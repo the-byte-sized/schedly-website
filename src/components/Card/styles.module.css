@@ -1,0 +1,32 @@
+.card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 315px;
+  height: 100%;
+  gap: 1rem;
+  padding: 2rem 3rem;
+  text-align: center;
+  border-radius: 2rem;
+  border: 1px solid rgba(248, 249, 250, 1);
+  transition: all 0.3s ease;
+}
+
+.card h1 {
+  margin-bottom: 0;
+}
+
+.card svg {
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 15px rgb(235, 237, 238);
+  border-color: var(--bs-primary);
+  background-color: var(--bs-light);
+}
+
+.card:hover svg {
+  stroke: var(--bs-primary);
+}

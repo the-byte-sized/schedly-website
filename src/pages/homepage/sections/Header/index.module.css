@@ -1,0 +1,105 @@
+.header {
+  overflow: hidden;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+}
+
+.background img {
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.background::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 0, 0, 0) 0%,
+    rgba(255, 255, 255, 1) 75%
+  );
+}
+
+.title {
+  font-size: 3.2rem;
+  margin: 0.8rem;
+}
+
+.subtitle {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.description {
+  max-width: 740px;
+  margin: 0.8rem auto 1rem;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.underlined {
+  position: relative;
+}
+
+.underlined svg {
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  width: 100%;
+}
+
+.underlined svg path {
+  fill: transparent;
+  stroke-width: 3px;
+  stroke-dasharray: 0 900;
+  stroke-dashoffset: 1;
+  stroke-linecap: round;
+  animation: draw 1s cubic-bezier(0.02, 0.51, 0.11, 0.98) 1.5s forwards;
+  stroke: var(--bs-primary);
+}
+
+.cursor {
+  width: 400px;
+  height: 400px;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 100%;
+  background-color: var(--bs-primary);
+  opacity: 0.3;
+  filter: blur(150px);
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2rem;
+  }
+}
+
+@keyframes draw {
+  from {
+    stroke-dasharray: 0 900;
+  }
+
+  to {
+    stroke-dasharray: 600 900;
+  }
+}

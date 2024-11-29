@@ -1,0 +1,8 @@
+.card,
+.card:hover {
+  background-color: #fff;
+}
+
+.card:hover svg {
+  stroke: revert-layer;
+}

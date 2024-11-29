@@ -1,0 +1,154 @@
+/* #region - Background effect */
+.background {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 100%;
+  background-color: var(--bs-primary);
+  opacity: 0.2;
+  filter: blur(100px);
+  z-index: 0;
+}
+
+.background[data-position="top-left"] {
+  top: -50%;
+  left: -10%;
+}
+
+.background[data-position="bottom-right"] {
+  bottom: -50%;
+  right: -10%;
+}
+/* #endregion */
+
+/* #region - Documentation Icons */
+.brandIcon {
+  --animation-duration: 3s;
+  --animation-timing-function: ease-in-out;
+  --animation-iteration-count: infinite;
+
+  --animation-flutter-duration: 2s;
+  --animation-android-duration: 2.5s;
+  --animation-apple-duration: 4s;
+
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.icon {
+  padding: 0.5rem;
+  border-radius: 1rem;
+  background-color: #fff;
+  animation-name: float;
+  animation-duration: var(--animation-duration);
+  animation-timing-function: var(--animation-timing-function);
+  animation-iteration-count: var(--animation-iteration-count);
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.icon:hover {
+  opacity: 1;
+}
+
+.brandIcon .icon svg {
+  stroke: var(--bs-primary);
+}
+
+.brandIcon .shadow {
+  width: 48px;
+  height: 3px;
+  background-color: #000;
+  margin: 20px auto 0;
+  filter: blur(6px);
+  animation-name: fade-out;
+  animation-duration: var(--animation-duration);
+  animation-timing-function: var(--animation-timing-function);
+  animation-iteration-count: var(--animation-iteration-count);
+}
+
+/* #region - Typescript icon */
+.brandIcon[data-brand="ts"] {
+  top: 15%;
+  left: 28%;
+}
+/* #endregion */
+
+/* #region - Flutter icon & shadow */
+.brandIcon[data-brand="flutter"] {
+  top: 0;
+  left: 58%;
+  animation-duration: var(--animation-flutter-duration);
+}
+
+.brandIcon[data-brand="flutter"] .shadow {
+  animation-duration: var(--animation-flutter-duration);
+}
+/* #endregion */
+
+/* #region - Android icon & shadow */
+.brandIcon[data-brand="android"] {
+  bottom: 22%;
+  right: 20%;
+  animation-duration: var(--animation-android-duration);
+}
+
+.brandIcon[data-brand="android"] .shadow {
+  animation-duration: var(--animation-android-duration);
+}
+/* #endregion */
+
+/* #region - Apple icon & shadow */
+.brandIcon[data-brand="apple"] {
+  bottom: 10%;
+  left: 43%;
+  animation-duration: var(--animation-apple-duration);
+}
+
+.brandIcon[data-brand="android"] .shadow {
+  animation-duration: var(--animation-apple-duration);
+}
+/* #endregion */
+
+/* #region - React icon & shadow */
+.brandIcon[data-brand="react"] {
+  top: -5%;
+  left: 43%;
+  animation-duration: var(--animation-apple-duration);
+}
+
+.brandIcon[data-brand="android"] .shadow {
+  animation-duration: var(--animation-apple-duration);
+}
+/* #endregion */
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 0.4;
+  }
+}
+
+/* #endregion */

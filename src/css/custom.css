@@ -5,6 +5,8 @@
  */
 
 /* You can override the default Infima variables here. */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
 :root {
   --ifm-color-primary: #2e8555;
   --ifm-color-primary-dark: #29784c;
@@ -15,10 +17,15 @@
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  --ifm-font-family-base: "Inter", sans-serif;
+  --bs-font-sans-serif: "Inter", sans-serif;
+
+  --website-container-width: 1360px;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
+[data-theme="dark"] {
   --ifm-color-primary: #25c2a0;
   --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
@@ -27,4 +34,48 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+a {
+  color: initial;
+}
+
+a:hover {
+  color: initial;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+.navbar {
+  box-shadow: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.navbar .navbar__inner {
+  max-width: var(--website-container-width);
+  margin: 0 auto;
+}
+
+.navbar__items {
+  gap: 12px;
+}
+
+.navbar__items .navbar__item.navbar__link {
+  font-family: var(--ifm-font-family-base);
+}
+
+.navbar__items .navbar__item.navbar__link:hover {
+  color: var(--bs-primary);
+}
+
+.container {
+  max-width: var(--website-container-width);
+}
+
+main {
+  width: 100%;
+  margin: 0 auto;
 }

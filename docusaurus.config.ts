@@ -32,6 +32,13 @@ const config: Config = {
     locales: ['en'],
   },
 
+  stylesheets: [
+    "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css",
+    "https://cdnjs.cloudflare.com/ajax/libs/aos/3.0.0-beta.6/aos.css",
+    "https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css",
+    "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
+  ],
+
   presets: [
     [
       'classic',
@@ -61,7 +68,7 @@ const config: Config = {
         theme: {
           customCss: './src/css/custom.css',
         },
-      } satisfies Preset.Options,
+      } as Preset.Options,
     ],
     // Redocusaurus config
     [
@@ -81,29 +88,44 @@ const config: Config = {
           primaryColor: '#1890ff',
         },
       },
-    ] satisfies Redocusaurus.PresetEntry,
+    ] as Redocusaurus.PresetEntry,
   ],
 
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
+    colorMode: {
+      disableSwitch: true,
+    },
     navbar: {
-      title: 'My Site',
+      title: 'Schedly',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Schedly Logo',
         src: 'img/logo.svg',
       },
       items: [
         {
+          label: "Overview",
+          href: "#overview",
+          position: 'right',
+
+        },
+        {
+          label: "Use cases",
+          href: "#use-cases",
+          position: 'right',
+
+        },
+        {
+          label: "Pricing",
+          href: "#pricing",
+          position: 'right',
+        },
+        {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Tutorial',
-        },
-        { to: '/blog', label: 'Blog', position: 'left' },
-        {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
+          label: 'Start building',
+          className: "btn btn-primary text-white hvr-icon-forward hvr-shadow",
           position: 'right',
         },
       ],
@@ -157,7 +179,7 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
-  } satisfies Preset.ThemeConfig,
+  } as Preset.ThemeConfig,
 };
 
 export default config;

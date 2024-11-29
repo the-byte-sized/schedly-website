@@ -1,0 +1,19 @@
+section[data-section="features"] {
+  padding: 10rem 0;
+}
+
+section[data-section="documentation"],
+section[data-section="use-cases"],
+section[data-section="pricing"] {
+  padding: 8rem 0;
+}
+
+@media only screen and (max-width: 1050px) {
+  section[data-section="documentation"] div[data-inner-section="integration"] {
+    width: 100%;
+  }
+
+  section[data-section="documentation"] div[data-inner-section="brands"] {
+    display: none;
+  }
+}
