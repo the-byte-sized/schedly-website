@@ -107,26 +107,44 @@ const config: Config = {
         {
           label: "Overview",
           href: "#overview",
-          position: 'right',
+          position: 'left',
 
         },
         {
-          label: "Use cases",
-          href: "#use-cases",
-          position: 'right',
-
-        },
-        {
-          label: "Pricing",
-          href: "#pricing",
-          position: 'right',
+          type: 'dropdown',
+          label: 'Use Cases',
+          position: 'left',
+          items: [
+            {
+              label: 'Healthcare',
+              href: '/use-cases/health-care',
+            },
+            {
+              label: 'Education',
+              href: '/use-cases/education',
+            },
+            {
+              label: 'Co-working Space Management',
+              href: '/use-cases/coworking-space-management',
+            },
+            {
+              label: 'Ride Sharing Service',
+              href: '/use-cases/ride-sharing',
+            },
+            {
+              label: 'Beauty Salon',
+              href: '/use-cases/beauty-salon',
+            },
+          ],
         },
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
-          label: 'Start building',
+          label: 'Join Waitlist now',
           className: "btn btn-primary text-white hvr-icon-forward hvr-shadow",
           position: 'right',
+          href: 'https://forms.office.com/r/8LmMHy2bUF',
+          target: "_blank"
         },
       ],
     },
