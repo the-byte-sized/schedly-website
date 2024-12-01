@@ -134,46 +134,88 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Use Cases',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: 'Healthcare',
+              to: '/use-cases/healthcare',
+            },
+            {
+              label: 'Education',
+              to: '/use-cases/education',
+            },
+            {
+              label: 'Co-working Space Management',
+              to: '/use-cases/coworking-space-management',
+            },
+            {
+              label: 'Ride Sharing Service',
+              to: '/use-cases/ride-sharing',
+            },
+            {
+              label: 'Beauty Salon',
+              to: '/use-cases/beauty-salon',
             },
           ],
         },
         {
-          title: 'Community',
+          title: 'For Developers',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'Documentation',
+              to: '/docs',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              label: 'API Reference',
+              to: '/docs/api-reference',
             },
             {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
+              label: 'Changelog',
+              to: '/docs/changelog',
             },
           ],
         },
         {
-          title: 'More',
+          title: 'Product',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              label: 'Why Schedly',
+              to: '/docs',
             },
             {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              label: 'Features',
+              to: '/docs/api-reference',
+            },
+            {
+              label: 'Pricing',
+              to: '/docs/changelog',
+            },
+   
+          ],
+        },
+        {
+          title: 'Company',
+          items: [
+            {
+              label: 'About Us',
+              to: '/',
+            },
+            {
+              label: 'Get In Touch',
+              to: '/',
+            },
+            {
+              label: 'Privacy',
+              to: '/',
+            },
+            {
+              label: 'Terms & Condition',
+              to: '/',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} The Byte-sized.`,
     },
     prism: {
       theme: prismThemes.github,
