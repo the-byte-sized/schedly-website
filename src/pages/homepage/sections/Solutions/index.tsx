@@ -1,19 +1,18 @@
-import React from "react";
 import Button from "@site/src/components/Button";
 import Card from "@site/src/components/Card";
 import {
-  IconHeartbeat,
   IconBooks,
-  IconUsers,
   IconCar,
+  IconHeartbeat,
   IconPlant2,
+  IconUsers,
 } from "@tabler/icons-react";
 
 type Props = {};
 
-function UseCases({}: Props) {
+function Solutions({}: Props) {
   return (
-    <section id="use-cases" data-section="use-cases">
+    <section id="solutions" data-section="solutions">
       <div className="container">
         <h1 className="fs-1">
           Schedly in <span className="text-primary">action</span>
@@ -137,4 +136,4 @@ function UseCases({}: Props) {
   );
 }
 
-export default UseCases;
+export default Solutions;

@@ -3,7 +3,7 @@ section[data-section="features"] {
 }
 
 section[data-section="documentation"],
-section[data-section="use-cases"],
+section[data-section="solutions"],
 section[data-section="pricing"] {
   padding: 8rem 0;
 }

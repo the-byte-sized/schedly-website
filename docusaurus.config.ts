@@ -117,23 +117,23 @@ const config: Config = {
           items: [
             {
               label: 'Healthcare',
-              href: '/use-cases/health-care',
+              href: '/solutions/health-care',
             },
             {
               label: 'Education',
-              href: '/use-cases/education',
+              href: '/solutions/education',
             },
             {
               label: 'Co-working Space Management',
-              href: '/use-cases/coworking-space-management',
+              href: '/solutions/coworking-space-management',
             },
             {
               label: 'Ride Sharing Service',
-              href: '/use-cases/ride-sharing',
+              href: '/solutions/ride-sharing',
             },
             {
               label: 'Beauty Salon',
-              href: '/use-cases/beauty-salon',
+              href: '/solutions/beauty-salon',
             },
           ],
         },
@@ -156,23 +156,23 @@ const config: Config = {
           items: [
             {
               label: 'Healthcare',
-              to: '/use-cases/healthcare',
+              to: '/solutions/healthcare',
             },
             {
               label: 'Education',
-              to: '/use-cases/education',
+              to: '/solutions/education',
             },
             {
               label: 'Co-working Space Management',
-              to: '/use-cases/coworking-space-management',
+              to: '/solutions/coworking-space-management',
             },
             {
               label: 'Ride Sharing Service',
-              to: '/use-cases/ride-sharing',
+              to: '/solutions/ride-sharing',
             },
             {
               label: 'Beauty Salon',
-              to: '/use-cases/beauty-salon',
+              to: '/solutions/beauty-salon',
             },
           ],
         },

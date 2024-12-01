@@ -1,10 +1,9 @@
-import React from "react";
 
-import Header from "./sections/Header";
-import Features from "./sections/Features";
 import Documentation from "./sections/Documentation";
-import UseCases from "./sections/UseCases";
+import Features from "./sections/Features";
+import Header from "./sections/Header";
 import Pricing from "./sections/Pricing";
+import Solutions from "./sections/Solutions";
 import "./styles.module.css";
 
 export default function Home(): JSX.Element {
@@ -14,7 +13,7 @@ export default function Home(): JSX.Element {
       <main>
         <Features />
         <Documentation />
-        <UseCases />
+        <Solutions />
         <Pricing />
       </main>
     </>
