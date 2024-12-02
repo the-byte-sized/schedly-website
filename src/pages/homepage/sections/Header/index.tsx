@@ -1,7 +1,8 @@
 import Link from "@docusaurus/Link";
-import Translate, { translate } from "@docusaurus/Translate";
+import Translate from "@docusaurus/Translate";
 import useBaseUrl from "@docusaurus/useBaseUrl";
-import Button from "@site/src/components/Button";
+import { Typography } from "@mui/material";
+import MuiButton from "@mui/material/Button";
 import Heading from "@theme/Heading";
 import React from "react";
 import styles from "./index.module.css";
@@ -39,9 +40,11 @@ function Header() {
   return (
     <header className={styles.header}>
       <div ref={cursor} className={styles.cursor}></div>
+
       <div className={styles.background}>
         <img src={useBaseUrl("/img/header-pattern.png")} alt="hero pattern" />
       </div>
+
       <div className="container d-flex flex-column justify-content-center align-items-center position-relative z-1">
         <div className="d-flex flex-column text-center">
           <Heading
@@ -51,14 +54,17 @@ function Header() {
             as="h1"
             className={styles.title}
           >
-            Scheduling{" "}
-            <span className={styles.underlined}>
-              Made Simple
-              <svg viewBox="0 0 231 34.72">
-                <path d="M9.61,12.86c0,0,168.39-6.89,212.56-5c0,0-152.83,10-180.83,13.78c0,0,62.72-1.39,94.83,4.17" />
-              </svg>
-            </span>
+            <Typography variant="h1">
+              Scheduling{" "}
+              <Typography variant="h1" component="span" className={styles.underlined}>
+                Made Simple
+                <svg viewBox="0 0 231 34.72">
+                  <path d="M9.61,12.86c0,0,168.39-6.89,212.56-5c0,0-152.83,10-180.83,13.78c0,0,62.72-1.39,94.83,4.17" />
+                </svg>
+              </Typography>
+            </Typography>
           </Heading>
+
           <div
             data-aos={AOS.effect}
             data-aos-duration={AOS.duration}
@@ -66,14 +72,17 @@ function Header() {
             data-aos-delay="250"
             className={styles.description}
           >
-            <Translate id="homepage.header.description">
-              Schedly is designed to simplify event and resource management for
-              businesses and professionals. It enables the creation of
-              customizable entities, flexible exception handling, and efficient
-              event scheduling through APIs or SDKs.
-            </Translate>
+            <Typography variant="h4">
+              <Translate id="homepage.header.description">
+                Schedly is designed to simplify event and resource management
+                for businesses and professionals. It enables the creation of
+                customizable entities, flexible exception handling, and
+                efficient event scheduling through APIs or SDKs.
+              </Translate>
+            </Typography>
           </div>
         </div>
+
         <div
           data-aos={AOS.effect}
           data-aos-duration={AOS.duration}
@@ -82,14 +91,9 @@ function Header() {
           className="d-flex align-items-center gap-2"
         >
           <Link to="https://forms.office.com/r/8LmMHy2bUF" target="_blank">
-            <Button
-              label={translate({
-                id: "joinWaitlistNow",
-                description:
-                  "A prompt for the user to make them subscribe to Schedly waitlist",
-              })}
-              className="btn-primary"
-            />
+            <MuiButton variant="contained">
+              <Translate id="joinWaitlistNow">Join Waitlist Now</Translate>
+            </MuiButton>
           </Link>
         </div>
       </div>

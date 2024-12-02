@@ -1,7 +1,11 @@
-import React from "react";
-import AOS from "aos";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
 import Layout from "@theme/Layout";
+import AOS from "aos";
+import React from "react";
 import Home from "./homepage";
 
 export default function App(): JSX.Element {
