@@ -16,7 +16,7 @@
     "description": "Navbar item with label Solutions"
   },
   "item.label.Join Waitlist now": {
-    "message": "Unisciti Alla Waitlist Ora!",
+    "message": "Unisciti alla Waitlist Ora!",
     "description": "Navbar item with label Join Waitlist now"
   },
   "item.label.Healthcare": {
@@ -36,7 +36,7 @@
     "description": "Navbar item with label Ride Sharing Service"
   },
   "item.label.Beauty Salon": {
-    "message": "Saloni Di Bellezza",
+    "message": "Saloni di Bellezza",
     "description": "Navbar item with label Beauty Salon"
   }
 }

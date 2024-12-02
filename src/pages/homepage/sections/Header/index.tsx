@@ -1,6 +1,6 @@
 import Link from "@docusaurus/Link";
-import Translate, { translate } from '@docusaurus/Translate';
-import useBaseUrl from '@docusaurus/useBaseUrl';
+import Translate, { translate } from "@docusaurus/Translate";
+import useBaseUrl from "@docusaurus/useBaseUrl";
 import Button from "@site/src/components/Button";
 import Heading from "@theme/Heading";
 import React from "react";
@@ -40,7 +40,7 @@ function Header() {
     <header className={styles.header}>
       <div ref={cursor} className={styles.cursor}></div>
       <div className={styles.background}>
-        <img src={useBaseUrl('/img/header-pattern.png')} alt="hero pattern" />
+        <img src={useBaseUrl("/img/header-pattern.png")} alt="hero pattern" />
       </div>
       <div className="container d-flex flex-column justify-content-center align-items-center position-relative z-1">
         <div className="d-flex flex-column text-center">
@@ -67,11 +67,11 @@ function Header() {
             className={styles.description}
           >
             <Translate id="homepage.header.description">
-            Schedly is designed to streamline time management for businesses
-              and individuals. It allows users to create customizable calendars,
-              manage exceptions, and schedule events efficiently.
+              Schedly is designed to simplify event and resource management for
+              businesses and professionals. It enables the creation of
+              customizable entities, flexible exception handling, and efficient
+              event scheduling through APIs or SDKs.
             </Translate>
-          
           </div>
         </div>
         <div
@@ -82,12 +82,14 @@ function Header() {
           className="d-flex align-items-center gap-2"
         >
           <Link to="https://forms.office.com/r/8LmMHy2bUF" target="_blank">
-            <Button label={
-                translate({
-                  id: 'joinWaitlistNow',
-                  description: 'A prompt for the user to make them subscribe to Schedly waitlist',
-                })
-            } className="btn-primary" />
+            <Button
+              label={translate({
+                id: "joinWaitlistNow",
+                description:
+                  "A prompt for the user to make them subscribe to Schedly waitlist",
+              })}
+              className="btn-primary"
+            />
           </Link>
         </div>
       </div>

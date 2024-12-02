@@ -1,4 +1,4 @@
-import React from "react";
+import Translate from "@docusaurus/Translate";
 import Card from "@site/src/components/Card";
 import {
   IconCalendarEvent,
@@ -19,33 +19,57 @@ function Features({}: Props) {
         <div className="col-sm-12 col-lg-4 p-2">
           <Card>
             <IconCircles size={iconSize} stroke={iconStroke} />
-            <h1 className={_className}>Create entities</h1>
+
+            <h1 className={_className}>
+              <Translate id="features.createEntities.title">
+                Create entities
+              </Translate>
+            </h1>
+
             <p className={_className}>
-              An entity is a flexible concept. It can represent a calendar, a
-              barbershop, a personal agenda, or even a task list. Its meaning
-              adapts to your needs.
+              <Translate id="features.createEntities.description">
+                An entity is a flexible concept. It can represent a calendar, a
+                barbershop, a personal agenda, or even a task list. Its meaning
+                adapts to your needs.
+              </Translate>
             </p>
           </Card>
         </div>
+
         <div className="col-sm-12 col-lg-4 p-2">
           <Card>
             <IconCategoryPlus size={iconSize} stroke={iconStroke} />
-            <h1 className={_className}>Add exceptions</h1>
+
+            <h1 className={_className}>
+              <Translate id="features.addRules.title">Add rules</Translate>
+            </h1>
+
             <p className={_className}>
-              Exceptions in Schedly, either blacklist or whitelist, can be
-              one-time or recurring (via cron). Use them for business hours,
-              employee leave, or resource unavailability—fully customizable.
+              <Translate id="features.addRules.description">
+                Rules in Schedly can be one-time or recurring. Use them to
+                represent business hours, employee leave, or resource
+                unavailability -— fully customizable.
+              </Translate>
             </p>
           </Card>
         </div>
+
         <div className="col-sm-12 col-lg-4 p-2">
           <Card>
             <IconCalendarEvent size={iconSize} stroke={iconStroke} />
-            <h1 className={_className}>Schedule events</h1>
+
+            <h1 className={_className}>
+              <Translate id="features.scheduleEvents.title">
+                Schedule events
+              </Translate>
+            </h1>
+
             <p className={_className}>
-              Easily find slots and add events effortlessly. What's an event?
-              It's whatever you need—doctor's appointment, team call, or more,
-              customizable via metadata.
+              <Translate id="features.scheduleEvents.description">
+                Easily find slots and add events effortlessly. What's an event?
+                It's whatever you need—doctor's appointment, team call, or more,
+                customizable via metadata.
+              </Translate>
             </p>
           </Card>
         </div>
