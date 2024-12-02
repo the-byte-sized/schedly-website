@@ -1,0 +1,42 @@
+{
+  "title": {
+    "message": "Schedly",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "Schedly Logo",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Overview": {
+    "message": "Overview",
+    "description": "Navbar item with label Overview"
+  },
+  "item.label.Solutions": {
+    "message": "Soluzioni",
+    "description": "Navbar item with label Solutions"
+  },
+  "item.label.Join Waitlist now": {
+    "message": "Unisciti Alla Waitlist Ora!",
+    "description": "Navbar item with label Join Waitlist now"
+  },
+  "item.label.Healthcare": {
+    "message": "Healthcare",
+    "description": "Navbar item with label Healthcare"
+  },
+  "item.label.Education": {
+    "message": "Education",
+    "description": "Navbar item with label Education"
+  },
+  "item.label.Co-working Space Management": {
+    "message": "Gestione Di Spazi Di Co-working",
+    "description": "Navbar item with label Co-working Space Management"
+  },
+  "item.label.Ride Sharing Service": {
+    "message": "Servizio di Ride Sharing",
+    "description": "Navbar item with label Ride Sharing Service"
+  },
+  "item.label.Beauty Salon": {
+    "message": "Saloni Di Bellezza",
+    "description": "Navbar item with label Beauty Salon"
+  }
+}

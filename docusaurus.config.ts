@@ -29,7 +29,7 @@ const config: Config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'it'],
   },
 
   stylesheets: [
@@ -124,7 +124,7 @@ const config: Config = {
         },
         {
           type: 'dropdown',
-          label: 'Use Cases',
+          label: 'Solutions',
           position: 'left',
           items: [
             {
@@ -150,8 +150,10 @@ const config: Config = {
           ],
         },
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          type: 'localeDropdown',
+          position: 'right',
+        },
+        {
           label: 'Join Waitlist now',
           className: "btn btn-primary text-white hvr-icon-forward hvr-shadow",
           position: 'right',
@@ -164,7 +166,7 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Use Cases',
+          title: 'Solutions',
           items: [
             {
               label: 'Healthcare',

@@ -19,7 +19,7 @@ function Solutions({}: Props) {
         </h1>
         <p className="fs-5 w-75">
           Imagine how Schedly's innovative, tech-forward scheduling solutions
-          can transform your business. Explore our use cases to see how we can
+          can transform your business. Explore our solutions to see how we can
           revolutionize time management and streamline your workflows.
         </p>
         <div className="row row-gap-5 mt-5">

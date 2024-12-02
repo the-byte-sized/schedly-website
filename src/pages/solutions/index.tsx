@@ -10,7 +10,6 @@ export default function Home(): JSX.Element {
       description="Description will go into a meta tag in <head />"
     >
       <main>
-        <h1>USE CASE!!!</h1>
       </main>
     </Layout>
   );
