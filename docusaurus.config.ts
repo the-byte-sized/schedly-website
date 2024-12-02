@@ -117,7 +117,7 @@ const config: Config = {
           items: [
             {
               label: 'Healthcare',
-              href: '/solutions/health-care',
+              href: '/solutions/healthcare',
             },
             {
               label: 'Education',
@@ -133,7 +133,7 @@ const config: Config = {
             },
             {
               label: 'Beauty Salon',
-              href: '/solutions/beauty-salon',
+              href: '/solutions/beauty-salons',
             },
           ],
         },
@@ -172,7 +172,7 @@ const config: Config = {
             },
             {
               label: 'Beauty Salon',
-              to: '/solutions/beauty-salon',
+              to: '/solutions/beauty-salons',
             },
           ],
         },
