@@ -1,6 +1,14 @@
+import { translate } from "@docusaurus/Translate";
+import useBaseUrl from "@docusaurus/useBaseUrl";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import Button from "@site/src/components/Button";
 import Card from "@site/src/components/Card";
-import { IconCalendarClock, IconFilter, IconProgressCheck, IconRefresh } from "@tabler/icons-react";
+import {
+  IconCalendarClock,
+  IconFilter,
+  IconProgressCheck,
+  IconRefresh,
+} from "@tabler/icons-react";
 import Layout from "@theme/Layout";
 
 export default function HealthcareSolutionPage(): JSX.Element {
@@ -13,15 +21,51 @@ export default function HealthcareSolutionPage(): JSX.Element {
     >
       <main>
         <div className="container">
-          <h1>Appointment Scheduling for a Multi-Specialty Clinic</h1>
+          <div className="intro-section row my-5">
+            <div className="col-12 col-md-6">
+              <h1 className="fw-bolder">
+                Appointment Scheduling for a Multi-Specialty Clinic
+              </h1>
 
-          <p>
-            A bustling multi-specialty clinic offers services ranging from
-            general practice to specialized treatments. Managing appointments
-            for numerous doctors with varying schedules, handling last-minute
-            cancellations, and accommodating emergency visits present
-            significant challenges.
-          </p>
+              <p>
+                Simplify appointment management for doctors with different
+                schedules. Handle last-minute cancellations, emergency visits,
+                and resource allocation—all with one tool.
+              </p>
+
+              <div className="d-flex align-items-center">
+                <div>
+                  <input
+                    type="email"
+                    className="form-control"
+                    placeholder={translate({
+                      id: "enterYourEmail",
+                      message: "Enter your email",
+                    })}
+                  />
+                </div>
+
+                <a
+                  href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAa__e6EKmNURUpXVDBYWUVBMUVOQjRGS05KOVNZVkMwMy4u&r41d97b59b6194312b8aaa93246d4d61a=claudio.cortese%40outlook.it"
+                  target="_blank"
+                >
+                  <Button
+                    label={translate({ id: "joinWaitlistNow" })}
+                    className="btn-outline-primary"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div className="col-12 col-md-6 text-center">
+              <img
+                className="shadow-lg rounded-5"
+                src={useBaseUrl("/img/hero-embedded-lending.jpg")}
+                alt="hero pattern"
+                height={375}
+              />
+            </div>
+          </div>
 
           <div className="row row-gap-5 mt-5">
             <div className="col-sm-12 col-md-6">
