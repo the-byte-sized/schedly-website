@@ -77,6 +77,9 @@ const config: Config = {
             return items.filter((item) => !item.url.includes('/page/'));
           },
         },
+        gtag: {
+          trackingID: 'G-TD0DJ68RLE',
+        },
       } as Preset.Options,
     ],
     // Redocusaurus config
