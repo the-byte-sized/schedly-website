@@ -24,7 +24,7 @@
     "description": "The label of footer link with label=Education linking to /solutions/education"
   },
   "link.item.label.Co-working Space Management": {
-    "message": "Gestione Di Spazi Di Co-working",
+    "message": "Gestione Spazi Di Co-working",
     "description": "The label of footer link with label=Co-working Space Management linking to /solutions/coworking-space-management"
   },
   "link.item.label.Ride Sharing Service": {

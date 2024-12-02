@@ -2,7 +2,6 @@ import type * as Preset from '@docusaurus/preset-classic';
 import type { Config } from '@docusaurus/types';
 import { themes as prismThemes } from 'prism-react-renderer';
 import type * as Redocusaurus from 'redocusaurus';
-
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
@@ -120,12 +119,12 @@ const config: Config = {
           label: "Overview",
           href: "#overview",
           position: 'left',
-
         },
         {
           type: 'dropdown',
           label: 'Solutions',
           position: 'left',
+          class: 'wide-dropdown',
           items: [
             {
               label: 'Healthcare',

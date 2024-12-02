@@ -71,6 +71,18 @@ a:hover {
   color: var(--bs-primary);
 }
 
+.wide-dropdown ~ .dropdown__menu {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 30px;
+  left: -109%;
+  border: 1px solid lightgray;
+}
+
+.wide-dropdown ~ .dropdown__menu li {
+  width: 202px;
+}
+
 .container {
   max-width: var(--website-container-width);
 }
