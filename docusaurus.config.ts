@@ -68,6 +68,15 @@ const config: Config = {
         theme: {
           customCss: './src/css/custom.css',
         },
+        sitemap: {
+          lastmod: 'datetime',
+          filename: 'sitemap.xml',
+          createSitemapItems: async (params) => {
+            const { defaultCreateSitemapItems, ...rest } = params;
+            const items = await defaultCreateSitemapItems(rest);
+            return items.filter((item) => !item.url.includes('/page/'));
+          },
+        },
       } as Preset.Options,
     ],
     // Redocusaurus config
@@ -208,7 +217,7 @@ const config: Config = {
               label: 'Pricing',
               to: '/docs/changelog',
             },
-   
+
           ],
         },
         {
