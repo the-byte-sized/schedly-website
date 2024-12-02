@@ -387,5 +387,8 @@
   },
   "yourBusinessCouldBeNext.hype": {
     "message": "Pronto a fare il passo successivo?"
+  },
+  "enterYourEmail": {
+    "message": "Inserisci la tua email"
   }
 }
