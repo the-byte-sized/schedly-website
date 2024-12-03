@@ -20,7 +20,7 @@ function Solutions({}: Props) {
           dangerouslySetInnerHTML={{
             __html: translate({
               id: "solutions.title",
-              message: "Schedly in <span class='text-primary'>action</span>",
+              message: "Schedly in <span className='text-primary'>action</span>",
             }),
           }}
         />

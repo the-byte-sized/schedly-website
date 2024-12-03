@@ -124,7 +124,7 @@ const config: Config = {
           type: 'dropdown',
           label: 'Solutions',
           position: 'left',
-          class: 'wide-dropdown',
+          className: 'wide-dropdown',
           items: [
             {
               label: 'Healthcare',

@@ -1,6 +1,6 @@
 {
   "joinWaitlistNow": {
-    "message": "Unisciti alla Waitlist Ora!"
+    "message": "Unisciti alla waitlist"
   },
   "theme.ErrorPageContent.title": {
     "message": "Questa pagina è andata in crash.",
@@ -344,7 +344,7 @@
     "message": "Vedi Documentazione"
   },
   "solutions.title": {
-    "message": "Schedly in <span class='text-primary'>azione</span>"
+    "message": "Schedly in <span className='text-primary'>azione</span>"
   },
   "solutions.description": {
     "message": "Immagina come le soluzioni di scheduling innovative e all’avanguardia di Schedly possano trasformare la tua azienda. Esplora le nostre soluzioni per scoprire come possiamo rivoluzionare la gestione del tempo e ottimizzare i tuoi flussi di lavoro."
