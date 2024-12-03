@@ -128,11 +128,7 @@ export default function HealthcareSolutionPage(): JSX.Element {
                 md: "block",
               }}
             >
-              <img
-                className="shadow-lg rounded-5"
-                src={useBaseUrl("/img/hero-embedded-lending.jpg")}
-                alt="hero pattern"
-              />
+              <img src={useBaseUrl("/img/carbon.png")} alt="hero pattern" />
             </Grid>
           </Grid>
 
@@ -170,11 +166,7 @@ export default function HealthcareSolutionPage(): JSX.Element {
                   md: "flex",
                 }}
               >
-                <img
-                  className="shadow-lg rounded-5"
-                  src={useBaseUrl("/img/hero-embedded-lending.jpg")}
-                  alt="hero pattern"
-                />
+                <img src={useBaseUrl("/img/carbon.png")} alt="hero pattern" />
               </Stack>
 
               <Stack direction="column" flex="1" spacing={4}>
