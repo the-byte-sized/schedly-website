@@ -2,6 +2,10 @@ import { extendTheme, ThemeOptions } from "@mui/material/styles";
 
 const extTheme: ThemeOptions = extendTheme({
   typography: {
+    allVariants: {
+      fontFamily: "Inter, sans-serif",
+      lineHeight: 1.3,
+    },
     h1: {
       fontSize: "3.9rem",
     },
@@ -22,9 +26,11 @@ const extTheme: ThemeOptions = extendTheme({
     },
     body1: {
       fontSize: "1rem",
+      lineHeight: 1.8,
     },
     body2: {
       fontSize: "1rem",
+      lineHeight: 1.8,
     },
     subtitle1: {
       fontSize: "1rem",
