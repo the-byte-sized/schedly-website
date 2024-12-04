@@ -1,0 +1,33 @@
+---
+sidebar_position: 6
+---
+
+# Entities Overview
+
+In GoSchedule, entities are the core building blocks used to model the scheduling and availability management system. Each entity serves as an abstract and flexible component that can represent various roles and functions, making Schedly adaptable to a wide range of use cases.
+
+## Key Characteristics of Entities
+
+	1.	Types of Entities:
+	•	Resource: Represents tangible or intangible resources that can be scheduled, such as a barber, a meeting room, or a piece of equipment.
+	•	Service: Represents activities or offerings that can be scheduled, such as a haircut, a workshop, or a medical consultation.
+	2.	Hierarchy:
+	•	Entities can have parent-child relationships. For instance, a “Barber” (resource) can have child services like “Haircut” or “Beard Trim.”
+	•	This hierarchical structure allows the system to dynamically aggregate and manage availability rules across related entities.
+	3.	Metadata:
+	•	Each entity has a customizable metadata field (JSON) to store additional information like service duration, pricing, or other context-specific details.
+	4.	Scheduling Rules:
+	•	Entities can have business rules (whitelist) defining when they are available and exceptions (blacklist) specifying periods of unavailability.
+	•	These rules can be recurring (e.g., every Monday from 9 AM to 5 PM) or specific to a particular date (e.g., closed on December 25th).
+	5.	Integration:
+	•	Entities can act as a Data Source, integrating with external systems like Google Calendar or Outlook. This allows events and availability to synchronize seamlessly between Schedly and external platforms.
+
+## Why add entities via the API?
+
+If you are building integrated experiences it's essential to keep the flow as seamless as possible - this is where programmatical entity-creation comes in handy.
+
+If your product is a platform or marketplace or a different kind of product that doesn't "own" the resources because they are your customers, then you'll want to interact with GoSchedule during your own product's onboarding flow.
+
+Or maybe you already have you an internal admin tool that controls your bookable resources. So every time you create a new entity on your end, you'll want to create or update it in GoSchedule.
+
+In the following guides, we'll teach you how to do this 🙏

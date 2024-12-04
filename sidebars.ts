@@ -55,19 +55,14 @@ const sidebars: SidebarsConfig = {
       items: [
         {
           type: 'doc',
-          id: 'intro/welcome',
+          id: 'account/your-account',
           label: 'Your Account'
         },
         {
           type: 'doc',
-          id: 'intro/welcome',
+          id: 'account/api-keys',
           label: 'API Keys'
-        },
-        {
-          type: 'doc',
-          id: 'intro/welcome',
-          label: 'Test & Live Mode'
-        },
+        }
       ],
     },
     {
@@ -76,33 +71,81 @@ const sidebars: SidebarsConfig = {
       items: [
         {
           type: 'doc',
-          id: 'intro/welcome',
+          id: 'sdk/javascript',
           label: 'JavaScript SDK'
         },
         {
           type: 'doc',
-          id: 'intro/welcome',
+          id: 'sdk/java',
           label: 'Java SDK'
         },
         {
           type: 'doc',
-          id: 'intro/welcome',
+          id: 'sdk/php',
           label: 'PHP SDK'
         },
         {
           type: 'doc',
-          id: 'intro/welcome',
+          id: 'sdk/flutter',
           label: 'Flutter SDK'
         },
         {
           type: 'doc',
-          id: 'intro/welcome',
+          id: 'sdk/android',
           label: 'Android SDK'
         },
         {
           type: 'doc',
-          id: 'intro/welcome',
+          id: 'sdk/ios',
           label: 'iOS SDK'
+        },
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Entities',
+      items: [
+        {
+          type: 'doc',
+          id: 'entities/overview',
+          label: 'Entities Overview'
+        },
+        {
+          type: 'doc',
+          id: 'entities/creating',
+          label: 'Creating Entities'
+        },
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Rules',
+      items: [
+        {
+          type: 'doc',
+          id: 'rules/overview',
+          label: 'Rules Overview'
+        },
+        {
+          type: 'doc',
+          id: 'rules/creating',
+          label: 'Creating Rules'
+        },
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Events',
+      items: [
+        {
+          type: 'doc',
+          id: 'events/overview',
+          label: 'Events Overview'
+        },
+        {
+          type: 'doc',
+          id: 'events/creating',
+          label: 'Creating Events'
         },
       ],
     },

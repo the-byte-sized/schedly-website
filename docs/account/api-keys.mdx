@@ -1,0 +1,27 @@
+---
+sidebar_position: 5
+---
+import Link from '@docusaurus/Link';
+import { Alert, AlertTitle, Button } from '@mui/material';
+import { IconChevronRight } from '@tabler/icons-react';
+
+# API Keys
+
+<Alert icon={false} severity="success" sx={{
+  marginBottom: '25px'
+}}>
+  <AlertTitle>👍 Working with the API</AlertTitle>
+  Take a look at our API reference to learn more about the different endpoints in the API and how to authenticate.
+
+  <Button component={Link} to="/docs/restful-api-reference/" variant='outlined' endIcon={<IconChevronRight />}>
+  {'API Reference'}
+  </Button>
+</Alert>
+
+All api requests needs to be authenticated with an "API key" for the specific Timekit app you are operating within. You can find your app's api-key in the Admin Dashboard under "API settings".
+
+Make sure NOT to share your api-key anywhere publicly available! Otherwise anybody will be able to control your application, create bookings, change availability etc. Even increase your billing amount by creating resources.
+
+Authentication is done using HTTP basic authentication, omitting the username just using the api-key as password. Read our API reference on authentication to see the this in action.
+
+We have prefixed the api-key with "test" or "live" for test and live mode apps, in order to make it as visible as possible, which key should be used in which situations.
