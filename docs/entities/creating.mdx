@@ -8,7 +8,7 @@ import WorkingWithApiAlert from '@site/src/components/WorkingWithApiAlert';
 
 Entities can represent people (employees, vendors), items (screwdriver, musical instrument) or locations (meeting rooms).
 
-*Its a good idea to have familiarised yourself with Timekits definition of a bookable entites before reading this article.*
+*Its a good idea to have familiarised yourself with GoSchedules definition of a bookable entites before reading this article.*
 
 <WorkingWithApiAlert />
 
@@ -39,7 +39,7 @@ curl --request POST \
   --header 'Content-Type: application/json' \
   --user :live_api_key_7nzvc7wsBQQISLeFSVhROys9V1bUJ1z7 \
   --data '{
-    "email": "doc.brown@timekit.io",
+    "email": "doc.brown@GoSchedule.io",
     "timezone": "America/Los_Angeles",
     "name": "Doc Brown",
     "password": "FluxCapacitator"
@@ -57,7 +57,7 @@ The above request will produce a response similar to this:
     "first_name": "Doc Brown",
     "last_name": "",
     "name": "Doc Brown",
-    "email": "doc.brown@timekit.io",
+    "email": "doc.brown@GoSchedule.io",
     "timezone": "America/Los_Angeles",
     "calendars": [
       "id": "bfa0b9fa-36aa-4ae6-8096-f3b20fbed1d2"
@@ -71,7 +71,7 @@ The above request will produce a response similar to this:
       "backgroundcolor": null
       "created_at": "2017-12-19T09:37:36+0200"
       "updated_at": "2017-12-19T09:37:36+0200"
-      "provider": "timekit"
+      "provider": "GoSchedule"
     ]
   }
 }

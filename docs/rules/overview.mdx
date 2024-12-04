@@ -4,30 +4,88 @@ sidebar_position: 6
 
 # Rules Overview
 
-In GoSchedule, entities are the core building blocks used to model the scheduling and availability management system. Each entity serves as an abstract and flexible component that can represent various roles and functions, making Schedly adaptable to a wide range of use cases.
+In GoSchedule, rules are a pivotal mechanism that govern the availability and behavior of entities. They provide a flexible and powerful framework to manage scheduling constraints, define operational periods, and handle exceptions. 
+
+Rules ensure that the system adapts to a wide range of real-world scenarios, maintaining precision and consistency in scheduling.
 
 ## Key Characteristics of Rules
+	### Types of Rules
+		
+	#### Whitelist Rules
 
-	1.	Types of Entities:
-	•	Resource: Represents tangible or intangible resources that can be scheduled, such as a barber, a meeting room, or a piece of equipment.
-	•	Service: Represents activities or offerings that can be scheduled, such as a haircut, a workshop, or a medical consultation.
-	2.	Hierarchy:
-	•	Entities can have parent-child relationships. For instance, a “Barber” (resource) can have child services like “Haircut” or “Beard Trim.”
-	•	This hierarchical structure allows the system to dynamically aggregate and manage availability rules across related entities.
-	3.	Metadata:
-	•	Each entity has a customizable metadata field (JSON) to store additional information like service duration, pricing, or other context-specific details.
-	4.	Scheduling Rules:
-	•	Entities can have business rules (whitelist) defining when they are available and exceptions (blacklist) specifying periods of unavailability.
-	•	These rules can be recurring (e.g., every Monday from 9 AM to 5 PM) or specific to a particular date (e.g., closed on December 25th).
-	5.	Integration:
-	•	Entities can act as a Data Source, integrating with external systems like Google Calendar or Outlook. This allows events and availability to synchronize seamlessly between Schedly and external platforms.
+	Specify allowed periods when an entity is available. These define “business hours” or other operational windows.
 
-## Why add rules via the API?
+	#### Blacklist Rules
+	
+	Define restricted periods when an entity is unavailable. These account for holidays, maintenance, or other exceptions.
 
-If you are building integrated experiences it's essential to keep the flow as seamless as possible - this is where programmatical entity-creation comes in handy.
+	### Recurrence
+		-	Rules can be recurring (e.g., every Monday from 9 AM to 5 PM) or one-time (e.g., closed on December 25th).
+		-	Recurrence supports patterns like specific days of the week or monthly schedules.
+	
+	### Time Ranges
+		-	Each rule can include multiple time ranges (e.g., 9 AM–12 PM and 1 PM–5 PM), allowing granular control over availability within a day.
+	
+	###	Scope
+		-	Rules apply to specific entities and can cascade within a hierarchy. For instance, a rule applied to a parent entity can influence its child entities unless overridden locally.
+	
+	###	Dynamic Behavior
+		-	Rules are evaluated dynamically against other constraints like existing events, resource conflicts, and overlapping schedules.
+	
+	### Priority
+		-	Blacklist Rules take precedence over Whitelist Rules. This ensures that exceptions like holidays or maintenance blocks always supersede general availability.
 
-If your product is a platform or marketplace or a different kind of product that doesn't "own" the resources because they are your customers, then you'll want to interact with GoSchedule during your own product's onboarding flow.
+## How Rules Work in GoSchedule
 
-Or maybe you already have you an internal admin tool that controls your bookable resources. So every time you create a new entity on your end, you'll want to create or update it in GoSchedule.
+	### Defining Availability
+		
+	Use Whitelist Rules to specify when an entity is available for scheduling. For example, define operating hours for a business or the availability of a service.
 
-In the following guides, we'll teach you how to do this 🙏
+	### Handling Exceptions
+	
+	Use Blacklist Rules to handle periods when availability is restricted. For example, block time for maintenance, holidays, or staff meetings.
+
+	### Dynamic Evaluation
+
+	Rules are dynamically applied in conjunction with existing events and other constraints. This ensures that all time slots adhere to the defined rules and prevent scheduling conflicts.
+
+	### Interaction with Entities
+
+	Rules can be applied to specific entities or inherited by child entities, allowing flexible configurations that adapt to hierarchical structures.
+
+	### Conflict Resolution
+
+	When a time slot overlaps with both whitelist and blacklist rules, the Blacklist Rule takes precedence to ensure restricted periods are respected.
+
+## Examples of Rules in GoSchedule
+
+	###	Barber Shop Availability
+		#### Whitelist
+
+		-	**Business hours:** Monday to Friday, 9 AM to 6 PM.
+		-	**Special Saturday opening:** 10 AM to 2 PM.
+
+		#### Blacklist
+		
+		-	**Closed for lunch:** Monday to Friday, 12 PM to 1 PM.
+		-	**Annual holiday:** December 25th.
+	
+	### Health Clinic Operations
+		#### Whitelist:
+
+		- **General availability:** Monday to Saturday, 8 AM to 8 PM.
+
+		#### Blacklist
+
+		-	Doctor A unavailable every Friday afternoon for administrative tasks.
+		-	Clinic closed on public holidays.
+	
+	### Co-Working Space
+		#### Whitelist
+
+		-	**Meeting room booking available:** Monday to Sunday, 9 AM to 10 PM.
+
+		#### Blacklist
+
+		-	**Blocked time for cleaning:** Monday to Sunday, 8 AM to 9 AM.
+		-	**Closed for events:** January 1st.
