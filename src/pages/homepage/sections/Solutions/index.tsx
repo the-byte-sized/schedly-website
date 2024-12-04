@@ -1,9 +1,10 @@
 import Translate, { translate } from "@docusaurus/Translate";
-import Button from "@site/src/components/Button";
+import { Button } from "@mui/material";
 import Card from "@site/src/components/Card";
 import {
   IconBooks,
   IconCar,
+  IconChevronRight,
   IconHeartbeat,
   IconPlant2,
   IconUsers,
@@ -20,7 +21,8 @@ function Solutions({}: Props) {
           dangerouslySetInnerHTML={{
             __html: translate({
               id: "solutions.title",
-              message: "Schedly in <span className='text-primary'>action</span>",
+              message:
+                "Schedly in <span className='text-primary'>action</span>",
             }),
           }}
         />
@@ -181,12 +183,9 @@ function Solutions({}: Props) {
                 </Translate>
               </p>
 
-              <a href="">
-                <Button
-                  label={translate({ message: "joinWaitlistNow" })}
-                  className="bg-white text-primary"
-                />
-              </a>
+                <Button className="bg-white text-primary" endIcon={<IconChevronRight />}>
+                  <Translate id="joinWaitlistNow">Join Waitlist Now</Translate>
+                </Button>
             </Card>
           </div>
         </div>

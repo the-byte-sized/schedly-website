@@ -1,11 +1,13 @@
+import Link from "@docusaurus/Link";
 import Translate, { translate } from "@docusaurus/Translate";
-import Button from "@site/src/components/Button";
+import { Button } from "@mui/material";
 import {
   IconBrandAndroid,
   IconBrandApple,
   IconBrandFlutter,
   IconBrandReact,
   IconBrandTypescript,
+  IconChevronRight,
 } from "@tabler/icons-react";
 import styles from "./styles.module.css";
 
@@ -44,12 +46,15 @@ function Documentation() {
 
           <a href="/docs/intro">
             <Button
-              className="mt-4 btn-primary"
-              label={translate({
-                id: "documentationSection.button",
-                message: "View Documentation",
-              })}
-            />
+              component={Link}
+              to="/docs/intro/welcome"
+              variant="contained"
+              endIcon={<IconChevronRight />}
+            >
+              <Translate id="documentationSection.button">
+                View Documentation
+              </Translate>
+            </Button>
           </a>
         </div>
 
@@ -75,7 +80,7 @@ function Documentation() {
               </div>
               <div className={styles.shadow}></div>
             </div>
-            
+
             <div data-brand="apple" className={styles.brandIcon}>
               <div className={styles.icon}>
                 <IconBrandApple size={72} stroke={2} />
