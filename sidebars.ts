@@ -40,7 +40,7 @@ const sidebars: SidebarsConfig = {
         {
           type: 'link',
           label: 'API Reference',
-          href: '/docs/restful-api-reference/',
+          href: '/restful-api-reference/',
         },
         {
           type: 'link',

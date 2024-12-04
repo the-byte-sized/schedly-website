@@ -11,7 +11,7 @@ import {
 } from "@tabler/icons-react";
 import styles from "./styles.module.css";
 
-function Documentation() {
+const Documentation = () => {
   return (
     <section
       data-section="documentation"
@@ -44,18 +44,16 @@ function Documentation() {
             </Translate>
           </p>
 
-          <a href="/docs/intro">
-            <Button
-              component={Link}
-              to="/docs/intro/welcome"
-              variant="contained"
-              endIcon={<IconChevronRight />}
-            >
-              <Translate id="documentationSection.button">
-                View Documentation
-              </Translate>
-            </Button>
-          </a>
+          <Button
+            component={Link}
+            to="/docs/intro/welcome"
+            variant="contained"
+            endIcon={<IconChevronRight />}
+          >
+            <Translate id="documentationSection.button">
+              View Documentation
+            </Translate>
+          </Button>
         </div>
 
         <div data-inner-section="brands" className="flex-1 col-sm-12 col-lg-6">

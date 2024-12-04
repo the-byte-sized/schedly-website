@@ -45,21 +45,7 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -86,7 +72,7 @@ const config: Config = {
           // You can also pass it a OpenAPI spec URL
           {
             spec: 'https://redocly.github.io/redoc/openapi.yaml',
-            route: '/docs/restful-api-reference/',
+            route: '/restful-api-reference',
           },
         ],
         // Theme Options for modifying how redoc renders them
@@ -163,7 +149,7 @@ const config: Config = {
               label: 'Documentation',
             },
             {
-              href: '/docs/restful-api-reference/',
+              href: '/restful-api-reference',
               label: 'API Reference',
             },
             {
@@ -236,15 +222,15 @@ const config: Config = {
           items: [
             {
               label: 'Why Schedly',
-              to: '/docs',
+              to: '/docs/intro/welcome',
             },
             {
               label: 'Features',
-              to: '/docs/api-reference',
+              to: '/docs/intro/welcome',
             },
             {
               label: 'Pricing',
-              to: '/docs/changelog',
+              to: '/docs/intro/welcome',
             },
 
           ],

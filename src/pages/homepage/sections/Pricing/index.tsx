@@ -5,7 +5,7 @@ import { IconCircleCheck, IconCircleX } from "@tabler/icons-react";
 import React from "react";
 import styles from "./styles.module.css";
 
-function Pricing() {
+const Pricing: React.FC = () => {
   const [premiumPrice, setPremiumPrice] = React.useState<string>("€15/mo");
 
   const handlePriceChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -136,3 +136,5 @@ function Pricing() {
     </section>
   );
 }
+
+export default Pricing;

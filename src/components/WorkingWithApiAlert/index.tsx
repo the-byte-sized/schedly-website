@@ -34,7 +34,7 @@ const WorkingWithApiAlert: React.FC<AlertProps> = (props) => {
 
       <Button
         component={Link}
-        to="/docs/restful-api-reference/"
+        to="/restful-api-reference/"
         variant="outlined"
         endIcon={<IconChevronRight />}
         sx={{
