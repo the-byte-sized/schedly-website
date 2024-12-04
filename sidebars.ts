@@ -155,22 +155,22 @@ const sidebars: SidebarsConfig = {
       items: [
         {
           type: 'doc',
-          id: 'intro/welcome',
+          id: 'integrate/custom-webhook',
           label: 'Custom WebHook'
         },
         {
           type: 'doc',
-          id: 'intro/welcome',
+          id: 'integrate/zapier',
           label: 'Zapier'
         },
         {
           type: 'doc',
-          id: 'intro/welcome',
+          id: 'integrate/outlook-calendar',
           label: 'Outlook Calendar'
         },
         {
           type: 'doc',
-          id: 'intro/welcome',
+          id: 'integrate/google-calendar',
           label: 'Google Calendar'
         },
       ],
