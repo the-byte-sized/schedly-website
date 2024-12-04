@@ -1,0 +1,62 @@
+---
+sidebar_position: 2
+---
+# Working with our API
+
+The tutorials on these pages assume that you have at least a basic understanding of what a RESTful API is.
+
+## Getting Started
+
+### Sign Up and Create an App
+
+First of all, you need to **sign up** before you can start consuming the API. You can sign up [here](https://admin.goschedule.io/login).  
+You also need to create a **GoSchedule app**, as all requests to the API are made in the context of an app.
+
+---
+
+## Tools and Standards
+
+### cURL
+
+All code examples use the **cURL command line tool**, which is a simple and common tool for communicating via HTTP and perfect for consuming RESTful APIs. We've tried our best to make the code examples copy-pastable, so you should basically just replace IDs if you're taking these tutorials for a spin.
+
+### JSON
+
+GoSchedule uses **JSON** as its data format, so all data to and from GoSchedule must be and will be formatted in JSON.  
+You need to set an HTTP header like this:
+
+```
+Content-Type: application/json
+```
+
+All our cURL examples include this header for your convenience.
+
+### RFC3339 Timestamps
+
+The standard timestamp format we use is **RFC3339**, which is a subset of ISO8601 but more narrowly defined and precise. Some programming languages may lack an RFC3339-specific format but will often have an ISO8601 format that is RFC3339 compatible.  
+
+An RFC3339 timestamp will look like this:  
+`2017-11-24T08:46:01+02:00`
+
+---
+
+## Authentication
+
+We use **Basic Authentication** over HTTPS.
+
+### App API-Key Authentication
+
+App API-Key authentication is slightly different from traditional basic authentication. There is no email or username value associated with the App API-Key, so the authentication only uses the key value as the password. For example:
+
+#### cURL Example:
+
+```bash
+curl --request GET \
+  --url https://api.goschedule.io/v2/bookings \
+  --header 'Content-Type: application/json' \   
+  --user :live_api_key_7nzvc7wsBQQISLeFSVhROys9V1bUJ1z7
+```
+
+Notice that there is a prefixing colon on the key value. That cURL example will respond with all the bookings for the app identified by the App API-Key.
+
+You can find your App API-Key in the admin under **API settings**.

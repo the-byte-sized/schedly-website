@@ -1,0 +1,72 @@
+---
+sidebar_position: 3
+---
+# Before you start
+
+## Prerequisite
+
+Please read the introduction to using the API.
+
+---
+
+## Introduction
+
+Integrating the GoSchedule API into your product is straightforward, but there are a few key points to understand upfront regarding the structure of data flow between your platform and ours. This article focuses on API integration only and excludes use cases involving our admin and project widget UIs.
+
+In general, most integrations consist of the following 3 steps:
+
+1. **Create & setup resources** ([detailed guide](#))
+2. **Search for availability** ([detailed guide](#))
+3. **Create & update bookings** ([detailed guide](#))
+
+When creating and configuring resource settings (step 1), you'll need to save some of the data we return so you can use it for fetching availability (step 2) and creating bookings later on (step 3). Let's jump right in!
+
+---
+
+## Save Resource Meta-data on Your End
+
+Whether you automate resource creation into your own onboarding flow or create resources manually within our admin, you'll need their ID to communicate with our API.
+
+Almost all endpoints require that you define which resource or resources you're working with. For example, when creating a booking, you must specify which resource is being booked. This is done by using the resource's ID.
+
+In your own database (or whatever persistent storage you use), you likely have a user table where you save metadata about your service providers, your resources. Add the following fields/columns:
+
+- The user's ID
+- **goschedule_resource_id** [UUID]
+
+You are, of course, free to name the fields/columns whatever you want.  
+Please note that for some advanced use cases, a resource could have more than one calendar relevant for querying availability and storing events in.
+
+---
+
+## Availability Calendar
+
+**goschedule_findtime_calendar** is an ID that you pass to the FindTime endpoint, specifying the calendar the algorithm will use when searching for availability.
+
+For Google-connected resources with multiple calendars (e.g., Personal and Work calendars), you should provide a UI where users can pick the calendars to sync and toggle sync status through our API.
+
+---
+
+## Availability Filters
+
+When fetching availability for a user, you can input filters that the FindTime algorithm will consider when calculating available time slots.  
+Please refer to our [introduction to filters](#) for details.
+
+---
+
+## Target Calendar
+
+**goschedule_booking_calendar** is used when you create bookings and specifies which calendar the event should end up in.
+
+This is particularly relevant when syncing with Google, as it enables you to provide a UI where resources can pick which of their Google calendars they want your bookings to appear in.  
+If your user doesn't sync with Google, you still need to provide a calendar ID.
+
+---
+
+## Minimal Effort by Using Our UIs
+
+This article assumes you're aiming for a 100% pure API integration (aka 'headless'). However, there are also hybrid approaches where you can leverage GoSchedule's Admin and booking widget UI to get started faster.
+
+If you use GoSchedule's admin to create and configure resources and set up project widgets, you can skip most of the above. The project widget you set up contains all the above information in its JSON configuration, which we persist in our database.
+
+Of course, you'll be limited to our standard embed functionality and won't be able to make additional API calls, but it might help you get started quickly.

@@ -44,10 +44,6 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
@@ -90,7 +86,7 @@ const config: Config = {
           // You can also pass it a OpenAPI spec URL
           {
             spec: 'https://redocly.github.io/redoc/openapi.yaml',
-            route: '/docs/restful-api/',
+            route: '/docs/restful-api-reference/',
           },
         ],
         // Theme Options for modifying how redoc renders them
@@ -149,6 +145,33 @@ const config: Config = {
           ],
         },
         {
+          type: 'dropdown',
+          label: 'API',
+          position: 'left',
+          className: 'wide-dropdown',
+          items: [
+            {
+              type: 'doc',
+              docId: 'intro/welcome',
+              label: 'Overview',
+            },
+            {
+              type: 'doc',
+              docId: 'intro/welcome',
+              label: 'Documentation',
+            },
+            {
+              href: '/docs/restful-api-reference/',
+              label: 'API Reference',
+            },
+            {
+              type: 'doc',
+              docId: 'intro/welcome',
+              label: 'Resources',
+            }
+          ],
+        },
+        {
           type: 'localeDropdown',
           position: 'right',
         },
@@ -194,15 +217,15 @@ const config: Config = {
           items: [
             {
               label: 'Documentation',
-              to: '/docs',
+              to: '/docs/intro/welcome',
             },
             {
               label: 'API Reference',
-              to: '/docs/api-reference',
+              to: '/docs/intro/welcome',
             },
             {
               label: 'Changelog',
-              to: '/docs/changelog',
+              to: '/docs/intro/welcome',
             },
           ],
         },
