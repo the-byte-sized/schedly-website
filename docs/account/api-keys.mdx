@@ -1,22 +1,11 @@
 ---
 sidebar_position: 5
 ---
-import Link from '@docusaurus/Link';
-import { Alert, AlertTitle, Button } from '@mui/material';
-import { IconChevronRight } from '@tabler/icons-react';
+import WorkingWithApiAlert from '@site/src/components/WorkingWithApiAlert';
 
 # API Keys
 
-<Alert icon={false} severity="success" sx={{
-  marginBottom: '25px'
-}}>
-  <AlertTitle>👍 Working with the API</AlertTitle>
-  Take a look at our API reference to learn more about the different endpoints in the API and how to authenticate.
-
-  <Button component={Link} to="/docs/restful-api-reference/" variant='outlined' endIcon={<IconChevronRight />}>
-  {'API Reference'}
-  </Button>
-</Alert>
+<WorkingWithApiAlert />
 
 All api requests needs to be authenticated with an "API key" for the specific Timekit app you are operating within. You can find your app's api-key in the Admin Dashboard under "API settings".
 
