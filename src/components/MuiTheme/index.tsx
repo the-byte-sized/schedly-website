@@ -1,6 +1,7 @@
 import { extendTheme, ThemeOptions } from "@mui/material/styles";
 
 const extTheme: ThemeOptions = extendTheme({
+  colorSchemeSelector: 'class',
   typography: {
     h1: {
       fontSize: "3.9rem",
