@@ -3,7 +3,7 @@ import WorkingWithApiAlert from '@site/src/components/WorkingWithApiAlert';
 
 # Creating Rules
 
-Rules in GoSchedule serve as the backbone for managing availability and restrictions. 
+Rules in GoSchedule serve as the backbone for managing availability and restrictions.
 
 By combining whitelist and blacklist rules, recurrence, and hierarchical inheritance, the system provides a robust and flexible mechanism to handle any scheduling scenario, from simple business hours to complex exceptions and custom requirements.
 
@@ -11,104 +11,103 @@ By combining whitelist and blacklist rules, recurrence, and hierarchical inherit
 
 <WorkingWithApiAlert />
 
-## Introduction 
+## Introduction
 
-  ### Why add entities via the API?
+## Why add entities via the API?
 
-  GoSchedule can be used without your users even knowing, as resource creation and provisioning can be done 100% through the API. 
+GoSchedule can be used without your users even knowing, as resource creation and provisioning can be done 100% through the API.
 
-  As such this tutorial will focus on resource creation solely through the API.
+As such this tutorial will focus on resource creation solely through the API.
 
-  <Alert icon={false} severity="info">
-    <AlertTitle>{'📘 Using the Admin Dashboard'}</AlertTitle>
-      You don't have to use the API to create new users. 
-      
-      Visit your Admin Dashboard and navigate to your resource page for the option to create a new resource with a few clicks.
-  </Alert>
+<Alert icon={false} severity="info">
+  <AlertTitle>{'📘 Using the Admin Dashboard'}</AlertTitle>
+  You don't have to use the API to create new users.
 
-  ### Examples
+  Visit your Admin Dashboard and navigate to your resource page for the option to create a new resource with a few clicks.
+</Alert>
 
-  As per REST conventions you create resources by requesting the /resource endpoint with a POST.
+## Examples
 
-    #### Create a Recurring Rule (Business Hours)
+As per REST conventions you create resources by requesting the /resource endpoint with a POST.
 
-    This example creates a whitelist rule indicating that an entity is available every Monday and Friday from 9:00 AM to 5:00 PM.
+### Create a Recurring Rule (Business Hours)
 
-    ```bash
-    curl -X POST "http://localhost:3000/rules" \
-    -H "Content-Type: application/json" \
-    -d '{
-      "entityId": "123e4567-e89b-12d3-a456-426614174000",
-      "type": "WHITELIST",
-      "isRecurring": true,
-      "rule": {
-        "days": ["monday", "friday"],
-        "timeRanges": [
-          { "start": "09:00", "end": "17:00" }
-        ]
-      },
-      "startAt": "2024-01-01T00:00:00.000Z",
-      "endAt": "2024-12-31T23:59:59.000Z"
-    }'
-    ```
+This example creates a whitelist rule indicating that an entity is available every Monday and Friday from 9:00 AM to 5:00 PM.
 
-    This will create the rules for the entity with id *123e4567-e89b-12d3-a456-426614174000*.
+```bash
+curl -X POST "http://localhost:3000/rules" \
+-H "Content-Type: application/json" \
+-d '{
+"entityId": "123e4567-e89b-12d3-a456-426614174000",
+"type": "WHITELIST",
+"isRecurring": true,
+"rule": {
+"days": ["monday", "friday"],
+"timeRanges": [
+{ "start": "09:00", "end": "17:00" }
+]
+},
+"startAt": "2024-01-01T00:00:00.000Z",
+"endAt": "2024-12-31T23:59:59.000Z"
+}'
+```
 
+This will create the rules for the entity with id *123e4567-e89b-12d3-a456-426614174000*.
 
-    The above request will produce a response similar to this:
+The above request will produce a response similar to this:
 
-    ```json
-    {
-      "id": "rule-id",
-      "entityId": "123e4567-e89b-12d3-a456-426614174000",
-      "type": "WHITELIST",
-      "isRecurring": true,
-      "rule": {
-        "days": ["monday", "friday"],
-        "timeRanges": [
-          { "start": "09:00", "end": "17:00" }
-        ]
-      },
-      "startAt": "2024-01-01T00:00:00.000Z",
-      "endAt": "2024-12-31T23:59:59.000Z",
-      "createdAt": "2023-11-27T12:00:00.000Z"
-    }
-    ```
+```json
+{
+"id": "rule-id",
+"entityId": "123e4567-e89b-12d3-a456-426614174000",
+"type": "WHITELIST",
+"isRecurring": true,
+"rule": {
+"days": ["monday", "friday"],
+"timeRanges": [
+{ "start": "09:00", "end": "17:00" }
+]
+},
+"startAt": "2024-01-01T00:00:00.000Z",
+"endAt": "2024-12-31T23:59:59.000Z",
+"createdAt": "2023-11-27T12:00:00.000Z"
+}
+```
 
-    #### Create a One-Time Exception (Holiday Closure)
+### Create a One-Time Exception (Holiday Closure)
 
-    This example creates a blacklist rule for a specific date to block all availability on December 25, 2024.
+This example creates a blacklist rule for a specific date to block all availability on December 25, 2024.
 
-    ```bash
-    curl -X POST "http://localhost:3000/rules" \
-    -H "Content-Type: application/json" \
-    -d '{
-      "entityId": "123e4567-e89b-12d3-a456-426614174000",
-      "type": "BLACKLIST",
-      "isRecurring": false,
-      "rule": {
-        "date": "2024-12-25",
-        "timeRanges": [
-          { "start": "00:00", "end": "23:59" }
-        ]
-      }
-    }'
-    ```
+```bash
+curl -X POST "http://localhost:3000/rules" \
+-H "Content-Type: application/json" \
+-d '{
+"entityId": "123e4567-e89b-12d3-a456-426614174000",
+"type": "BLACKLIST",
+"isRecurring": false,
+"rule": {
+"date": "2024-12-25",
+"timeRanges": [
+{ "start": "00:00", "end": "23:59" }
+]
+}
+}'
+```
 
-    The above request will produce a response similar to this:
+The above request will produce a response similar to this:
 
-    ```json
-    {
-      "id": "rule-id",
-      "entityId": "123e4567-e89b-12d3-a456-426614174000",
-      "type": "BLACKLIST",
-      "isRecurring": false,
-      "rule": {
-        "date": "2024-12-25",
-        "timeRanges": [
-          { "start": "00:00", "end": "23:59" }
-        ]
-      },
-      "createdAt": "2023-11-27T12:00:00.000Z"
-    }
-    ```
+```json
+{
+"id": "rule-id",
+"entityId": "123e4567-e89b-12d3-a456-426614174000",
+"type": "BLACKLIST",
+"isRecurring": false,
+"rule": {
+"date": "2024-12-25",
+"timeRanges": [
+{ "start": "00:00", "end": "23:59" }
+]
+},
+"createdAt": "2023-11-27T12:00:00.000Z"
+}
+```

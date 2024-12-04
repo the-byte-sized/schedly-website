@@ -1,33 +1,91 @@
----
-sidebar_position: 6
----
+import { Alert, AlertTitle } from '@mui/material';
+import WorkingWithApiAlert from '@site/src/components/WorkingWithApiAlert';
 
-# Events Overview
+# Creating Events
 
-In GoSchedule, entities are the core building blocks used to model the scheduling and availability management system. Each entity serves as an abstract and flexible component that can represent various roles and functions, making Schedly adaptable to a wide range of use cases.
+Events in GoSchedule are designed to adapt to diverse scheduling needs, from individual appointments to large-scale bookings. 
 
-## Key Characteristics of Events
+By leveraging rules for validation, conflict resolution, and external integrations, GoSchedule ensures reliable and flexible event management.
 
-	1.	Types of Entities:
-	•	Resource: Represents tangible or intangible resources that can be scheduled, such as a barber, a meeting room, or a piece of equipment.
-	•	Service: Represents activities or offerings that can be scheduled, such as a haircut, a workshop, or a medical consultation.
-	2.	Hierarchy:
-	•	Entities can have parent-child relationships. For instance, a “Barber” (resource) can have child services like “Haircut” or “Beard Trim.”
-	•	This hierarchical structure allows the system to dynamically aggregate and manage availability rules across related entities.
-	3.	Metadata:
-	•	Each entity has a customizable metadata field (JSON) to store additional information like service duration, pricing, or other context-specific details.
-	4.	Scheduling Rules:
-	•	Entities can have business rules (whitelist) defining when they are available and exceptions (blacklist) specifying periods of unavailability.
-	•	These rules can be recurring (e.g., every Monday from 9 AM to 5 PM) or specific to a particular date (e.g., closed on December 25th).
-	5.	Integration:
-	•	Entities can act as a Data Source, integrating with external systems like Google Calendar or Outlook. This allows events and availability to synchronize seamlessly between Schedly and external platforms.
+*Its a good idea to have familiarised yourself with GoSchedules definition of a rule before reading this article.*
+
+<WorkingWithApiAlert />
+
+## Introduction
 
 ## Why add events via the API?
 
-If you are building integrated experiences it's essential to keep the flow as seamless as possible - this is where programmatical entity-creation comes in handy.
+GoSchedule can be used without your users even knowing, as resource creation and provisioning can be done 100% through the API.
 
-If your product is a platform or marketplace or a different kind of product that doesn't "own" the resources because they are your customers, then you'll want to interact with GoSchedule during your own product's onboarding flow.
+As such this tutorial will focus on resource creation solely through the API.
 
-Or maybe you already have you an internal admin tool that controls your bookable resources. So every time you create a new entity on your end, you'll want to create or update it in GoSchedule.
+<Alert icon={false} severity="info">
+  <AlertTitle>{'📘 Using the Admin Dashboard'}</AlertTitle>
+  You don't have to use the API to create new users.
 
-In the following guides, we'll teach you how to do this 🙏
+  Visit your Admin Dashboard and navigate to your resource page for the option to create a new resource with a few clicks.
+</Alert>
+
+## Examples
+
+As per REST conventions you create resources by requesting the /resource endpoint with a POST.
+
+### Create a New Event
+
+This example schedules an event for a haircut.
+
+```bash
+curl -X POST "http://localhost:3000/events" \
+-H "Content-Type: application/json" \
+-d '{
+  "entityId": "123e4567-e89b-12d3-a456-426614174000",
+  "title": "Haircut Appointment",
+  "startAt": "2024-12-02T09:00:00.000Z",
+  "endAt": "2024-12-02T09:30:00.000Z",
+  "metadata": {
+    "client": "John Doe",
+    "notes": "Prefers short sides"
+  }
+}'
+```
+
+The above request will produce a response similar to this:
+
+```json
+{
+  "id": "event-id",
+  "entityId": "123e4567-e89b-12d3-a456-426614174000",
+  "title": "Haircut Appointment",
+  "startAt": "2024-12-02T09:00:00.000Z",
+  "endAt": "2024-12-02T09:30:00.000Z",
+  "metadata": {
+    "client": "John Doe",
+    "notes": "Prefers short sides"
+  },
+  "createdAt": "2023-11-27T12:00:00.000Z"
+}
+```
+
+### Retrieve Events by Date
+
+This example retrieves events for a specific entity on a specific date (e.g., December 2, 2024).
+
+```bash
+curl -X GET "http://localhost:3000/entities/123e4567-e89b-12d3-a456-426614174000/events?date=2024-12-02"
+```
+
+```json
+[
+  {
+    "id": "event-id-1",
+    "entityId": "123e4567-e89b-12d3-a456-426614174000",
+    "title": "Haircut Appointment",
+    "startAt": "2024-12-02T09:00:00.000Z",
+    "endAt": "2024-12-02T09:30:00.000Z",
+    "metadata": {
+      "client": "John Doe",
+      "notes": "Prefers short sides"
+    }
+  }
+]
+```
