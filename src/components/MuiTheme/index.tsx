@@ -65,10 +65,10 @@ const extTheme: ThemeOptions = extendTheme({
           main: "hsl(209, 39%, 17%)",
         },
         text: {
-          primary: "hsl(209, 39%, 17%)",
+          primary: "#f5f5f5",
         },
         background: {
-          default: "hsl(260, 60%, 99%)",
+          default: "hsl(260, 60%, 50%)",
         },
       },
     },

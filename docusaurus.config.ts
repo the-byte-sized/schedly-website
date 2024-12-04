@@ -160,6 +160,11 @@ const config: Config = {
           ],
         },
         {
+          label: 'Help',
+          position: 'left',
+          to: 'help'
+        },
+        {
           type: 'localeDropdown',
           position: 'right',
         },
