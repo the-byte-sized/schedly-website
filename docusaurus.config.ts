@@ -44,26 +44,8 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -89,8 +71,8 @@ const config: Config = {
         specs: [
           // You can also pass it a OpenAPI spec URL
           {
-            spec: 'https://redocly.github.io/redoc/openapi.yaml',
-            route: '/docs/restful-api/',
+            spec: 'https://schedly-api.onrender.com/swagger.json',
+            route: '/restful-api-reference',
           },
         ],
         // Theme Options for modifying how redoc renders them
@@ -106,7 +88,9 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     colorMode: {
-      disableSwitch: true,
+      defaultMode: 'light',
+      disableSwitch: false,
+      respectPrefersColorScheme: true,
     },
     navbar: {
       title: 'Schedly',
@@ -115,11 +99,6 @@ const config: Config = {
         src: 'img/logo.svg',
       },
       items: [
-        {
-          label: "Overview",
-          href: "#overview",
-          position: 'left',
-        },
         {
           type: 'dropdown',
           label: 'Solutions',
@@ -147,6 +126,43 @@ const config: Config = {
               href: '/solutions/beauty-salons',
             },
           ],
+        },
+        {
+          type: 'dropdown',
+          label: 'Developers',
+          position: 'left',
+          className: 'wide-dropdown',
+          items: [
+            {
+              type: 'doc',
+              docId: 'intro/welcome',
+              label: 'Overview',
+            },
+            {
+              type: 'doc',
+              docId: 'intro/welcome',
+              label: 'Documentation',
+            },
+            {
+              href: '/restful-api-reference',
+              label: 'API Reference',
+            },
+            {
+              type: 'doc',
+              docId: 'intro/welcome',
+              label: 'Resources',
+            }
+          ],
+        },
+        {
+          label: 'FAQ',
+          position: 'left',
+          to: 'faq'
+        },
+        {
+          label: 'Help',
+          position: 'left',
+          to: 'help'
         },
         {
           type: 'localeDropdown',
@@ -194,15 +210,15 @@ const config: Config = {
           items: [
             {
               label: 'Documentation',
-              to: '/docs',
+              to: '/docs/intro/welcome',
             },
             {
               label: 'API Reference',
-              to: '/docs/api-reference',
+              to: '/docs/intro/welcome',
             },
             {
               label: 'Changelog',
-              to: '/docs/changelog',
+              to: '/docs/intro/welcome',
             },
           ],
         },
@@ -211,15 +227,15 @@ const config: Config = {
           items: [
             {
               label: 'Why Schedly',
-              to: '/docs',
+              to: '/docs/intro/welcome',
             },
             {
               label: 'Features',
-              to: '/docs/api-reference',
+              to: '/docs/intro/welcome',
             },
             {
               label: 'Pricing',
-              to: '/docs/changelog',
+              to: '/docs/intro/welcome',
             },
 
           ],
@@ -251,6 +267,7 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+      additionalLanguages: ['bash'],
     },
   } as Preset.ThemeConfig,
 };

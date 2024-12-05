@@ -1,81 +1,104 @@
-import Translate from "@docusaurus/Translate";
+import Translate, { translate } from "@docusaurus/Translate";
+import { Container, Stack, Typography } from "@mui/material";
 import Card from "@site/src/components/Card";
 import {
   IconCalendarEvent,
   IconCategoryPlus,
   IconCircles,
+  IconClockCog,
 } from "@tabler/icons-react";
+import React from "react";
 
-type Props = {};
+const features = [
+  {
+    title: translate({
+      id: "features.createEntities.description",
+      message: "Create entities",
+    }),
+    description: translate({
+      id: "features.createEntities.description",
+      message:
+        "An entity is a flexible concept. It can represent a calendar, a barbershop, a personal agenda, or even a task list. Its meaning adapts to your needs.",
+    }),
+    icon: <IconCircles size={48} />,
+  },
+  {
+    title: translate({ id: "features.addRules.title", message: "Add rules" }),
+    description: translate({
+      id: "features.addRules.description",
+      message:
+        "Rules in Schedly can be one-time or recurring. Use them to represent business hours, employee leave, or resource unavailability — fully customizable.",
+    }),
+    icon: <IconCategoryPlus size={48} />,
+  },
+  {
+    title: translate({
+      id: "features.scheduleEvents.title",
+      message: "Schedule events",
+    }),
+    description: translate({
+      id: "features.scheduleEvents.description",
+      message:
+        "Easily find slots and add events effortlessly. What's an event? It's whatever you need — doctor's appointment, team call, or more, customizable via metadata.",
+    }),
+    icon: <IconCalendarEvent size={48} />,
+  },
+];
 
-function Features({}: Props) {
-  const iconSize = 56;
-  const iconStroke = 2;
-  const _className = "mb-0";
-
+const FeaturesCards: React.FC = () => {
   return (
-    <section id="overview" data-section="features" className="container my-5">
-      <div className="row row-gap-5 mx-auto">
-        <div className="col-sm-12 col-lg-4 p-2">
-          <Card>
-            <IconCircles size={iconSize} stroke={iconStroke} />
+    <Container
+      id="overview"
+      data-section="features"
+      component="section"
+      sx={{
+        py: 5,
+        backgroundColor: "background.default",
+      }}
+    >
+      <Stack textAlign="center" alignItems="center">
+        <IconClockCog size={96} />
 
-            <h1 className={_className}>
-              <Translate id="features.createEntities.title">
-                Create entities
-              </Translate>
-            </h1>
+        <Typography variant="h2">
+          <Translate id="featuresSection.title">
+            Unleash the Power of Smart Scheduling
+          </Translate>
+        </Typography>
 
-            <p className={_className}>
-              <Translate id="features.createEntities.description">
-                An entity is a flexible concept. It can represent a calendar, a
-                barbershop, a personal agenda, or even a task list. Its meaning
-                adapts to your needs.
-              </Translate>
-            </p>
-          </Card>
-        </div>
+        <Typography variant="subtitle1" color="textSecondary">
+          <Translate id="featuresSection.description">
+            Effortlessly manage availability, bookings, and events with
+            GoSchedule’s cutting-edge features. From dynamic rules to seamless
+            integrations, our platform is designed to simplify scheduling while
+            maximizing productivity and flexibility.
+          </Translate>
+        </Typography>
+      </Stack>
 
-        <div className="col-sm-12 col-lg-4 p-2">
-          <Card>
-            <IconCategoryPlus size={iconSize} stroke={iconStroke} />
-
-            <h1 className={_className}>
-              <Translate id="features.addRules.title">Add rules</Translate>
-            </h1>
-
-            <p className={_className}>
-              <Translate id="features.addRules.description">
-                Rules in Schedly can be one-time or recurring. Use them to
-                represent business hours, employee leave, or resource
-                unavailability -— fully customizable.
-              </Translate>
-            </p>
-          </Card>
-        </div>
-
-        <div className="col-sm-12 col-lg-4 p-2">
-          <Card>
-            <IconCalendarEvent size={iconSize} stroke={iconStroke} />
-
-            <h1 className={_className}>
-              <Translate id="features.scheduleEvents.title">
-                Schedule events
-              </Translate>
-            </h1>
-
-            <p className={_className}>
-              <Translate id="features.scheduleEvents.description">
-                Easily find slots and add events effortlessly. What's an event?
-                It's whatever you need—doctor's appointment, team call, or more,
-                customizable via metadata.
-              </Translate>
-            </p>
-          </Card>
-        </div>
-      </div>
-    </section>
+      <Stack
+        direction={{
+          xs: "column",
+          sm: "row",
+        }}
+        spacing={4}
+        py={6}
+        flexWrap="wrap"
+        justifyContent="center"
+      >
+        {features.map((feature, index) => (
+          <Card
+            key={index}
+            cardTitle={feature.title}
+            cardDescription={feature.description}
+            cardIcon={feature.icon}
+            sx={{
+              maxWidth: 320,
+            }}
+          />
+        ))}
+      </Stack>
+    </Container>
   );
-}
+};
 
-export default Features;
+export default FeaturesCards;

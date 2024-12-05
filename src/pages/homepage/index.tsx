@@ -2,7 +2,6 @@
 import Documentation from "./sections/Documentation";
 import Features from "./sections/Features";
 import Header from "./sections/Header";
-import Pricing from "./sections/Pricing";
 import Solutions from "./sections/Solutions";
 import "./styles.module.css";
 
@@ -14,7 +13,6 @@ export default function Home(): JSX.Element {
         <Features />
         <Documentation />
         <Solutions />
-        <Pricing />
       </main>
     </>
   );

@@ -1,0 +1,78 @@
+---
+sidebar_position: 6
+---
+import { Alert, AlertTitle } from '@mui/material';
+import WorkingWithApiAlert from '@site/src/components/WorkingWithApiAlert';
+
+# Creating Entities
+
+Entities can represent people (employees, vendors), items (screwdriver, musical instrument) or locations (meeting rooms).
+
+*Its a good idea to have familiarised yourself with GoSchedules definition of a bookable entites before reading this article.*
+
+<WorkingWithApiAlert />
+
+## Introduction 
+
+### Why add entities via the API?
+
+GoSchedule can be used without your users even knowing, as resource creation and provisioning can be done 100% through the API. 
+
+As such this tutorial will focus on resource creation solely through the API.
+
+<Alert icon={false} severity="info">
+  <AlertTitle>{'📘 Using the Admin Dashboard'}</AlertTitle>
+    You don't have to use the API to create new users. 
+    
+    Visit your Admin Dashboard and navigate to your resource page for the option to create a new resource with a few clicks.
+</Alert>
+
+### Save the IDs
+
+As we'll demonstrate further down each resource will have its own unique identifier in the form of a UUID. This UUID is all you need to get up and running, querying for availability and handle bookings.
+
+As per REST conventions you create resources by requesting the /resource endpoint with a POST like so:
+
+```bash
+curl --request POST \
+  --url https://api.goschedule.io/v1/entities \
+  --header 'Content-Type: application/json' \
+  --user :live_api_key_7nzvc7wsBQQISLeFSVhROys9V1bUJ1z7 \
+  --data '{
+    "email": "doc.brown@GoSchedule.io",
+    "timezone": "America/Los_Angeles",
+    "name": "Doc Brown",
+    "password": "FluxCapacitator"
+  }'
+```
+
+This will create the Doc Brown resource, only the "name" and "timezone" parameters are mandatory, email is not mandatory as its not common for a conference room to have an email address, just to exemplify what a resource could also be.
+
+The above request will produce a response similar to this:
+
+```json
+{
+  "data": {
+    "id": "78a4d873-2a68-41c6-bdd4-c0ca5b35efd3",
+    "first_name": "Doc Brown",
+    "last_name": "",
+    "name": "Doc Brown",
+    "email": "doc.brown@GoSchedule.io",
+    "timezone": "America/Los_Angeles",
+    "calendars": [
+      "id": "bfa0b9fa-36aa-4ae6-8096-f3b20fbed1d2"
+      "provider_id": null
+      "provider_access": "owner"
+      "provider_primary": false
+      "provider_sync": false
+      "name": "Bookings"
+      "description": "Created by GoSchedule           on resource creation"
+      "foregroundcolor": null
+      "backgroundcolor": null
+      "created_at": "2017-12-19T09:37:36+0200"
+      "updated_at": "2017-12-19T09:37:36+0200"
+      "provider": "GoSchedule"
+    ]
+  }
+}
+```

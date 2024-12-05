@@ -1,0 +1,122 @@
+# Events Overview
+
+Events in GoSchedule represent scheduled activities or bookings tied to specific entities. 
+
+They capture the start and end times, metadata, and any additional information required to manage and track reservations or activities.
+
+## Key Characteristics of Events
+
+### Entity Association
+-	Every event is linked to an entity, such as a resource (e.g., a meeting room) or a service (e.g., a haircut).
+-	The entity’s availability and rules (e.g., business hours, exceptions) influence whether an event can be scheduled.
+
+### Time Range:
+-	Events have precise start and end times in UTC format.
+	
+### Metadata
+-	Flexible JSON metadata allows for custom information, such as client details, special requirements, or notes.
+	
+### Conflict Resolution
+-	Events are validated against existing rules and other events to avoid conflicts.
+
+### Integration
+-	Events can synchronize with external calendars (e.g., Google Calendar or Outlook) to ensure consistent scheduling across platforms.tities can act as a Data Source, integrating with external systems like Google Calendar or Outlook. This allows events and availability to synchronize seamlessly between Schedly and external platforms.
+
+## Examples of Events in GoSchedule
+
+Events in GoSchedule are highly flexible and allow you to schedule activities or bookings for resources and services. Here are some practical examples to illustrate how events can be used in different scenarios.
+
+### Booking a Haircut Appointment
+
+A barber shop uses GoSchedule to manage customer appointments. 
+
+John Doe schedules a haircut with Barber A for 30 minutes.
+
+-	**Entity:** Barber A
+-	**Event Details:**
+	-	**Title:** “Haircut Appointment”
+	-	**Start Time:** 2024-12-02T09:00:00.000Z
+	-	**End Time:** 2024-12-02T09:30:00.000Z
+	-	**Metadata:** `{ "client": "John Doe", "notes": "Prefers short sides" }`
+
+### Reserving a Meeting Room
+
+A co-working space uses GoSchedule to manage room reservations. A team reserves Meeting Room 1 for a 2-hour brainstorming session.
+
+-	**Entity:** Meeting Room 1
+-	**Event Details:**
+	-	**Title:** “Team Brainstorming Session”
+	-	**Start Time:** 2024-12-02T14:00:00.000Z
+	-	**End Time:** 2024-12-02T16:00:00.000Z
+	-	**Metadata:** `{ "organizer": "Jane Smith", "attendees": 8 }`
+
+### Scheduling a Doctor’s Consultation
+
+A health clinic uses GoSchedule to manage patient consultations. A patient books a general consultation with Doctor B for 15 minutes.
+
+-	**Entity:** Doctor B
+-	**Event Details:**
+	-	**Title:** “General Consultation”
+	-	**Start Time:** 2024-12-03T10:00:00.000Z
+	-	**End Time:** 2024-12-03T10:15:00.000Z
+	-	**Metadata:** `{ "patient": "Alice Johnson", "reason": "Flu symptoms" }`
+
+## How Events Work in GoSchedule
+
+GoSchedule manages events with a robust framework designed to ensure seamless scheduling while respecting rules and avoiding conflicts. Here’s how events are processed:
+
+### 1. Creation
+
+When an event is created, the system:
+
+-	Validates the event’s time range (startAt and endAt) to ensure it fits within the entity’s availability rules (whitelist).
+-	Checks for conflicts with existing rules (blacklist) or other events.
+-	Stores metadata for additional details about the event.
+
+### 2. Validation
+
+Before adding an event, GoSchedule dynamically evaluates:
+
+#### Rules:
+-	**Whitelist:** Ensures the event is within allowed time ranges (e.g., business hours).
+-	**Blacklist:** Prevents scheduling during restricted periods (e.g., holidays or maintenance).
+
+#### Conflicts:
+-	Checks for overlapping events tied to the same entity or resource.
+-	Ensures parent or child entities (if applicable) are not double-booked.
+
+### 3. Modification
+
+When updating an event:
+
+-	The system revalidates the modified time range to ensure compliance with current rules and existing events.
+-	Metadata or other non-timing details can be updated without affecting validation.
+
+### 4. Retrieval
+
+GoSchedule supports retrieving events:
+
+-	**By Entity:** Fetch all events for a specific resource or service.
+-	**By Date:** Retrieve events scheduled on a specific date.
+-	**By Range:** Query events within a defined start and end range.
+
+### 5. Conflict Handling
+
+If a new or updated event conflicts with rules or existing bookings:
+
+-	The API returns an error with a clear message, such as "The selected time overlaps with an existing event."
+-	Users must adjust the event’s time or select a different resource.
+
+### 6. Synchronization with External Calendars
+
+For entities acting as data sources (e.g., Google Calendar or Outlook):
+
+-	Events from external calendars are synchronized into GoSchedule.
+-	Deletions or modifications in GoSchedule propagate back to the external system, ensuring consistency.
+
+### 7. Metadata for Customization
+
+The metadata field allows events to be highly customizable, supporting various use cases:
+
+-	For a doctor’s appointment, metadata might include patient information and reason for the visit.
+-	For a meeting room reservation, metadata might specify the organizer, number of attendees, and equipment requirements.

@@ -1,0 +1,91 @@
+import { Alert, AlertTitle } from '@mui/material';
+import WorkingWithApiAlert from '@site/src/components/WorkingWithApiAlert';
+
+# Creating Events
+
+Events in GoSchedule are designed to adapt to diverse scheduling needs, from individual appointments to large-scale bookings. 
+
+By leveraging rules for validation, conflict resolution, and external integrations, GoSchedule ensures reliable and flexible event management.
+
+*Its a good idea to have familiarised yourself with GoSchedules definition of a rule before reading this article.*
+
+<WorkingWithApiAlert />
+
+## Introduction
+
+## Why add events via the API?
+
+GoSchedule can be used without your users even knowing, as resource creation and provisioning can be done 100% through the API.
+
+As such this tutorial will focus on resource creation solely through the API.
+
+<Alert icon={false} severity="info">
+  <AlertTitle>{'📘 Using the Admin Dashboard'}</AlertTitle>
+  You don't have to use the API to create new users.
+
+  Visit your Admin Dashboard and navigate to your resource page for the option to create a new resource with a few clicks.
+</Alert>
+
+## Examples
+
+As per REST conventions you create resources by requesting the /resource endpoint with a POST.
+
+### Create a New Event
+
+This example schedules an event for a haircut.
+
+```bash
+curl -X POST "http://localhost:3000/events" \
+-H "Content-Type: application/json" \
+-d '{
+  "entityId": "123e4567-e89b-12d3-a456-426614174000",
+  "title": "Haircut Appointment",
+  "startAt": "2024-12-02T09:00:00.000Z",
+  "endAt": "2024-12-02T09:30:00.000Z",
+  "metadata": {
+    "client": "John Doe",
+    "notes": "Prefers short sides"
+  }
+}'
+```
+
+The above request will produce a response similar to this:
+
+```json
+{
+  "id": "event-id",
+  "entityId": "123e4567-e89b-12d3-a456-426614174000",
+  "title": "Haircut Appointment",
+  "startAt": "2024-12-02T09:00:00.000Z",
+  "endAt": "2024-12-02T09:30:00.000Z",
+  "metadata": {
+    "client": "John Doe",
+    "notes": "Prefers short sides"
+  },
+  "createdAt": "2023-11-27T12:00:00.000Z"
+}
+```
+
+### Retrieve Events by Date
+
+This example retrieves events for a specific entity on a specific date (e.g., December 2, 2024).
+
+```bash
+curl -X GET "http://localhost:3000/entities/123e4567-e89b-12d3-a456-426614174000/events?date=2024-12-02"
+```
+
+```json
+[
+  {
+    "id": "event-id-1",
+    "entityId": "123e4567-e89b-12d3-a456-426614174000",
+    "title": "Haircut Appointment",
+    "startAt": "2024-12-02T09:00:00.000Z",
+    "endAt": "2024-12-02T09:30:00.000Z",
+    "metadata": {
+      "client": "John Doe",
+      "notes": "Prefers short sides"
+    }
+  }
+]
+```

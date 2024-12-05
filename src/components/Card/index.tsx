@@ -1,11 +1,62 @@
+import {
+  Box,
+  Card,
+  CardContent,
+  type CardProps,
+  Typography,
+} from "@mui/material";
 import React from "react";
-import clsx from "clsx";
-import styles from "./styles.module.css";
 
-type Props = React.HTMLAttributes<HTMLDivElement>;
-
-function Card({ className, ...props }: Props) {
-  return <div className={clsx(className, styles.card)}>{props.children}</div>;
+interface CustomCardProps extends CardProps {
+  cardTitle?: string,
+  cardDescription?: string,
+  cardIcon?: React.ReactElement
 }
 
-export default Card;
+const CustomCard: React.FC<CustomCardProps> = ({cardTitle, cardIcon, cardDescription, sx, ...props}) => {
+  return (
+    <Card
+      elevation={0}
+      sx={{
+        ...sx,
+        width: "100%",
+        textAlign: "center",
+        padding: 2,
+        backgroundColor: "transparent",
+        color: "text.primary",
+        borderRadius: "2rem",
+        border: "1px solid rgba(248, 249, 250, 1)",
+        transition: "all 0.3s ease",
+        svg: {
+          transition: "all 0.3s ease",
+        },
+        "&:hover,&:focus": {
+          transform: "translateY(-10px)",
+          borderColor: "var(--bs-primary)",
+          boxShadow: "0 10px 15px rgb(235, 237, 238)",
+          backgroundColor: "var(--bs-light)",
+          svg: {
+            stroke: "var(--bs-primary)",
+          },
+        },
+      }}
+      {...props}
+    >
+      <CardContent>
+        <Box sx={{ display: "flex", justifyContent: "center", mb: 2 }}>
+          {cardIcon}
+        </Box>
+
+        <Typography variant="h6" gutterBottom>
+          {cardTitle}
+        </Typography>
+
+        <Typography variant="body2">{cardDescription}</Typography>
+        
+        {props.children}
+      </CardContent>
+    </Card>
+  );
+};
+
+export default CustomCard;
