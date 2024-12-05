@@ -1,7 +1,7 @@
 import { extendTheme, ThemeOptions } from "@mui/material/styles";
 
 const extTheme: ThemeOptions = extendTheme({
-  colorSchemeSelector: 'class',
+  colorSchemeSelector: "class",
   typography: {
     h1: {
       fontSize: "3.9rem",
@@ -49,26 +49,36 @@ const extTheme: ThemeOptions = extendTheme({
     light: {
       palette: {
         primary: {
-          main: "hsl(209, 39%, 17%)",
+          main: "#A5D6A7",
         },
-        text: {
-          primary: "hsl(209, 39%, 17%)",
+        secondary: {
+          main: "#FFCC80",
         },
         background: {
-          default: "hsl(260, 60%, 99%)",
+          default: "#F5F5F5",
+          paper: "#FFFFFF",
+        },
+        text: {
+          primary: "#4E342E",
+          secondary: "#757575",
         },
       },
     },
     dark: {
       palette: {
         primary: {
-          main: "hsl(209, 39%, 17%)",
+          main: "#81C784",
         },
-        text: {
-          primary: "#f5f5f5",
+        secondary: {
+          main: "#FFB74D",
         },
         background: {
-          default: "hsl(260, 60%, 50%)",
+          default: "#212121",
+          paper: "#424242",
+        },
+        text: {
+          primary: "#E0E0E0",
+          secondary: "#BDBDBD",
         },
       },
     },
