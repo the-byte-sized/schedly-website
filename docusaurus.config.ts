@@ -100,11 +100,6 @@ const config: Config = {
       },
       items: [
         {
-          label: "Overview",
-          href: "#overview",
-          position: 'left',
-        },
-        {
           type: 'dropdown',
           label: 'Solutions',
           position: 'left',
@@ -134,7 +129,7 @@ const config: Config = {
         },
         {
           type: 'dropdown',
-          label: 'API',
+          label: 'Developers',
           position: 'left',
           className: 'wide-dropdown',
           items: [
@@ -158,6 +153,11 @@ const config: Config = {
               label: 'Resources',
             }
           ],
+        },
+        {
+          label: 'FAQ',
+          position: 'left',
+          to: 'faq'
         },
         {
           label: 'Help',
