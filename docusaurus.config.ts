@@ -71,7 +71,7 @@ const config: Config = {
         specs: [
           // You can also pass it a OpenAPI spec URL
           {
-            spec: 'https://redocly.github.io/redoc/openapi.yaml',
+            spec: 'https://schedly-api.onrender.com/swagger.json',
             route: '/restful-api-reference',
           },
         ],
