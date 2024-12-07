@@ -139,6 +139,8 @@ const Solutions: React.FC = () => {
 
         <Button
           variant="outlined"
+          component={Link}
+          to="/solutions"
           sx={{
             mt: 5,
           }}
