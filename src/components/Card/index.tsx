@@ -24,14 +24,15 @@ const CustomCard: React.FC<CustomCardProps> = ({
     <Card
       elevation={0}
       sx={{
-        ...sx,
         width: "100%",
         textAlign: "center",
         padding: 2,
         backgroundColor: "transparent",
         color: "text.primary",
         borderRadius: "2rem",
-        border: "1px solid rgba(248, 249, 250, 1)",
+        borderWidth: "1px",
+        borderStyle: "solid",
+        borderColor: "rgba(248, 249, 250,1)",
         transition: "all 0.3s ease",
         svg: {
           transition: "all 0.3s ease",
@@ -44,6 +45,7 @@ const CustomCard: React.FC<CustomCardProps> = ({
             stroke: "var(--mui-palette-primary-main)",
           },
         },
+        ...sx,
       }}
       {...props}
     >

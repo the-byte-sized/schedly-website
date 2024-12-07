@@ -9,6 +9,7 @@ import {
   IconPlant2,
   IconUsers,
 } from "@tabler/icons-react";
+import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
@@ -81,6 +82,8 @@ const solutions = [
 ];
 
 const Solutions: React.FC = () => {
+  const id = React.useId();
+
   return (
     <>
       <Container
@@ -116,7 +119,7 @@ const Solutions: React.FC = () => {
           centerSlidePercentage={16}
         >
           {solutions.map((solution) => (
-            <Link to={solution.link}>
+            <Link to={solution.link} key={id}>
               <Card
                 sx={{
                   height: 250,
@@ -125,11 +128,9 @@ const Solutions: React.FC = () => {
                 <Stack alignItems="center" justifyContent="center" gap={3}>
                   {solution.icon}
 
-                  <Typography variant="h3" component="h1">{solution.title}</Typography>
-
-                  {/* <Typography variant="subtitle1" mb={0}>
-                  {solution.description}
-                </Typography> */}
+                  <Typography variant="h3" component="h1">
+                    {solution.title}
+                  </Typography>
                 </Stack>
               </Card>
             </Link>
@@ -137,12 +138,12 @@ const Solutions: React.FC = () => {
         </Carousel>
 
         <Button
-          variant="contained"
+          variant="outlined"
           sx={{
             mt: 5,
           }}
         >
-          <Translate id="solutions.seeMoreButton">See more</Translate>
+          <Translate id="solutions.learnMoreButton">Learn more</Translate>
         </Button>
       </Stack>
     </>

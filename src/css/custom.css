@@ -92,6 +92,10 @@ main {
   margin: 0 auto;
 }
 
+.carousel-root {
+  width: 100%;
+}
+
 .slider {
   padding: 20px 0px !important;
   gap: 50px;
