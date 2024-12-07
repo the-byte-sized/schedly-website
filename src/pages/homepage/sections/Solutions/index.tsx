@@ -57,7 +57,7 @@ const solutions = [
     link: "/solutions/ride-sharing",
     title: translate({
       id: "solutions.rideSharingService.title",
-      message: "Ride Sharing service",
+      message: "Ride Sharing",
     }),
     description: translate({
       id: "solutions.rideSharingService.description",
@@ -119,10 +119,10 @@ const Solutions: React.FC = () => {
             <Link to={solution.link}>
               <Card
                 sx={{
-                  height: 275,
+                  height: 250,
                 }}
               >
-                <Stack alignItems="center" justifyContent="center">
+                <Stack alignItems="center" justifyContent="center" gap={3}>
                   {solution.icon}
 
                   <Typography variant="h3" component="h1">{solution.title}</Typography>
