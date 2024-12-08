@@ -27,6 +27,7 @@ import Layout from "@theme/Layout";
 import React from "react";
 import SolutionHeader from "../sections/Header";
 import SolutionFeatures, { Feature } from "../sections/Features";
+import Benefits, { type Benefit } from "../sections/Benefits";
 
 const steps = [
   "Select campaign settings",
@@ -54,6 +55,25 @@ const features: Feature[] = [
     title: "Notify and remind patients about their appointments.",
     description:
       "Send timely reminders and updates to keep patients informed and on time.",
+  },
+];
+
+const benefits: Benefit[] = [
+  {
+    title: "Simplified and efficient scheduling for the clinic.",
+    description:
+      "Streamline appointment management with tools that centralize and organize scheduling tasks, reducing manual effort.",
+  },
+  {
+    title: "Reduced booking conflicts.",
+    description:
+      "Intelligent algorithms prevent overlapping bookings, ensuring seamless clinic operations.",
+  },
+  {
+    title:
+      "Improved patient satisfaction through automated reminders and smooth booking processes",
+    description:
+      "Notifications keep patients informed, while intuitive systems enable effortless appointment creation and changes.",
   },
 ];
 
@@ -309,40 +329,11 @@ export default function HealthcareSolutionPage(): JSX.Element {
 
         <Box
           sx={{
+            p: 8,
             backgroundColor: "hsl(260, 60%, 98%)",
           }}
         >
-          <Container>
-            <Typography variant="h4" component="h2" fontWeight="900">
-              Key benefits of GoSchedule
-            </Typography>
-
-            <Typography component="div">
-              <ol style={{ paddingLeft: "20px" }}>
-                <li>Simplified and efficient scheduling for the clinic.</li>
-                <li>Reduced booking conflicts.</li>
-                <li>
-                  Improved patient satisfaction through automated reminders and
-                  smooth booking processes.
-                </li>
-              </ol>
-            </Typography>
-
-            <Typography textAlign="center">
-              Join the companies that have revolutionized their scheduling with
-              our innovative solutions.
-            </Typography>
-
-            <Typography textAlign="center">
-              Ready to take the next step?
-            </Typography>
-
-            <JoinWaitlistInput
-              sx={{
-                mt: 3,
-              }}
-            />
-          </Container>
+          <Benefits benefits={benefits} />
         </Box>
       </main>
     </Layout>

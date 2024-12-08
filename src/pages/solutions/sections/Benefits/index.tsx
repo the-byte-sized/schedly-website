@@ -1,17 +1,19 @@
-import { Typography } from "@mui/material";
+import { Box, List, ListItem, Typography } from "@mui/material";
+import Card from "@site/src/components/Card";
 import Container from "@site/src/components/Container";
 import JoinWaitlistInput from "@site/src/components/JoinWaitlistInput/JoinWaitlistInput";
+import { IconCheck } from "@tabler/icons-react";
 
 type Element = JSX.Element | string;
 
-export type Feature = {
+export type Benefit = {
   title: Element;
   description: Element;
 };
 
 type Props = {
   title?: Element;
-  features: Feature[];
+  benefits: Benefit[];
   imgUrl?: string;
 };
 
@@ -21,34 +23,55 @@ const defaultTitle: Props["title"] = (
   </Typography>
 );
 
-export default function Benefits({ title = defaultTitle }: Props) {
+export default function Benefits({ title = defaultTitle, benefits }: Props) {
   return (
     <Container>
       {title}
 
-      <Typography component="div">
-        <ol style={{ paddingLeft: "20px" }}>
-          <li>Simplified and efficient scheduling for the clinic.</li>
-          <li>Reduced booking conflicts.</li>
-          <li>
-            Improved patient satisfaction through automated reminders and smooth
-            booking processes.
-          </li>
-        </ol>
-      </Typography>
+      <Box my={1}>
+        <List>
+          {benefits.map((benefit) => (
+            <ListItem sx={{ p: 0, my: 4, gap: 1, alignItems: "start" }}>
+              <IconCheck size={32} stroke={2} />
+              <Box sx={{ display: "flex", flexDirection: "column" }}>
+                <Typography variant="h6" fontWeight="500">
+                  {benefit.title}
+                </Typography>
+                <Typography variant="body1" fontWeight={300}>
+                  {benefit.description}
+                </Typography>
+              </Box>
+            </ListItem>
+          ))}
+        </List>
+      </Box>
 
-      <Typography textAlign="center">
-        Join the companies that have revolutionized their scheduling with our
-        innovative solutions.
-      </Typography>
+      <Box mt={8}>
+        <Card
+          cardTitle="Your Business Could Be Next"
+          cardDescription="Join the companies that have revolutionized their scheduling with our innovative solutions."
+          sx={{
+            color: "#fff",
+            textAlign: "center",
+            backgroundColor: "hsl(209, 39%, 17%)",
+            border: "1px solid hsl(209, 39%, 17%)",
 
-      <Typography textAlign="center">Ready to take the next step?</Typography>
+            "&:hover,&:focus": {
+              backgroundColor: "hsl(209, 39%, 17%)",
+            },
+          }}
+        >
+          <Typography fontWeight={700}>Ready to take the next step?</Typography>
 
-      <JoinWaitlistInput
-        sx={{
-          mt: 3,
-        }}
-      />
+          <Box my={2} mx="auto" maxWidth="60%">
+            <JoinWaitlistInput
+              sx={{
+                mt: 3,
+              }}
+            />
+          </Box>
+        </Card>
+      </Box>
     </Container>
   );
 }
