@@ -8,20 +8,25 @@ import {
 import React from "react";
 
 interface CustomCardProps extends CardProps {
-  cardTitle?: string,
-  cardDescription?: string,
-  cardIcon?: React.ReactElement
+  cardTitle?: string;
+  cardDescription?: string;
+  cardIcon?: React.ReactElement;
 }
 
-const CustomCard: React.FC<CustomCardProps> = ({cardTitle, cardIcon, cardDescription, sx, ...props}) => {
+const CustomCard: React.FC<CustomCardProps> = ({
+  cardTitle,
+  cardIcon,
+  cardDescription,
+  sx,
+  ...props
+}) => {
   return (
     <Card
       elevation={0}
       sx={{
-        ...sx,
         width: "100%",
         textAlign: "center",
-        padding: 2,
+        padding: 4,
         backgroundColor: "transparent",
         color: "text.primary",
         borderRadius: "2rem",
@@ -39,6 +44,7 @@ const CustomCard: React.FC<CustomCardProps> = ({cardTitle, cardIcon, cardDescrip
             stroke: "var(--bs-primary)",
           },
         },
+        ...sx,
       }}
       {...props}
     >
@@ -52,7 +58,7 @@ const CustomCard: React.FC<CustomCardProps> = ({cardTitle, cardIcon, cardDescrip
         </Typography>
 
         <Typography variant="body2">{cardDescription}</Typography>
-        
+
         {props.children}
       </CardContent>
     </Card>
