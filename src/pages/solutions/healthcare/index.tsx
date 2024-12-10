@@ -29,9 +29,9 @@ import SolutionFeatures, { Feature } from "../sections/Features";
 import SolutionHeader from "../sections/Header";
 
 const steps = [
-  "Select campaign settings",
-  "Create an ad group",
-  "Create an ad",
+  "Create Entities",
+  "Create Rules",
+  "Configure WebHooks",
 ];
 
 const features: Feature[] = [
@@ -81,7 +81,7 @@ export default function HealthcareSolutionPage(): JSX.Element {
   const [skipped, setSkipped] = React.useState(new Set<number>());
 
   const isStepOptional = (step: number) => {
-    return step === 1;
+    return false;
   };
 
   const isStepSkipped = (step: number) => {
@@ -266,7 +266,9 @@ export default function HealthcareSolutionPage(): JSX.Element {
             ZenSched Implementation
           </Typography>
 
-          <Stepper activeStep={activeStep}>
+          <Stepper activeStep={activeStep} sx={{
+            mt: 5
+          }}>
             {steps.map((label, index) => {
               const stepProps: { completed?: boolean } = {};
               const labelProps: {
