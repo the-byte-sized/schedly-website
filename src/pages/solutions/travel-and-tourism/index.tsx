@@ -21,7 +21,7 @@ import {
   IconCalendarCog,
   IconCheck,
   IconNotification,
-  IconUser,
+  IconUser
 } from "@tabler/icons-react";
 import Layout from "@theme/Layout";
 import React from "react";
@@ -140,7 +140,7 @@ export default function TravelAndTourismSolutionPage(): JSX.Element {
         </Box>
 
         <Container>
-          <Typography variant="h4" component="h2" fontWeight="900">
+          <Typography variant="h2" fontWeight="900">
             <Translate>Workflow Example</Translate>
           </Typography>
 
@@ -228,7 +228,7 @@ export default function TravelAndTourismSolutionPage(): JSX.Element {
         </Container>
 
         <Container>
-          <Typography variant="h4" component="h2" fontWeight="900">
+          <Typography variant="h2" fontWeight="900">
             ZenSched Implementation
           </Typography>
 
