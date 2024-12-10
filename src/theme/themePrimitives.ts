@@ -256,7 +256,7 @@ export const colorSchemes = {
   light: {
     palette: {
       primary: {
-        light: brand[200],
+        light: brand[100],
         main: brand[400],
         dark: brand[700],
         contrastText: brand[50],
@@ -291,8 +291,8 @@ export const colorSchemes = {
         paper: 'hsl(220, 35%, 97%)',
       },
       text: {
-        primary: brown[800],
-        secondary: brown[600],
+        primary: gray[800],
+        secondary: gray[600],
         warning: orange[400],
       },
       action: {
@@ -355,16 +355,16 @@ export const colorSchemes = {
 };
 
 export const typography = {
-  fontFamily: 'Inter, sans-serif',
+  fontFamily: 'Onest, sans-serif',
   h1: {
     fontSize: defaultTheme.typography.pxToRem(48),
-    fontWeight: 600,
+    fontWeight: 500,
     lineHeight: 1.2,
     letterSpacing: -0.5,
   },
   h2: {
     fontSize: defaultTheme.typography.pxToRem(36),
-    fontWeight: 600,
+    fontWeight: 500,
     lineHeight: 1.2,
   },
   h3: {

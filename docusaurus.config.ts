@@ -34,7 +34,7 @@ const config: Config = {
   stylesheets: [
     "https://cdnjs.cloudflare.com/ajax/libs/aos/3.0.0-beta.6/aos.css",
     "https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css",
-    "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
+    "https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap",
   ],
 
   presets: [

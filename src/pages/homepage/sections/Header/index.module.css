@@ -1,9 +1,7 @@
 .header {
   overflow: hidden;
-  height: 70vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 100vh;
+  padding: 4rem 0;
   position: relative;
 }
 
@@ -37,21 +35,16 @@
   );
 }
 
-.title {
-  font-size: 3.2rem;
-  margin: 0.8rem;
+.wrapper {
+  width: 100%;
+  height: 100%;
 }
 
-.subtitle {
-  font-size: 2.5rem;
-  margin: 0;
-}
-
-.description {
+.description p {
   max-width: 740px;
-  margin: 0.8rem auto 1rem;
-  font-size: 1.25rem;
-  text-align: center;
+  margin: 1.5rem 0 3rem;
+  font-size: 1.1rem;
+  line-height: 1.5;
 }
 
 .underlined {
