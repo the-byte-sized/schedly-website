@@ -1,83 +1,82 @@
 import Translate from "@docusaurus/Translate";
 import {
-  Timeline,
-  TimelineConnector,
-  TimelineContent,
-  TimelineDot,
-  TimelineItem,
-  TimelineSeparator,
+    Timeline,
+    TimelineConnector,
+    TimelineContent,
+    TimelineDot,
+    TimelineItem,
+    TimelineSeparator,
 } from "@mui/lab";
 import {
-  Box,
-  Button,
-  Stack,
-  Step,
-  StepLabel,
-  Stepper,
-  Typography,
+    Box,
+    Button,
+    Stack,
+    Step,
+    StepLabel,
+    Stepper,
+    Typography,
 } from "@mui/material";
 import Container from "@site/src/components/Container";
 import {
-  IconCalendarCog,
-  IconCheck,
-  IconNotification,
-  IconUser,
+    IconCalendarCog,
+    IconCheck,
+    IconNotification,
+    IconUser,
 } from "@tabler/icons-react";
 import Layout from "@theme/Layout";
 import React from "react";
 //@ts-expect-error
-import travelAndTourismAnimationData from "../../../assets/lottie/travel-and-tourism.json";
-// @ts-expect-error
-import bookingSolutionAnimationData from "../../../assets/lottie/booking-solution.json";
+import healthAndFitnessAnimationData from "../../../assets/lottie/health-and-fitness.json";
 import Benefits, { type Benefit } from "../sections/Benefits";
 import SolutionFeatures, { Feature } from "../sections/Features";
 import SolutionHeader from "../sections/Header";
+// @ts-expect-error
+import bookingSolutionAnimationData from "../../../assets/lottie/booking-solution.json";
 
 const steps = ["Create Entities", "Create Rules", "Configure WebHooks"];
 
 const features: Feature[] = [
   {
-    title: "Synchronize availability across the staff.",
+    title: "Manage Class Schedules.",
     description:
-      "Tour guides and administrative staff need to coordinate their schedules. ZenSched dynamically synchronizes staff availability to avoid conflicts and ensure seamless scheduling.",
+      "Handle recurring group classes like yoga or spin, each with capacity limits and fixed schedules. ZenSched ensures no overlap in resource or instructor assignments.",
   },
   {
-    title: "Handle shared resources.",
+    title: "Coordinate Personal Training Sessions.",
     description:
-      "Easily adapt to unique scheduling needs with ZenSched. Set custom booking durations, cancellation policies, and advance booking requirements for each service, ensuring a seamless fit for your business operations.",
+      "Manage one-on-one training schedules by syncing trainer availability with client preferences, avoiding conflicts.",
   },
   {
-    title: "Support different booking rules.",
-    description: "Different guided tours and events have unique policies.",
+    title: "Handle Shared Resources.",
+    description:
+      "Allocate shared spaces (e.g., studios) and equipment (e.g., bikes, mats) efficiently, ensuring optimal use without conflicts.",
   },
   {
-    title:
-      "Notify and remind guide tours and customers about their appointments.",
+    title: "Send Notifications and Reminders.",
     description:
-      "Send timely reminders and updates to keep customers and guide tours informed and on time.",
+      "Automate email or SMS notifications for bookings, reminders, and updates to keep both members and staff informed and on schedule.",
   },
 ];
 
 const benefits: Benefit[] = [
   {
-    title: "Simplified and efficient scheduling.",
+    title: "Efficient Resource Allocation",
     description:
-      "Streamline appointment management with tools that centralize and organize scheduling tasks, reducing manual effort.",
+      "Shared spaces and equipment are managed seamlessly, avoiding overbooking and downtime.",
   },
   {
-    title: "Reduced booking conflicts.",
+    title: "Personalized Member Experience",
     description:
-      "Intelligent algorithms prevent overlapping bookings, ensuring seamless operations.",
+      "Members benefit from clear booking processes, timely reminders, and the ability to choose preferred trainers or classes.",
   },
   {
-    title:
-      "Improved customer satisfaction through automated reminders and smooth booking processes",
+    title: "Improved Staff Coordination",
     description:
-      "Notifications keep customers informed, while intuitive systems enable effortless appointment creation and changes.",
+      "Staff schedules are automatically updated, reducing errors and ensuring smooth operations.",
   },
 ];
 
-export default function TravelAndTourismSolutionPage(): JSX.Element {
+const HealthAndFitnessSolutionPage: React.FC = () => {
   const [activeStep, setActiveStep] = React.useState(0);
 
   const handleNext = () => {
@@ -90,27 +89,26 @@ export default function TravelAndTourismSolutionPage(): JSX.Element {
 
   return (
     <Layout
-      title="ZenSched for Travel and Tourism"
-      description="Smart Scheduling for Travel and Tourism Agency"
+      title="ZenSched for Health and Fitness"
+      description="Smart Scheduling for Health and Fitness Centers"
     >
       <main>
         <Container sx={{ my: 5 }}>
           <SolutionHeader
             lottieProps={{
-              animationData: travelAndTourismAnimationData,
-              loop: false,
+              animationData: healthAndFitnessAnimationData,
             }}
             solutionTitle={
-              <Translate id="healthcareSolutionPage.intro.title">
-                Advanced Scheduling for a Travel and Tourism Agency
+              <Translate id="healthAndFitnessSolutionPage.intro.title">
+                Advanced Scheduling for Health and Fitness Center
               </Translate>
             }
             solutionDescription={
-              <Translate id="healthcareSolutionPage.intro.caption">
-                Manage live classes effortlessly with a flexible scheduling
-                system. Coordinate instructors across time zones, handle student
-                bookings, and adapt to changing availability—all in one
-                platform.
+              <Translate id="healthAndFitnessSolutionPage.intro.caption">
+                Effortlessly manage fitness schedules with a versatile system
+                that coordinates trainers, handles member bookings, optimizes
+                shared spaces, and adapts seamlessly to changing
+                availability—all from one powerful platform.
               </Translate>
             }
           />
@@ -248,7 +246,13 @@ export default function TravelAndTourismSolutionPage(): JSX.Element {
             ))}
           </Stepper>
 
-          <Typography sx={{ mt: 2, mb: 1 }}>Step {activeStep + 1}</Typography>
+          {activeStep === 1 && (
+            <>
+              <Typography sx={{ mt: 2, mb: 1 }}>
+                Define Resources and Services
+              </Typography>
+            </>
+          )}
 
           <Stack
             direction="row"
@@ -284,4 +288,6 @@ export default function TravelAndTourismSolutionPage(): JSX.Element {
       </main>
     </Layout>
   );
-}
+};
+
+export default HealthAndFitnessSolutionPage;
