@@ -1,15 +1,126 @@
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import Card from "@site/src/components/Card";
+import Translate from "@docusaurus/Translate";
 import {
-    IconCalendarUser,
-    IconClockRecord,
-    IconRazor,
-    IconRefresh
+  Timeline,
+  TimelineConnector,
+  TimelineContent,
+  TimelineDot,
+  TimelineItem,
+  TimelineSeparator,
+} from "@mui/lab";
+import {
+  Box,
+  Button,
+  Step,
+  StepLabel,
+  Stepper,
+  Typography,
+} from "@mui/material";
+import Container from "@site/src/components/Container";
+import {
+  IconCalendarCog,
+  IconCheck,
+  IconNotification,
+  IconUser,
 } from "@tabler/icons-react";
 import Layout from "@theme/Layout";
+import React from "react";
+import Benefits, { type Benefit } from "../sections/Benefits";
+import SolutionFeatures, { Feature } from "../sections/Features";
+import SolutionHeader from "../sections/Header";
+// @ts-expect-error
+import beautySalonAnimationData from "../../../assets/lottie/beauty-salon.json";
+// @ts-expect-error
+import bookingSolutionAnimationData from "../../../assets/lottie/booking-solution.json";
 
-export default function BeautySalonSolutionPage(): JSX.Element {
-  const { siteConfig } = useDocusaurusContext();
+const steps = ["Create Entities", "Create Rules", "Configure WebHooks"];
+
+const features: Feature[] = [
+  {
+    title: "Synchronize availability across multiple specialists.",
+    description:
+      "Effortlessly manage and coordinate schedules for all your specialists.",
+  },
+  {
+    title: "Handle shared resources.",
+    description:
+      "Ensure optimal use of rooms, equipment, and shared resources without conflicts.",
+  },
+  {
+    title: "Support different booking rules per specialty.",
+    description:
+      "Customize booking policies to match the unique needs of each specialty.",
+  },
+  {
+    title: "Notify and remind customers about their appointments.",
+    description:
+      "Send timely reminders and updates to keep customers informed and on time.",
+  },
+];
+
+const benefits: Benefit[] = [
+  {
+    title: "Simplified and efficient scheduling for the beauty salon.",
+    description:
+      "Streamline appointment management with tools that centralize and organize scheduling tasks, reducing manual effort.",
+  },
+  {
+    title: "Reduced booking conflicts.",
+    description:
+      "Intelligent algorithms prevent overlapping bookings, ensuring seamless beauty salon operations.",
+  },
+  {
+    title:
+      "Improved customer satisfaction through automated reminders and smooth booking processes",
+    description:
+      "Notifications keep customers informed, while intuitive systems enable effortless appointment creation and changes.",
+  },
+];
+
+export default function BeautySalonsSolutionPage(): JSX.Element {
+  const [activeStep, setActiveStep] = React.useState(0);
+  const [skipped, setSkipped] = React.useState(new Set<number>());
+
+  const isStepOptional = (step: number) => {
+    return false;
+  };
+
+  const isStepSkipped = (step: number) => {
+    return skipped.has(step);
+  };
+
+  const handleNext = () => {
+    let newSkipped = skipped;
+    if (isStepSkipped(activeStep)) {
+      newSkipped = new Set(newSkipped.values());
+      newSkipped.delete(activeStep);
+    }
+
+    setActiveStep((prevActiveStep) => prevActiveStep + 1);
+    setSkipped(newSkipped);
+  };
+
+  const handleBack = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep - 1);
+  };
+
+  const handleSkip = () => {
+    if (!isStepOptional(activeStep)) {
+      // You probably want to guard against something like this,
+      // it should never occur unless someone's actively trying to break something.
+      throw new Error("You can't skip a step that isn't optional.");
+    }
+
+    setActiveStep((prevActiveStep) => prevActiveStep + 1);
+    setSkipped((prevSkipped) => {
+      const newSkipped = new Set(prevSkipped.values());
+      newSkipped.add(activeStep);
+      return newSkipped;
+    });
+  };
+
+  const handleReset = () => {
+    setActiveStep(0);
+  };
 
   return (
     <Layout
@@ -17,68 +128,220 @@ export default function BeautySalonSolutionPage(): JSX.Element {
       description="Streamlining Appointment Scheduling"
     >
       <main>
-        <div className="container">
-          <h1>Beauty Salons Reservation System</h1>
+        <Container sx={{ my: 5 }}>
+          <SolutionHeader
+            lottieProps={{
+              animationData: beautySalonAnimationData,
+            }}
+            solutionTitle={
+              <Translate id="healthcareSolutionPage.intro.title">
+                Advanced Scheduling for a Beauty Salon
+              </Translate>
+            }
+            solutionDescription={
+              <Translate id="healthcareSolutionPage.intro.caption">
+                Simplify appointment management for barber with different
+                schedules. Handle last-minute cancellations, and resource
+                allocation—all with one tool.
+              </Translate>
+            }
+          />
+        </Container>
 
-          <p>
-            A busy beauty salon offers a wide range of services, including
-            haircuts, coloring, styling, manicures, pedicures, facials, and
-            massages. Each service requires different durations, specialized
-            staff, and sometimes specific equipment or rooms.
-          </p>
+        <Box
+          sx={{
+            backgroundColor: "hsl(260, 60%, 98%)",
+            py: 5,
+          }}
+        >
+          <Container>
+            <SolutionFeatures
+              lottieProps={{
+                animationData: bookingSolutionAnimationData,
+                style: {
+                  maxWidth: 700,
+                },
+              }}
+              features={features}
+              title={
+                <Translate>
+                  Effortless booking management, simplified for your success.
+                </Translate>
+              }
+            />
+          </Container>
+        </Box>
 
-          <div className="row row-gap-5 mt-5">
-            <div className="col-sm-12 col-md-6">
-              <Card>
-                <IconCalendarUser size={56} stroke={2} />
+        <Container>
+          <Typography variant="h4" component="h2" fontWeight="900">
+            <Translate>Workflow Example</Translate>
+          </Typography>
 
-                <h1>Staff Availability</h1>
+          <Timeline position="alternate">
+            <TimelineItem>
+              <TimelineSeparator>
+                <TimelineConnector />
+                <TimelineDot>
+                  <IconUser />
+                </TimelineDot>
+                <TimelineConnector />
+              </TimelineSeparator>
 
-                <p className="mb-0">
-                  Manage individual schedules with real-time updates for
-                  emergencies.
-                </p>
-              </Card>
-            </div>
+              <TimelineContent sx={{ py: "12px", px: 2 }}>
+                <Typography variant="h6" component="span">
+                  Customer Booking
+                </Typography>
 
-            <div className="col-sm-12 col-md-6">
-              <Card>
-                <IconClockRecord size={56} stroke={2} />
+                <Typography>
+                  A customer would like to book an haricut for 2 PM on a
+                  Wednesday.
+                </Typography>
 
-                <h1>Conflict Prevention</h1>
+                <Typography>The ZenSched API checks:</Typography>
 
-                <p className="mb-0">
-                  Automatically prevent double bookings of rooms and resources.
-                </p>
-              </Card>
-            </div>
+                <Typography>• The salon availability;</Typography>
+              </TimelineContent>
+            </TimelineItem>
 
-            <div className="col-sm-12 col-md-6">
-              <Card>
-                <IconRazor size={56} stroke={2} />
+            <TimelineItem>
+              <TimelineSeparator>
+                <TimelineConnector />
+                <TimelineDot color="primary">
+                  <IconCalendarCog />
+                </TimelineDot>
+                <TimelineConnector />
+              </TimelineSeparator>
 
-                <h1>Resource Allocation</h1>
+              <TimelineContent sx={{ py: "12px", px: 2 }}>
+                <Typography variant="h6" component="span">
+                  Conflict Resolution
+                </Typography>
+                <Typography>
+                  If there salon is fully booked for the 2PM, ZenSched suggests
+                  the next available slot.
+                </Typography>
+              </TimelineContent>
+            </TimelineItem>
 
-                <p className="mb-0">
-                  Book treatment rooms and equipment to avoid conflicts.
-                </p>
-              </Card>
-            </div>
+            <TimelineItem>
+              <TimelineSeparator>
+                <TimelineConnector />
+                <TimelineDot color="primary" variant="outlined">
+                  <IconNotification />
+                </TimelineDot>
+                <TimelineConnector sx={{ bgcolor: "secondary.main" }} />
+              </TimelineSeparator>
 
-            <div className="col-sm-12 col-md-6">
-              <Card>
-                <IconRefresh size={56} stroke={2} />
+              <TimelineContent sx={{ py: "12px", px: 2 }}>
+                <Typography variant="h6" component="span">
+                  Notifications
+                </Typography>
 
-                <h1>Recurring Appointments</h1>
+                <Typography>
+                  Thanks to the WebHooks functionalities of ZenSched, the
+                  customer and the barber can receive confirmation emails.
+                </Typography>
+              </TimelineContent>
+            </TimelineItem>
 
-                <p className="mb-0">
-                  Allow clients to book regular appointments with their
-                  preferred staff.
-                </p>
-              </Card>
-            </div>
-          </div>
-        </div>
+            <TimelineItem>
+              <TimelineSeparator>
+                <TimelineConnector sx={{ bgcolor: "secondary.main" }} />
+
+                <TimelineDot color="secondary">
+                  <IconCheck />
+                </TimelineDot>
+
+                <TimelineConnector sx={{ bgcolor: "secondary.main" }} />
+              </TimelineSeparator>
+
+              <TimelineContent sx={{ py: "12px", px: 2 }}>
+                <Typography variant="h6" component="span">
+                  That's how simple it's with ZenSched!
+                </Typography>
+              </TimelineContent>
+            </TimelineItem>
+          </Timeline>
+        </Container>
+
+        <Container>
+          <Typography variant="h4" component="h2" fontWeight="900">
+            ZenSched Implementation
+          </Typography>
+
+          <Stepper
+            activeStep={activeStep}
+            sx={{
+              mt: 5,
+            }}
+          >
+            {steps.map((label, index) => {
+              const stepProps: { completed?: boolean } = {};
+              const labelProps: {
+                optional?: React.ReactNode;
+              } = {};
+              if (isStepOptional(index)) {
+                labelProps.optional = (
+                  <Typography variant="caption">Optional</Typography>
+                );
+              }
+              if (isStepSkipped(index)) {
+                stepProps.completed = false;
+              }
+              return (
+                <Step key={label} {...stepProps}>
+                  <StepLabel {...labelProps}>{label}</StepLabel>
+                </Step>
+              );
+            })}
+          </Stepper>
+
+          {activeStep === steps.length ? (
+            <React.Fragment>
+              <Typography sx={{ mt: 2, mb: 1 }}>
+                All steps completed - you&apos;re finished
+              </Typography>
+              <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
+                <Box sx={{ flex: "1 1 auto" }} />
+                <Button onClick={handleReset}>Reset</Button>
+              </Box>
+            </React.Fragment>
+          ) : (
+            <React.Fragment>
+              <Typography sx={{ mt: 2, mb: 1 }}>
+                Step {activeStep + 1}
+              </Typography>
+              <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
+                <Button
+                  color="inherit"
+                  disabled={activeStep === 0}
+                  onClick={handleBack}
+                  sx={{ mr: 1 }}
+                >
+                  Back
+                </Button>
+                <Box sx={{ flex: "1 1 auto" }} />
+                {isStepOptional(activeStep) && (
+                  <Button color="inherit" onClick={handleSkip} sx={{ mr: 1 }}>
+                    Skip
+                  </Button>
+                )}
+                <Button onClick={handleNext}>
+                  {activeStep === steps.length - 1 ? "Finish" : "Next"}
+                </Button>
+              </Box>
+            </React.Fragment>
+          )}
+        </Container>
+
+        <Box
+          sx={{
+            p: 8,
+            backgroundColor: "hsl(260, 60%, 98%)",
+          }}
+        >
+          <Benefits benefits={benefits} />
+        </Box>
       </main>
     </Layout>
   );

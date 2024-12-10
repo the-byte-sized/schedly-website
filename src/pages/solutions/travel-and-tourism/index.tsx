@@ -24,13 +24,11 @@ import {
 } from "@tabler/icons-react";
 import Layout from "@theme/Layout";
 import React from "react";
+//@ts-expect-error
+import animationData from "../../../assets/lottie/travel-and-tourism.json";
 import Benefits, { type Benefit } from "../sections/Benefits";
 import SolutionFeatures, { Feature } from "../sections/Features";
 import SolutionHeader from "../sections/Header";
-// @ts-expect-error
-import coworkingSpaceManagementAnimationData from "../../../assets/lottie/coworking-space-management.json";
-// @ts-expect-error
-import bookingSolutionAnimationData from "../../../assets/lottie/booking-solution.json";
 
 const steps = ["Create Entities", "Create Rules", "Configure WebHooks"];
 
@@ -38,22 +36,22 @@ const features: Feature[] = [
   {
     title: "Synchronize availability across the staff.",
     description:
-      "The staff members, such as front-desk managers or cleaning staff, must coordinate their schedules to align with bookings for meeting rooms, events, or equipment setup.",
+      "Tour guides and administrative staff need to coordinate their schedules. ZenSched dynamically synchronizes staff availability to avoid conflicts and ensure seamless scheduling.",
   },
   {
     title: "Handle shared resources.",
     description:
-      "Meeting rooms, projectors, and whiteboards are shared resources that must be booked without conflicts. ZenSched ensures optimal allocation and usage.",
+      "Easily adapt to unique scheduling needs with ZenSched. Set custom booking durations, cancellation policies, and advance booking requirements for each service, ensuring a seamless fit for your business operations.",
   },
   {
     title: "Support different booking rules.",
-    description:
-      "Different spaces have unique policies. For instance, meeting rooms can be booked in 30-minute increments, while private offices are reserved by the hour.",
+    description: "Different guided tours and events have unique policies.",
   },
   {
-    title: "Notify and remind customers about their appointments.",
+    title:
+      "Notify and remind guide tours and customers about their appointments.",
     description:
-      "Send timely reminders and updates to keep customers and staff informed and on time.",
+      "Send timely reminders and updates to keep customers and guide tours informed and on time.",
   },
 ];
 
@@ -76,7 +74,7 @@ const benefits: Benefit[] = [
   },
 ];
 
-export default function CoworkingSpaceManagementSolutionPage(): JSX.Element {
+export default function TravelAndTourismSolutionPage(): JSX.Element {
   const [activeStep, setActiveStep] = React.useState(0);
   const [skipped, setSkipped] = React.useState(new Set<number>());
 
@@ -124,26 +122,27 @@ export default function CoworkingSpaceManagementSolutionPage(): JSX.Element {
 
   return (
     <Layout
-      title="ZenSched for Co-working Spaces"
-      description="Streamlining Shared Workspace Management"
+      title="ZenSched for Travel and Tourism"
+      description="Smart Scheduling for Travel and Tourism Agency"
     >
       <main>
         <Container sx={{ my: 5 }}>
           <SolutionHeader
             lottieProps={{
-              animationData: coworkingSpaceManagementAnimationData,
+              animationData,
+              loop: false,
             }}
             solutionTitle={
               <Translate id="healthcareSolutionPage.intro.title">
-                Conference Room Booking for a Co-Working Space
+                Advanced Scheduling for a Travel and Tourism Agency
               </Translate>
             }
             solutionDescription={
               <Translate id="healthcareSolutionPage.intro.caption">
-                Manage coworking spaces effortlessly with a single tool. Handle
-                bookings across multiple locations, accommodate various
-                membership levels, and avoid scheduling conflicts—all in one
-                place.
+                Manage live classes effortlessly with a flexible scheduling
+                system. Coordinate instructors across time zones, handle student
+                bookings, and adapt to changing availability—all in one
+                platform.
               </Translate>
             }
           />
@@ -158,9 +157,10 @@ export default function CoworkingSpaceManagementSolutionPage(): JSX.Element {
           <Container>
             <SolutionFeatures
               lottieProps={{
-                animationData: bookingSolutionAnimationData,
+                animationData,
+                loop: false,
                 style: {
-                  maxWidth: 700,
+                  maxWidth: "600px",
                 },
               }}
               features={features}
@@ -190,12 +190,12 @@ export default function CoworkingSpaceManagementSolutionPage(): JSX.Element {
 
               <TimelineContent sx={{ py: "12px", px: 2 }}>
                 <Typography variant="h6" component="span">
-                  Customer Booking
+                  Customer Makes a Booking
                 </Typography>
 
                 <Typography>
-                  A customer would like to book the conference room for 2 PM on
-                  a Wednesday.
+                  A customer wants to book a guided city tour offered by the
+                  travel agency.
                 </Typography>
               </TimelineContent>
             </TimelineItem>
@@ -214,8 +214,7 @@ export default function CoworkingSpaceManagementSolutionPage(): JSX.Element {
                   Conflict Resolution
                 </Typography>
                 <Typography>
-                  If the conference room is fully booked for the 2PM, ZenSched
-                  suggests the next available slot.
+                  ZenSched checks the tour guide and the vehicle availability.
                 </Typography>
               </TimelineContent>
             </TimelineItem>
@@ -236,8 +235,8 @@ export default function CoworkingSpaceManagementSolutionPage(): JSX.Element {
 
                 <Typography>
                   Thanks to the WebHooks functionalities of ZenSched, the
-                  customer and the staff members can receive confirmation
-                  emails.
+                  customer and the staff receives notifications with the booking
+                  details.
                 </Typography>
               </TimelineContent>
             </TimelineItem>

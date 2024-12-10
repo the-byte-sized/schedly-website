@@ -1,18 +1,31 @@
-import Translate from "@docusaurus/Translate";
 import useBaseUrl from "@docusaurus/useBaseUrl";
-import { Grid2 as Grid, Typography } from "@mui/material";
+import { Grid2 as Grid, Typography, type Grid2Props } from "@mui/material";
 import JoinWaitlistInput from "@site/src/components/JoinWaitlistInput/JoinWaitlistInput";
+import Lottie, { type LottieComponentProps } from "lottie-react";
 import React from "react";
 
-type Props = {
-  title: JSX.Element | string;
-  description: JSX.Element | string;
-  imgUrl: string;
-};
+interface SolutionHeaderProps extends Grid2Props {
+  solutionTitle: JSX.Element | string;
+  solutionDescription: JSX.Element | string;
+  imgUrl?: string;
+  lottieProps?: LottieComponentProps;
+}
 
-function SolutionHeader({ title, description, imgUrl }: Props) {
+const SolutionHeader: React.FC<SolutionHeaderProps> = ({
+  solutionTitle,
+  solutionDescription,
+  imgUrl,
+  lottieProps,
+  ...props
+}) => {
   return (
-    <Grid container spacing={5} alignItems="center" justifyContent="center">
+    <Grid
+      container
+      spacing={5}
+      alignItems="center"
+      justifyContent="center"
+      {...props}
+    >
       <Grid
         size={{
           xs: 12,
@@ -20,10 +33,10 @@ function SolutionHeader({ title, description, imgUrl }: Props) {
         }}
       >
         <Typography variant="h1" fontWeight="900">
-          {title}
+          {solutionTitle}
         </Typography>
 
-        <Typography variant="subtitle1">{description}</Typography>
+        <Typography variant="subtitle1">{solutionDescription}</Typography>
 
         <JoinWaitlistInput sx={{ mt: 3 }} />
       </Grid>
@@ -39,14 +52,17 @@ function SolutionHeader({ title, description, imgUrl }: Props) {
           md: "block",
         }}
       >
-        <img
-          className="shadow-lg rounded-5"
-          src={useBaseUrl(`/img/${imgUrl}`)}
-          alt="hero pattern"
-        />
+        {imgUrl && (
+          <img
+            className="shadow-lg rounded-5"
+            src={useBaseUrl(`/img/${imgUrl}`)}
+            alt="hero pattern"
+          />
+        )}
+        {lottieProps && <Lottie {...lottieProps} />}
       </Grid>
     </Grid>
   );
-}
+};
 
 export default SolutionHeader;

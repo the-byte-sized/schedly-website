@@ -27,12 +27,12 @@ import React from "react";
 import Benefits, { type Benefit } from "../sections/Benefits";
 import SolutionFeatures, { Feature } from "../sections/Features";
 import SolutionHeader from "../sections/Header";
+// @ts-expect-error
+import healtcareAnimationData from "../../../assets/lottie/healtcare.json";
+// @ts-expect-error
+import bookingSolutionAnimationData from "../../../assets/lottie/booking-solution.json";
 
-const steps = [
-  "Create Entities",
-  "Create Rules",
-  "Configure WebHooks",
-];
+const steps = ["Create Entities", "Create Rules", "Configure WebHooks"];
 
 const features: Feature[] = [
   {
@@ -130,13 +130,15 @@ export default function HealthcareSolutionPage(): JSX.Element {
       <main>
         <Container sx={{ my: 5 }}>
           <SolutionHeader
-            imgUrl="hero-embedded-lending.jpg"
-            title={
+            lottieProps={{
+              animationData: healtcareAnimationData,
+            }}
+            solutionTitle={
               <Translate id="healthcareSolutionPage.intro.title">
                 Appointment Scheduling for a Multi-Specialty Clinic
               </Translate>
             }
-            description={
+            solutionDescription={
               <Translate id="healthcareSolutionPage.intro.caption">
                 Simplify appointment management for doctors with different
                 schedules. Handle last-minute cancellations, emergency visits,
@@ -154,7 +156,12 @@ export default function HealthcareSolutionPage(): JSX.Element {
         >
           <Container>
             <SolutionFeatures
-              imgUrl="hero-embedded-lending.jpg"
+              lottieProps={{
+                animationData: bookingSolutionAnimationData,
+                style: {
+                  maxWidth: 700
+                }
+              }}
               features={features}
               title={
                 <Translate>
@@ -266,9 +273,12 @@ export default function HealthcareSolutionPage(): JSX.Element {
             ZenSched Implementation
           </Typography>
 
-          <Stepper activeStep={activeStep} sx={{
-            mt: 5
-          }}>
+          <Stepper
+            activeStep={activeStep}
+            sx={{
+              mt: 5,
+            }}
+          >
             {steps.map((label, index) => {
               const stepProps: { completed?: boolean } = {};
               const labelProps: {

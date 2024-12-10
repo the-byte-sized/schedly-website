@@ -1,6 +1,7 @@
-import Translate from "@docusaurus/Translate";
 import useBaseUrl from "@docusaurus/useBaseUrl";
-import { Typography, Stack } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
+import Lottie, { type LottieComponentProps } from 'lottie-react';
+import React from "react";
 
 type Element = JSX.Element | string;
 
@@ -9,13 +10,19 @@ export type Feature = {
   description: Element;
 };
 
-type Props = {
+type SolutionFeaturesProps = {
   title: Element;
   features: Feature[];
   imgUrl?: string;
+  lottieProps?: LottieComponentProps;
 };
 
-export default function SolutionFeatures({ title, imgUrl, features }: Props) {
+const SolutionFeatures: React.FC<SolutionFeaturesProps> = ({
+  title,
+  imgUrl,
+  features,
+  lottieProps
+}) => {
   return (
     <>
       <Typography
@@ -49,6 +56,10 @@ export default function SolutionFeatures({ title, imgUrl, features }: Props) {
           </Stack>
         )}
 
+        {
+          lottieProps && <Lottie  {...lottieProps} />
+        }
+
         <Stack direction="column" flex="1" spacing={4}>
           {features.map((feature) => (
             <Stack>
@@ -65,4 +76,6 @@ export default function SolutionFeatures({ title, imgUrl, features }: Props) {
       </Stack>
     </>
   );
-}
+};
+
+export default SolutionFeatures;
