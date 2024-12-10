@@ -2,21 +2,21 @@ import Link from "@docusaurus/Link";
 import Translate, { translate } from "@docusaurus/Translate";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import {
-  Box,
-  CardContent,
-  Container,
-  Grid,
-  Stack,
-  Typography,
+    Box,
+    CardContent,
+    Container,
+    Grid,
+    Stack,
+    Typography,
 } from "@mui/material";
 import Card from "@site/src/components/Card";
 import JoinWaitlistInput from "@site/src/components/JoinWaitlistInput/JoinWaitlistInput";
 import {
-  IconBooks,
-  IconCar,
-  IconHeartbeat,
-  IconPlant2,
-  IconUsers,
+    IconBooks,
+    IconCar,
+    IconHeartbeat,
+    IconPlant2,
+    IconUsers,
 } from "@tabler/icons-react";
 import Layout from "@theme/Layout";
 
@@ -37,14 +37,14 @@ export default function Home(): JSX.Element {
                 __html: translate({
                   id: "solutions.title",
                   message:
-                    "Schedly in <span style='color: var(--mui-palette-primary-main);'>action</span>",
+                    "ZenSched in <span style='color: var(--mui-palette-primary-main);'>action</span>",
                 }),
               }}
             />
 
             <Typography variant="subtitle1" sx={{ maxWidth: "75%", mt: 2 }}>
               <Translate id="solutions.description">
-                Imagine how Schedly's innovative, tech-forward scheduling
+                Imagine how ZenSched's innovative, tech-forward scheduling
                 solutions can transform your business. Explore our solutions to
                 see how we can revolutionize time management and streamline your
                 workflows.
@@ -73,7 +73,7 @@ export default function Home(): JSX.Element {
                           <Translate id="solutions.healthcare.description">
                             A bustling multi-specialty clinic offers services
                             ranging from general practice to specialized
-                            treatments. Schedly helps managing appointments for
+                            treatments. ZenSched helps managing appointments for
                             numerous doctors with varying schedules, handling
                             last-minute cancellations, and accommodating
                             emergency visits present significant challenges.
@@ -106,7 +106,7 @@ export default function Home(): JSX.Element {
                           <Translate id="solutions.education.description">
                             An online education platform offers live classes
                             across different time zones with instructors
-                            worldwide. Schedly helps coordinating class times,
+                            worldwide. ZenSched helps coordinating class times,
                             managing instructor availability, and handling
                             student bookings.
                           </Translate>
@@ -138,7 +138,7 @@ export default function Home(): JSX.Element {
                           <Translate id="solutions.coworkingSpaceManagement.description">
                             A co-working space provides members with the ability
                             to book conference rooms and shared facilities.
-                            Schedly helps with managing bookings across multiple
+                            ZenSched helps with managing bookings across multiple
                             locations and prevent scheduling conflicts.
                           </Translate>
                         </Typography>
@@ -172,7 +172,7 @@ export default function Home(): JSX.Element {
                             via a mobile app. The service faces complex
                             scheduling challenges, such as adhering to local
                             laws regarding driver working hour and mandatory
-                            breaks Schedly helps streamline scheduling
+                            breaks ZenSched helps streamline scheduling
                             processes, reducing administrative overhead and
                             manual interventions optimizing operations.
                           </Translate>
@@ -206,7 +206,7 @@ export default function Home(): JSX.Element {
                             including haircuts, coloring, styling, manicures,
                             pedicures, facials, and massages. Each service
                             requires different durations, specialized staff, and
-                            sometimes specific equipment or rooms. Schedly can
+                            sometimes specific equipment or rooms. ZenSched can
                             help in assigning services to staff members
                             qualified to perform them, preventing scheduling
                             errors or managing the availability of specific
@@ -232,7 +232,7 @@ export default function Home(): JSX.Element {
 
                       <Typography sx={{ maxWidth: "75%" }}>
                         <Translate id="yourBusinessCouldBeNext.description">
-                          Imagine the transformation Schedly can bring to your
+                          Imagine the transformation ZenSched can bring to your
                           business. Join the companies that have revolutionized
                           their scheduling with our innovative solutions.
                         </Translate>

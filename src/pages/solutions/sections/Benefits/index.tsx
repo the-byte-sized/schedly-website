@@ -19,7 +19,7 @@ type Props = {
 
 const defaultTitle: Props["title"] = (
   <Typography variant="h4" component="h2" fontWeight="900">
-    Key benefits of GoSchedule
+    Key benefits of ZenSched
   </Typography>
 );
 

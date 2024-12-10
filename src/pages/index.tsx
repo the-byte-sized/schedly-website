@@ -20,7 +20,7 @@ export default function App(): JSX.Element {
   return (
     <Layout
       title={siteConfig.title}
-      description="Schedly is designed to streamline time management for businesses and individuals. It allows users to create customizable calendars, manage exceptions, and schedule events efficiently."
+      description="ZenSched is designed to streamline time management for businesses and individuals. It allows users to create customizable calendars, manage exceptions, and schedule events efficiently."
     >
       <Home />
     </Layout>

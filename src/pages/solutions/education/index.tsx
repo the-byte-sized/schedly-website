@@ -8,7 +8,7 @@ export default function EducationSolutionPage(): JSX.Element {
 
   return (
     <Layout
-      title="Schedly for Education"
+      title="ZenSched for Education"
       description="Smart Scheduling for Learning Environments"
     >
       <main>

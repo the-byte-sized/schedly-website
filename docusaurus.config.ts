@@ -5,12 +5,12 @@ import type * as Redocusaurus from 'redocusaurus';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Schedly Documentation',
+  title: 'ZenSched',
   tagline: 'Scheduling Made Simple.Tailored to Your Workflow',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://schedly.thebytesized.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -18,7 +18,7 @@ const config: Config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'the-byte-sized', // Usually your GitHub org/user name.
-  projectName: 'schedly-documentation', // Usually your repo name.
+  projectName: 'schedly-website', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -32,7 +32,6 @@ const config: Config = {
   },
 
   stylesheets: [
-    "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css",
     "https://cdnjs.cloudflare.com/ajax/libs/aos/3.0.0-beta.6/aos.css",
     "https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css",
     "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
@@ -93,9 +92,9 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'Schedly',
+      title: 'ZenSched',
       logo: {
-        alt: 'Schedly Logo',
+        alt: 'ZenSched Logo',
         src: 'img/logo.svg',
       },
       items: [
@@ -170,7 +169,8 @@ const config: Config = {
         },
         {
           label: 'Join Waitlist now',
-          className: "btn btn-primary text-white hvr-icon-forward hvr-shadow",
+          id: 'join-waitlist-navbar-button',
+          className: "text-white hvr-icon-forward hvr-shadow",
           position: 'right',
           href: 'https://forms.office.com/r/8LmMHy2bUF',
           target: "_blank"
@@ -226,7 +226,7 @@ const config: Config = {
           title: 'Product',
           items: [
             {
-              label: 'Why Schedly',
+              label: 'Why ZenSched',
               to: '/docs/intro/welcome',
             },
             {

@@ -2,9 +2,9 @@ import Link from "@docusaurus/Link";
 import Translate from "@docusaurus/Translate";
 import { Box, Button, Card, Container, Stack, Typography } from "@mui/material";
 import {
-  IconChevronRight,
-  IconCode,
-  IconHelpCircle,
+    IconChevronRight,
+    IconCode,
+    IconHelpCircle,
 } from "@tabler/icons-react";
 import Layout from "@theme/Layout";
 import React from "react";
@@ -118,7 +118,7 @@ const HelpCenterCard: React.FC = () => (
 
 export default function HelpPage(): JSX.Element {
   return (
-    <Layout title="Schedly - Get Help">
+    <Layout title="ZenSched - Get Help">
       <main>
         <Container>
           <Box textAlign="center" mt={10}>

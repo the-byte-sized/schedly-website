@@ -9,8 +9,8 @@ The tutorials on these pages assume that you have at least a basic understanding
 
 ### Sign Up and Create an App
 
-First of all, you need to **sign up** before you can start consuming the API. You can sign up [here](https://admin.goschedule.io/login).  
-You also need to create a **GoSchedule app**, as all requests to the API are made in the context of an app.
+First of all, you need to **sign up** before you can start consuming the API. You can sign up [here](https://admin.ZenSched.io/login).  
+You also need to create a **ZenSched app**, as all requests to the API are made in the context of an app.
 
 ---
 
@@ -22,7 +22,7 @@ All code examples use the **cURL command line tool**, which is a simple and comm
 
 ### JSON
 
-GoSchedule uses **JSON** as its data format, so all data to and from GoSchedule must be and will be formatted in JSON.  
+ZenSched uses **JSON** as its data format, so all data to and from ZenSched must be and will be formatted in JSON.  
 You need to set an HTTP header like this:
 
 ```
@@ -52,7 +52,7 @@ App API-Key authentication is slightly different from traditional basic authenti
 
 ```bash
 curl --request GET \
-  --url https://api.goschedule.io/v2/bookings \
+  --url https://api.zensched.io/v2/bookings \
   --header 'Content-Type: application/json' \   
   --user :live_api_key_7nzvc7wsBQQISLeFSVhROys9V1bUJ1z7
 ```

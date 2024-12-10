@@ -15,30 +15,30 @@ import Layout from "@theme/Layout";
 const faqs = [
   {
     question: translate({
-      id: "faq.whatIsGoSchedule.question",
-      message: "What is GoSchedule?",
+      id: "faq.whatIsZenSched.question",
+      message: "What is ZenSched?",
     }),
     answer: translate({
-      id: "faq.whatIsGoSchedule.answer",
+      id: "faq.whatIsZenSched.answer",
       message:
-        "GoSchedule is a powerful scheduling platform designed to manage availability, bookings, and events for businesses of all sizes. With features like dynamic rules, conflict management, and external calendar integration, it ensures seamless and smart scheduling",
+        "ZenSched is a powerful scheduling platform designed to manage availability, bookings, and events for businesses of all sizes. With features like dynamic rules, conflict management, and external calendar integration, it ensures seamless and smart scheduling",
     }),
   },
   {
     question: translate({
-      id: "faq.whoCanUseGoSchedule.question",
-      message: "Who can use GoSchedule?",
+      id: "faq.whoCanUseZenSched.question",
+      message: "Who can use ZenSched?",
     }),
     answer: translate({
-      id: "faq.whoCanUseGoSchedule.answer",
+      id: "faq.whoCanUseZenSched.answer",
       message:
-        "GoSchedule is perfect for professionals, teams, and organizations across various industries:\n- Service providers (e.g., salons, clinics)\n- Resource managers (e.g., co-working spaces, event planners)\n- Anyone who needs streamlined scheduling.",
+        "ZenSched is perfect for professionals, teams, and organizations across various industries:\n- Service providers (e.g., salons, clinics)\n- Resource managers (e.g., co-working spaces, event planners)\n- Anyone who needs streamlined scheduling.",
     }),
   },
   {
     question: translate({
       id: "faq.schedulingConflictsHandling.question",
-      message: "How does GoSchedule handle conflicts?",
+      message: "How does ZenSched handle conflicts?",
     }),
     answer: translate({
       id: "faq.schedulingConflictsHandling.answer",
@@ -49,51 +49,51 @@ const faqs = [
   {
     question: translate({
       id: "faq.externalCalendarsIntegrations.question",
-      message: "Can GoSchedule integrate with external calendars?",
+      message: "Can ZenSched integrate with external calendars?",
     }),
     answer: translate({
       id: "faq.externalCalendarsIntegrations.answer",
       message:
-        "Yes! GoSchedule seamlessly integrates with Google Calendar, Outlook, and other platforms. Synchronize your events effortlessly and keep everything in one place.",
+        "Yes! ZenSched seamlessly integrates with Google Calendar, Outlook, and other platforms. Synchronize your events effortlessly and keep everything in one place.",
     }),
   },
   {
     question: translate({
       id: "faq.customization.question",
-      message: "Is GoSchedule customizable?",
+      message: "Is ZenSched customizable?",
     }),
     answer: translate({
       id: "faq.customization.answer",
       message:
-        "Absolutely! With flexible rules, metadata for events, and hierarchical entity management, GoSchedule adapts to your unique needs.",
+        "Absolutely! With flexible rules, metadata for events, and hierarchical entity management, ZenSched adapts to your unique needs.",
     }),
   },
   {
     question: translate({
       id: "faq.recurringSchedules.question",
-      message: "Does GoSchedule work with recurring schedules?",
+      message: "Does ZenSched work with recurring schedules?",
     }),
     answer: translate({
       id: "faq.recurringSchedules.answer",
       message:
-        "Yes, GoSchedule supports both one-time and recurring schedules. Define weekly business hours, set exceptions for holidays, and manage recurring appointments with ease.",
+        "Yes, ZenSched supports both one-time and recurring schedules. Define weekly business hours, set exceptions for holidays, and manage recurring appointments with ease.",
     }),
   },
   {
     question: translate({
       id: "faq.dataSecurity.question",
-      message: "How secure is my data on GoSchedule?",
+      message: "How secure is my data on ZenSched?",
     }),
     answer: translate({
       id: "faq.dataSecurity.answer",
       message:
-        "GoSchedule prioritizes data security and employs encryption, secure APIs, and role-based access controls to protect your information.",
+        "ZenSched prioritizes data security and employs encryption, secure APIs, and role-based access controls to protect your information.",
     }),
   },
   {
     question: translate({
       id: "faq.getStarted.question",
-      message: "How can I get started with GoSchedule?",
+      message: "How can I get started with ZenSched?",
     }),
     answer: translate({
       id: "faq.getStarted.answer",
@@ -105,7 +105,7 @@ const faqs = [
 
 export default function FaqPage(): JSX.Element {
   return (
-    <Layout title="Schedly - FAQ">
+    <Layout title="ZenSched - FAQ">
       <main>
         <Container>
           <Box textAlign="center" mt={10}>
@@ -117,7 +117,7 @@ export default function FaqPage(): JSX.Element {
               <Typography variant="h5" component="h2" fontWeight="300">
                 <Translate id="faqPage.subtitle1">
                   Frequently asked questions regarding our booking and
-                  scheduling API - GoSchedule
+                  scheduling API - ZenSched
                 </Translate>
               </Typography>
             </Box>

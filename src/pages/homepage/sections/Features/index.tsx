@@ -27,7 +27,7 @@ const features = [
     description: translate({
       id: "features.addRules.description",
       message:
-        "Rules in Schedly can be one-time or recurring. Use them to represent business hours, employee leave, or resource unavailability — fully customizable.",
+        "Rules in ZenSched can be one-time or recurring. Use them to represent business hours, employee leave, or resource unavailability — fully customizable.",
     }),
     icon: <IconCategoryPlus size={48} />,
   },
@@ -68,7 +68,7 @@ const FeaturesCards: React.FC = () => {
         <Typography variant="subtitle1" color="textSecondary">
           <Translate id="featuresSection.description">
             Effortlessly manage availability, bookings, and events with
-            GoSchedule’s cutting-edge features. From dynamic rules to seamless
+            ZenSched’s cutting-edge features. From dynamic rules to seamless
             integrations, our platform is designed to simplify scheduling while
             maximizing productivity and flexibility.
           </Translate>

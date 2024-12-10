@@ -2,12 +2,12 @@ import Link from "@docusaurus/Link";
 import Translate, { translate } from "@docusaurus/Translate";
 import { Button } from "@mui/material";
 import {
-  IconBrandAndroid,
-  IconBrandApple,
-  IconBrandFlutter,
-  IconBrandReact,
-  IconBrandTypescript,
-  IconChevronRight,
+    IconBrandAndroid,
+    IconBrandApple,
+    IconBrandFlutter,
+    IconBrandReact,
+    IconBrandTypescript,
+    IconChevronRight,
 } from "@tabler/icons-react";
 import styles from "./styles.module.css";
 
@@ -31,14 +31,14 @@ const Documentation = () => {
             dangerouslySetInnerHTML={{
               __html: translate({
                 id: "documentationSection.title",
-                message: "Integrate Schedly <span>your way</span>",
+                message: "Integrate ZenSched <span>your way</span>",
               }),
             }}
           />
 
           <p className="fs-5">
             <Translate id="documentationSection.description">
-              Schedly adapts to your workflow with ease. Use our robust API for
+              ZenSched adapts to your workflow with ease. Use our robust API for
               direct integration or speed up development with ready-to-go SDKs
               for multiple platforms.
             </Translate>

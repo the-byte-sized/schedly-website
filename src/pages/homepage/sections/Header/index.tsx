@@ -74,7 +74,7 @@ function Header() {
           >
             <Typography variant="h4">
               <Translate id="homepage.header.description">
-                Schedly is designed to simplify event and resource management
+                ZenSched is designed to simplify event and resource management
                 for businesses and professionals. It enables the creation of
                 customizable entities, flexible exception handling, and
                 efficient event scheduling through APIs or SDKs.

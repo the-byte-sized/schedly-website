@@ -100,3 +100,8 @@ main {
   padding: 20px 0px !important;
   gap: 50px;
 }
+
+#join-waitlist-navbar-button {
+  background-color: var(--mui-palette-primary-main);
+  border-radius: 4px;
+}

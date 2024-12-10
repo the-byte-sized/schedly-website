@@ -1,10 +1,10 @@
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Card from "@site/src/components/Card";
 import {
-  IconBuildings,
-  IconCalendarCheck,
-  IconNotification,
-  IconUserShield
+    IconBuildings,
+    IconCalendarCheck,
+    IconNotification,
+    IconUserShield
 } from "@tabler/icons-react";
 import Layout from "@theme/Layout";
 
@@ -13,7 +13,7 @@ export default function CoworkingSpaceManagementSolutionPage(): JSX.Element {
 
   return (
     <Layout
-      title="Schedly for Co-working Spaces"
+      title="ZenSched for Co-working Spaces"
       description="Streamlining Shared Workspace Management"
     >
       <main>

@@ -1,10 +1,10 @@
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Card from "@site/src/components/Card";
 import {
-  IconCalendarUser,
-  IconClockRecord,
-  IconRazor,
-  IconRefresh
+    IconCalendarUser,
+    IconClockRecord,
+    IconRazor,
+    IconRefresh
 } from "@tabler/icons-react";
 import Layout from "@theme/Layout";
 
@@ -13,7 +13,7 @@ export default function BeautySalonSolutionPage(): JSX.Element {
 
   return (
     <Layout
-      title="Schedly for Beauty Salons"
+      title="ZenSched for Beauty Salons"
       description="Streamlining Appointment Scheduling"
     >
       <main>

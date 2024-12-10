@@ -9,15 +9,20 @@ const extTheme: ThemeOptions = extendTheme({
     },
     h1: {
       fontSize: "3.9rem",
+      lineHeight: 1.2,
+      letterSpacing: -0.5,
     },
     h2: {
       fontSize: "3.2rem",
+      lineHeight: 1.2,
     },
     h3: {
       fontSize: "2.7rem",
+      lineHeight: 1.2,
     },
     h4: {
       fontSize: "2.2rem",
+      lineHeight: 1.5,
     },
     h5: {
       fontSize: "1.9rem",

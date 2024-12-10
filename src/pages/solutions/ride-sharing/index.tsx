@@ -13,7 +13,7 @@ export default function RideSharingSolutionPage(): JSX.Element {
 
   return (
     <Layout
-      title="Schedly for Ride Sharing"
+      title="ZenSched for Ride Sharing"
       description="Empowering Flexible Ride Scheduling"
     >
       <main>

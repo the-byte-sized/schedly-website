@@ -1,6 +1,6 @@
 # Events Overview
 
-Events in GoSchedule represent scheduled activities or bookings tied to specific entities. 
+Events in ZenSched represent scheduled activities or bookings tied to specific entities. 
 
 They capture the start and end times, metadata, and any additional information required to manage and track reservations or activities.
 
@@ -20,15 +20,15 @@ They capture the start and end times, metadata, and any additional information r
 -	Events are validated against existing rules and other events to avoid conflicts.
 
 ### Integration
--	Events can synchronize with external calendars (e.g., Google Calendar or Outlook) to ensure consistent scheduling across platforms.tities can act as a Data Source, integrating with external systems like Google Calendar or Outlook. This allows events and availability to synchronize seamlessly between Schedly and external platforms.
+-	Events can synchronize with external calendars (e.g., Google Calendar or Outlook) to ensure consistent scheduling across platforms.tities can act as a Data Source, integrating with external systems like Google Calendar or Outlook. This allows events and availability to synchronize seamlessly between ZenSched and external platforms.
 
-## Examples of Events in GoSchedule
+## Examples of Events in ZenSched
 
-Events in GoSchedule are highly flexible and allow you to schedule activities or bookings for resources and services. Here are some practical examples to illustrate how events can be used in different scenarios.
+Events in ZenSched are highly flexible and allow you to schedule activities or bookings for resources and services. Here are some practical examples to illustrate how events can be used in different scenarios.
 
 ### Booking a Haircut Appointment
 
-A barber shop uses GoSchedule to manage customer appointments. 
+A barber shop uses ZenSched to manage customer appointments. 
 
 John Doe schedules a haircut with Barber A for 30 minutes.
 
@@ -41,7 +41,7 @@ John Doe schedules a haircut with Barber A for 30 minutes.
 
 ### Reserving a Meeting Room
 
-A co-working space uses GoSchedule to manage room reservations. A team reserves Meeting Room 1 for a 2-hour brainstorming session.
+A co-working space uses ZenSched to manage room reservations. A team reserves Meeting Room 1 for a 2-hour brainstorming session.
 
 -	**Entity:** Meeting Room 1
 -	**Event Details:**
@@ -52,7 +52,7 @@ A co-working space uses GoSchedule to manage room reservations. A team reserves 
 
 ### Scheduling a Doctor’s Consultation
 
-A health clinic uses GoSchedule to manage patient consultations. A patient books a general consultation with Doctor B for 15 minutes.
+A health clinic uses ZenSched to manage patient consultations. A patient books a general consultation with Doctor B for 15 minutes.
 
 -	**Entity:** Doctor B
 -	**Event Details:**
@@ -61,9 +61,9 @@ A health clinic uses GoSchedule to manage patient consultations. A patient books
 	-	**End Time:** 2024-12-03T10:15:00.000Z
 	-	**Metadata:** `{ "patient": "Alice Johnson", "reason": "Flu symptoms" }`
 
-## How Events Work in GoSchedule
+## How Events Work in ZenSched
 
-GoSchedule manages events with a robust framework designed to ensure seamless scheduling while respecting rules and avoiding conflicts. Here’s how events are processed:
+ZenSched manages events with a robust framework designed to ensure seamless scheduling while respecting rules and avoiding conflicts. Here’s how events are processed:
 
 ### 1. Creation
 
@@ -75,7 +75,7 @@ When an event is created, the system:
 
 ### 2. Validation
 
-Before adding an event, GoSchedule dynamically evaluates:
+Before adding an event, ZenSched dynamically evaluates:
 
 #### Rules:
 -	**Whitelist:** Ensures the event is within allowed time ranges (e.g., business hours).
@@ -94,7 +94,7 @@ When updating an event:
 
 ### 4. Retrieval
 
-GoSchedule supports retrieving events:
+ZenSched supports retrieving events:
 
 -	**By Entity:** Fetch all events for a specific resource or service.
 -	**By Date:** Retrieve events scheduled on a specific date.
@@ -111,8 +111,8 @@ If a new or updated event conflicts with rules or existing bookings:
 
 For entities acting as data sources (e.g., Google Calendar or Outlook):
 
--	Events from external calendars are synchronized into GoSchedule.
--	Deletions or modifications in GoSchedule propagate back to the external system, ensuring consistency.
+-	Events from external calendars are synchronized into ZenSched.
+-	Deletions or modifications in ZenSched propagate back to the external system, ensuring consistency.
 
 ### 7. Metadata for Customization
 

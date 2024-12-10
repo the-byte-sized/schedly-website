@@ -314,7 +314,7 @@
     "description": "The title of the tag list page"
   },
   "homepage.header.description": {
-    "message": "Schedly è progettato per semplificare la gestione degli eventi e delle risorse per aziende e professionisti. Permette di creare entità personalizzabili, gestire eccezioni con flessibilità e pianificare eventi in modo semplice ed efficiente tramite API o SDK."
+    "message": "ZenSched è progettato per semplificare la gestione degli eventi e delle risorse per aziende e professionisti. Permette di creare entità personalizzabili, gestire eccezioni con flessibilità e pianificare eventi in modo semplice ed efficiente tramite API o SDK."
   },
   "features.createEntities.title": {
     "message": "Crea entità"
@@ -326,7 +326,7 @@
     "message": "Aggiungi regole"
   },
   "features.addRules.description": {
-    "message": "Le regole in Schedly possono essere singole o ricorrenti. Usale per rappresentare gli orari di attività, le assenze dei dipendenti o l’indisponibilità delle risorse, il tutto completamente personalizzabile."
+    "message": "Le regole in ZenSched possono essere singole o ricorrenti. Usale per rappresentare gli orari di attività, le assenze dei dipendenti o l’indisponibilità delle risorse, il tutto completamente personalizzabile."
   },
   "features.scheduleEvents.title": {
     "message": "Pianifica eventi"
@@ -335,55 +335,55 @@
     "message": "Trova rapidamente gli slot disponibili e aggiungi eventi con facilità. Cos’è un evento? È ciò di cui hai bisogno: una visita medica, una call di team o altro, personalizzabile tramite metadata."
   },
   "documentationSection.title": {
-    "message": "Integra Schedly <span>a modo tuo</span>"
+    "message": "Integra ZenSched <span>a modo tuo</span>"
   },
   "documentationSection.description": {
-    "message": "Schedly si adatta con facilità al tuo workflow. Utilizza la nostra API robusta per un’integrazione diretta oppure accelera lo sviluppo con SDK pronti all’uso per diverse piattaforme."
+    "message": "ZenSched si adatta con facilità al tuo workflow. Utilizza la nostra API robusta per un’integrazione diretta oppure accelera lo sviluppo con SDK pronti all’uso per diverse piattaforme."
   },
   "documentationSection.button": {
     "message": "Vedi Documentazione"
   },
   "solutions.title": {
-    "message": "Schedly in <span className='text-primary'>azione</span>"
+    "message": "ZenSched in <span className='text-primary'>azione</span>"
   },
   "solutions.description": {
-    "message": "Immagina come le soluzioni di scheduling innovative e all’avanguardia di Schedly possano trasformare la tua azienda. Esplora le nostre soluzioni per scoprire come possiamo rivoluzionare la gestione del tempo e ottimizzare i tuoi flussi di lavoro."
+    "message": "Immagina come le soluzioni di scheduling innovative e all’avanguardia di ZenSched possano trasformare la tua azienda. Esplora le nostre soluzioni per scoprire come possiamo rivoluzionare la gestione del tempo e ottimizzare i tuoi flussi di lavoro."
   },
   "solutions.healthcare.title": {
     "message": "Healthcare"
   },
   "solutions.healthcare.description": {
-    "message": "Una clinica polispecialistica sempre impegnata, con un’agenda fitta di appuntamenti, offre servizi che spaziano dalla medicina generale a trattamenti specialistici. Schedly semplifica la gestione degli appuntamenti per numerosi medici con orari variabili, affrontando con efficienza le sfide di cancellazioni dell’ultimo minuto e visite d’emergenza."
+    "message": "Una clinica polispecialistica sempre impegnata, con un’agenda fitta di appuntamenti, offre servizi che spaziano dalla medicina generale a trattamenti specialistici. ZenSched semplifica la gestione degli appuntamenti per numerosi medici con orari variabili, affrontando con efficienza le sfide di cancellazioni dell’ultimo minuto e visite d’emergenza."
   },
   "solutions.education.title": {
     "message": "Education"
   },
   "solutions.education.description": {
-    "message": "Una piattaforma di educazione online offre lezioni live in diversi fusi orari con istruttori da tutto il mondo. Schedly aiuta a coordinare gli orari delle lezioni, gestire la disponibilità degli istruttori e organizzare le prenotazioni degli studenti."
+    "message": "Una piattaforma di educazione online offre lezioni live in diversi fusi orari con istruttori da tutto il mondo. ZenSched aiuta a coordinare gli orari delle lezioni, gestire la disponibilità degli istruttori e organizzare le prenotazioni degli studenti."
   },
   "solutions.coworkingSpaceManagement.title": {
     "message": "Gestione Spazi Di Co-working"
   },
   "solutions.coworkingSpaceManagement.description": {
-    "message": "Uno spazio di co-working offre ai membri la possibilità di prenotare sale riunioni e strutture condivise. Schedly aiuta a gestire le prenotazioni su più sedi e a prevenire conflitti di programmazione."
+    "message": "Uno spazio di co-working offre ai membri la possibilità di prenotare sale riunioni e strutture condivise. ZenSched aiuta a gestire le prenotazioni su più sedi e a prevenire conflitti di programmazione."
   },
   "solutions.rideSharingService.title": {
     "message": "Servizio di Ride Sharing"
   },
   "solutions.rideSharingService.description": {
-    "message": "Un servizio di ride-sharing in rapida crescita opera in più città, collegando passeggeri e autisti tramite un’app mobile. Il servizio affronta complesse sfide di pianificazione, come il rispetto delle normative locali sugli orari di lavoro degli autisti e le pause obbligatorie. Schedly semplifica i processi di pianificazione, riducendo il carico amministrativo e le attività manuali, ottimizzando le operazioni."
+    "message": "Un servizio di ride-sharing in rapida crescita opera in più città, collegando passeggeri e autisti tramite un’app mobile. Il servizio affronta complesse sfide di pianificazione, come il rispetto delle normative locali sugli orari di lavoro degli autisti e le pause obbligatorie. ZenSched semplifica i processi di pianificazione, riducendo il carico amministrativo e le attività manuali, ottimizzando le operazioni."
   },
   "solutions.beautySalons.title": {
     "message": "Saloni di Bellezza"
   },
   "solutions.beautySalons.description": {
-    "message": "Un salone di bellezza offre una vasta gamma di servizi, tra cui tagli di capelli, colorazioni, acconciature, manicure, pedicure, trattamenti viso e massaggi. Ogni servizio richiede tempi diversi, personale specializzato e, a volte, attrezzature o stanze specifiche. Schedly aiuta ad assegnare i servizi ai membri dello staff qualificati per svolgerli, prevenendo errori di pianificazione e gestendo la disponibilità di risorse specifiche, come stanze per trattamenti o poltrone per lo styling, evitando doppie prenotazioni.."
+    "message": "Un salone di bellezza offre una vasta gamma di servizi, tra cui tagli di capelli, colorazioni, acconciature, manicure, pedicure, trattamenti viso e massaggi. Ogni servizio richiede tempi diversi, personale specializzato e, a volte, attrezzature o stanze specifiche. ZenSched aiuta ad assegnare i servizi ai membri dello staff qualificati per svolgerli, prevenendo errori di pianificazione e gestendo la disponibilità di risorse specifiche, come stanze per trattamenti o poltrone per lo styling, evitando doppie prenotazioni.."
   },
   "yourBusinessCouldBeNext.title": {
     "message": "La Tua Attività Potrebbe Essere la Prossima"
   },
   "yourBusinessCouldBeNext.description": {
-    "message": "Immagina la trasformazione che Schedly può portare alla tua attività. Unisciti alle aziende che hanno rivoluzionato la loro pianificazione con le nostre soluzioni innovative."
+    "message": "Immagina la trasformazione che ZenSched può portare alla tua attività. Unisciti alle aziende che hanno rivoluzionato la loro pianificazione con le nostre soluzioni innovative."
   },
   "yourBusinessCouldBeNext.hype": {
     "message": "Pronto a fare il passo successivo?"

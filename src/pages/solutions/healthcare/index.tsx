@@ -16,7 +16,6 @@ import {
   Typography,
 } from "@mui/material";
 import Container from "@site/src/components/Container";
-import JoinWaitlistInput from "@site/src/components/JoinWaitlistInput/JoinWaitlistInput";
 import {
   IconCalendarCog,
   IconCheck,
@@ -25,9 +24,9 @@ import {
 } from "@tabler/icons-react";
 import Layout from "@theme/Layout";
 import React from "react";
-import SolutionHeader from "../sections/Header";
-import SolutionFeatures, { Feature } from "../sections/Features";
 import Benefits, { type Benefit } from "../sections/Benefits";
+import SolutionFeatures, { Feature } from "../sections/Features";
+import SolutionHeader from "../sections/Header";
 
 const steps = [
   "Select campaign settings",
@@ -125,7 +124,7 @@ export default function HealthcareSolutionPage(): JSX.Element {
 
   return (
     <Layout
-      title="Schedly for Healthcare"
+      title="ZenSched for Healthcare"
       description="Revolutionizing Medical Scheduling"
     >
       <main>
@@ -191,7 +190,7 @@ export default function HealthcareSolutionPage(): JSX.Element {
                   on a Wednesday.
                 </Typography>
 
-                <Typography>The GoSchedule API checks:</Typography>
+                <Typography>The ZenSched API checks:</Typography>
 
                 <Typography>• The physiotherapist’s availability;</Typography>
 
@@ -215,7 +214,7 @@ export default function HealthcareSolutionPage(): JSX.Element {
                   Conflict Resolution
                 </Typography>
                 <Typography>
-                  If the consultation room is occupied, Schedly suggests the
+                  If the consultation room is occupied, ZenSched suggests the
                   next available slot.
                 </Typography>
               </TimelineContent>
@@ -236,7 +235,7 @@ export default function HealthcareSolutionPage(): JSX.Element {
                 </Typography>
 
                 <Typography>
-                  Thanks to the WebHooks functionalities of GoSchedule, the
+                  Thanks to the WebHooks functionalities of ZenSched, the
                   patient and physiotherapist can receive confirmation emails.
                 </Typography>
               </TimelineContent>
@@ -255,7 +254,7 @@ export default function HealthcareSolutionPage(): JSX.Element {
 
               <TimelineContent sx={{ py: "12px", px: 2 }}>
                 <Typography variant="h6" component="span">
-                  That's how simple it's with GoSchedule!
+                  That's how simple it's with ZenSched!
                 </Typography>
               </TimelineContent>
             </TimelineItem>
@@ -264,7 +263,7 @@ export default function HealthcareSolutionPage(): JSX.Element {
 
         <Container>
           <Typography variant="h4" component="h2" fontWeight="900">
-            GoSchedule Implementation
+            ZenSched Implementation
           </Typography>
 
           <Stepper activeStep={activeStep}>
