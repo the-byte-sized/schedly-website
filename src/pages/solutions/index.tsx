@@ -15,7 +15,13 @@ import JoinWaitlistInput from "@site/src/components/JoinWaitlistInput/JoinWaitli
 import useSolutions from "@site/src/hooks/useSolutions";
 import Layout from "@theme/Layout";
 
-export default function Home(): JSX.Element {
+const AOS = {
+  effect: "fade-up",
+  duration: "500",
+  easing: "ease-out",
+};
+
+const SolutionsPage: React.FC = () => {
   const { palette } = useTheme();
   const { siteConfig } = useDocusaurusContext();
   const solutions = useSolutions();
@@ -38,9 +44,19 @@ export default function Home(): JSX.Element {
                     "ZenSched in <span style='color: var(--mui-palette-primary-main);'>action</span>",
                 }),
               }}
+              data-aos={AOS.effect}
+              data-aos-duration={AOS.duration}
+              data-aos-easing={AOS.easing}
             />
 
-            <Typography variant="subtitle1" sx={{ maxWidth: "75%", mt: 2 }}>
+            <Typography
+              variant="subtitle1"
+              sx={{ maxWidth: "75%", mt: 2 }}
+              data-aos={AOS.effect}
+              data-aos-duration={AOS.duration}
+              data-aos-easing={AOS.easing}
+              data-aos-delay="250"
+            >
               <Translate id="solutions.description">
                 Imagine how ZenSched's innovative, tech-forward scheduling
                 solutions can transform your business. Explore our solutions to
@@ -49,7 +65,13 @@ export default function Home(): JSX.Element {
               </Translate>
             </Typography>
 
-            <JoinWaitlistInput sx={{ mt: 3 }} />
+            <JoinWaitlistInput
+              sx={{ mt: 3 }}
+              data-aos={AOS.effect}
+              data-aos-duration={AOS.duration}
+              data-aos-easing={AOS.easing}
+              data-aos-delay="500"
+            />
           </Container>
         </Box>
 
@@ -61,7 +83,7 @@ export default function Home(): JSX.Element {
             sx={{ mt: 3 }}
           >
             {solutions.map(({ title, description, icon, link }) => (
-              <Link to={link}>
+              <Link to={link} key={crypto.randomUUID()}>
                 <Card sx={{ textDecoration: "none" }}>
                   <CardContent>
                     <Stack gap={1} alignItems="center" justifyContent="center">
@@ -77,35 +99,41 @@ export default function Home(): JSX.Element {
             ))}
           </Masonry>
 
-          <Card sx={{ backgroundColor: "primary.main", color: "white", mb: 7 }}>
-            <CardContent>
-              <Stack gap={1} alignItems="center" justifyContent="center">
-                <Typography variant="h5">
-                  <Translate id="yourBusinessCouldBeNext.title">
-                    Your Business Could Be Next
-                  </Translate>
-                </Typography>
+          <Box mt={8}>
+            <Card
+              sx={{ backgroundColor: "primary.main", color: "white", mb: 7 }}
+            >
+              <CardContent>
+                <Stack gap={1} alignItems="center" justifyContent="center">
+                  <Typography variant="h4">
+                    <Translate id="yourBusinessCouldBeNext.title">
+                      Your Business Could Be Next
+                    </Translate>
+                  </Typography>
 
-                <Typography sx={{ maxWidth: "75%" }}>
-                  <Translate id="yourBusinessCouldBeNext.description">
-                    Imagine the transformation ZenSched can bring to your
-                    business. Join the companies that have revolutionized their
-                    scheduling with our innovative solutions.
-                  </Translate>
-                </Typography>
+                  <Typography sx={{ maxWidth: "75%" }}>
+                    <Translate id="yourBusinessCouldBeNext.description">
+                      Imagine the transformation ZenSched can bring to your
+                      business. Join the companies that have revolutionized
+                      their scheduling with our innovative solutions.
+                    </Translate>
+                  </Typography>
 
-                <Typography fontWeight="bold">
-                  <Translate id="yourBusinessCouldBeNext.hype">
-                    Ready to take the next step?
-                  </Translate>
-                </Typography>
+                  <Typography fontWeight="bold">
+                    <Translate id="yourBusinessCouldBeNext.hype">
+                      Ready to take the next step?
+                    </Translate>
+                  </Typography>
 
-                <JoinWaitlistInput />
-              </Stack>
-            </CardContent>
-          </Card>
+                  <JoinWaitlistInput />
+                </Stack>
+              </CardContent>
+            </Card>
+          </Box>
         </Container>
       </main>
     </Layout>
   );
-}
+};
+
+export default SolutionsPage;
