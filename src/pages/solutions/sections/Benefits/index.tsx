@@ -42,7 +42,10 @@ const Benefits: React.FC<Props> = ({ title = defaultTitle, benefits }) => {
       <Box my={1}>
         <List>
           {benefits.map((benefit) => (
-            <ListItem sx={{ p: 0, my: 4, gap: 1, alignItems: "start" }}>
+            <ListItem
+              sx={{ p: 0, my: 4, gap: 1, alignItems: "start" }}
+              key={crypto.randomUUID()}
+            >
               <IconCheck size={32} stroke={2} color={palette.primary.main} />
 
               <Box sx={{ display: "flex", flexDirection: "column" }}>

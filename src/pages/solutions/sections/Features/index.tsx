@@ -60,7 +60,12 @@ const SolutionFeatures: React.FC<SolutionFeaturesProps> = ({
 
         <Stack direction="column" flex="1" spacing={4}>
           {features.map((feature) => (
-            <Stack direction="row" gap={1} alignItems="center">
+            <Stack
+              direction="row"
+              gap={1}
+              alignItems="center"
+              key={crypto.randomUUID()}
+            >
               {feature.icon}
 
               <Stack>
