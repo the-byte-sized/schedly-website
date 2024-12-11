@@ -33,6 +33,12 @@ import beautySalonAnimationData from "../../../assets/lottie/beauty-salon.json";
 // @ts-expect-error
 import bookingSolutionAnimationData from "../../../assets/lottie/booking-solution.json";
 
+const AOS = {
+  effect: "fade-up",
+  duration: "500",
+  easing: "ease-out",
+};
+
 const steps = ["Create Entities", "Create Rules", "Configure WebHooks"];
 
 const features: Feature[] = [
@@ -187,14 +193,23 @@ const BeautySalonsSolutionPage: React.FC = () => {
         </Box>
 
         <Container>
-          <Typography variant="h4" component="h2" fontWeight="900">
-            <Translate id="beautySalonsPage.workflowExampleSection.title">
+          <Typography variant="h2" fontWeight="900">
+            <Translate
+              id="beautySalonsPage.workflowExampleSection.title"
+              data-aos={AOS.effect}
+              data-aos-duration={AOS.duration}
+              data-aos-easing={AOS.easing}
+            >
               Workflow Example
             </Translate>
           </Typography>
 
           <Timeline position="alternate">
-            <TimelineItem>
+            <TimelineItem
+              data-aos={AOS.effect}
+              data-aos-duration={AOS.duration}
+              data-aos-easing={AOS.easing}
+            >
               <TimelineSeparator>
                 <TimelineConnector />
                 <TimelineDot>
@@ -204,7 +219,7 @@ const BeautySalonsSolutionPage: React.FC = () => {
               </TimelineSeparator>
 
               <TimelineContent sx={{ py: "12px", px: 2 }}>
-                <Typography variant="h6" component="span">
+                <Typography variant="h3">
                   <Typography>Customer Booking</Typography>
                 </Typography>
 
@@ -219,7 +234,12 @@ const BeautySalonsSolutionPage: React.FC = () => {
               </TimelineContent>
             </TimelineItem>
 
-            <TimelineItem>
+            <TimelineItem
+              data-aos="fade-down"
+              data-aos-duration={AOS.duration}
+              data-aos-easing={AOS.easing}
+              data-aos-delay="250"
+            >
               <TimelineSeparator>
                 <TimelineConnector />
                 <TimelineDot color="primary">
@@ -239,7 +259,12 @@ const BeautySalonsSolutionPage: React.FC = () => {
               </TimelineContent>
             </TimelineItem>
 
-            <TimelineItem>
+            <TimelineItem
+              data-aos={AOS.effect}
+              data-aos-duration={AOS.duration}
+              data-aos-easing={AOS.easing}
+              data-aos-delay="500"
+            >
               <TimelineSeparator>
                 <TimelineConnector />
                 <TimelineDot color="primary" variant="outlined">
@@ -260,7 +285,12 @@ const BeautySalonsSolutionPage: React.FC = () => {
               </TimelineContent>
             </TimelineItem>
 
-            <TimelineItem>
+            <TimelineItem
+              data-aos={AOS.effect}
+              data-aos-duration={AOS.duration}
+              data-aos-easing={AOS.easing}
+              data-aos-delay="750"
+            >
               <TimelineSeparator>
                 <TimelineConnector sx={{ bgcolor: "secondary.main" }} />
 
@@ -281,46 +311,58 @@ const BeautySalonsSolutionPage: React.FC = () => {
         </Container>
 
         <Container>
-          <Typography variant="h4" component="h2" fontWeight="900">
+          <Typography
+            variant="h2"
+            fontWeight="900"
+            data-aos={AOS.effect}
+            data-aos-duration={AOS.duration}
+            data-aos-easing={AOS.easing}
+          >
             ZenSched Implementation
           </Typography>
 
-          <Stepper
-            activeStep={activeStep}
-            sx={{
-              mt: 5,
-            }}
+          <Box
+            data-aos={AOS.effect}
+            data-aos-duration={AOS.duration}
+            data-aos-easing={AOS.easing}
           >
-            {steps.map((label) => (
-              <Step key={label}>
-                <StepLabel>{label}</StepLabel>
-              </Step>
-            ))}
-          </Stepper>
-
-          <Typography sx={{ mt: 2, mb: 1 }}>Step {activeStep + 1}</Typography>
-
-          <Stack
-            direction="row"
-            alignItems="center"
-            justifyContent="space-between"
-          >
-            <Button
-              color="inherit"
-              disabled={activeStep === 0}
-              onClick={handleBack}
-              sx={{ mr: 1 }}
+            <Stepper
+              activeStep={activeStep}
+              sx={{
+                mt: 5,
+              }}
             >
-              <Typography id="stepper.previousStepButton">Back</Typography>
-            </Button>
+              {steps.map((label) => (
+                <Step key={label}>
+                  <StepLabel>{label}</StepLabel>
+                </Step>
+              ))}
+            </Stepper>
 
-            <Button
-              onClick={handleNext}
-              disabled={activeStep === steps.length - 1}
+            <Typography sx={{ mt: 2, mb: 1 }}>Step {activeStep + 1}</Typography>
+
+            <Stack
+              direction="row"
+              alignItems="center"
+              justifyContent="space-between"
             >
-              <Typography id="stepper.nextStepButton">Next</Typography>
-            </Button>
-          </Stack>
+              <Button
+                color="inherit"
+                disabled={activeStep === 0}
+                onClick={handleBack}
+                sx={{ mr: 1 }}
+              >
+                <Typography id="stepper.previousStepButton">Back</Typography>
+              </Button>
+
+              <Button
+                onClick={handleNext}
+                disabled={activeStep === steps.length - 1}
+              >
+                <Typography id="stepper.nextStepButton">Next</Typography>
+              </Button>
+            </Stack>
+          </Box>
         </Container>
 
         <Box

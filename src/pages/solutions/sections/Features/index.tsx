@@ -3,6 +3,12 @@ import { Stack, Typography } from "@mui/material";
 import Lottie, { type LottieComponentProps } from "lottie-react";
 import React from "react";
 
+const AOS = {
+  effect: "fade-up",
+  duration: "500",
+  easing: "ease-out",
+};
+
 type Element = JSX.Element | string;
 
 export type Feature = {
@@ -33,6 +39,9 @@ const SolutionFeatures: React.FC<SolutionFeaturesProps> = ({
           xs: "100%",
           md: "50%",
         }}
+        data-aos={AOS.effect}
+        data-aos-duration={AOS.duration}
+        data-aos-easing={AOS.easing}
       >
         {title}
       </Typography>
@@ -47,6 +56,10 @@ const SolutionFeatures: React.FC<SolutionFeaturesProps> = ({
               xs: "none",
               md: "flex",
             }}
+            data-aos={"fade-right"}
+            data-aos-duration={AOS.duration}
+            data-aos-easing={AOS.easing}
+            data-aos-delay="250"
           >
             <img
               className="shadow-lg rounded-5"
@@ -56,24 +69,36 @@ const SolutionFeatures: React.FC<SolutionFeaturesProps> = ({
           </Stack>
         )}
 
-        {lottieProps && <Lottie {...lottieProps} />}
+        {lottieProps && (
+          <Lottie
+            {...lottieProps}
+            data-aos={"fade-right"}
+            data-aos-duration={AOS.duration}
+            data-aos-easing={AOS.easing}
+            data-aos-delay="250"
+          />
+        )}
 
         <Stack direction="column" flex="1" spacing={4}>
-          {features.map((feature) => (
+          {features.map((feature, index) => (
             <Stack
               direction="row"
               gap={1}
               alignItems="center"
               key={crypto.randomUUID()}
+              data-aos={AOS.effect}
+              data-aos-duration={AOS.duration}
+              data-aos-easing={AOS.easing}
+              data-aos-delay={index * 100}
             >
               {feature.icon}
 
               <Stack>
-                <Typography component="h2" variant="h6" fontWeight={700}>
+                <Typography variant="h5" component="h2" fontWeight={700}>
                   {feature.title}
                 </Typography>
 
-                <Typography variant="body1" fontWeight={300}>
+                <Typography variant="subtitle1" fontWeight={300}>
                   {feature.description}
                 </Typography>
               </Stack>

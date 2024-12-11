@@ -11,6 +11,12 @@ interface SolutionHeaderProps extends Grid2Props {
   lottieProps?: LottieComponentProps;
 }
 
+const AOS = {
+  effect: "fade-up",
+  duration: "500",
+  easing: "ease-out",
+};
+
 const SolutionHeader: React.FC<SolutionHeaderProps> = ({
   solutionTitle,
   solutionDescription,
@@ -32,13 +38,33 @@ const SolutionHeader: React.FC<SolutionHeaderProps> = ({
           md: 6,
         }}
       >
-        <Typography variant="h1" fontWeight="900">
+        <Typography
+          variant="h1"
+          fontWeight="900"
+          data-aos={AOS.effect}
+          data-aos-duration={AOS.duration}
+          data-aos-easing={AOS.easing}
+        >
           {solutionTitle}
         </Typography>
 
-        <Typography variant="subtitle1">{solutionDescription}</Typography>
+        <Typography
+          variant="subtitle1"
+          data-aos={AOS.effect}
+          data-aos-duration={AOS.duration}
+          data-aos-easing={AOS.easing}
+          data-aos-delay="250"
+        >
+          {solutionDescription}
+        </Typography>
 
-        <JoinWaitlistInput sx={{ mt: 3 }} />
+        <JoinWaitlistInput
+          sx={{ mt: 3 }}
+          data-aos={AOS.effect}
+          data-aos-duration={AOS.duration}
+          data-aos-easing={AOS.easing}
+          data-aos-delay="500"
+        />
       </Grid>
 
       <Grid
@@ -51,6 +77,9 @@ const SolutionHeader: React.FC<SolutionHeaderProps> = ({
           xs: "none",
           md: "block",
         }}
+        data-aos="fade-left"
+        data-aos-duration={AOS.duration}
+        data-aos-easing={AOS.easing}
       >
         {imgUrl && (
           <img

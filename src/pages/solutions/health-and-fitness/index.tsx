@@ -33,6 +33,12 @@ import SolutionHeader from "../sections/Header";
 // @ts-expect-error
 import bookingSolutionAnimationData from "../../../assets/lottie/booking-solution.json";
 
+const AOS = {
+  effect: "fade-up",
+  duration: "500",
+  easing: "ease-out",
+};
+
 const steps = ["Create Entities", "Create Rules", "Configure WebHooks"];
 
 const features: Feature[] = [
@@ -188,12 +194,23 @@ const HealthAndFitnessSolutionPage: React.FC = () => {
         </Box>
 
         <Container>
-          <Typography variant="h2" fontWeight="900">
+          <Typography
+            variant="h2"
+            fontWeight="900"
+            data-aos={AOS.effect}
+            data-aos-duration={AOS.duration}
+            data-aos-easing={AOS.easing}
+            data-aos-delay="750"
+          >
             <Translate>Workflow Example</Translate>
           </Typography>
 
           <Timeline position="alternate">
-            <TimelineItem>
+            <TimelineItem
+              data-aos={AOS.effect}
+              data-aos-duration={AOS.duration}
+              data-aos-easing={AOS.easing}
+            >
               <TimelineSeparator>
                 <TimelineConnector />
                 <TimelineDot>
@@ -214,7 +231,12 @@ const HealthAndFitnessSolutionPage: React.FC = () => {
               </TimelineContent>
             </TimelineItem>
 
-            <TimelineItem>
+            <TimelineItem
+              data-aos={AOS.effect}
+              data-aos-duration={AOS.duration}
+              data-aos-easing={AOS.easing}
+              data-aos-delay="150"
+            >
               <TimelineSeparator>
                 <TimelineConnector />
                 <TimelineDot color="primary">
@@ -234,7 +256,12 @@ const HealthAndFitnessSolutionPage: React.FC = () => {
               </TimelineContent>
             </TimelineItem>
 
-            <TimelineItem>
+            <TimelineItem
+              data-aos={AOS.effect}
+              data-aos-duration={AOS.duration}
+              data-aos-easing={AOS.easing}
+              data-aos-delay="250"
+            >
               <TimelineSeparator>
                 <TimelineConnector />
                 <TimelineDot color="primary" variant="outlined">
@@ -256,7 +283,12 @@ const HealthAndFitnessSolutionPage: React.FC = () => {
               </TimelineContent>
             </TimelineItem>
 
-            <TimelineItem>
+            <TimelineItem
+              data-aos={AOS.effect}
+              data-aos-duration={AOS.duration}
+              data-aos-easing={AOS.easing}
+              data-aos-delay="500"
+            >
               <TimelineSeparator>
                 <TimelineConnector sx={{ bgcolor: "secondary.main" }} />
 
@@ -277,52 +309,65 @@ const HealthAndFitnessSolutionPage: React.FC = () => {
         </Container>
 
         <Container>
-          <Typography variant="h2" fontWeight="900">
+          <Typography
+            variant="h2"
+            fontWeight="900"
+            data-aos={AOS.effect}
+            data-aos-duration={AOS.duration}
+            data-aos-easing={AOS.easing}
+            data-aos-delay="750"
+          >
             ZenSched Implementation
           </Typography>
 
-          <Stepper
-            activeStep={activeStep}
-            sx={{
-              mt: 5,
-            }}
+          <Box
+            data-aos={AOS.effect}
+            data-aos-duration={AOS.duration}
+            data-aos-easing={AOS.easing}
           >
-            {steps.map((label) => (
-              <Step key={label}>
-                <StepLabel>{label}</StepLabel>
-              </Step>
-            ))}
-          </Stepper>
-
-          {activeStep === 1 && (
-            <>
-              <Typography sx={{ mt: 2, mb: 1 }}>
-                Define Resources and Services
-              </Typography>
-            </>
-          )}
-
-          <Stack
-            direction="row"
-            alignItems="center"
-            justifyContent="space-between"
-          >
-            <Button
-              color="inherit"
-              disabled={activeStep === 0}
-              onClick={handleBack}
-              sx={{ mr: 1 }}
+            <Stepper
+              activeStep={activeStep}
+              sx={{
+                mt: 5,
+              }}
             >
-              <Typography id="stepper.previousStepButton">Back</Typography>
-            </Button>
+              {steps.map((label) => (
+                <Step key={label}>
+                  <StepLabel>{label}</StepLabel>
+                </Step>
+              ))}
+            </Stepper>
 
-            <Button
-              onClick={handleNext}
-              disabled={activeStep === steps.length - 1}
+            {activeStep === 1 && (
+              <>
+                <Typography sx={{ mt: 2, mb: 1 }}>
+                  Define Resources and Services
+                </Typography>
+              </>
+            )}
+
+            <Stack
+              direction="row"
+              alignItems="center"
+              justifyContent="space-between"
             >
-              <Typography id="stepper.nextStepButton">Next</Typography>
-            </Button>
-          </Stack>
+              <Button
+                color="inherit"
+                disabled={activeStep === 0}
+                onClick={handleBack}
+                sx={{ mr: 1 }}
+              >
+                <Typography id="stepper.previousStepButton">Back</Typography>
+              </Button>
+
+              <Button
+                onClick={handleNext}
+                disabled={activeStep === steps.length - 1}
+              >
+                <Typography id="stepper.nextStepButton">Next</Typography>
+              </Button>
+            </Stack>
+          </Box>
         </Container>
 
         <Box

@@ -1,13 +1,10 @@
 import Link from "@docusaurus/Link";
 import Translate from "@docusaurus/Translate";
-import useBaseUrl from "@docusaurus/useBaseUrl";
-import { Typography, Grid2 as Grid, Box, useTheme } from "@mui/material";
-import MuiButton from "@mui/material/Button";
-import Heading from "@theme/Heading";
+import { Box, Grid2 as Grid, Typography, useTheme } from "@mui/material";
+import Button from "@site/src/components/Button";
+import Container from "@site/src/components/Container";
 import React from "react";
 import styles from "./index.module.css";
-import Container from "@site/src/components/Container";
-import Button from "@site/src/components/Button";
 
 const AOS = {
   effect: "fade-up",
@@ -73,6 +70,7 @@ function Header() {
                   </svg>
                 </Typography>
               </Typography>
+              
               <div
                 data-aos={AOS.effect}
                 data-aos-duration={AOS.duration}
@@ -113,9 +111,6 @@ function Header() {
           </Container>
         </div>
 
-        <div className="container d-flex flex-column justify-content-center align-items-center position-relative z-1">
-          <div className="d-flex flex-column text-center"></div>
-        </div>
       </Box>
     </header>
   );

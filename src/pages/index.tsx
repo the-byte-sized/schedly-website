@@ -6,16 +6,10 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import '@fontsource/roboto/900.css';
 import Layout from "@theme/Layout";
-import AOS from "aos";
-import React from "react";
 import Home from "./homepage";
 
 export default function App(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
-
-  React.useEffect(() => {
-    AOS.init();
-  }, []);
 
   return (
     <Layout
