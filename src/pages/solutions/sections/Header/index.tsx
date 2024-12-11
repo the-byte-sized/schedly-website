@@ -54,12 +54,13 @@ const SolutionHeader: React.FC<SolutionHeaderProps> = ({
           data-aos-duration={AOS.duration}
           data-aos-easing={AOS.easing}
           data-aos-delay="250"
+          sx={{mt: 2}}
         >
           {solutionDescription}
         </Typography>
 
         <JoinWaitlistInput
-          sx={{ mt: 3 }}
+          sx={{ mt: 4 }}
           data-aos={AOS.effect}
           data-aos-duration={AOS.duration}
           data-aos-easing={AOS.easing}

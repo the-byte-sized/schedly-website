@@ -170,7 +170,7 @@ const BeautySalonsSolutionPage: React.FC = () => {
 
         <Box
           sx={{
-            backgroundColor: "hsl(260, 60%, 98%)",
+            backgroundColor: "background.paper",
             py: 5,
           }}
         >
@@ -368,7 +368,7 @@ const BeautySalonsSolutionPage: React.FC = () => {
         <Box
           sx={{
             p: 8,
-            backgroundColor: "hsl(260, 60%, 98%)",
+            backgroundColor: "background.paper",
           }}
         >
           <Benefits benefits={benefits} />

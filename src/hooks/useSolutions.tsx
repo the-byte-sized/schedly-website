@@ -62,7 +62,7 @@ const useSolutions = () => [
     link: "/solutions/ecommerce-and-retail",
     title: translate({
       id: "solutions.ecommerceAndRetail.title",
-      message: "E-commerce e Retail",
+      message: "E-commerce & Retail",
     }),
     description: translate({
       id: "solutions.ecommerceAndRetail.description",
