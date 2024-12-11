@@ -1,3 +1,4 @@
+import Link from "@docusaurus/Link";
 import Translate, { translate } from "@docusaurus/Translate";
 import {
   Timeline,
@@ -10,19 +11,26 @@ import {
 import {
   Box,
   Button,
+  List,
+  ListItem,
+  ListItemText,
   Stack,
   Step,
+  StepContent,
   StepLabel,
   Stepper,
   Typography,
 } from "@mui/material";
+import { styled } from "@mui/material/styles";
 import Container from "@site/src/components/Container";
 import {
+  IconBook,
   IconCalendarCog,
   IconCheck,
   IconNotification,
   IconUser,
 } from "@tabler/icons-react";
+import CodeBlock from "@theme/CodeBlock";
 import Layout from "@theme/Layout";
 import React from "react";
 import Benefits, { type Benefit } from "../sections/Benefits";
@@ -125,14 +133,26 @@ const benefits: Benefit[] = [
   },
 ];
 
-export default function HealthcareSolutionPage(): JSX.Element {
+const StyledList = styled(List)(({ theme }) => ({
+  listStyleType: "disc",
+  paddingLeft: theme.spacing(5),
+}));
+
+const StyledListItem = styled(ListItem)({
+  display: "list-item",
+});
+
+const HealthcareSolutionPage: React.FC = () => {
   const [activeStep, setActiveStep] = React.useState(0);
+  const prevStepRef = React.useRef<number>(0);
 
   const handleNext = () => {
+    prevStepRef.current = activeStep;
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
   };
 
   const handleBack = () => {
+    prevStepRef.current = activeStep;
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 
@@ -341,11 +361,179 @@ export default function HealthcareSolutionPage(): JSX.Element {
               {steps.map((label) => (
                 <Step key={label}>
                   <StepLabel>{label}</StepLabel>
+                  <StepContent></StepContent>
                 </Step>
               ))}
             </Stepper>
 
-            <Typography sx={{ mt: 2, mb: 1 }}>Step {activeStep + 1}</Typography>
+            {activeStep === 0 && (
+              <Box
+                sx={{ my: 5, marginLeft: 1 }}
+                data-aos={
+                  prevStepRef.current > activeStep
+                    ? "slide-right"
+                    : "slide-left"
+                }
+                data-aos-duration={AOS.duration}
+                data-aos-easing={AOS.easing}
+              >
+                <Typography variant="subtitle1">
+                  In this step we are going to create the various entities
+                  involved for this specific use case
+                </Typography>
+
+                <StyledList dense>
+                  <StyledListItem>
+                    <ListItemText
+                      primary="Physiotherapist"
+                      secondary="Resource"
+                    />
+
+                    <CodeBlock language="typescript" showLineNumbers>
+                      {`const physiotherapist = await zensched.entities.create({
+  name: 'Dr. John Doe',
+  type: 'RESOURCE',
+  metadata: {
+    specialization: 'Musculoskeletal Physiotherapy',
+    contact: 'john.doe@example.com',
+  }
+});
+`}
+                    </CodeBlock>
+                  </StyledListItem>
+
+                  <StyledListItem>
+                    <ListItemText
+                      primary="Consultation Room"
+                      secondary="Resource"
+                    />
+
+                    <CodeBlock language="typescript" showLineNumbers>
+                      {`const consultationRoom = await zensched.entities.create({
+  name: 'Consultation Room A',
+  type: 'RESOURCE'
+});
+`}
+                    </CodeBlock>
+                  </StyledListItem>
+
+                  <StyledListItem>
+                    <ListItemText
+                      primary="Physiotherapy Session"
+                      secondary="Service"
+                    />
+                  </StyledListItem>
+
+                  <CodeBlock language="typescript" showLineNumbers>
+                    {` await zensched.entities.create({
+  name: 'Physiotherapy Session',
+  type: 'SERVICE',
+  dependencies: [physiotherapist.id, consultationRoom.id]
+});
+`}
+                  </CodeBlock>
+                </StyledList>
+              </Box>
+            )}
+
+            {activeStep === 1 && (
+              <Box
+                sx={{ my: 5, marginLeft: 1 }}
+                data-aos={
+                  prevStepRef.current > activeStep
+                    ? "slide-right"
+                    : "slide-left"
+                }
+                data-aos-duration={AOS.duration}
+                data-aos-easing={AOS.easing}
+              >
+                <Typography variant="subtitle1">
+                  In this step we are going to create the rules involved for
+                  this specific use case
+                </Typography>
+
+                <StyledList dense>
+                  <StyledListItem>
+                    <ListItemText primary="Physiotherapist" />
+
+                    <CodeBlock language="typescript" showLineNumbers>
+                      {`await zensched.rules.create({
+    entityId: entityId, // ID of the physiotherapist entity
+    type: 'WHITELIST',
+    isRecurring: true,
+    rule: {
+      days: ['monday', 'tuesday', 'wednesday', 'thursday', 'friday'],
+      timeRanges: [{ start: '09:00', end: '13:00' }, { start: '14:00', end: '18:00' }],
+    },
+  });`}
+                    </CodeBlock>
+                  </StyledListItem>
+
+                  <StyledListItem>
+                    <ListItemText primary="Consultation Room" />
+
+                    <CodeBlock language="typescript" showLineNumbers>
+                      {`await zensched.rules.create({
+    entityId: entityId, // ID of the consultation room entity
+    type: 'WHITELIST',
+    isRecurring: true,
+    rule: {
+      days: ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'],
+      timeRanges: [{ start: '08:00', end: '20:00' }],
+    },
+  });`}
+                    </CodeBlock>
+                  </StyledListItem>
+                </StyledList>
+              </Box>
+            )}
+
+            {activeStep === 2 && (
+              <Box
+                sx={{ my: 5, marginLeft: 1 }}
+                data-aos={
+                  prevStepRef.current > activeStep
+                    ? "slide-right"
+                    : "slide-left"
+                }
+                data-aos-duration={AOS.duration}
+                data-aos-easing={AOS.easing}
+              >
+                <Typography variant="subtitle1">
+                  If you wish to handle notifications or have a custom handling
+                  of events you can create webhooks for various lifecycle events
+                  that we emit.
+                </Typography>
+
+                <StyledListItem>
+                  <ListItemText
+                    primary="Entity Created/Updated/Deleted"
+                    secondary="Useful for CRM or ERP integrations"
+                  />
+                </StyledListItem>
+
+                <StyledListItem>
+                  <ListItemText
+                    primary="Booking Updated/Deleted"
+                    secondary="You can listen for this event and send confirmation emails, for example"
+                  />
+                </StyledListItem>
+
+                <Typography variant="body1">
+                  Please refer to the documentation for more examples.
+                </Typography>
+
+                <Button
+                  LinkComponent={Link}
+                  href="/docs/intro/welcome"
+                  startIcon={<IconBook />}
+                  sx={{ mt: 2 }}
+                  variant="outlined"
+                >
+                  Read documentation
+                </Button>
+              </Box>
+            )}
 
             <Stack
               direction="row"
@@ -382,4 +570,6 @@ export default function HealthcareSolutionPage(): JSX.Element {
       </main>
     </Layout>
   );
-}
+};
+
+export default HealthcareSolutionPage;
