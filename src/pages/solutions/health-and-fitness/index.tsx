@@ -1,27 +1,27 @@
-import Translate from "@docusaurus/Translate";
+import Translate, { translate } from "@docusaurus/Translate";
 import {
-    Timeline,
-    TimelineConnector,
-    TimelineContent,
-    TimelineDot,
-    TimelineItem,
-    TimelineSeparator,
+  Timeline,
+  TimelineConnector,
+  TimelineContent,
+  TimelineDot,
+  TimelineItem,
+  TimelineSeparator,
 } from "@mui/lab";
 import {
-    Box,
-    Button,
-    Stack,
-    Step,
-    StepLabel,
-    Stepper,
-    Typography,
+  Box,
+  Button,
+  Stack,
+  Step,
+  StepLabel,
+  Stepper,
+  Typography,
 } from "@mui/material";
 import Container from "@site/src/components/Container";
 import {
-    IconCalendarCog,
-    IconCheck,
-    IconNotification,
-    IconUser,
+  IconCalendarCog,
+  IconCheck,
+  IconNotification,
+  IconUser,
 } from "@tabler/icons-react";
 import Layout from "@theme/Layout";
 import React from "react";
@@ -37,42 +37,84 @@ const steps = ["Create Entities", "Create Rules", "Configure WebHooks"];
 
 const features: Feature[] = [
   {
-    title: "Manage Class Schedules.",
-    description:
-      "Handle recurring group classes like yoga or spin, each with capacity limits and fixed schedules. ZenSched ensures no overlap in resource or instructor assignments.",
+    title: translate({
+      id: "healthAndFitness.benefits.manageClassSchedules.title",
+      message: "Manage Class Schedules.",
+    }),
+    description: translate({
+      id: "healthAndFitness.benefits.manageClassSchedules.description",
+      message:
+        "Handle recurring group classes like yoga or spin, each with capacity limits and fixed schedules. ZenSched ensures no overlap in resource or instructor assignments.",
+    }),
   },
   {
-    title: "Coordinate Personal Training Sessions.",
-    description:
-      "Manage one-on-one training schedules by syncing trainer availability with client preferences, avoiding conflicts.",
+    title: translate({
+      id: "healthAndFitness.benefits.coordinatePersonalTrainingSessions.title",
+      message: "Coordinate Personal Training Sessions.",
+    }),
+    description: translate({
+      id: "healthAndFitness.benefits.coordinatePersonalTrainingSessions.description",
+      message:
+        "Manage one-on-one training schedules by syncing trainer availability with client preferences, avoiding conflicts.",
+    }),
   },
   {
-    title: "Handle Shared Resources.",
-    description:
-      "Allocate shared spaces (e.g., studios) and equipment (e.g., bikes, mats) efficiently, ensuring optimal use without conflicts.",
+    title: translate({
+      id: "healthAndFitness.benefits.handleSharedResources.title",
+      message: "Handle Shared Resources.",
+    }),
+    description: translate({
+      id: "healthAndFitness.benefits.handleSharedResources.description",
+      message:
+        "Allocate shared spaces (e.g., studios) and equipment (e.g., bikes, mats) efficiently, ensuring optimal use without conflicts.",
+    }),
   },
   {
-    title: "Send Notifications and Reminders.",
-    description:
-      "Automate email or SMS notifications for bookings, reminders, and updates to keep both members and staff informed and on schedule.",
+    title: translate({
+      id: "healthAndFitness.benefits.sendNotifications.title",
+      message: "Send Notifications and Reminders.",
+    }),
+    description: translate({
+      id: "healthAndFitness.benefits.sendNotifications.description",
+      message:
+        "Automate email or SMS notifications for bookings, reminders, and updates to keep both members and staff informed and on schedule.",
+    }),
   },
 ];
 
 const benefits: Benefit[] = [
   {
-    title: "Efficient Resource Allocation",
-    description:
-      "Shared spaces and equipment are managed seamlessly, avoiding overbooking and downtime.",
+    title: translate({
+      id: "healthAndFitness.benefits.efficientResourceAllocation.title",
+      message: "Efficient Resource Allocation",
+    }),
+    description: translate({
+      id: "healthAndFitness.benefits.efficientResourceAllocation.description",
+      message:
+        "Shared spaces and equipment are managed seamlessly, avoiding overbooking and downtime.",
+    }),
   },
   {
-    title: "Personalized Member Experience",
-    description:
-      "Members benefit from clear booking processes, timely reminders, and the ability to choose preferred trainers or classes.",
+    title: translate({
+      id: "healthAndFitness.benefits.personalizedMemberExperience.title",
+      message: "Personalized Member Experience",
+    }),
+    description: translate({
+      id: "healthAndFitness.benefits.personalizedMemberExperience.description",
+      message:
+        "Members benefit from clear booking processes, timely reminders, and the ability to choose preferred trainers or classes.",
+    }),
   },
   {
-    title: "Improved Staff Coordination",
-    description:
-      "Staff schedules are automatically updated, reducing errors and ensuring smooth operations.",
+    title: translate({
+      id: "healthAndFitness.benefits.improvedStaffCoordination.title",
+      message: "Improved Staff Coordination",
+    }),
+    description: translate({
+      id: "healthAndFitness.benefits.improvedStaffCoordination.description",
+      message:
+        "Staff schedules are automatically updated, reducing errors and ensuring smooth operations.",
+    }),
   },
 ];
 
@@ -89,8 +131,11 @@ const HealthAndFitnessSolutionPage: React.FC = () => {
 
   return (
     <Layout
-      title="ZenSched for Health and Fitness"
-      description="Smart Scheduling for Health and Fitness Centers"
+      title={translate({ id: "healthAndFitnessPage.title", message: "ZenSched for Health and Fitness" })}
+      description={translate({
+        id: "healthAndFitnessPage.description",
+        message: "Smart Scheduling for Health and Fitness Centers",
+      })}
     >
       <main>
         <Container sx={{ my: 5 }}>
@@ -99,12 +144,12 @@ const HealthAndFitnessSolutionPage: React.FC = () => {
               animationData: healthAndFitnessAnimationData,
             }}
             solutionTitle={
-              <Translate id="healthAndFitnessSolutionPage.intro.title">
+              <Translate id="healthAndFitnessPage.intro.title">
                 Advanced Scheduling for Health and Fitness Center
               </Translate>
             }
             solutionDescription={
-              <Translate id="healthAndFitnessSolutionPage.intro.caption">
+              <Translate id="healthAndFitnessPage.intro.caption">
                 Effortlessly manage fitness schedules with a versatile system
                 that coordinates trainers, handles member bookings, optimizes
                 shared spaces, and adapts seamlessly to changing
@@ -131,7 +176,7 @@ const HealthAndFitnessSolutionPage: React.FC = () => {
               }}
               features={features}
               title={
-                <Translate>
+                <Translate id="healthAndFitnessPage.solutionFeaturesSection.title">
                   Effortless booking management, simplified for your success.
                 </Translate>
               }

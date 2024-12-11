@@ -1,4 +1,4 @@
-import Translate from "@docusaurus/Translate";
+import Translate, { translate } from "@docusaurus/Translate";
 import {
   Timeline,
   TimelineConnector,
@@ -37,47 +37,89 @@ const steps = ["Create Entities", "Create Rules", "Configure WebHooks"];
 
 const features: Feature[] = [
   {
-    title: "Synchronize availability across the staff.",
-    description:
-      "The staff members, such as front-desk managers or cleaning staff, must coordinate their schedules to align with bookings for meeting rooms, events, or equipment setup.",
+    title: translate({
+      id: "coworkingSpaceManagement.features.synchronizeAvailability.title",
+      message: "Synchronize availability across the staff.",
+    }),
+    description: translate({
+      id: "coworkingSpaceManagement.features.synchronizeAvailability.description",
+      message:
+        "The staff members, such as front-desk managers or cleaning staff, must coordinate their schedules to align with bookings for meeting rooms, events, or equipment setup.",
+    }),
   },
   {
-    title: "Handle shared resources.",
-    description:
-      "Meeting rooms, projectors, and whiteboards are shared resources that must be booked without conflicts. ZenSched ensures optimal allocation and usage.",
+    title: translate({
+      id: "coworkingSpaceManagement.features.handleSharedResources.title",
+      message: "Handle shared resources.",
+    }),
+    description: translate({
+      id: "coworkingSpaceManagement.features.handleSharedResources.description",
+      message:
+        "Meeting rooms, projectors, and whiteboards are shared resources that must be booked without conflicts. ZenSched ensures optimal allocation and usage.",
+    }),
   },
   {
-    title: "Support different booking rules.",
-    description:
-      "Different spaces have unique policies. For instance, meeting rooms can be booked in 30-minute increments, while private offices are reserved by the hour.",
+    title: translate({
+      id: "coworkingSpaceManagement.features.supportDifferentBookingRules.title",
+      message: "Support different booking rules.",
+    }),
+    description: translate({
+      id: "coworkingSpaceManagement.features.supportDifferentBookingRules.description",
+      message:
+        "Different spaces have unique policies. For instance, meeting rooms can be booked in 30-minute increments, while private offices are reserved by the hour.",
+    }),
   },
   {
-    title: "Notify and remind customers about their appointments.",
-    description:
-      "Send timely reminders and updates to keep customers and staff informed and on time.",
+    title: translate({
+      id: "coworkingSpaceManagement.features.notifications.title",
+      message: "Notify and remind customers about their appointments.",
+    }),
+    description: translate({
+      id: "coworkingSpaceManagement.features.notifications.description",
+      message:
+        "Send timely reminders and updates to keep customers and staff informed and on time.",
+    }),
   },
 ];
 
 const benefits: Benefit[] = [
   {
-    title: "Simplified and efficient scheduling.",
-    description:
-      "Streamline appointment management with tools that centralize and organize scheduling tasks, reducing manual effort.",
+    title: translate({
+      id: "coworkingSpaceManagement.benefits.simplifiedScheduling.title",
+      message: "Simplified and efficient scheduling.",
+    }),
+    description: translate({
+      id: "coworkingSpaceManagement.benefits.simplifiedScheduling.description",
+      message:
+        "Streamline appointment management with tools that centralize and organize scheduling tasks, reducing manual effort.",
+    }),
   },
   {
-    title: "Reduced booking conflicts.",
-    description:
-      "Intelligent algorithms prevent overlapping bookings, ensuring seamless operations.",
+    title: translate({
+      id: "coworkingSpaceManagement.benefits.reducedBookingConflicts.title",
+      message: "Reduced booking conflicts.",
+    }),
+    description: translate({
+      id: "coworkingSpaceManagement.benefits.reducedBookingConflicts.description",
+      message:
+        "Intelligent algorithms prevent overlapping bookings, ensuring seamless operations.",
+    }),
   },
   {
-    title:
-      "Improved customer satisfaction through automated reminders and smooth booking processes",
-    description:
-      "Notifications keep customers informed, while intuitive systems enable effortless appointment creation and changes.",
+    title: translate({
+      id: "coworkingSpaceManagement.benefits.improvedCustomerSatisfaction.title",
+      message:
+        "Improved customer satisfaction through automated reminders and smooth booking processes",
+    }),
+    description: translate({
+      id: "coworkingSpaceManagement.benefits.improvedCustomerSatisfaction.description",
+      message:
+        "Notifications keep customers informed, while intuitive systems enable effortless appointment creation and changes.",
+    }),
   },
 ];
 
-export default function CoworkingSpaceManagementSolutionPage(): JSX.Element {
+const CoworkingSpaceManagementSolutionPage: React.FC = () => {
   const [activeStep, setActiveStep] = React.useState(0);
 
   const handleNext = () => {
@@ -90,8 +132,14 @@ export default function CoworkingSpaceManagementSolutionPage(): JSX.Element {
 
   return (
     <Layout
-      title="ZenSched for Co-working Spaces"
-      description="Streamlining Shared Workspace Management"
+      title={translate({
+        id: "coworkingSpaceManagementPage.title",
+        message: "ZenSched for Co-working Spaces",
+      })}
+      description={translate({
+        id: "coworkingSpaceManagementPage.description",
+        message: "Streamlining Shared Workspace Management",
+      })}
     >
       <main>
         <Container sx={{ my: 5 }}>
@@ -100,12 +148,12 @@ export default function CoworkingSpaceManagementSolutionPage(): JSX.Element {
               animationData: coworkingSpaceManagementAnimationData,
             }}
             solutionTitle={
-              <Translate id="healthcareSolutionPage.intro.title">
+              <Translate id="coworkingSpaceManagementPage.intro.title">
                 Conference Room Booking for a Co-Working Space
               </Translate>
             }
             solutionDescription={
-              <Translate id="healthcareSolutionPage.intro.caption">
+              <Translate id="coworkingSpaceManagementPage.intro.caption">
                 Manage coworking spaces effortlessly with a single tool. Handle
                 bookings across multiple locations, accommodate various
                 membership levels, and avoid scheduling conflicts—all in one
@@ -131,7 +179,7 @@ export default function CoworkingSpaceManagementSolutionPage(): JSX.Element {
               }}
               features={features}
               title={
-                <Translate>
+                <Translate id="coworkingSpaceManagementPage.solutionFeaturesSection.title">
                   Effortless booking management, simplified for your success.
                 </Translate>
               }
@@ -282,4 +330,6 @@ export default function CoworkingSpaceManagementSolutionPage(): JSX.Element {
       </main>
     </Layout>
   );
-}
+};
+
+export default CoworkingSpaceManagementSolutionPage;

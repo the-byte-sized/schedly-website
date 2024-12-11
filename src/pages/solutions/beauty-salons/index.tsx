@@ -1,4 +1,4 @@
-import Translate from "@docusaurus/Translate";
+import Translate, { translate } from "@docusaurus/Translate";
 import {
   Timeline,
   TimelineConnector,
@@ -37,43 +37,85 @@ const steps = ["Create Entities", "Create Rules", "Configure WebHooks"];
 
 const features: Feature[] = [
   {
-    title: "Synchronize availability across multiple specialists.",
-    description:
-      "Effortlessly manage and coordinate schedules for all your specialists.",
+    title: translate({
+      id: "beautySalons.features.synchronizeAvailability.title",
+      message: "Synchronize availability across multiple specialists.",
+    }),
+    description: translate({
+      id: "beautySalons.features.synchronizeAvailability.description",
+      message:
+        "Effortlessly manage and coordinate schedules for all your specialists.",
+    }),
   },
   {
-    title: "Handle shared resources.",
-    description:
-      "Ensure optimal use of rooms, equipment, and shared resources without conflicts.",
+    title: translate({
+      id: "beautySalons.features.handleSharedResources.title",
+      message: "Handle shared resources.",
+    }),
+    description: translate({
+      id: "beautySalons.features.handleSharedResources.description",
+      message:
+        "Ensure optimal use of rooms, equipment, and shared resources without conflicts.",
+    }),
   },
   {
-    title: "Support different booking rules per specialty.",
-    description:
-      "Customize booking policies to match the unique needs of each specialty.",
+    title: translate({
+      id: "beautySalons.features.bookingRules.title",
+      message: "Support different booking rules per specialty.",
+    }),
+    description: translate({
+      id: "beautySalons.features.bookingRules.description",
+      message:
+        "Customize booking policies to match the unique needs of each specialty.",
+    }),
   },
   {
-    title: "Notify and remind customers about their appointments.",
-    description:
-      "Send timely reminders and updates to keep customers informed and on time.",
+    title: translate({
+      id: "beautySalons.features.notifications.title",
+      message: "Notify and remind customers about their appointments.",
+    }),
+    description: translate({
+      id: "beautySalons.features.notifications.description",
+      message:
+        "Send timely reminders and updates to keep customers informed and on time.",
+    }),
   },
 ];
 
 const benefits: Benefit[] = [
   {
-    title: "Simplified and efficient scheduling for the beauty salon.",
-    description:
-      "Streamline appointment management with tools that centralize and organize scheduling tasks, reducing manual effort.",
+    title: translate({
+      id: "beautySalons.benefits.simplifiedScheduling.title",
+      message: "Simplified and efficient scheduling for the beauty salon.",
+    }),
+    description: translate({
+      id: "beautySalons.benefits.simplifiedScheduling.description",
+      message:
+        "Streamline appointment management with tools that centralize and organize scheduling tasks, reducing manual effort.",
+    }),
   },
   {
-    title: "Reduced booking conflicts.",
-    description:
-      "Intelligent algorithms prevent overlapping bookings, ensuring seamless beauty salon operations.",
+    title: translate({
+      id: "beautySalons.benefits.reducedBookingConflicts.title",
+      message: "Reduced booking conflicts.",
+    }),
+    description: translate({
+      id: "beautySalons.benefits.reducedBookingConflicts.description",
+      message:
+        "Intelligent algorithms prevent overlapping bookings, ensuring seamless beauty salon operations.",
+    }),
   },
   {
-    title:
-      "Improved customer satisfaction through automated reminders and smooth booking processes",
-    description:
-      "Notifications keep customers informed, while intuitive systems enable effortless appointment creation and changes.",
+    title: translate({
+      id: "beautySalons.benefits.improvedCustomerSatisfaction.title",
+      message:
+        "Improved customer satisfaction through automated reminders and smooth booking processes",
+    }),
+    description: translate({
+      id: "beautySalons.benefits.improvedCustomerSatisfaction.description",
+      message:
+        "Notifications keep customers informed, while intuitive systems enable effortless appointment creation and changes.",
+    }),
   },
 ];
 
@@ -90,8 +132,14 @@ const BeautySalonsSolutionPage: React.FC = () => {
 
   return (
     <Layout
-      title="ZenSched for Beauty Salons"
-      description="Streamlining Appointment Scheduling"
+      title={translate({
+        id: "beautySalonsPage.title",
+        message: "ZenSched for Beauty Salons",
+      })}
+      description={translate({
+        id: "beautySalonsPage.description",
+        message: "ZenSched for Beauty Salons",
+      })}
     >
       <main>
         <Container sx={{ my: 5 }}>
@@ -100,12 +148,12 @@ const BeautySalonsSolutionPage: React.FC = () => {
               animationData: beautySalonAnimationData,
             }}
             solutionTitle={
-              <Translate id="healthcareSolutionPage.intro.title">
+              <Translate id="beautySalonsPage.intro.title">
                 Advanced Scheduling for a Beauty Salon
               </Translate>
             }
             solutionDescription={
-              <Translate id="healthcareSolutionPage.intro.caption">
+              <Translate id="beautySalonsPage.intro.caption">
                 Simplify appointment management for barber with different
                 schedules. Handle last-minute cancellations, and resource
                 allocation—all with one tool.
@@ -130,7 +178,7 @@ const BeautySalonsSolutionPage: React.FC = () => {
               }}
               features={features}
               title={
-                <Translate>
+                <Translate id="beautySalonsPage.solutionFeaturesSection.title">
                   Effortless booking management, simplified for your success.
                 </Translate>
               }
@@ -140,7 +188,9 @@ const BeautySalonsSolutionPage: React.FC = () => {
 
         <Container>
           <Typography variant="h4" component="h2" fontWeight="900">
-            <Translate>Workflow Example</Translate>
+            <Translate id="beautySalonsPage.workflowExampleSection.title">
+              Workflow Example
+            </Translate>
           </Typography>
 
           <Timeline position="alternate">
@@ -155,7 +205,7 @@ const BeautySalonsSolutionPage: React.FC = () => {
 
               <TimelineContent sx={{ py: "12px", px: 2 }}>
                 <Typography variant="h6" component="span">
-                  Customer Booking
+                  <Typography>Customer Booking</Typography>
                 </Typography>
 
                 <Typography>

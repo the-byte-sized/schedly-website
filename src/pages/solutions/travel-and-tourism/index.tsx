@@ -1,4 +1,4 @@
-import Translate from "@docusaurus/Translate";
+import Translate, { translate } from "@docusaurus/Translate";
 import {
   Timeline,
   TimelineConnector,
@@ -37,47 +37,89 @@ const steps = ["Create Entities", "Create Rules", "Configure WebHooks"];
 
 const features: Feature[] = [
   {
-    title: "Synchronize availability across the staff.",
-    description:
-      "Tour guides and administrative staff need to coordinate their schedules. ZenSched dynamically synchronizes staff availability to avoid conflicts and ensure seamless scheduling.",
+    title: translate({
+      id: "travelAndTourism.benefits.synchronizeAvailability.title",
+      message: "Synchronize availability across the staff.",
+    }),
+    description: translate({
+      id: "travelAndTourism.benefits.synchronizeAvailability.description",
+      message:
+        "Tour guides and administrative staff need to coordinate their schedules. ZenSched dynamically synchronizes staff availability to avoid conflicts and ensure seamless scheduling.",
+    }),
   },
   {
-    title: "Handle shared resources.",
-    description:
-      "Easily adapt to unique scheduling needs with ZenSched. Set custom booking durations, cancellation policies, and advance booking requirements for each service, ensuring a seamless fit for your business operations.",
+    title: translate({
+      id: "travelAndTourism.benefits.handleSharedResources.title",
+      message: "Handle shared resources.",
+    }),
+    description: translate({
+      id: "travelAndTourism.benefits.handleSharedResources.description",
+      message:
+        "Easily adapt to unique scheduling needs with ZenSched. Set custom booking durations, cancellation policies, and advance booking requirements for each service, ensuring a seamless fit for your business operations.",
+    }),
   },
   {
-    title: "Support different booking rules.",
-    description: "Different guided tours and events have unique policies.",
+    title: translate({
+      id: "travelAndTourism.benefits.bookingRules.title",
+      message: "Support different booking rules.",
+    }),
+    description: translate({
+      id: "travelAndTourism.benefits.bookingRules.description",
+      message: "Different guided tours and events have unique policies.",
+    }),
   },
   {
-    title:
-      "Notify and remind guide tours and customers about their appointments.",
-    description:
-      "Send timely reminders and updates to keep customers and guide tours informed and on time.",
+    title: translate({
+      id: "travelAndTourism.benefits.notifications.title",
+      message:
+        "Notify and remind guide tours and customers about their appointments.",
+    }),
+    description: translate({
+      id: "travelAndTourism.benefits.notifications.description",
+      message:
+        "Send timely reminders and updates to keep customers and guide tours informed and on time.",
+    }),
   },
 ];
 
 const benefits: Benefit[] = [
   {
-    title: "Simplified and efficient scheduling.",
-    description:
-      "Streamline appointment management with tools that centralize and organize scheduling tasks, reducing manual effort.",
+    title: translate({
+      id: "travelAndTourism.benefits.simplifiedAndEfficientScheduling.title",
+      message: "Simplified and efficient scheduling.",
+    }),
+    description: translate({
+      id: "travelAndTourism.benefits.simplifiedAndEfficientScheduling.description",
+      message:
+        "Streamline appointment management with tools that centralize and organize scheduling tasks, reducing manual effort.",
+    }),
   },
   {
-    title: "Reduced booking conflicts.",
-    description:
-      "Intelligent algorithms prevent overlapping bookings, ensuring seamless operations.",
+    title: translate({
+      id: "travelAndTourism.benefits.reducedBookingConflicts.title",
+      message: "Reduced booking conflicts.",
+    }),
+    description: translate({
+      id: "travelAndTourism.benefits.reducedBookingConflicts.description",
+      message:
+        "Intelligent algorithms prevent overlapping bookings, ensuring seamless operations.",
+    }),
   },
   {
-    title:
-      "Improved customer satisfaction through automated reminders and smooth booking processes",
-    description:
-      "Notifications keep customers informed, while intuitive systems enable effortless appointment creation and changes.",
+    title: translate({
+      id: "travelAndTourism.benefits.improvedCustomerSatisfaction.title",
+      message:
+        "Improved customer satisfaction through automated reminders and smooth booking processes",
+    }),
+    description: translate({
+      id: "travelAndTourism.benefits.improvedCustomerSatisfaction.description",
+      message:
+        "Notifications keep customers informed, while intuitive systems enable effortless appointment creation and changes.",
+    }),
   },
 ];
 
-export default function TravelAndTourismSolutionPage(): JSX.Element {
+const TravelAndTourismSolutionPage: React.FC = () => {
   const [activeStep, setActiveStep] = React.useState(0);
 
   const handleNext = () => {
@@ -90,8 +132,14 @@ export default function TravelAndTourismSolutionPage(): JSX.Element {
 
   return (
     <Layout
-      title="ZenSched for Travel and Tourism"
-      description="Smart Scheduling for Travel and Tourism Agency"
+      title={translate({
+        id: "travelAndTourismPage.title",
+        message: "ZenSched for Travel and Tourism",
+      })}
+      description={translate({
+        id: "travelAndTourismPage.description",
+        message: "Smart Scheduling for Travel and Tourism Agency",
+      })}
     >
       <main>
         <Container sx={{ my: 5 }}>
@@ -101,12 +149,12 @@ export default function TravelAndTourismSolutionPage(): JSX.Element {
               loop: false,
             }}
             solutionTitle={
-              <Translate id="healthcareSolutionPage.intro.title">
+              <Translate id="travelAndTourismPage.intro.title">
                 Advanced Scheduling for a Travel and Tourism Agency
               </Translate>
             }
             solutionDescription={
-              <Translate id="healthcareSolutionPage.intro.caption">
+              <Translate id="travelAndTourismPage.intro.caption">
                 Manage live classes effortlessly with a flexible scheduling
                 system. Coordinate instructors across time zones, handle student
                 bookings, and adapt to changing availability—all in one
@@ -133,7 +181,7 @@ export default function TravelAndTourismSolutionPage(): JSX.Element {
               }}
               features={features}
               title={
-                <Translate>
+                <Translate id="travelAndTourismPage.solutionFeaturesSection.title">
                   Effortless booking management, simplified for your success.
                 </Translate>
               }
@@ -284,4 +332,6 @@ export default function TravelAndTourismSolutionPage(): JSX.Element {
       </main>
     </Layout>
   );
-}
+};
+
+export default TravelAndTourismSolutionPage;

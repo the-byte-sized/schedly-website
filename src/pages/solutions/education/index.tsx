@@ -1,4 +1,4 @@
-import Translate from "@docusaurus/Translate";
+import Translate, { translate } from "@docusaurus/Translate";
 import {
   Timeline,
   TimelineConnector,
@@ -37,47 +37,90 @@ const steps = ["Create Entities", "Create Rules", "Configure WebHooks"];
 
 const features: Feature[] = [
   {
-    title: "Synchronize availability across the staff.",
-    description:
-      "Instructors, teaching assistants, and administrative staff need to coordinate their schedules to align with class timings, one-on-one sessions, and student consultations. ZenSched dynamically synchronizes staff availability to avoid conflicts and ensure seamless scheduling.",
+    title: translate({
+      id: "education.benefits.synchronizeAvailability.title",
+      message: "Synchronize availability across the staff.",
+    }),
+    description: translate({
+      id: "education.benefits.synchronizeAvailability.title",
+      message:
+        "Instructors, teaching assistants, and administrative staff need to coordinate their schedules to align with class timings, one-on-one sessions, and student consultations. ZenSched dynamically synchronizes staff availability to avoid conflicts and ensure seamless scheduling.",
+    }),
   },
   {
-    title: "Handle shared resources.",
-    description:
-      "Virtual classrooms, breakout rooms, and shared teaching tools (e.g., whiteboards, document sharing systems) are allocated based on availability. ZenSched ensures optimal usage by avoiding double-booking and prioritizing critical classes or sessions.",
+    title: translate({
+      id: "education.benefits.sharedResources.title",
+      message: "Handle shared resources.",
+    }),
+    description: translate({
+      id: "education.benefits.sharedResources.title",
+      message:
+        "Virtual classrooms, breakout rooms, and shared teaching tools (e.g., whiteboards, document sharing systems) are allocated based on availability. ZenSched ensures optimal usage by avoiding double-booking and prioritizing critical classes or sessions.",
+    }),
   },
   {
-    title: "Support different booking rules.",
-    description:
-      "Different online courses and events have unique policies. For instance, meeting regular classes are scheduled in fixed 1-hour increments, while one-on-one sessions are bookable for 30 minutes.",
+    title: translate({
+      id: "education.benefits.bookingRules.title",
+      message: "Support different booking rules.",
+    }),
+    description: translate({
+      id: "education.benefits.bookingRules.title",
+      message:
+        "Different online courses and events have unique policies. For instance, meeting regular classes are scheduled in fixed 1-hour increments, while one-on-one sessions are bookable for 30 minutes.",
+    }),
   },
   {
-    title: "Notify and remind students and lecturers about their appointments.",
-    description:
-      "Send timely reminders and updates to keep students and lecturers informed and on time.",
+    title: translate({
+      id: "education.benefits.notifications.title",
+      message:
+        "Notify and remind students and lecturers about their appointments.",
+    }),
+    description: translate({
+      id: "education.benefits.notifications.description",
+      message:
+        "Send timely reminders and updates to keep students and lecturers informed and on time.",
+    }),
   },
 ];
 
 const benefits: Benefit[] = [
   {
-    title: "Simplified and efficient scheduling.",
-    description:
-      "Streamline appointment management with tools that centralize and organize scheduling tasks, reducing manual effort.",
+    title: translate({
+      id: "education.benefits.simplifiedScheduling.title",
+      message: "Simplified and efficient scheduling.",
+    }),
+    description: translate({
+      id: "education.benefits.simplifiedScheduling.description",
+      message:
+        "Streamline appointment management with tools that centralize and organize scheduling tasks, reducing manual effort.",
+    }),
   },
   {
-    title: "Reduced booking conflicts.",
-    description:
-      "Intelligent algorithms prevent overlapping bookings, ensuring seamless operations.",
+    title: translate({
+      id: "education.benefits.reducedBookingConflicts.title",
+      message: "Reduced booking conflicts.",
+    }),
+    description: translate({
+      id: "education.benefits.reducedBookingConflicts.description",
+      message:
+        "Intelligent algorithms prevent overlapping bookings, ensuring seamless operations.",
+    }),
   },
   {
-    title:
-      "Improved customer satisfaction through automated reminders and smooth booking processes",
-    description:
-      "Notifications keep customers informed, while intuitive systems enable effortless appointment creation and changes.",
+    title: translate({
+      id: "education.benefits.improvedCustomerSatisfaction.title",
+      message:
+        "Improved customer satisfaction through automated reminders and smooth booking processes",
+    }),
+    description: translate({
+      id: "education.benefits.improvedCustomerSatisfaction.description",
+      message:
+        "Notifications keep customers informed, while intuitive systems enable effortless appointment creation and changes.",
+    }),
   },
 ];
 
-export default function EducationSolutionPage(): JSX.Element {
+const EducationSolutionPage: React.FC = () => {
   const [activeStep, setActiveStep] = React.useState(0);
 
   const handleNext = () => {
@@ -90,8 +133,11 @@ export default function EducationSolutionPage(): JSX.Element {
 
   return (
     <Layout
-      title="ZenSched for Education"
-      description="Smart Scheduling for Learning Environments"
+      title={translate({ id: "beautySalonsPage.title", message: "ZenSched for Education" })}
+      description={translate({
+        id: "beautySalonsPage.description",
+        message: "Smart Scheduling for Learning Environments",
+      })}
     >
       <main>
         <Container sx={{ my: 5 }}>
@@ -100,12 +146,12 @@ export default function EducationSolutionPage(): JSX.Element {
               animationData: educationSolutionAnimationData,
             }}
             solutionTitle={
-              <Translate id="healthcareSolutionPage.intro.title">
+              <Translate id="beautySalonsPage.intro.title">
                 Class Scheduling for an Online Learning Platform
               </Translate>
             }
             solutionDescription={
-              <Translate id="healthcareSolutionPage.intro.caption">
+              <Translate id="beautySalonsPage.intro.caption">
                 Manage live classes effortlessly with a flexible scheduling
                 system. Coordinate instructors across time zones, handle student
                 bookings, and adapt to changing availability—all in one
@@ -131,7 +177,7 @@ export default function EducationSolutionPage(): JSX.Element {
               }}
               features={features}
               title={
-                <Translate>
+                <Translate id="beautySalonsPage.solutionFeaturesSection.title">
                   Effortless booking management, simplified for your success.
                 </Translate>
               }
@@ -281,4 +327,6 @@ export default function EducationSolutionPage(): JSX.Element {
       </main>
     </Layout>
   );
-}
+};
+
+export default EducationSolutionPage;

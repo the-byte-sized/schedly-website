@@ -1,4 +1,4 @@
-import Translate from "@docusaurus/Translate";
+import Translate, { translate } from "@docusaurus/Translate";
 import {
   Timeline,
   TimelineConnector,
@@ -37,43 +37,85 @@ const steps = ["Create Entities", "Create Rules", "Configure WebHooks"];
 
 const features: Feature[] = [
   {
-    title: "Synchronize availability across multiple specialists.",
-    description:
-      "Effortlessly manage and coordinate schedules for all your specialists.",
+    title: translate({
+      id: "healthcare.benefits.synchronizeAvailability.title",
+      message: "Synchronize availability across multiple specialists.",
+    }),
+    description: translate({
+      id: "healthcare.benefits.synchronizeAvailability.title",
+      message:
+        "Effortlessly manage and coordinate schedules for all your specialists.",
+    }),
   },
   {
-    title: "Handle shared resources.",
-    description:
-      "Ensure optimal use of rooms, equipment, and shared resources without conflicts.",
+    title: translate({
+      id: "healthcare.benefits.manageClassSchedules.title",
+      message: "Handle shared resources.",
+    }),
+    description: translate({
+      id: "healthcare.benefits.manageClassSchedules.title",
+      message:
+        "Ensure optimal use of rooms, equipment, and shared resources without conflicts.",
+    }),
   },
   {
-    title: "Support different booking rules per specialty.",
-    description:
-      "Customize booking policies to match the unique needs of each specialty.",
+    title: translate({
+      id: "healthcare.benefits.manageClassSchedules.title",
+      message: "Support different booking rules per specialty.",
+    }),
+    description: translate({
+      id: "healthcare.benefits.manageClassSchedules.title",
+      message:
+        "Customize booking policies to match the unique needs of each specialty.",
+    }),
   },
   {
-    title: "Notify and remind patients about their appointments.",
-    description:
-      "Send timely reminders and updates to keep patients informed and on time.",
+    title: translate({
+      id: "healthcare.benefits.manageClassSchedules.title",
+      message: "Notify and remind patients about their appointments.",
+    }),
+    description: translate({
+      id: "healthcare.benefits.manageClassSchedules.title",
+      message:
+        "Send timely reminders and updates to keep patients informed and on time.",
+    }),
   },
 ];
 
 const benefits: Benefit[] = [
   {
-    title: "Simplified and efficient scheduling for the clinic.",
-    description:
-      "Streamline appointment management with tools that centralize and organize scheduling tasks, reducing manual effort.",
+    title: translate({
+      id: "healthcare.benefits.manageClassSchedules.title",
+      message: "Simplified and efficient scheduling for the clinic.",
+    }),
+    description: translate({
+      id: "healthcare.benefits.manageClassSchedules.title",
+      message:
+        "Streamline appointment management with tools that centralize and organize scheduling tasks, reducing manual effort.",
+    }),
   },
   {
-    title: "Reduced booking conflicts.",
-    description:
-      "Intelligent algorithms prevent overlapping bookings, ensuring seamless clinic operations.",
+    title: translate({
+      id: "healthcare.benefits.manageClassSchedules.title",
+      message: "Reduced booking conflicts.",
+    }),
+    description: translate({
+      id: "healthcare.benefits.manageClassSchedules.title",
+      message:
+        "Intelligent algorithms prevent overlapping bookings, ensuring seamless clinic operations.",
+    }),
   },
   {
-    title:
-      "Improved patient satisfaction through automated reminders and smooth booking processes",
-    description:
-      "Notifications keep patients informed, while intuitive systems enable effortless appointment creation and changes.",
+    title: translate({
+      id: "healthcare.benefits.manageClassSchedules.title",
+      message:
+        "Improved patient satisfaction through automated reminders and smooth booking processes",
+    }),
+    description: translate({
+      id: "healthcare.benefits.manageClassSchedules.title",
+      message:
+        "Notifications keep patients informed, while intuitive systems enable effortless appointment creation and changes.",
+    }),
   },
 ];
 
@@ -90,8 +132,14 @@ export default function HealthcareSolutionPage(): JSX.Element {
 
   return (
     <Layout
-      title="ZenSched for Healthcare"
-      description="Revolutionizing Medical Scheduling"
+      title={translate({
+        id: "healthcareSolutionPage.title",
+        message: "ZenSched for Healthcare",
+      })}
+      description={translate({
+        id: "healthcareSolutionPage.description",
+        message: "Revolutionizing Medical Scheduling",
+      })}
     >
       <main>
         <Container sx={{ my: 5 }}>
@@ -130,7 +178,7 @@ export default function HealthcareSolutionPage(): JSX.Element {
               }}
               features={features}
               title={
-                <Translate>
+                <Translate id="healthcareSolutionPage.solutionFeaturesSection.title">
                   Effortless booking management, simplified for your success.
                 </Translate>
               }
