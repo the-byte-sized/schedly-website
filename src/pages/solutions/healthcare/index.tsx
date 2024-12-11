@@ -313,14 +313,14 @@ export default function HealthcareSolutionPage(): JSX.Element {
               onClick={handleBack}
               sx={{ mr: 1 }}
             >
-              Back
+              <Typography id="stepper.previousStepButton">Back</Typography>
             </Button>
 
             <Button
               onClick={handleNext}
               disabled={activeStep === steps.length - 1}
             >
-              Next
+              <Typography id="stepper.nextStepButton">Next</Typography>
             </Button>
           </Stack>
         </Container>

@@ -133,7 +133,10 @@ const EducationSolutionPage: React.FC = () => {
 
   return (
     <Layout
-      title={translate({ id: "beautySalonsPage.title", message: "ZenSched for Education" })}
+      title={translate({
+        id: "beautySalonsPage.title",
+        message: "ZenSched for Education",
+      })}
       description={translate({
         id: "beautySalonsPage.description",
         message: "Smart Scheduling for Learning Environments",
@@ -304,14 +307,14 @@ const EducationSolutionPage: React.FC = () => {
               onClick={handleBack}
               sx={{ mr: 1 }}
             >
-              Back
+              <Typography id="stepper.previousStepButton">Back</Typography>
             </Button>
 
             <Button
               onClick={handleNext}
               disabled={activeStep === steps.length - 1}
             >
-              Next
+              <Typography id="stepper.nextStepButton">Next</Typography>
             </Button>
           </Stack>
         </Container>
