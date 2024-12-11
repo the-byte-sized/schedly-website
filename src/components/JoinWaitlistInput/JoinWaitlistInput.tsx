@@ -19,7 +19,12 @@ const JoinWaitlistInput: React.FC<TextFieldProps> = (props) => {
     // Controlla la validità in tempo reale
     if (value && !validateEmail(value)) {
       setError(true);
-      setHelperText("Inserisci un indirizzo email valido.");
+      setHelperText(
+        translate({
+          id: "invalidEmailHelperText",
+          message: "Enter a valid email address.",
+        })
+      );
     } else {
       setError(false);
       setHelperText("");
