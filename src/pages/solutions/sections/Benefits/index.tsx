@@ -1,4 +1,13 @@
-import { Box, List, ListItem, Typography } from "@mui/material";
+import Translate from "@docusaurus/Translate";
+import {
+  Box,
+  CardContent,
+  List,
+  ListItem,
+  Stack,
+  Typography,
+  useTheme,
+} from "@mui/material";
 import Card from "@site/src/components/Card";
 import Container from "@site/src/components/Container";
 import JoinWaitlistInput from "@site/src/components/JoinWaitlistInput/JoinWaitlistInput";
@@ -23,7 +32,9 @@ const defaultTitle: Props["title"] = (
   </Typography>
 );
 
-export default function Benefits({ title = defaultTitle, benefits }: Props) {
+const Benefits: React.FC<Props> = ({ title = defaultTitle, benefits }) => {
+  const { palette } = useTheme();
+
   return (
     <Container>
       {title}
@@ -32,7 +43,8 @@ export default function Benefits({ title = defaultTitle, benefits }: Props) {
         <List>
           {benefits.map((benefit) => (
             <ListItem sx={{ p: 0, my: 4, gap: 1, alignItems: "start" }}>
-              <IconCheck size={32} stroke={2} />
+              <IconCheck size={32} stroke={2} color={palette.primary.main} />
+
               <Box sx={{ display: "flex", flexDirection: "column" }}>
                 <Typography variant="h6" fontWeight="500">
                   {benefit.title}
@@ -47,31 +59,36 @@ export default function Benefits({ title = defaultTitle, benefits }: Props) {
       </Box>
 
       <Box mt={8}>
-        <Card
-          cardTitle="Your Business Could Be Next"
-          cardDescription="Join the companies that have revolutionized their scheduling with our innovative solutions."
-          sx={{
-            color: "#fff",
-            textAlign: "center",
-            backgroundColor: "hsl(209, 39%, 17%)",
-            border: "1px solid hsl(209, 39%, 17%)",
+        <Card sx={{ backgroundColor: "primary.main", color: "white", mb: 7 }}>
+          <CardContent>
+            <Stack gap={1} alignItems="center" justifyContent="center">
+              <Typography variant="h5">
+                <Translate id="yourBusinessCouldBeNext.title">
+                  Your Business Could Be Next
+                </Translate>
+              </Typography>
 
-            "&:hover,&:focus": {
-              backgroundColor: "hsl(209, 39%, 17%)",
-            },
-          }}
-        >
-          <Typography fontWeight={700}>Ready to take the next step?</Typography>
+              <Typography sx={{ maxWidth: "75%" }}>
+                <Translate id="yourBusinessCouldBeNext.description">
+                  Imagine the transformation ZenSched can bring to your
+                  business. Join the companies that have revolutionized their
+                  scheduling with our innovative solutions.
+                </Translate>
+              </Typography>
 
-          <Box my={2} mx="auto" maxWidth="60%">
-            <JoinWaitlistInput
-              sx={{
-                mt: 3,
-              }}
-            />
-          </Box>
+              <Typography fontWeight="bold">
+                <Translate id="yourBusinessCouldBeNext.hype">
+                  Ready to take the next step?
+                </Translate>
+              </Typography>
+
+              <JoinWaitlistInput />
+            </Stack>
+          </CardContent>
         </Card>
       </Box>
     </Container>
   );
-}
+};
+
+export default Benefits;

@@ -77,7 +77,7 @@ export default function Home(): JSX.Element {
             ))}
           </Masonry>
 
-          <Card sx={{ backgroundColor: "primary.main", color: "white" }}>
+          <Card sx={{ backgroundColor: "primary.main", color: "white", mb: 7 }}>
             <CardContent>
               <Stack gap={1} alignItems="center" justifyContent="center">
                 <Typography variant="h5">
