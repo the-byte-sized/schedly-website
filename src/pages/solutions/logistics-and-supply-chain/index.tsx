@@ -20,8 +20,8 @@ import Container from "@site/src/components/Container";
 import {
   IconCalendarCog,
   IconCheck,
+  IconClipboardText,
   IconNotification,
-  IconUser,
 } from "@tabler/icons-react";
 import Layout from "@theme/Layout";
 import React from "react";
@@ -44,46 +44,46 @@ const steps = ["Create Entities", "Create Rules", "Configure WebHooks"];
 const features: Feature[] = [
   {
     title: translate({
-      id: "logisticsAndSupplyChain.features.synchronizeAvailability.title",
-      message: "Synchronize availability across multiple specialists.",
+      id: "logisticsAndSupplyChain.features.manageShipmentSchedules.title",
+      message: "Manage Shipment Schedules",
     }),
     description: translate({
-      id: "logisticsAndSupplyChain.features.synchronizeAvailability.description",
+      id: "logisticsAndSupplyChain.features.manageShipmentSchedules.description",
       message:
-        "Effortlessly manage and coordinate schedules for all your specialists.",
+        "Coordinate pickup and delivery schedules, ensuring driver availability and optimized routes.",
     }),
   },
   {
     title: translate({
-      id: "logisticsAndSupplyChain.features.handleSharedResources.title",
-      message: "Handle shared resources.",
+      id: "logisticsAndSupplyChain.features.optimizeFleet.title",
+      message: "Optimize Fleet and Warehouse Management",
     }),
     description: translate({
-      id: "logisticsAndSupplyChain.features.handleSharedResources.description",
+      id: "logisticsAndSupplyChain.features.optimizeFleet.description",
       message:
-        "Ensure optimal use of rooms, equipment, and shared resources without conflicts.",
+        "Efficiently allocate trucks, loading docks, and warehouse storage space to avoid bottlenecks.",
     }),
   },
   {
     title: translate({
       id: "logisticsAndSupplyChain.features.bookingRules.title",
-      message: "Support different booking rules per specialty.",
+      message: "Support Dynamic Scheduling Rules",
     }),
     description: translate({
       id: "logisticsAndSupplyChain.features.bookingRules.description",
       message:
-        "Customize booking policies to match the unique needs of each specialty.",
+        "Adapt to priority shipments, real-time delays, and seasonal demand with flexible scheduling policies.",
     }),
   },
   {
     title: translate({
       id: "logisticsAndSupplyChain.features.notifications.title",
-      message: "Notify and remind customers about their appointments.",
+      message: "Send Notifications and Updates",
     }),
     description: translate({
       id: "logisticsAndSupplyChain.features.notifications.description",
       message:
-        "Send timely reminders and updates to keep customers informed and on time.",
+        "Notify drivers, warehouse teams, and clients about schedule updates, delivery status, and potential delays.",
     }),
   },
 ];
@@ -91,36 +91,35 @@ const features: Feature[] = [
 const benefits: Benefit[] = [
   {
     title: translate({
-      id: "logisticsAndSupplyChain.benefits.simplifiedScheduling.title",
-      message: "Simplified and efficient scheduling for the beauty salon.",
+      id: "logisticsAndSupplyChain.benefits.improvedResourceUtilization.title",
+      message: "Improved Resource Utilization",
     }),
     description: translate({
-      id: "logisticsAndSupplyChain.benefits.simplifiedScheduling.description",
+      id: "logisticsAndSupplyChain.benefits.improvedResourceUtilization.description",
       message:
-        "Streamline appointment management with tools that centralize and organize scheduling tasks, reducing manual effort.",
+        "Maximizes the use of trucks, docks, and equipment, reducing idle time and bottlenecks.",
     }),
   },
   {
     title: translate({
-      id: "logisticsAndSupplyChain.benefits.reducedBookingConflicts.title",
-      message: "Reduced booking conflicts.",
+      id: "logisticsAndSupplyChain.benefits.increasedOpearionalEfficiency.title",
+      message: "Increased Operational Efficiency",
     }),
     description: translate({
-      id: "logisticsAndSupplyChain.benefits.reducedBookingConflicts.description",
+      id: "logisticsAndSupplyChain.benefits.increasedOpearionalEfficiency.description",
       message:
-        "Intelligent algorithms prevent overlapping bookings, ensuring seamless beauty salon operations.",
+        "Streamlines workflows across the supply chain, ensuring timely deliveries and reduced costs.",
     }),
   },
   {
     title: translate({
-      id: "logisticsAndSupplyChain.benefits.improvedCustomerSatisfaction.title",
-      message:
-        "Improved customer satisfaction through automated reminders and smooth booking processes",
+      id: "logisticsAndSupplyChain.benefits.enhancedCommunication.title",
+      message: "	Enhanced Communication",
     }),
     description: translate({
-      id: "logisticsAndSupplyChain.benefits.improvedCustomerSatisfaction.description",
+      id: "logisticsAndSupplyChain.benefits.enhancedCommunication.description",
       message:
-        "Notifications keep customers informed, while intuitive systems enable effortless appointment creation and changes.",
+        "Keeps drivers, warehouse staff, and clients informed with real-time updates and notifications.",
     }),
   },
 ];
@@ -144,7 +143,8 @@ const LogisticsAndSupplyChainSolutionPage: React.FC = () => {
       })}
       description={translate({
         id: "logisticsAndSupplyChainPage.description",
-        message: "ZenSched for Beauty Salons",
+        message:
+          "Advanced Scheduling for Logistics and Supply Chain with ZenSched",
       })}
     >
       <main>
@@ -155,14 +155,14 @@ const LogisticsAndSupplyChainSolutionPage: React.FC = () => {
             }}
             solutionTitle={
               <Translate id="logisticsAndSupplyChainPage.intro.title">
-                Advanced Scheduling for a Beauty Salon
+                Advanced Scheduling for Logistics and Supply Chain with ZenSched
               </Translate>
             }
             solutionDescription={
               <Translate id="logisticsAndSupplyChainPage.intro.caption">
-                Simplify appointment management for barber with different
-                schedules. Handle last-minute cancellations, and resource
-                allocation—all with one tool.
+                Streamline shipment scheduling for logistics teams. Manage
+                driver assignments, warehouse resources, and last-minute
+                changes—all with one powerful tool.
               </Translate>
             }
           />
@@ -186,6 +186,19 @@ const LogisticsAndSupplyChainSolutionPage: React.FC = () => {
               title={
                 <Translate id="logisticsAndSupplyChainPage.solutionFeaturesSection.title">
                   Effortless booking management, simplified for your success.
+                </Translate>
+              }
+              description={
+                <Translate id="logisticsAndSupplyChainPage.solutionFeaturesSection.description">
+                  A logistics company manages a complex network of warehouses,
+                  delivery routes, and supply chain operations. The company
+                  handles a variety of tasks, including shipment scheduling,
+                  fleet management, warehouse space allocation, and loading dock
+                  assignments. Coordinating drivers, warehouse staff, and shared
+                  resources is critical to maintaining smooth operations and
+                  timely deliveries. ZenSched provides an advanced scheduling
+                  solution to optimize resource allocation, improve
+                  communication, and streamline logistics workflows.
                 </Translate>
               }
             />
@@ -213,24 +226,31 @@ const LogisticsAndSupplyChainSolutionPage: React.FC = () => {
               <TimelineSeparator>
                 <TimelineConnector />
                 <TimelineDot>
-                  <IconUser />
+                  <IconClipboardText />
                 </TimelineDot>
                 <TimelineConnector />
               </TimelineSeparator>
 
               <TimelineContent sx={{ py: "12px", px: 2 }}>
-                <Typography variant="h3">
-                  <Typography>Customer Booking</Typography>
+                <Typography variant="h6" component="span">
+                  Task Scheduling
                 </Typography>
 
                 <Typography>
-                  A customer would like to book an haricut for 2 PM on a
-                  Wednesday.
+                  A logistics manager wants to schedule a shipment delivery for
+                  10 AM on a Tuesday.
                 </Typography>
 
                 <Typography>The ZenSched API checks:</Typography>
 
-                <Typography>• The salon availability;</Typography>
+                <Typography>
+                  • The availability of drivers and trucks;
+                </Typography>
+
+                <Typography>
+                  • The availability of loading docks at the destination
+                  warehouse.
+                </Typography>
               </TimelineContent>
             </TimelineItem>
 
@@ -253,8 +273,9 @@ const LogisticsAndSupplyChainSolutionPage: React.FC = () => {
                   Conflict Resolution
                 </Typography>
                 <Typography>
-                  If there salon is fully booked for the 2PM, ZenSched suggests
-                  the next available slot.
+                  If the requested time is unavailable due to resource conflicts
+                  or delays, ZenSched automatically suggests the next available
+                  slot, ensuring timely delivery.
                 </Typography>
               </TimelineContent>
             </TimelineItem>
@@ -279,8 +300,10 @@ const LogisticsAndSupplyChainSolutionPage: React.FC = () => {
                 </Typography>
 
                 <Typography>
-                  Thanks to the WebHooks functionalities of ZenSched, the
-                  customer and the barber can receive confirmation emails.
+                  Thanks to the WebHooks functionality of ZenSched, both the
+                  logistics manager and the assigned driver receive confirmation
+                  emails and real-time updates about the schedule, ensuring
+                  seamless coordination.
                 </Typography>
               </TimelineContent>
             </TimelineItem>

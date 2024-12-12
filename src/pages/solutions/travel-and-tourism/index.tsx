@@ -161,9 +161,9 @@ const TravelAndTourismSolutionPage: React.FC = () => {
             }
             solutionDescription={
               <Translate id="travelAndTourismPage.intro.caption">
-                Manage live classes effortlessly with a flexible scheduling
-                system. Coordinate instructors across time zones, handle student
-                bookings, and adapt to changing availability—all in one
+                Streamline travel itineraries with a powerful scheduling system.
+                Coordinate tour guides across locations, manage customer
+                bookings, and adapt to last-minute changes—all in one seamless
                 platform.
               </Translate>
             }
@@ -189,6 +189,20 @@ const TravelAndTourismSolutionPage: React.FC = () => {
               title={
                 <Translate id="travelAndTourismPage.solutionFeaturesSection.title">
                   Effortless booking management, simplified for your success.
+                </Translate>
+              }
+              description={
+                <Translate id="travelAndTourismPage.solutionFeaturesSection.description">
+                  A thriving travel and tourism company that organizes guided
+                  tours, transportation schedules, and travel itineraries for
+                  customers across multiple destinations. The business
+                  coordinates tour guides, drivers, and shared resources like
+                  vehicles, accommodations, and activity spaces. Managing
+                  bookings, adapting to last-minute changes, and ensuring smooth
+                  communication between travelers and staff is crucial to
+                  providing a seamless travel experience. ZenSched offers a
+                  robust scheduling solution to optimize resources, streamline
+                  coordination, and enhance customer satisfaction.
                 </Translate>
               }
             />

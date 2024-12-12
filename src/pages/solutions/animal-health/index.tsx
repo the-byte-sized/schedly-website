@@ -29,7 +29,7 @@ import Benefits, { type Benefit } from "../sections/Benefits";
 import SolutionFeatures, { Feature } from "../sections/Features";
 import SolutionHeader from "../sections/Header";
 // @ts-expect-error
-import agricultureAndAnimalHealthAnimationData from "../../../assets/lottie/agriculture-and-animal-health.json";
+import animalHealthAnimationData from "../../../assets/lottie/animal-health.json";
 // @ts-expect-error
 import bookingSolutionAnimationData from "../../../assets/lottie/booking-solution.json";
 
@@ -44,46 +44,46 @@ const steps = ["Create Entities", "Create Rules", "Configure WebHooks"];
 const features: Feature[] = [
   {
     title: translate({
-      id: "agricultureAndAnimalHealth.features.synchronizeAvailability.title",
-      message: "Synchronize availability across multiple specialists.",
+      id: "animalHealth.features.manageAppointments.title",
+      message: "Manage Appointments.",
     }),
     description: translate({
-      id: "agricultureAndAnimalHealth.features.synchronizeAvailability.description",
+      id: "animalHealth.features.manageAppointments.description",
       message:
-        "Effortlessly manage and coordinate schedules for all your specialists.",
+        "Schedule routine checkups, vaccinations, and diagnostic exams efficiently, ensuring that veterinarian availability and room allocation are handled seamlessly.",
     }),
   },
   {
     title: translate({
-      id: "agricultureAndAnimalHealth.features.handleSharedResources.title",
+      id: "animalHealth.features.handleSharedResources.title",
       message: "Handle shared resources.",
     }),
     description: translate({
-      id: "agricultureAndAnimalHealth.features.handleSharedResources.description",
+      id: "animalHealth.features.handleSharedResources.description",
       message:
-        "Ensure optimal use of rooms, equipment, and shared resources without conflicts.",
+        "Optimize the use of examination rooms and equipment such as diagnostic machines or surgical tools to prevent scheduling overlaps.",
     }),
   },
   {
     title: translate({
-      id: "agricultureAndAnimalHealth.features.bookingRules.title",
-      message: "Support different booking rules per specialty.",
+      id: "animalHealth.features.supportRecurringAppointments.title",
+      message: "Support Recurring Appointments",
     }),
     description: translate({
-      id: "agricultureAndAnimalHealth.features.bookingRules.description",
+      id: "animalHealth.features.supportRecurringAppointments.description",
       message:
-        "Customize booking policies to match the unique needs of each specialty.",
+        "Automate regular appointments for vaccinations, follow-ups, or wellness plans, ensuring clients are always on track.",
     }),
   },
   {
     title: translate({
-      id: "agricultureAndAnimalHealth.features.notifications.title",
+      id: "animalHealth.features.notifications.title",
       message: "Notify and remind customers about their appointments.",
     }),
     description: translate({
-      id: "agricultureAndAnimalHealth.features.notifications.description",
+      id: "animalHealth.features.notifications.description",
       message:
-        "Send timely reminders and updates to keep customers informed and on time.",
+        "Automatically send appointment confirmations, reminders, and updates to clients and staff for a smooth and hassle-free experience.",
     }),
   },
 ];
@@ -91,41 +91,41 @@ const features: Feature[] = [
 const benefits: Benefit[] = [
   {
     title: translate({
-      id: "agricultureAndAnimalHealth.benefits.simplifiedScheduling.title",
-      message: "Simplified and efficient scheduling for the beauty salon.",
+      id: "animalHealth.benefits.simplifiedScheduling.title",
+      message: "Streamlined Appointment Management.",
     }),
     description: translate({
-      id: "agricultureAndAnimalHealth.benefits.simplifiedScheduling.description",
+      id: "animalHealth.benefits.simplifiedScheduling.description",
       message:
-        "Streamline appointment management with tools that centralize and organize scheduling tasks, reducing manual effort.",
+        "Automates scheduling for routine, diagnostic, and recurring care, reducing manual effort.",
     }),
   },
   {
     title: translate({
-      id: "agricultureAndAnimalHealth.benefits.reducedBookingConflicts.title",
-      message: "Reduced booking conflicts.",
+      id: "animalHealth.benefits.efficientResourceAllocation.title",
+      message: "Efficient Resource Allocation",
     }),
     description: translate({
-      id: "agricultureAndAnimalHealth.benefits.reducedBookingConflicts.description",
+      id: "animalHealth.benefits.efficientResourceAllocation.description",
       message:
-        "Intelligent algorithms prevent overlapping bookings, ensuring seamless beauty salon operations.",
+        "Ensures examination rooms and equipment are optimally utilized without conflicts.",
     }),
   },
   {
     title: translate({
-      id: "agricultureAndAnimalHealth.benefits.improvedCustomerSatisfaction.title",
+      id: "animalHealth.benefits.improvedCustomerSatisfaction.title",
       message:
         "Improved customer satisfaction through automated reminders and smooth booking processes",
     }),
     description: translate({
-      id: "agricultureAndAnimalHealth.benefits.improvedCustomerSatisfaction.description",
+      id: "animalHealth.benefits.improvedCustomerSatisfaction.description",
       message:
         "Notifications keep customers informed, while intuitive systems enable effortless appointment creation and changes.",
     }),
   },
 ];
 
-const AgricultureAndAnimalHealthSolutionPage: React.FC = () => {
+const AnimalHealthSolutionPage: React.FC = () => {
   const [activeStep, setActiveStep] = React.useState<number>(0);
 
   const handleNext = () => {
@@ -139,30 +139,30 @@ const AgricultureAndAnimalHealthSolutionPage: React.FC = () => {
   return (
     <Layout
       title={translate({
-        id: "agricultureAndAnimalHealthPage.title",
-        message: "ZenSched for Beauty Salons",
+        id: "animalHealthPage.title",
+        message: "ZenSched for Veterinary Clinic",
       })}
       description={translate({
-        id: "agricultureAndAnimalHealthPage.description",
-        message: "ZenSched for Beauty Salons",
+        id: "animalHealthPage.description",
+        message: "ZenSched for Veterinary Clinic",
       })}
     >
       <main>
         <Container sx={{ my: 5 }}>
           <SolutionHeader
             lottieProps={{
-              animationData: agricultureAndAnimalHealthAnimationData,
+              animationData: animalHealthAnimationData,
             }}
             solutionTitle={
-              <Translate id="agricultureAndAnimalHealthPage.intro.title">
-                Advanced Scheduling for a Beauty Salon
+              <Translate id="animalHealthPage.intro.title">
+                Simplified Scheduling for Animal Health Services with ZenSched
               </Translate>
             }
             solutionDescription={
-              <Translate id="agricultureAndAnimalHealthPage.intro.caption">
-                Simplify appointment management for barber with different
-                schedules. Handle last-minute cancellations, and resource
-                allocation—all with one tool.
+              <Translate id="animalHealthPage.intro.caption">
+                Simplify appointment management for veterinarians with varying
+                schedules. Handle resource allocation, recurring visits, and
+                last-minute changes—all with one powerful tool.
               </Translate>
             }
           />
@@ -184,8 +184,20 @@ const AgricultureAndAnimalHealthSolutionPage: React.FC = () => {
               }}
               features={features}
               title={
-                <Translate id="agricultureAndAnimalHealthPage.solutionFeaturesSection.title">
+                <Translate id="animalHealthPage.solutionFeaturesSection.title">
                   Effortless booking management, simplified for your success.
+                </Translate>
+              }
+              description={
+                <Translate id="animalHealthPage.solutionFeaturesSection.description">
+                  A veterinary clinic offers a variety of in-clinic services,
+                  including routine checkups, vaccinations, diagnostic exams,
+                  and wellness consultations for pets and livestock. Managing
+                  veterinarian schedules, appointment bookings, and shared
+                  resources such as diagnostic tools and examination rooms is
+                  crucial to ensuring smooth operations. ZenSched helps
+                  streamline the scheduling process, reduces booking conflicts,
+                  and enhances the customer experience.
                 </Translate>
               }
             />
@@ -195,7 +207,7 @@ const AgricultureAndAnimalHealthSolutionPage: React.FC = () => {
         <Container>
           <Typography variant="h2" fontWeight="900">
             <Translate
-              id="agricultureAndAnimalHealthPage.workflowExampleSection.title"
+              id="animalHealthPage.workflowExampleSection.title"
               data-aos={AOS.effect}
               data-aos-duration={AOS.duration}
               data-aos-easing={AOS.easing}
@@ -219,18 +231,21 @@ const AgricultureAndAnimalHealthSolutionPage: React.FC = () => {
               </TimelineSeparator>
 
               <TimelineContent sx={{ py: "12px", px: 2 }}>
-                <Typography variant="h3">
-                  <Typography>Customer Booking</Typography>
+                <Typography variant="h6" component="span">
+                  Customer Booking
                 </Typography>
 
                 <Typography>
-                  A customer would like to book an haricut for 2 PM on a
-                  Wednesday.
+                  A client wants to book a wellness checkup for their pet at 3
+                  PM on a Friday.
                 </Typography>
 
                 <Typography>The ZenSched API checks:</Typography>
 
-                <Typography>• The salon availability;</Typography>
+                <Typography> • The availability of veterinarians.</Typography>
+                <Typography>
+                  • The availability of examination rooms.
+                </Typography>
               </TimelineContent>
             </TimelineItem>
 
@@ -252,9 +267,11 @@ const AgricultureAndAnimalHealthSolutionPage: React.FC = () => {
                 <Typography variant="h6" component="span">
                   Conflict Resolution
                 </Typography>
+                
                 <Typography>
-                  If there salon is fully booked for the 2PM, ZenSched suggests
-                  the next available slot.
+                  If all veterinarians or examination rooms are fully booked for
+                  3 PM, ZenSched suggests the next available time slot, ensuring
+                  seamless scheduling.
                 </Typography>
               </TimelineContent>
             </TimelineItem>
@@ -279,8 +296,9 @@ const AgricultureAndAnimalHealthSolutionPage: React.FC = () => {
                 </Typography>
 
                 <Typography>
-                  Thanks to the WebHooks functionalities of ZenSched, the
-                  customer and the barber can receive confirmation emails.
+                  Thanks to ZenSched’s WebHooks functionality, both the client
+                  and the assigned veterinarian receive confirmation emails,
+                  along with reminders before the appointment.
                 </Typography>
               </TimelineContent>
             </TimelineItem>
@@ -378,4 +396,4 @@ const AgricultureAndAnimalHealthSolutionPage: React.FC = () => {
   );
 };
 
-export default AgricultureAndAnimalHealthSolutionPage;
+export default AnimalHealthSolutionPage;

@@ -188,6 +188,18 @@ const BeautySalonsSolutionPage: React.FC = () => {
                   Effortless booking management, simplified for your success.
                 </Translate>
               }
+              description={
+                <Translate id="beautySalonsPage.solutionFeaturesSection.description">
+                  A busy beauty salon offers a wide range of services, including
+                  haircuts, coloring, styling, manicures, pedicures, facials,
+                  and massages. Each service requires different durations,
+                  specialized staff, and sometimes specific equipment or rooms.
+                  ZenSched can help in assigning services to staff members
+                  qualified to perform them, preventing scheduling errors or
+                  managing the availability of specific resources like treatment
+                  rooms or styling chairs to avoid double bookings.
+                </Translate>
+              }
             />
           </Container>
         </Box>

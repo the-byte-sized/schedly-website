@@ -189,6 +189,11 @@ const CoworkingSpaceManagementSolutionPage: React.FC = () => {
                   Effortless booking management, simplified for your success.
                 </Translate>
               }
+              description={
+                <Translate id="coworkingSpaceManagementPage.solutionFeaturesSection.description">
+                  A dynamic coworking space that manages shared offices, meeting rooms, and event areas for freelancers, startups, and established businesses. The space coordinates schedules for shared resources like desks, private offices, and conference rooms, while also handling member bookings and event setups. Efficiently managing availability, adapting to last-minute changes, and optimizing resource allocation are essential for smooth operations. ZenSched offers a comprehensive scheduling solution to streamline bookings, maximize resource usage, and enhance member satisfaction.
+                </Translate>
+              }
             />
           </Container>
         </Box>

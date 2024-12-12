@@ -45,34 +45,34 @@ const features: Feature[] = [
   {
     title: translate({
       id: "financeAndInsurance.features.synchronizeAvailability.title",
-      message: "Synchronize availability across multiple specialists.",
+      message: "Manage Client Consultations",
     }),
     description: translate({
       id: "financeAndInsurance.features.synchronizeAvailability.description",
       message:
-        "Effortlessly manage and coordinate schedules for all your specialists.",
+        "Schedule appointments for financial planning, investment reviews, insurance consultations, and claims assistance while aligning with advisor and agent availability.",
     }),
   },
   {
     title: translate({
       id: "financeAndInsurance.features.handleSharedResources.title",
-      message: "Handle shared resources.",
+      message: "Optimize Shared Resources",
     }),
     description: translate({
       id: "financeAndInsurance.features.handleSharedResources.description",
       message:
-        "Ensure optimal use of rooms, equipment, and shared resources without conflicts.",
+        "Allocate shared meeting rooms, conference facilities, and specialized tools like video conferencing systems for hybrid appointments.",
     }),
   },
   {
     title: translate({
       id: "financeAndInsurance.features.bookingRules.title",
-      message: "Support different booking rules per specialty.",
+      message: "Support Custom Booking Policies",
     }),
     description: translate({
       id: "financeAndInsurance.features.bookingRules.description",
       message:
-        "Customize booking policies to match the unique needs of each specialty.",
+        "Implement unique rules for consultations, including buffer times between appointments, priority handling for VIP clients, and advance booking requirements.",
     }),
   },
   {
@@ -92,12 +92,12 @@ const benefits: Benefit[] = [
   {
     title: translate({
       id: "financeAndInsurance.benefits.simplifiedScheduling.title",
-      message: "Simplified and efficient scheduling for the beauty salon.",
+      message: "Streamlined Appointment Management",
     }),
     description: translate({
       id: "financeAndInsurance.benefits.simplifiedScheduling.description",
       message:
-        "Streamline appointment management with tools that centralize and organize scheduling tasks, reducing manual effort.",
+        "Automates scheduling for consultations, claims support, and financial reviews, reducing manual effort.",
     }),
   },
   {
@@ -108,7 +108,7 @@ const benefits: Benefit[] = [
     description: translate({
       id: "financeAndInsurance.benefits.reducedBookingConflicts.description",
       message:
-        "Intelligent algorithms prevent overlapping bookings, ensuring seamless beauty salon operations.",
+        "Intelligent algorithms prevent overlapping bookings, ensuring seamless operations.",
     }),
   },
   {
@@ -155,14 +155,14 @@ const FinanceAndInsuranceSolutionPage: React.FC = () => {
             }}
             solutionTitle={
               <Translate id="financeAndInsurancePage.intro.title">
-                Advanced Scheduling for a Beauty Salon
+                Advanced Scheduling for Finance and Insurance with ZenSched
               </Translate>
             }
             solutionDescription={
               <Translate id="financeAndInsurancePage.intro.caption">
-                Simplify appointment management for barber with different
-                schedules. Handle last-minute cancellations, and resource
-                allocation—all with one tool.
+                Streamline appointment scheduling for financial advisors and
+                insurance agents. Manage client consultations, resource
+                allocation, and last-minute changes—all with one powerful tool.
               </Translate>
             }
           />
@@ -186,6 +186,19 @@ const FinanceAndInsuranceSolutionPage: React.FC = () => {
               title={
                 <Translate id="financeAndInsurancePage.solutionFeaturesSection.title">
                   Effortless booking management, simplified for your success.
+                </Translate>
+              }
+              description={
+                <Translate id="financeAndInsurancePage.solutionFeaturesSection.description">
+                  A company offers financial planning, investment advisory, and
+                  wealth management services, while SecureInsure specializes in
+                  insurance policy consultations, claims processing, and
+                  renewals. Both sectors require managing appointments with
+                  clients, coordinating staff availability, and handling shared
+                  resources like meeting rooms and specialized tools. ZenSched
+                  provides a streamlined solution to manage these scheduling
+                  needs, ensure efficient resource allocation, and enhance
+                  client communication.
                 </Translate>
               }
             />
@@ -219,18 +232,21 @@ const FinanceAndInsuranceSolutionPage: React.FC = () => {
               </TimelineSeparator>
 
               <TimelineContent sx={{ py: "12px", px: 2 }}>
-                <Typography variant="h3">
-                  <Typography>Customer Booking</Typography>
+                <Typography variant="h6" component="span">
+                  Customer Booking
                 </Typography>
 
                 <Typography>
-                  A customer would like to book an haricut for 2 PM on a
-                  Wednesday.
+                  A client wants to schedule a financial consultation for 10 AM
+                  on a Friday.
                 </Typography>
 
                 <Typography>The ZenSched API checks:</Typography>
 
-                <Typography>• The salon availability;</Typography>
+                <Typography>
+                  • The availability of the financial advisor;
+                </Typography>
+                <Typography>• The availability of the meeting room.</Typography>
               </TimelineContent>
             </TimelineItem>
 
@@ -252,9 +268,11 @@ const FinanceAndInsuranceSolutionPage: React.FC = () => {
                 <Typography variant="h6" component="span">
                   Conflict Resolution
                 </Typography>
+
                 <Typography>
-                  If there salon is fully booked for the 2PM, ZenSched suggests
-                  the next available slot.
+                  If the requested time is fully booked, ZenSched automatically
+                  suggests the next available slot, ensuring no delays in
+                  service.
                 </Typography>
               </TimelineContent>
             </TimelineItem>
@@ -279,8 +297,7 @@ const FinanceAndInsuranceSolutionPage: React.FC = () => {
                 </Typography>
 
                 <Typography>
-                  Thanks to the WebHooks functionalities of ZenSched, the
-                  customer and the barber can receive confirmation emails.
+                Thanks to the WebHooks functionality of ZenSched, both the client and the assigned financial advisor receive confirmation emails and reminders, ensuring a smooth and well-prepared consultation.
                 </Typography>
               </TimelineContent>
             </TimelineItem>

@@ -117,8 +117,8 @@ const config: Config = {
               href: '/solutions/coworking-space-management',
             },
             {
-              label: 'Ride Sharing Service',
-              href: '/solutions/ride-sharing',
+              label: 'Restoration & Food Delivery',
+              href: '/solutions/restoration-and-food-delivery',
             },
             {
               label: 'Beauty Salon',
@@ -196,8 +196,8 @@ const config: Config = {
               to: '/solutions/coworking-space-management',
             },
             {
-              label: 'Ride Sharing Service',
-              to: '/solutions/ride-sharing',
+              label: 'Restoration & Food Delivery',
+              to: '/solutions/restoration-and-food-delivery',
             },
             {
               label: 'Beauty Salon',

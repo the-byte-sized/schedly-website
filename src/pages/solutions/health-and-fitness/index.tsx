@@ -170,7 +170,7 @@ const HealthAndFitnessSolutionPage: React.FC = () => {
 
         <Box
           sx={{
-            backgroundColor: 'background.paper',
+            backgroundColor: "background.paper",
             py: 5,
           }}
         >
@@ -187,6 +187,18 @@ const HealthAndFitnessSolutionPage: React.FC = () => {
               title={
                 <Translate id="healthAndFitnessPage.solutionFeaturesSection.title">
                   Effortless booking management, simplified for your success.
+                </Translate>
+              }
+              description={
+                <Translate id="healthAndFitnessPage.solutionFeaturesSection.description">
+                  The gym offers a wide range of health and fitness services, including
+                  group classes, personal training sessions, and wellness
+                  consultations. These services require managing class
+                  schedules, coordinating trainer availability, and optimizing
+                  shared resources like studios and equipment. ZenSched provides
+                  a streamlined solution to handle these scheduling needs,
+                  ensure efficient resource utilization, and enhance member
+                  engagement through automated communication and reminders.
                 </Translate>
               }
             />
@@ -373,7 +385,7 @@ const HealthAndFitnessSolutionPage: React.FC = () => {
         <Box
           sx={{
             p: 8,
-            backgroundColor: 'background.paper',
+            backgroundColor: "background.paper",
           }}
         >
           <Benefits benefits={benefits} />

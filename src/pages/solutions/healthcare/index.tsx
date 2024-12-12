@@ -190,7 +190,7 @@ const HealthcareSolutionPage: React.FC = () => {
 
         <Box
           sx={{
-            backgroundColor: 'background.paper',
+            backgroundColor: "background.paper",
             py: 5,
           }}
         >
@@ -206,6 +206,21 @@ const HealthcareSolutionPage: React.FC = () => {
               title={
                 <Translate id="healthcareSolutionPage.solutionFeaturesSection.title">
                   Effortless booking management, simplified for your success.
+                </Translate>
+              }
+              description={
+                <Translate id="healthcareSolutionPage.solutionFeaturesSection.description">
+                  A multi-specialty clinic offering a range of healthcare
+                  services, including general consultations, specialist visits,
+                  diagnostic tests, and wellness programs. The clinic manages
+                  schedules for doctors, nurses, and diagnostic equipment while
+                  coordinating patient appointments across multiple specialties.
+                  Efficiently handling bookings, adapting to last-minute
+                  changes, and ensuring optimal use of resources are critical to
+                  providing high-quality patient care. ZenSched delivers a
+                  robust scheduling solution to streamline appointment
+                  management, optimize resource allocation, and enhance the
+                  overall patient experience.
                 </Translate>
               }
             />
@@ -562,7 +577,7 @@ const HealthcareSolutionPage: React.FC = () => {
         <Box
           sx={{
             p: 8,
-            backgroundColor: 'background.paper',
+            backgroundColor: "background.paper",
           }}
         >
           <Benefits benefits={benefits} />

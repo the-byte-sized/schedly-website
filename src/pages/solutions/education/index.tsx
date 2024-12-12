@@ -172,7 +172,7 @@ const EducationSolutionPage: React.FC = () => {
 
         <Box
           sx={{
-            backgroundColor: 'background.paper',
+            backgroundColor: "background.paper",
             py: 5,
           }}
         >
@@ -188,6 +188,20 @@ const EducationSolutionPage: React.FC = () => {
               title={
                 <Translate id="beautySalonsPage.solutionFeaturesSection.title">
                   Effortless booking management, simplified for your success.
+                </Translate>
+              }
+              description={
+                <Translate id="beautySalonsPage.solutionFeaturesSection.description">
+                  An innovative online learning platform offering live classes,
+                  workshops, and one-on-one tutoring sessions across a variety
+                  of subjects. The platform manages schedules for instructors,
+                  students, and shared virtual classrooms, while also handling
+                  bookings across different time zones. Coordinating instructor
+                  availability, adapting to last-minute changes, and ensuring
+                  smooth class transitions are critical for an optimal learning
+                  experience. ZenSched provides a flexible scheduling solution
+                  to streamline class management, align global schedules, and
+                  enhance the experience for both students and instructors.
                 </Translate>
               }
             />
@@ -365,7 +379,7 @@ const EducationSolutionPage: React.FC = () => {
         <Box
           sx={{
             p: 8,
-            backgroundColor: 'background.paper',
+            backgroundColor: "background.paper",
           }}
         >
           <Benefits benefits={benefits} />

@@ -29,7 +29,7 @@ import Benefits, { type Benefit } from "../sections/Benefits";
 import SolutionFeatures, { Feature } from "../sections/Features";
 import SolutionHeader from "../sections/Header";
 // @ts-expect-error
-import rideSharingAnimationData from "../../../assets/lottie/ride-sharing.json";
+import restorationAndFoodDeliveryAnimationData from "../../../assets/lottie/restaurant-and-food-sharing.json";
 // @ts-expect-error
 import bookingSolutionAnimationData from "../../../assets/lottie/booking-solution.json";
 
@@ -44,44 +44,44 @@ const steps = ["Create Entities", "Create Rules", "Configure WebHooks"];
 const features: Feature[] = [
   {
     title: translate({
-      id: "rideSharing.features.synchronizeAvailability.title",
-      message: "Synchronize availability across multiple specialists.",
+      id: "restorationAndFoodDelivery.features.manageTableReservations.title",
+      message: "Manage Table Reservations",
     }),
     description: translate({
-      id: "rideSharing.features.synchronizeAvailability.description",
+      id: "restorationAndFoodDelivery.features.manageTableReservations.description",
       message:
-        "Effortlessly manage and coordinate schedules for all your specialists.",
+        "Handle customer reservations for dine-in services, ensuring proper table allocation and avoiding overbooking.",
     }),
   },
   {
     title: translate({
-      id: "rideSharing.features.handleSharedResources.title",
-      message: "Handle shared resources.",
+      id: "restorationAndFoodDelivery.features.coordinateDeliverySchedules.title",
+      message: "Coordinate Delivery Schedules",
     }),
     description: translate({
-      id: "rideSharing.features.handleSharedResources.description",
+      id: "restorationAndFoodDelivery.features.coordinateDeliverySchedules.description",
       message:
-        "Ensure optimal use of rooms, equipment, and shared resources without conflicts.",
+        "Optimize delivery driver routes and availability to handle customer orders efficiently.",
     }),
   },
   {
     title: translate({
-      id: "rideSharing.features.bookingRules.title",
-      message: "Support different booking rules per specialty.",
+      id: "restorationAndFoodDelivery.features.handlePrivateDiningAndEvents.title",
+      message: "Handle Private Dining and Events",
     }),
     description: translate({
-      id: "rideSharing.features.bookingRules.description",
+      id: "restorationAndFoodDelivery.features.handlePrivateDiningAndEvents.description",
       message:
-        "Customize booking policies to match the unique needs of each specialty.",
+        "Schedule private rooms and coordinate staff and kitchen resources for special events.",
     }),
   },
   {
     title: translate({
-      id: "rideSharing.features.notifications.title",
+      id: "restorationAndFoodDelivery.features.notifications.title",
       message: "Notify and remind customers about their appointments.",
     }),
     description: translate({
-      id: "rideSharing.features.notifications.description",
+      id: "restorationAndFoodDelivery.features.notifications.description",
       message:
         "Send timely reminders and updates to keep customers informed and on time.",
     }),
@@ -91,41 +91,41 @@ const features: Feature[] = [
 const benefits: Benefit[] = [
   {
     title: translate({
-      id: "rideSharing.benefits.simplifiedScheduling.title",
-      message: "Simplified and efficient scheduling for the beauty salon.",
+      id: "restorationAndFoodDelivery.benefits.streamlinedOperations.title",
+      message: "Streamlined Operations",
     }),
     description: translate({
-      id: "rideSharing.benefits.simplifiedScheduling.description",
+      id: "restorationAndFoodDelivery.benefits.streamlinedOperations.description",
       message:
-        "Streamline appointment management with tools that centralize and organize scheduling tasks, reducing manual effort.",
+        "Automates reservations, delivery schedules, and staff coordination, reducing manual effort.",
     }),
   },
   {
     title: translate({
-      id: "rideSharing.benefits.reducedBookingConflicts.title",
+      id: "restorationAndFoodDelivery.benefits.reducedBookingConflicts.title",
       message: "Reduced booking conflicts.",
     }),
     description: translate({
-      id: "rideSharing.benefits.reducedBookingConflicts.description",
+      id: "restorationAndFoodDelivery.benefits.reducedBookingConflicts.description",
       message:
         "Intelligent algorithms prevent overlapping bookings, ensuring seamless beauty salon operations.",
     }),
   },
   {
     title: translate({
-      id: "rideSharing.benefits.improvedCustomerSatisfaction.title",
+      id: "restorationAndFoodDelivery.benefits.improvedCustomerSatisfaction.title",
       message:
         "Improved customer satisfaction through automated reminders and smooth booking processes",
     }),
     description: translate({
-      id: "rideSharing.benefits.improvedCustomerSatisfaction.description",
+      id: "restorationAndFoodDelivery.benefits.improvedCustomerSatisfaction.description",
       message:
         "Notifications keep customers informed, while intuitive systems enable effortless appointment creation and changes.",
     }),
   },
 ];
 
-const RideSharingSolutionPage: React.FC = () => {
+const RestorationAndFoodDeliverySolutionPage: React.FC = () => {
   const [activeStep, setActiveStep] = React.useState<number>(0);
 
   const handleNext = () => {
@@ -139,30 +139,31 @@ const RideSharingSolutionPage: React.FC = () => {
   return (
     <Layout
       title={translate({
-        id: "rideSharingPage.title",
-        message: "ZenSched for Beauty Salons",
+        id: "restorationAndFoodDeliveryPage.title",
+        message: "ZenSched for Restaurants and Food Delivery",
       })}
       description={translate({
-        id: "rideSharingPage.description",
-        message: "ZenSched for Beauty Salons",
+        id: "restorationAndFoodDeliveryPage.description",
+        message: "How ZenSched Supports Restaurants with Food Delivery",
       })}
     >
       <main>
         <Container sx={{ my: 5 }}>
           <SolutionHeader
             lottieProps={{
-              animationData: rideSharingAnimationData,
+              animationData: restorationAndFoodDeliveryAnimationData,
             }}
             solutionTitle={
-              <Translate id="rideSharingPage.intro.title">
-                Advanced Scheduling for a Beauty Salon
+              <Translate id="restorationAndFoodDeliveryPage.intro.title">
+                ZenSched for Restaurants and Food Delivery
               </Translate>
             }
             solutionDescription={
-              <Translate id="rideSharingPage.intro.caption">
-                Simplify appointment management for barber with different
-                schedules. Handle last-minute cancellations, and resource
-                allocation—all with one tool.
+              <Translate id="restorationAndFoodDeliveryPage.intro.caption">
+                Streamline reservations and delivery scheduling for restaurants
+                with dynamic demands. Manage table bookings, optimize delivery
+                routes, and handle last-minute changes—all with one powerful
+                tool.
               </Translate>
             }
           />
@@ -184,8 +185,22 @@ const RideSharingSolutionPage: React.FC = () => {
               }}
               features={features}
               title={
-                <Translate id="rideSharingPage.solutionFeaturesSection.title">
+                <Translate id="restorationAndFoodDeliveryPage.solutionFeaturesSection.title">
                   Effortless booking management, simplified for your success.
+                </Translate>
+              }
+              description={
+                <Translate id="restorationAndFoodDeliveryPage.solutionFeaturesSection.description">
+                  A popular restaurant offering dine-in services, private dining
+                  experiences, and food delivery. The restaurant manages table
+                  reservations, private event bookings, and delivery schedules,
+                  while ensuring optimal utilization of its staff, kitchen
+                  resources, and delivery drivers. Coordinating schedules across
+                  these operations is crucial to providing seamless service and
+                  enhancing customer satisfaction. ZenSched offers a powerful
+                  scheduling solution to manage reservations, optimize delivery
+                  logistics, and streamline communication with customers and
+                  staff.
                 </Translate>
               }
             />
@@ -195,7 +210,7 @@ const RideSharingSolutionPage: React.FC = () => {
         <Container>
           <Typography variant="h2" fontWeight="900">
             <Translate
-              id="rideSharingPage.workflowExampleSection.title"
+              id="restorationAndFoodDeliveryPage.workflowExampleSection.title"
               data-aos={AOS.effect}
               data-aos-duration={AOS.duration}
               data-aos-easing={AOS.easing}
@@ -219,18 +234,23 @@ const RideSharingSolutionPage: React.FC = () => {
               </TimelineSeparator>
 
               <TimelineContent sx={{ py: "12px", px: 2 }}>
-                <Typography variant="h3">
-                  <Typography>Customer Booking</Typography>
+                <Typography variant="h6" component="span">
+                  Customer Booking
                 </Typography>
 
                 <Typography>
-                  A customer would like to book an haricut for 2 PM on a
-                  Wednesday.
+                  A customer wants to book a table for 7 PM on a Friday.
                 </Typography>
 
                 <Typography>The ZenSched API checks:</Typography>
 
-                <Typography>• The salon availability;</Typography>
+                <Typography>
+                  • The availability of tables matching the party size;
+                </Typography>
+
+                <Typography>
+                  • The availability of waitstaff for the reservation.
+                </Typography>
               </TimelineContent>
             </TimelineItem>
 
@@ -252,9 +272,11 @@ const RideSharingSolutionPage: React.FC = () => {
                 <Typography variant="h6" component="span">
                   Conflict Resolution
                 </Typography>
+
                 <Typography>
-                  If there salon is fully booked for the 2PM, ZenSched suggests
-                  the next available slot.
+                  If the requested time is unavailable due to fully booked
+                  tables, ZenSched automatically suggests the next available
+                  slot, ensuring no disruption in customer service.
                 </Typography>
               </TimelineContent>
             </TimelineItem>
@@ -279,8 +301,9 @@ const RideSharingSolutionPage: React.FC = () => {
                 </Typography>
 
                 <Typography>
-                  Thanks to the WebHooks functionalities of ZenSched, the
-                  customer and the barber can receive confirmation emails.
+                  Thanks to the WebHooks functionality of ZenSched, the customer
+                  and assigned staff receive confirmation emails and reminders,
+                  ensuring smooth coordination for the reservation.
                 </Typography>
               </TimelineContent>
             </TimelineItem>
@@ -378,4 +401,4 @@ const RideSharingSolutionPage: React.FC = () => {
   );
 };
 
-export default RideSharingSolutionPage;
+export default RestorationAndFoodDeliverySolutionPage;

@@ -20,8 +20,8 @@ import Container from "@site/src/components/Container";
 import {
   IconCalendarCog,
   IconCheck,
+  IconClipboardText,
   IconNotification,
-  IconUser,
 } from "@tabler/icons-react";
 import Layout from "@theme/Layout";
 import React from "react";
@@ -44,46 +44,46 @@ const steps = ["Create Entities", "Create Rules", "Configure WebHooks"];
 const features: Feature[] = [
   {
     title: translate({
-      id: "industrialAndManufacturing.features.synchronizeAvailability.title",
-      message: "Synchronize availability across multiple specialists.",
+      id: "industrialAndManufacturing.features.coordinateActivities.title",
+      message: "Manage Production Schedules.",
     }),
     description: translate({
-      id: "industrialAndManufacturing.features.synchronizeAvailability.description",
+      id: "industrialAndManufacturing.features.coordinateActivities.description",
       message:
-        "Effortlessly manage and coordinate schedules for all your specialists.",
+        "Coordinate production line activities and allocate shared machinery, ensuring seamless transitions between tasks.",
     }),
   },
   {
     title: translate({
-      id: "industrialAndManufacturing.features.handleSharedResources.title",
-      message: "Handle shared resources.",
+      id: "industrialAndManufacturing.features.optimizeMaintenanceScheduling.title",
+      message: "Optimize Maintenance Scheduling.",
     }),
     description: translate({
-      id: "industrialAndManufacturing.features.handleSharedResources.description",
+      id: "industrialAndManufacturing.features.optimizeMaintenanceScheduling.description",
       message:
-        "Ensure optimal use of rooms, equipment, and shared resources without conflicts.",
+        "Plan preventive maintenance and equipment servicing without disrupting production workflows.",
     }),
   },
   {
     title: translate({
-      id: "industrialAndManufacturing.features.bookingRules.title",
-      message: "Support different booking rules per specialty.",
+      id: "industrialAndManufacturing.features.handleWorkforceCoordination.title",
+      message: "Handle Workforce Coordination",
     }),
     description: translate({
-      id: "industrialAndManufacturing.features.bookingRules.description",
+      id: "industrialAndManufacturing.features.handleWorkforceCoordination.description",
       message:
-        "Customize booking policies to match the unique needs of each specialty.",
+        "Schedule employee shifts and assign tasks based on expertise, availability, and production needs.",
     }),
   },
   {
     title: translate({
       id: "industrialAndManufacturing.features.notifications.title",
-      message: "Notify and remind customers about their appointments.",
+      message: "Automate Notifications",
     }),
     description: translate({
       id: "industrialAndManufacturing.features.notifications.description",
       message:
-        "Send timely reminders and updates to keep customers informed and on time.",
+        "Send alerts to teams about production schedule updates, maintenance tasks, and shift changes to keep operations running smoothly.",
     }),
   },
 ];
@@ -91,36 +91,35 @@ const features: Feature[] = [
 const benefits: Benefit[] = [
   {
     title: translate({
-      id: "industrialAndManufacturing.benefits.simplifiedScheduling.title",
-      message: "Simplified and efficient scheduling for the beauty salon.",
+      id: "industrialAndManufacturing.benefits.optimizedResourceUtilizaion.title",
+      message: "Optimized Resource Utilization",
     }),
     description: translate({
-      id: "industrialAndManufacturing.benefits.simplifiedScheduling.description",
+      id: "industrialAndManufacturing.benefits.optimizedResourceUtilizaion.description",
       message:
         "Streamline appointment management with tools that centralize and organize scheduling tasks, reducing manual effort.",
     }),
   },
   {
     title: translate({
-      id: "industrialAndManufacturing.benefits.reducedBookingConflicts.title",
-      message: "Reduced booking conflicts.",
+      id: "industrialAndManufacturing.benefits.reducedDowntime.title",
+      message: "Reduced Downtime",
     }),
     description: translate({
-      id: "industrialAndManufacturing.benefits.reducedBookingConflicts.description",
+      id: "industrialAndManufacturing.benefits.reducedDowntime.description",
       message:
-        "Intelligent algorithms prevent overlapping bookings, ensuring seamless beauty salon operations.",
+        "Streamlines maintenance scheduling to prevent unexpected equipment failures.",
     }),
   },
   {
     title: translate({
-      id: "industrialAndManufacturing.benefits.improvedCustomerSatisfaction.title",
-      message:
-        "Improved customer satisfaction through automated reminders and smooth booking processes",
+      id: "industrialAndManufacturing.benefits.enhancedCommunication.title",
+      message: "Enhanced Communication",
     }),
     description: translate({
-      id: "industrialAndManufacturing.benefits.improvedCustomerSatisfaction.description",
+      id: "industrialAndManufacturing.benefits.enhancedCommunication.description",
       message:
-        "Notifications keep customers informed, while intuitive systems enable effortless appointment creation and changes.",
+        "Automated notifications keep employees and supervisors informed, improving operational efficiency.",
     }),
   },
 ];
@@ -140,11 +139,11 @@ const IndustrialAndManufacturingSolutionPage: React.FC = () => {
     <Layout
       title={translate({
         id: "industrialAndManufacturingPage.title",
-        message: "ZenSched for Beauty Salons",
+        message: "ZenSched for Industrial and Manufacturing",
       })}
       description={translate({
         id: "industrialAndManufacturingPage.description",
-        message: "ZenSched for Beauty Salons",
+        message: "Advanced Scheduling for Industrial and Manufacturing with ZenSched",
       })}
     >
       <main>
@@ -160,9 +159,9 @@ const IndustrialAndManufacturingSolutionPage: React.FC = () => {
             }
             solutionDescription={
               <Translate id="industrialAndManufacturingPage.intro.caption">
-                Simplify appointment management for barber with different
-                schedules. Handle last-minute cancellations, and resource
-                allocation—all with one tool.
+                Streamline production scheduling for manufacturing teams. Manage
+                equipment allocation, workforce shifts, and maintenance
+                tasks—all with one powerful tool.
               </Translate>
             }
           />
@@ -186,6 +185,19 @@ const IndustrialAndManufacturingSolutionPage: React.FC = () => {
               title={
                 <Translate id="industrialAndManufacturingPage.solutionFeaturesSection.title">
                   Effortless booking management, simplified for your success.
+                </Translate>
+              }
+              description={
+                <Translate id="industrialAndManufacturingPage.solutionFeaturesSection.description">
+                  A manufacturing company that manages production schedules,
+                  maintenance tasks, and workforce coordination. The company
+                  operates multiple production lines, shared machinery, and
+                  tools that require precise scheduling to avoid downtime and
+                  maximize efficiency. In addition, SmartMFG coordinates
+                  employee shifts, equipment maintenance, and inventory checks.
+                  ZenSched provides a robust scheduling solution to optimize
+                  operations, ensure resource allocation, and streamline
+                  communication across teams.
                 </Translate>
               }
             />
@@ -213,24 +225,30 @@ const IndustrialAndManufacturingSolutionPage: React.FC = () => {
               <TimelineSeparator>
                 <TimelineConnector />
                 <TimelineDot>
-                  <IconUser />
+                  <IconClipboardText />
                 </TimelineDot>
                 <TimelineConnector />
               </TimelineSeparator>
 
               <TimelineContent sx={{ py: "12px", px: 2 }}>
-                <Typography variant="h3">
-                  <Typography>Customer Booking</Typography>
+                <Typography variant="h6" component="span">
+                  <Typography>Task Scheduling</Typography>
                 </Typography>
 
                 <Typography>
-                  A customer would like to book an haricut for 2 PM on a
-                  Wednesday.
+                  A supervisor wants to schedule a task on the assembly line for
+                  10 AM on a Monday.
                 </Typography>
 
                 <Typography>The ZenSched API checks:</Typography>
 
-                <Typography>• The salon availability;</Typography>
+                <Typography>
+                  • The availability of the assembly line.
+                </Typography>
+
+                <Typography>
+                  • The availability of necessary tools and machinery.
+                </Typography>
               </TimelineContent>
             </TimelineItem>
 
@@ -252,9 +270,11 @@ const IndustrialAndManufacturingSolutionPage: React.FC = () => {
                 <Typography variant="h6" component="span">
                   Conflict Resolution
                 </Typography>
+
                 <Typography>
-                  If there salon is fully booked for the 2PM, ZenSched suggests
-                  the next available slot.
+                  If the requested slot is unavailable due to ongoing tasks or
+                  maintenance, ZenSched automatically suggests the next
+                  available time, ensuring minimal downtime.
                 </Typography>
               </TimelineContent>
             </TimelineItem>
@@ -279,8 +299,9 @@ const IndustrialAndManufacturingSolutionPage: React.FC = () => {
                 </Typography>
 
                 <Typography>
-                  Thanks to the WebHooks functionalities of ZenSched, the
-                  customer and the barber can receive confirmation emails.
+                  Thanks to the WebHooks functionality of ZenSched, both the
+                  supervisor and the assigned staff receive task confirmation
+                  emails and updates, ensuring seamless coordination.
                 </Typography>
               </TimelineContent>
             </TimelineItem>

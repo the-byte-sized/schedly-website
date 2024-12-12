@@ -2,33 +2,33 @@ import { translate } from "@docusaurus/Translate";
 import {
   IconAsset,
   IconBooks,
-  IconCar,
+  IconChefHat,
   IconClipboardText,
   IconCompass,
   IconCpu,
   IconHeartbeat,
+  IconPaw,
   IconPlant2,
-  IconSeeding,
   IconShieldCheck,
   IconShoppingBag,
   IconTreadmill,
   IconTruckLoading,
-  IconUsers,
+  IconUsers
 } from "@tabler/icons-react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const useSolutions = () => [
   {
-    icon: <IconSeeding size={56} stroke={2} />,
-    link: "/solutions/agriculture-and-animal-health",
+    icon: <IconPaw size={56} stroke={2} />,
+    link: "/solutions/animal-health",
     title: translate({
-      id: "solutions.agricultureAndAnimalHealth.title",
-      message: "Agriculture and Animal Health",
+      id: "solutions.animalHealth.title",
+      message: "Animal Health",
     }),
     description: translate({
-      id: "solutions.agricultureAndAnimalHealth.description",
+      id: "solutions.animalHealth.description",
       message:
-        "A bustling multi-specialty clinic offers services ranging from general practice to specialized treatments. ZenSched helps managing appointments for numerous doctors with varying schedules, handling last-minute cancellations, and accommodating emergency visits present significant challenges.",
+        "A veterinary clinic offers a variety of in-clinic services, including routine checkups, vaccinations, diagnostic exams, and wellness consultations for pets and livestock. Managing veterinarian schedules, appointment bookings, and shared resources such as diagnostic tools and examination rooms is crucial to ensuring smooth operations. ZenSched helps streamline the scheduling process, reduces booking conflicts, and enhances the customer experience.",
     }),
   },
   {
@@ -54,7 +54,7 @@ const useSolutions = () => [
     description: translate({
       id: "solutions.coworkingSTypographyaceManagement.description",
       message:
-        "A co-working space provides members with the ability to book conference rooms and shared facilities. ZenSched helps with managing bookings across multiple locations and prevent scheduling conflicts.",
+        "A dynamic coworking space that manages shared offices, meeting rooms, and event areas for freelancers, startups, and established businesses. The space coordinates schedules for shared resources like desks, private offices, and conference rooms, while also handling member bookings and event setups. Efficiently managing availability, adapting to last-minute changes, and optimizing resource allocation are essential for smooth operations. ZenSched offers a comprehensive scheduling solution to streamline bookings, maximize resource usage, and enhance member satisfaction.",
     }),
   },
   {
@@ -67,7 +67,7 @@ const useSolutions = () => [
     description: translate({
       id: "solutions.ecommerceAndRetail.description",
       message:
-        "An online platform offers live classes across different time zones with instructors worldwide. ZenSched helps coordinating class times, managing instructor availability, and handling student bookings.",
+        "A company operates a network of physical stores alongside an e-commerce platform. The company offers services such as in-store product pickups, personal shopping appointments, inventory management, and delivery scheduling. Coordinating between in-store staff, delivery drivers, and shared resources (e.g., storage space and checkout counters) is complex, especially during peak shopping seasons. ZenSched helps RetailChain & Co. streamline scheduling, optimize resource allocation, and improve the overall customer experience.",
     }),
   },
   {
@@ -80,7 +80,7 @@ const useSolutions = () => [
     description: translate({
       id: "solutions.education.description",
       message:
-        "An online education platform offers live classes across different time zones with instructors worldwide. ZenSched helps coordinating class times, managing instructor availability, and handling student bookings.",
+        "An innovative online learning platform offering live classes, workshops, and one-on-one tutoring sessions across a variety of subjects. The platform manages schedules for instructors, students, and shared virtual classrooms, while also handling bookings across different time zones. Coordinating instructor availability, adapting to last-minute changes, and ensuring smooth class transitions are critical for an optimal learning experience. ZenSched provides a flexible scheduling solution to streamline class management, align global schedules, and enhance the experience for both students and instructors.",
     }),
   },
   {
@@ -93,7 +93,7 @@ const useSolutions = () => [
     description: translate({
       id: "solutions.financeAndInsurance.description",
       message:
-        "An online finance and insurance platform offers live classes across different time zones with instructors worldwide. ZenSched helps coordinating class times, managing instructor availability, and handling student bookings.",
+        "A company offers financial planning, investment advisory, and wealth management services, while SecureInsure specializes in insurance policy consultations, claims processing, and renewals. Both sectors require managing appointments with clients, coordinating staff availability, and handling shared resources like meeting rooms and specialized tools. ZenSched provides a streamlined solution to manage these scheduling needs, ensure efficient resource allocation, and enhance client communication.",
     }),
   },
   {
@@ -106,7 +106,7 @@ const useSolutions = () => [
     description: translate({
       id: "solutions.healthAndFitness.description",
       message:
-        "An online finance and insurance platform offers live classes across different time zones with instructors worldwide. ZenSched helps coordinating class times, managing instructor availability, and handling student bookings.",
+        "A gym offers a wide range of health and fitness services, including group classes, personal training sessions, and wellness consultations. These services require managing class schedules, coordinating trainer availability, and optimizing shared resources like studios and equipment. ZenSched provides a streamlined solution to handle these scheduling needs, ensure efficient resource utilization, and enhance member engagement through automated communication and reminders.",
     }),
   },
   {
@@ -119,7 +119,7 @@ const useSolutions = () => [
     description: translate({
       id: "solutions.healthcare.description",
       message:
-        "A bustling multi-specialty clinic offers services ranging from general practice to specialized treatments. ZenSched helps managing appointments for numerous doctors with varying schedules, handling last-minute cancellations, and accommodating emergency visits present significant challenges.",
+        "A multi-specialty clinic offering a range of healthcare services, including general consultations, specialist visits, diagnostic tests, and wellness programs. The clinic manages schedules for doctors, nurses, and diagnostic equipment while coordinating patient appointments across multiple specialties. Efficiently handling bookings, adapting to last-minute changes, and ensuring optimal use of resources are critical to providing high-quality patient care. ZenSched delivers a robust scheduling solution to streamline appointment management, optimize resource allocation, and enhance the overall patient experience.",
     }),
   },
   {
@@ -132,7 +132,7 @@ const useSolutions = () => [
     description: translate({
       id: "solutions.industrialAndManufacturing.description",
       message:
-        "A bustling multi-specialty clinic offers services ranging from general practice to specialized treatments. ZenSched helps managing appointments for numerous doctors with varying schedules, handling last-minute cancellations, and accommodating emergency visits present significant challenges.",
+        "A manufacturing company that manages production schedules, maintenance tasks, and workforce coordination. The company operates multiple production lines, shared machinery, and tools that require precise scheduling to avoid downtime and maximize efficiency. In addition, SmartMFG coordinates employee shifts, equipment maintenance, and inventory checks. ZenSched provides a robust scheduling solution to optimize operations, ensure resource allocation, and streamline communication across teams.",
     }),
   },
   {
@@ -145,7 +145,7 @@ const useSolutions = () => [
     description: translate({
       id: "solutions.logisticAndSupplyChain.description",
       message:
-        "A bustling multi-specialty clinic offers services ranging from general practice to specialized treatments. ZenSched helps managing appointments for numerous doctors with varying schedules, handling last-minute cancellations, and accommodating emergency visits present significant challenges.",
+        "A logistics company manages a complex network of warehouses, delivery routes, and supply chain operations. The company handles a variety of tasks, including shipment scheduling, fleet management, warehouse space allocation, and loading dock assignments. Coordinating drivers, warehouse staff, and shared resources is critical to maintaining smooth operations and timely deliveries. ZenSched provides an advanced scheduling solution to optimize resource allocation, improve communication, and streamline logistics workflows.",
     }),
   },
   {
@@ -158,12 +158,12 @@ const useSolutions = () => [
     description: translate({
       id: "solutions.recruitmentAndStaffing.description",
       message:
-        "A bustling multi-specialty clinic offers services ranging from general practice to specialized treatments. ZenSched helps managing appointments for numerous doctors with varying schedules, handling last-minute cancellations, and accommodating emergency visits present significant challenges.",
+        "A company manages candidate interviews, staff onboarding, and employee training sessions for various clients. The company coordinates schedules for recruiters, hiring managers, and candidates while managing shared resources such as meeting rooms and video conferencing tools. With high volumes of interviews and tight deadlines, effective scheduling is critical to maintain smooth operations. ZenSched helps TalentHire streamline scheduling, reduce conflicts, and improve communication across all stakeholders.",
     }),
   },
   {
-    icon: <IconCar size={56} stroke={2} />,
-    link: "/solutions/ride-sharing",
+    icon: <IconChefHat size={56} stroke={2} />,
+    link: "/solutions/restoration-and-food-delivery",
     title: translate({
       id: "solutions.rideSharingService.title",
       message: "Ride Sharing",
@@ -184,7 +184,7 @@ const useSolutions = () => [
     description: translate({
       id: "solutions.techAndSoftware.description",
       message:
-        "A rapidly growing ride-sharing service operates in multiple cities, connecting passengers with drivers via a mobile app. The service faces complex scheduling challenges, such as adhering to local laws regarding driver working hour and mandatory breaks ZenSched helps streamline scheduling processes, reducing administrative overhead and manual interventions optimizing operations.",
+        "A fast-growing software company that manages team meetings, product demos, code reviews, and developer training sessions. The company operates across multiple time zones and uses shared resources like meeting rooms, video conferencing tools, and test environments. Coordinating schedules for developers, project managers, and stakeholders is essential to meet deadlines and ensure smooth collaboration. ZenSched provides a powerful scheduling solution to manage resources, align global teams, and streamline communication.",
     }),
   },
   {
@@ -197,7 +197,7 @@ const useSolutions = () => [
     description: translate({
       id: "solutions.travelAndTourism.description",
       message:
-        "A rapidly growing ride-sharing service operates in multiple cities, connecting passengers with drivers via a mobile app. The service faces complex scheduling challenges, such as adhering to local laws regarding driver working hour and mandatory breaks ZenSched helps streamline scheduling processes, reducing administrative overhead and manual interventions optimizing operations.",
+        "A thriving travel and tourism company that organizes guided tours, transportation schedules, and travel itineraries for customers across multiple destinations. The business coordinates tour guides, drivers, and shared resources like vehicles, accommodations, and activity spaces. Managing bookings, adapting to last-minute changes, and ensuring smooth communication between travelers and staff is crucial to providing a seamless travel experience. ZenSched offers a robust scheduling solution to optimize resources, streamline coordination, and enhance customer satisfaction.",
     }),
   },
 ];

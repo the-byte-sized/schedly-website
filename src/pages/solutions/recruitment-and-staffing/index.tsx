@@ -44,46 +44,46 @@ const steps = ["Create Entities", "Create Rules", "Configure WebHooks"];
 const features: Feature[] = [
   {
     title: translate({
-      id: "recruitmentAndStaffing.features.synchronizeAvailability.title",
-      message: "Synchronize availability across multiple specialists.",
+      id: "recruitmentAndStaffing.features.streamlineInterviewScheduling.title",
+      message: "Streamline Interview Scheduling",
     }),
     description: translate({
-      id: "recruitmentAndStaffing.features.synchronizeAvailability.description",
+      id: "recruitmentAndStaffing.features.streamlineInterviewScheduling.description",
       message:
-        "Effortlessly manage and coordinate schedules for all your specialists.",
+        "Coordinate interviews across multiple candidates, recruiters, and hiring managers with dynamic availability tracking.",
     }),
   },
   {
     title: translate({
-      id: "recruitmentAndStaffing.features.handleSharedResources.title",
-      message: "Handle shared resources.",
+      id: "recruitmentAndStaffing.features.manageOnboardingAndTrainingSessions.title",
+      message: "Manage Onboarding and Training Sessions",
     }),
     description: translate({
-      id: "recruitmentAndStaffing.features.handleSharedResources.description",
+      id: "recruitmentAndStaffing.features.manageOnboardingAndTrainingSessions.description",
       message:
-        "Ensure optimal use of rooms, equipment, and shared resources without conflicts.",
+        "Schedule onboarding meetings, orientation sessions, and team training events efficiently.",
     }),
   },
   {
     title: translate({
-      id: "recruitmentAndStaffing.features.bookingRules.title",
-      message: "Support different booking rules per specialty.",
+      id: "recruitmentAndStaffing.features.adaptToLastMinuteChanges.title",
+      message: "Adapt to Last-Minute Changes",
     }),
     description: translate({
-      id: "recruitmentAndStaffing.features.bookingRules.description",
+      id: "recruitmentAndStaffing.features.adaptToLastMinuteChanges.description",
       message:
-        "Customize booking policies to match the unique needs of each specialty.",
+        "Reassign interview slots, update schedules, or accommodate last-minute cancellations with ease.",
     }),
   },
   {
     title: translate({
-      id: "recruitmentAndStaffing.features.notifications.title",
-      message: "Notify and remind customers about their appointments.",
+      id: "recruitmentAndStaffing.features.automateNotifications.title",
+      message: "Automate Notifications",
     }),
     description: translate({
-      id: "recruitmentAndStaffing.features.notifications.description",
+      id: "recruitmentAndStaffing.features.automateNotifications.description",
       message:
-        "Send timely reminders and updates to keep customers informed and on time.",
+        "Send automated confirmations, reminders, and updates to candidates, recruiters, and hiring managers.",
     }),
   },
 ];
@@ -92,12 +92,12 @@ const benefits: Benefit[] = [
   {
     title: translate({
       id: "recruitmentAndStaffing.benefits.simplifiedScheduling.title",
-      message: "Simplified and efficient scheduling for the beauty salon.",
+      message: "Simplified Scheduling",
     }),
     description: translate({
       id: "recruitmentAndStaffing.benefits.simplifiedScheduling.description",
       message:
-        "Streamline appointment management with tools that centralize and organize scheduling tasks, reducing manual effort.",
+        "Automates interview and onboarding schedules, reducing administrative overhead.",
     }),
   },
   {
@@ -113,14 +113,13 @@ const benefits: Benefit[] = [
   },
   {
     title: translate({
-      id: "recruitmentAndStaffing.benefits.improvedCustomerSatisfaction.title",
-      message:
-        "Improved customer satisfaction through automated reminders and smooth booking processes",
+      id: "recruitmentAndStaffing.benefits.enhancedCommunication.title",
+      message: "Enhanced Communication",
     }),
     description: translate({
-      id: "recruitmentAndStaffing.benefits.improvedCustomerSatisfaction.description",
+      id: "recruitmentAndStaffing.benefits.enhancedCommunication.description",
       message:
-        "Notifications keep customers informed, while intuitive systems enable effortless appointment creation and changes.",
+        "Keeps candidates, recruiters, and hiring managers informed with automated updates and reminders.",
     }),
   },
 ];
@@ -140,11 +139,12 @@ const RecruitmentAndStaffingSolutionPage: React.FC = () => {
     <Layout
       title={translate({
         id: "recruitmentAndStaffingPage.title",
-        message: "ZenSched for Beauty Salons",
+        message: "ZenSched for Recruitment and Staffing",
       })}
       description={translate({
         id: "recruitmentAndStaffingPage.description",
-        message: "ZenSched for Beauty Salons",
+        message:
+          "Advanced Scheduling for Recruitment and Staffing with ZenSched",
       })}
     >
       <main>
@@ -155,14 +155,14 @@ const RecruitmentAndStaffingSolutionPage: React.FC = () => {
             }}
             solutionTitle={
               <Translate id="recruitmentAndStaffingPage.intro.title">
-                Advanced Scheduling for a Beauty Salon
+                Advanced Scheduling for Recruitment and Staffing with ZenSched
               </Translate>
             }
             solutionDescription={
               <Translate id="recruitmentAndStaffingPage.intro.caption">
-                Simplify appointment management for barber with different
-                schedules. Handle last-minute cancellations, and resource
-                allocation—all with one tool.
+                Streamline interview scheduling for recruiters with varying
+                availability. Manage candidate bookings, resource allocation,
+                and last-minute changes—all with one powerful tool.
               </Translate>
             }
           />
@@ -186,6 +186,19 @@ const RecruitmentAndStaffingSolutionPage: React.FC = () => {
               title={
                 <Translate id="recruitmentAndStaffingPage.solutionFeaturesSection.title">
                   Effortless booking management, simplified for your success.
+                </Translate>
+              }
+              description={
+                <Translate id="recruitmentAndStaffingPage.solutionFeaturesSection.description">
+                  manages candidate interviews, staff onboarding, and employee
+                  training sessions for various clients. The company coordinates
+                  schedules for recruiters, hiring managers, and candidates
+                  while managing shared resources such as meeting rooms and
+                  video conferencing tools. With high volumes of interviews and
+                  tight deadlines, effective scheduling is critical to maintain
+                  smooth operations. ZenSched helps TalentHire streamline
+                  scheduling, reduce conflicts, and improve communication across
+                  all stakeholders.
                 </Translate>
               }
             />
@@ -219,18 +232,27 @@ const RecruitmentAndStaffingSolutionPage: React.FC = () => {
               </TimelineSeparator>
 
               <TimelineContent sx={{ py: "12px", px: 2 }}>
-                <Typography variant="h3">
-                  <Typography>Customer Booking</Typography>
+                <Typography variant="h6" component="span">
+                  Candidate Booking
                 </Typography>
 
                 <Typography>
-                  A customer would like to book an haricut for 2 PM on a
-                  Wednesday.
+                  A recruiter wants to schedule a candidate interview for 10 AM
+                  on a Thursday.
                 </Typography>
 
                 <Typography>The ZenSched API checks:</Typography>
 
-                <Typography>• The salon availability;</Typography>
+                <Typography> • The availability of the recruiter;</Typography>
+
+                <Typography>
+                  • The availability of the hiring manager;
+                </Typography>
+
+                <Typography>
+                  • The availability of a meeting room or video conferencing
+                  tool.
+                </Typography>
               </TimelineContent>
             </TimelineItem>
 
@@ -252,9 +274,11 @@ const RecruitmentAndStaffingSolutionPage: React.FC = () => {
                 <Typography variant="h6" component="span">
                   Conflict Resolution
                 </Typography>
+
                 <Typography>
-                  If there salon is fully booked for the 2PM, ZenSched suggests
-                  the next available slot.
+                  If any of the required resources are unavailable, ZenSched
+                  automatically suggests the next available slot, ensuring a
+                  smooth interview process.
                 </Typography>
               </TimelineContent>
             </TimelineItem>
@@ -279,8 +303,10 @@ const RecruitmentAndStaffingSolutionPage: React.FC = () => {
                 </Typography>
 
                 <Typography>
-                  Thanks to the WebHooks functionalities of ZenSched, the
-                  customer and the barber can receive confirmation emails.
+                  Thanks to the WebHooks functionality of ZenSched, the
+                  candidate, recruiter, and hiring manager receive confirmation
+                  emails and reminders, ensuring everyone is prepared for the
+                  interview.
                 </Typography>
               </TimelineContent>
             </TimelineItem>
