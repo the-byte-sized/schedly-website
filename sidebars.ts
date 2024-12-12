@@ -86,8 +86,8 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: 'doc',
-          id: 'sdk/flutter',
-          label: 'Flutter SDK'
+          id: 'sdk/dart',
+          label: 'Dart SDK'
         },
         {
           type: 'doc',
