@@ -44,35 +44,35 @@ const steps = ["Create Entities", "Create Rules", "Configure WebHooks"];
 const features: Feature[] = [
   {
     title: translate({
-      id: "ecommerceAndRetail.features.synchronizeAvailability.title",
-      message: "Synchronize availability across multiple specialists.",
+      id: "ecommerceAndRetail.features.manageInStoreAppointments.title",
+      message: "Manage In-Store Appointments",
     }),
     description: translate({
-      id: "ecommerceAndRetail.features.synchronizeAvailability.description",
+      id: "ecommerceAndRetail.features.manageInStoreAppointments.description",
       message:
-        "Effortlessly manage and coordinate schedules for all your specialists.",
+        "Customers can book personal shopping consultations or product pickups, and ZenSched ensures staff and space availability.",
     }),
   },
   {
     title: translate({
-      id: "ecommerceAndRetail.features.handleSharedResources.title",
-      message: "Handle shared resources.",
+      id: "ecommerceAndRetail.features.coordinateDeliverySchedules.title",
+      message: "Coordinate Delivery Schedules.",
     }),
     description: translate({
-      id: "ecommerceAndRetail.features.handleSharedResources.description",
+      id: "ecommerceAndRetail.features.coordinateDeliverySchedules.description",
       message:
-        "Ensure optimal use of rooms, equipment, and shared resources without conflicts.",
+        "Sync delivery drivers’ routes and availability with customer-preferred time slots.",
     }),
   },
   {
     title: translate({
       id: "ecommerceAndRetail.features.bookingRules.title",
-      message: "Support different booking rules per specialty.",
+      message: "Set Custom Booking Rules.",
     }),
     description: translate({
       id: "ecommerceAndRetail.features.bookingRules.description",
       message:
-        "Customize booking policies to match the unique needs of each specialty.",
+        "Apply unique rules such as specific pickup windows for e-commerce orders or time slots for delivery services.",
     }),
   },
   {
@@ -92,35 +92,35 @@ const benefits: Benefit[] = [
   {
     title: translate({
       id: "ecommerceAndRetail.benefits.simplifiedScheduling.title",
-      message: "Simplified and efficient scheduling for the beauty salon.",
+      message: "Simplified and efficient scheduling for retail operations.",
     }),
     description: translate({
       id: "ecommerceAndRetail.benefits.simplifiedScheduling.description",
       message:
-        "Streamline appointment management with tools that centralize and organize scheduling tasks, reducing manual effort.",
+        "Streamline in-store and delivery appointment management with tools that centralize scheduling, reducing manual effort.",
     }),
   },
   {
     title: translate({
       id: "ecommerceAndRetail.benefits.reducedBookingConflicts.title",
-      message: "Reduced booking conflicts.",
+      message: "Optimized resource allocation.",
     }),
     description: translate({
       id: "ecommerceAndRetail.benefits.reducedBookingConflicts.description",
       message:
-        "Intelligent algorithms prevent overlapping bookings, ensuring seamless beauty salon operations.",
+        "Intelligent algorithms ensure shared resources like pickup counters and delivery slots are allocated without conflicts, enhancing operational efficiency.",
     }),
   },
   {
     title: translate({
       id: "ecommerceAndRetail.benefits.improvedCustomerSatisfaction.title",
       message:
-        "Improved customer satisfaction through automated reminders and smooth booking processes",
+        "Enhanced customer satisfaction through notifications and flexibility.",
     }),
     description: translate({
       id: "ecommerceAndRetail.benefits.improvedCustomerSatisfaction.description",
       message:
-        "Notifications keep customers informed, while intuitive systems enable effortless appointment creation and changes.",
+        "Automated reminders and real-time updates keep customers informed, while flexible scheduling options make bookings and rescheduling effortless.",
     }),
   },
 ];
@@ -140,11 +140,11 @@ const EcommerceAndRetailSolutionPage: React.FC = () => {
     <Layout
       title={translate({
         id: "ecommerceAndRetailPage.title",
-        message: "ZenSched for Beauty Salons",
+        message: "ZenSched for E-commerce and Retail",
       })}
       description={translate({
         id: "ecommerceAndRetailPage.description",
-        message: "ZenSched for Beauty Salons",
+        message: "Advanced Scheduling for E-Commerce and Retail with ZenSched",
       })}
     >
       <main>
@@ -155,14 +155,14 @@ const EcommerceAndRetailSolutionPage: React.FC = () => {
             }}
             solutionTitle={
               <Translate id="ecommerceAndRetailPage.intro.title">
-                Advanced Scheduling for a Beauty Salon
+                Advanced Scheduling for E-Commerce and Retail with ZenSched
               </Translate>
             }
             solutionDescription={
               <Translate id="ecommerceAndRetailPage.intro.caption">
-                Simplify appointment management for barber with different
-                schedules. Handle last-minute cancellations, and resource
-                allocation—all with one tool.
+                Streamline scheduling for retail and e-commerce operations.
+                Manage in-store appointments, delivery slots, and shared
+                resources effortlessly—all in one powerful platform.
               </Translate>
             }
           />
@@ -186,6 +186,20 @@ const EcommerceAndRetailSolutionPage: React.FC = () => {
               title={
                 <Translate id="ecommerceAndRetailPage.solutionFeaturesSection.title">
                   Effortless booking management, simplified for your success.
+                </Translate>
+              }
+              description={
+                <Translate id="ecommerceAndRetailPage.solutionFeaturesSection.description">
+                  RetailChain & Co. operates a network of physical stores
+                  alongside an e-commerce platform. The company offers services
+                  such as in-store product pickups, personal shopping
+                  appointments, inventory management, and delivery scheduling.
+                  Coordinating between in-store staff, delivery drivers, and
+                  shared resources (e.g., storage space and checkout counters)
+                  is complex, especially during peak shopping seasons. ZenSched
+                  helps RetailChain & Co. streamline scheduling, optimize
+                  resource allocation, and improve the overall customer
+                  experience.
                 </Translate>
               }
             />
@@ -219,18 +233,21 @@ const EcommerceAndRetailSolutionPage: React.FC = () => {
               </TimelineSeparator>
 
               <TimelineContent sx={{ py: "12px", px: 2 }}>
-                <Typography variant="h3">
-                  <Typography>Customer Booking</Typography>
+                <Typography variant="h6" component="span">
+                  Customer Booking
                 </Typography>
 
                 <Typography>
-                  A customer would like to book an haricut for 2 PM on a
-                  Wednesday.
+                  A customer wants to schedule an in-store product pickup for 3
+                  PM on a Saturday.
                 </Typography>
 
                 <Typography>The ZenSched API checks:</Typography>
 
-                <Typography>• The salon availability;</Typography>
+                <Typography>
+                  • The availability of staff members assigned to manage
+                  pickups.
+                </Typography>
               </TimelineContent>
             </TimelineItem>
 
@@ -253,8 +270,9 @@ const EcommerceAndRetailSolutionPage: React.FC = () => {
                   Conflict Resolution
                 </Typography>
                 <Typography>
-                  If there salon is fully booked for the 2PM, ZenSched suggests
-                  the next available slot.
+                  If all pickup slots for 3 PM are fully booked, ZenSched
+                  automatically suggests the next available slot, ensuring a
+                  smooth customer experience.
                 </Typography>
               </TimelineContent>
             </TimelineItem>
@@ -279,8 +297,9 @@ const EcommerceAndRetailSolutionPage: React.FC = () => {
                 </Typography>
 
                 <Typography>
-                  Thanks to the WebHooks functionalities of ZenSched, the
-                  customer and the barber can receive confirmation emails.
+                  Thanks to the Webhooks functionality of ZenSched, both the
+                  customer and the assigned staff receive confirmation emails
+                  and reminders, ensuring everyone is on the same page.
                 </Typography>
               </TimelineContent>
             </TimelineItem>

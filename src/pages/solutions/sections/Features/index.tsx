@@ -19,6 +19,7 @@ export type Feature = {
 
 type SolutionFeaturesProps = {
   title: Element;
+  description?: Element;
   features: Feature[];
   imgUrl?: string;
   lottieProps?: LottieComponentProps;
@@ -26,6 +27,7 @@ type SolutionFeaturesProps = {
 
 const SolutionFeatures: React.FC<SolutionFeaturesProps> = ({
   title,
+  description,
   imgUrl,
   features,
   lottieProps,
@@ -45,6 +47,20 @@ const SolutionFeatures: React.FC<SolutionFeaturesProps> = ({
       >
         {title}
       </Typography>
+
+      {description && (
+        <Typography
+          variant="subtitle1"
+
+          data-aos={AOS.effect}
+          data-aos-duration={AOS.duration}
+          data-aos-easing={AOS.easing}
+          data-aos-delay="150"
+          mt={2}
+        >
+          {description}
+        </Typography>
+      )}
 
       <Stack direction="row" alignItems="center" spacing={5} mt={3}>
         {imgUrl && (
