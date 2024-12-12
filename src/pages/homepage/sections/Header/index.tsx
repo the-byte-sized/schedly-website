@@ -16,7 +16,7 @@ const AOS = {
 };
 
 function Header() {
-  const { palette } = useTheme();
+  const { palette, typography } = useTheme();
   const cursor = React.useRef<HTMLDivElement>(null);
 
   const handleCursorEffect = React.useCallback((e: MouseEvent) => {
@@ -59,18 +59,38 @@ function Header() {
           data-aos-easing={AOS.easing}
         >
           <Container>
-            <Grid container spacing={0} direction="column">
+            <Grid
+              container
+              spacing={0}
+              direction="column"
+              alignItems="center"
+              textAlign="center"
+            >
+              <Typography
+                sx={{
+                  textTransform: "uppercase",
+                  letterSpacing: 1,
+                  fontSize: ".75rem",
+                  marginBottom: 2,
+                }}
+              >
+                Simplify, Customize, Schedule
+              </Typography>
               <Typography variant="h1">
                 Scheduling{" "}
                 <Typography
                   variant="h1"
                   component="span"
-                  className={styles.underlined}
+                  sx={{
+                    fontFamily: "Playfair Display, serif",
+                    fontWeight: 500,
+                    fontStyle: "italic",
+                    fontSize: typography.pxToRem(
+                      Number(typography.h1.fontSize)
+                    ),
+                  }}
                 >
                   Made Simple
-                  <svg viewBox="0 0 231 34.72">
-                    <path d="M9.61,12.86c0,0,168.39-6.89,212.56-5c0,0-152.83,10-180.83,13.78c0,0,62.72-1.39,94.83,4.17" />
-                  </svg>
                 </Typography>
               </Typography>
               <div
@@ -90,7 +110,6 @@ function Header() {
                   </Translate>
                 </Typography>
               </div>
-
               <div
                 data-aos={AOS.effect}
                 data-aos-duration={AOS.duration}

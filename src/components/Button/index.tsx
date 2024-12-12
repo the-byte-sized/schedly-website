@@ -3,22 +3,35 @@ import React from "react";
 
 type Props = ButtonProps;
 
-function Button(props: Props) {
+function Button({ variant = "outlined", ...props }: Props) {
   const { palette } = useTheme();
 
   return (
     <MuiButton
-      variant="outlined"
+      variant={variant}
+      disableElevation
+      disableFocusRipple
+      disableRipple
+      disableTouchRipple
       sx={{
-        padding: "1rem 2.5rem",
         color: palette.text.primary,
-        borderColor: palette.text.primary,
-        borderRadius: 0,
 
-        "&:hover": {
-          color: palette.primary.light,
-          backgroundColor: palette.text.primary,
-        },
+        ...(variant === "outlined" && {
+          padding: "1rem 2.5rem",
+          borderColor: palette.text.primary,
+          borderRadius: 0,
+
+          "&:hover": {
+            color: palette.primary.light,
+            backgroundColor: palette.text.primary,
+          },
+        }),
+
+        ...(variant === "text" && {
+          "&:hover": {
+            backgroundColor: "transparent",
+          },
+        }),
 
         ...props.sx,
       }}

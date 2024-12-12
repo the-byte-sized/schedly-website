@@ -1,11 +1,20 @@
+import Link from "@docusaurus/Link";
 import Translate, { translate } from "@docusaurus/Translate";
-import { Container, Stack, Typography } from "@mui/material";
+import {
+  Box,
+  Container,
+  Divider,
+  Stack,
+  Typography,
+  useTheme,
+} from "@mui/material";
+import Button from "@site/src/components/Button";
 import Card from "@site/src/components/Card";
 import {
   IconCalendarEvent,
   IconCategoryPlus,
   IconCircles,
-  IconClockCog,
+  IconPlus,
 } from "@tabler/icons-react";
 import React from "react";
 
@@ -46,6 +55,8 @@ const features = [
 ];
 
 const FeaturesCards: React.FC = () => {
+  const { palette } = useTheme();
+
   return (
     <Container
       id="overview"
@@ -56,19 +67,32 @@ const FeaturesCards: React.FC = () => {
         backgroundColor: "background.default",
       }}
     >
-      <Stack textAlign="center" alignItems="center">
-        <IconClockCog size={96} />
-
-        <Typography variant="h2">
+      <Stack
+        maxWidth="740px"
+        margin="0 auto"
+        textAlign="center"
+        alignItems="center"
+      >
+        <Typography
+          sx={{
+            textTransform: "uppercase",
+            letterSpacing: 1,
+            fontSize: ".75rem",
+            marginBottom: 2,
+          }}
+        >
+          Why ZenSched
+        </Typography>
+        <Typography variant="h1">
           <Translate id="featuresSection.title">
             Unleash the Power of Smart Scheduling
           </Translate>
         </Typography>
 
-        <Typography variant="subtitle1" color="textSecondary">
+        <Typography marginTop="1.5rem" variant="body1" color="textSecondary">
           <Translate id="featuresSection.description">
             Effortlessly manage availability, bookings, and events with
-            ZenSched’s cutting-edge features. From dynamic rules to seamless
+            ZenSched's cutting-edge features. From dynamic rules to seamless
             integrations, our platform is designed to simplify scheduling while
             maximizing productivity and flexibility.
           </Translate>
@@ -76,25 +100,75 @@ const FeaturesCards: React.FC = () => {
       </Stack>
 
       <Stack
+        spacing={4}
+        my={12}
+        px={{
+          lg: 0,
+          md: 2,
+          xs: 2,
+        }}
+        flexWrap="wrap"
         direction={{
           xs: "column",
-          sm: "row",
         }}
-        spacing={4}
-        py={6}
-        flexWrap="wrap"
-        justifyContent="center"
       >
         {features.map((feature, index) => (
-          <Card
-            key={index}
-            cardTitle={feature.title}
-            cardDescription={feature.description}
-            cardIcon={feature.icon}
-            sx={{
-              maxWidth: 320,
-            }}
-          />
+          <>
+            <Box
+              display="flex"
+              flexDirection="column"
+              alignItems="start"
+              gap={2}
+              p={4}
+              borderRadius={2}
+            >
+              <Typography
+                variant="h2"
+                sx={{
+                  fontFamily: "Playfair Display, serif",
+                  fontStyle: "italic",
+                  fontWeight: 500,
+                  marginBottom: ".5rem",
+                }}
+              >
+                {feature.title}
+              </Typography>
+              <Box
+                maxWidth={{
+                  md: "75%",
+                  xs: "100%",
+                }}
+              >
+                <Typography>{feature.description}</Typography>
+              </Box>
+              <Link>
+                <Button
+                  variant="text"
+                  sx={{
+                    color: palette.text.primary,
+
+                    svg: {
+                      transition: "transform .3s ease",
+                    },
+
+                    "&:hover": {
+                      backgroundColor: "transparent",
+
+                      svg: {
+                        transform: "rotate(180deg) ",
+                      },
+                    },
+                  }}
+                >
+                  <IconPlus size={14} stroke={2} />
+                  <Typography ml={1} component="span" fontSize=".85rem">
+                    Read more
+                  </Typography>
+                </Button>
+              </Link>
+            </Box>
+            {index !== features.length - 1 && <Divider />}
+          </>
         ))}
       </Stack>
     </Container>

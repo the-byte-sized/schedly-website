@@ -42,30 +42,12 @@
 
 .description p {
   max-width: 740px;
-  margin: 1.5rem 0 3rem;
-  font-size: 1.1rem;
-  line-height: 1.5;
+  margin: 1.2rem 0 3rem;
 }
 
 .underlined {
-  position: relative;
-}
-
-.underlined svg {
-  position: absolute;
-  bottom: -30px;
-  left: 0;
-  width: 100%;
-}
-
-.underlined svg path {
-  fill: transparent;
-  stroke-width: 3px;
-  stroke-dasharray: 0 900;
-  stroke-dashoffset: 1;
-  stroke-linecap: round;
-  animation: draw 1s cubic-bezier(0.02, 0.51, 0.11, 0.98) 1.5s forwards;
-  stroke: var(--bs-primary);
+  font-family: "Playfair Display", serif !important;
+  font-style: italic;
 }
 
 .cursor {
