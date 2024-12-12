@@ -52,12 +52,11 @@ const FeaturesCards: React.FC = () => {
       data-section="features"
       component="section"
       sx={{
-        py: 5,
         backgroundColor: "background.default",
       }}
     >
-      <Stack textAlign="center" alignItems="center">
-        <IconClockCog size={96} />
+      <Stack textAlign="center" alignItems="center" gap={2}>
+        <IconClockCog size={84} />
 
         <Typography variant="h2">
           <Translate id="featuresSection.title">

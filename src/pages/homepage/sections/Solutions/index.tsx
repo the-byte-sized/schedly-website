@@ -3,6 +3,7 @@ import Translate, { translate } from "@docusaurus/Translate";
 import { Button, Container, Stack, Typography } from "@mui/material";
 import Card from "@site/src/components/Card";
 import useSolutions from "@site/src/hooks/useSolutions";
+import { IconChevronRight } from "@tabler/icons-react";
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -34,9 +35,10 @@ const Solutions: React.FC = () => {
 
         <Typography variant="subtitle1" sx={{ maxWidth: "75%", mt: 2 }}>
           <Translate id="solutions.description">
-            Imagine how ZenSched's innovative, tech-forward scheduling solutions
-            can transform your business. Explore our solutions to see how we can
-            revolutionize time management and streamline your workflows.
+            Unlock the full potential of streamlined booking processes with
+            ZenSched, a powerful API designed to cater to the diverse needs of
+            various industries such as healthcare, education, hospitality, and
+            beyond.
           </Translate>
         </Typography>
       </Container>
@@ -79,8 +81,12 @@ const Solutions: React.FC = () => {
           sx={{
             mt: 5,
           }}
+          size="large"
+          endIcon={<IconChevronRight />}
         >
-          <Translate id="solutions.learnMoreButton">Learn more</Translate>
+          <Translate id="solutions.learnMoreButton">
+            See all industries
+          </Translate>
         </Button>
       </Stack>
     </>

@@ -58,10 +58,10 @@ const SolutionsPage: React.FC = () => {
               data-aos-delay="250"
             >
               <Translate id="solutions.description">
-                Imagine how ZenSched's innovative, tech-forward scheduling
-                solutions can transform your business. Explore our solutions to
-                see how we can revolutionize time management and streamline your
-                workflows.
+                Unlock the full potential of streamlined booking processes with
+                ZenSched, a powerful API designed to cater to the diverse needs
+                of various industries such as healthcare, education,
+                hospitality, and beyond.
               </Translate>
             </Typography>
 

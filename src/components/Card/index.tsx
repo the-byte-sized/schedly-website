@@ -54,7 +54,9 @@ const CustomCard: React.FC<CustomCardProps> = ({
           {cardIcon}
         </Box>
 
-        <Typography variant="h6" gutterBottom>
+        <Typography variant="h3" component="h2" gutterBottom sx={{
+          whiteSpace:  "nowrap"
+        }}>
           {cardTitle}
         </Typography>
 
