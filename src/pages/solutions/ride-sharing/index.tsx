@@ -1,82 +1,381 @@
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import Card from "@site/src/components/Card";
+import Translate, { translate } from "@docusaurus/Translate";
 import {
-    IconCalendarBolt,
-    IconClockRecord,
-    IconGavel,
-    IconNotification
+  Timeline,
+  TimelineConnector,
+  TimelineContent,
+  TimelineDot,
+  TimelineItem,
+  TimelineSeparator,
+} from "@mui/lab";
+import {
+  Box,
+  Button,
+  Stack,
+  Step,
+  StepLabel,
+  Stepper,
+  Typography,
+} from "@mui/material";
+import Container from "@site/src/components/Container";
+import {
+  IconCalendarCog,
+  IconCheck,
+  IconNotification,
+  IconUser,
 } from "@tabler/icons-react";
 import Layout from "@theme/Layout";
+import React from "react";
+import Benefits, { type Benefit } from "../sections/Benefits";
+import SolutionFeatures, { Feature } from "../sections/Features";
+import SolutionHeader from "../sections/Header";
+// @ts-expect-error
+import rideSharingAnimationData from "../../../assets/lottie/ride-sharing.json";
+// @ts-expect-error
+import bookingSolutionAnimationData from "../../../assets/lottie/booking-solution.json";
 
-export default function RideSharingSolutionPage(): JSX.Element {
-  const { siteConfig } = useDocusaurusContext();
+const AOS = {
+  effect: "fade-up",
+  duration: "500",
+  easing: "ease-out",
+};
+
+const steps = ["Create Entities", "Create Rules", "Configure WebHooks"];
+
+const features: Feature[] = [
+  {
+    title: translate({
+      id: "rideSharing.features.synchronizeAvailability.title",
+      message: "Synchronize availability across multiple specialists.",
+    }),
+    description: translate({
+      id: "rideSharing.features.synchronizeAvailability.description",
+      message:
+        "Effortlessly manage and coordinate schedules for all your specialists.",
+    }),
+  },
+  {
+    title: translate({
+      id: "rideSharing.features.handleSharedResources.title",
+      message: "Handle shared resources.",
+    }),
+    description: translate({
+      id: "rideSharing.features.handleSharedResources.description",
+      message:
+        "Ensure optimal use of rooms, equipment, and shared resources without conflicts.",
+    }),
+  },
+  {
+    title: translate({
+      id: "rideSharing.features.bookingRules.title",
+      message: "Support different booking rules per specialty.",
+    }),
+    description: translate({
+      id: "rideSharing.features.bookingRules.description",
+      message:
+        "Customize booking policies to match the unique needs of each specialty.",
+    }),
+  },
+  {
+    title: translate({
+      id: "rideSharing.features.notifications.title",
+      message: "Notify and remind customers about their appointments.",
+    }),
+    description: translate({
+      id: "rideSharing.features.notifications.description",
+      message:
+        "Send timely reminders and updates to keep customers informed and on time.",
+    }),
+  },
+];
+
+const benefits: Benefit[] = [
+  {
+    title: translate({
+      id: "rideSharing.benefits.simplifiedScheduling.title",
+      message: "Simplified and efficient scheduling for the beauty salon.",
+    }),
+    description: translate({
+      id: "rideSharing.benefits.simplifiedScheduling.description",
+      message:
+        "Streamline appointment management with tools that centralize and organize scheduling tasks, reducing manual effort.",
+    }),
+  },
+  {
+    title: translate({
+      id: "rideSharing.benefits.reducedBookingConflicts.title",
+      message: "Reduced booking conflicts.",
+    }),
+    description: translate({
+      id: "rideSharing.benefits.reducedBookingConflicts.description",
+      message:
+        "Intelligent algorithms prevent overlapping bookings, ensuring seamless beauty salon operations.",
+    }),
+  },
+  {
+    title: translate({
+      id: "rideSharing.benefits.improvedCustomerSatisfaction.title",
+      message:
+        "Improved customer satisfaction through automated reminders and smooth booking processes",
+    }),
+    description: translate({
+      id: "rideSharing.benefits.improvedCustomerSatisfaction.description",
+      message:
+        "Notifications keep customers informed, while intuitive systems enable effortless appointment creation and changes.",
+    }),
+  },
+];
+
+const RideSharingSolutionPage: React.FC = () => {
+  const [activeStep, setActiveStep] = React.useState<number>(0);
+
+  const handleNext = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep + 1);
+  };
+
+  const handleBack = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep - 1);
+  };
 
   return (
     <Layout
-      title="ZenSched for Ride Sharing"
-      description="Empowering Flexible Ride Scheduling"
+      title={translate({
+        id: "rideSharingPage.title",
+        message: "ZenSched for Beauty Salons",
+      })}
+      description={translate({
+        id: "rideSharingPage.description",
+        message: "ZenSched for Beauty Salons",
+      })}
     >
       <main>
-        <div className="container">
-          <h1>Ride Sharing Service</h1>
+        <Container sx={{ my: 5 }}>
+          <SolutionHeader
+            lottieProps={{
+              animationData: rideSharingAnimationData,
+            }}
+            solutionTitle={
+              <Translate id="rideSharingPage.intro.title">
+                Advanced Scheduling for a Beauty Salon
+              </Translate>
+            }
+            solutionDescription={
+              <Translate id="rideSharingPage.intro.caption">
+                Simplify appointment management for barber with different
+                schedules. Handle last-minute cancellations, and resource
+                allocation—all with one tool.
+              </Translate>
+            }
+          />
+        </Container>
 
-          <p>
-            From real-time scheduling to superior operational efficiency, we
-            provide solutions to keep your business running smoothly.
-          </p>
+        <Box
+          sx={{
+            backgroundColor: "background.paper",
+            py: 5,
+          }}
+        >
+          <Container>
+            <SolutionFeatures
+              lottieProps={{
+                animationData: bookingSolutionAnimationData,
+                style: {
+                  maxWidth: 700,
+                },
+              }}
+              features={features}
+              title={
+                <Translate id="rideSharingPage.solutionFeaturesSection.title">
+                  Effortless booking management, simplified for your success.
+                </Translate>
+              }
+            />
+          </Container>
+        </Box>
 
-          <div className="row row-gap-5 mt-5">
-            <div className="col-sm-12 col-md-6">
-              <Card>
-                <IconCalendarBolt size={56} stroke={2} />
+        <Container>
+          <Typography variant="h2" fontWeight="900">
+            <Translate
+              id="rideSharingPage.workflowExampleSection.title"
+              data-aos={AOS.effect}
+              data-aos-duration={AOS.duration}
+              data-aos-easing={AOS.easing}
+            >
+              Workflow Example
+            </Translate>
+          </Typography>
 
-                <h1>Flexible Scheduling Rules</h1>
+          <Timeline position="alternate">
+            <TimelineItem
+              data-aos={AOS.effect}
+              data-aos-duration={AOS.duration}
+              data-aos-easing={AOS.easing}
+            >
+              <TimelineSeparator>
+                <TimelineConnector />
+                <TimelineDot>
+                  <IconUser />
+                </TimelineDot>
+                <TimelineConnector />
+              </TimelineSeparator>
 
-                <p className="mb-0">
-                  Set up individual schedules for each driver, including
-                  specific working hours, days off, and vacation periods.
-                </p>
-              </Card>
-            </div>
+              <TimelineContent sx={{ py: "12px", px: 2 }}>
+                <Typography variant="h3">
+                  <Typography>Customer Booking</Typography>
+                </Typography>
 
-            <div className="col-sm-12 col-md-6">
-              <Card>
-                <IconClockRecord size={56} stroke={2} />
+                <Typography>
+                  A customer would like to book an haricut for 2 PM on a
+                  Wednesday.
+                </Typography>
 
-                <h1>Unpredictable Schedules</h1>
+                <Typography>The ZenSched API checks:</Typography>
 
-                <p className="mb-0">
-                  Managing driver availability and part-time engagement poses
-                  significant hurdles.
-                </p>
-              </Card>
-            </div>
+                <Typography>• The salon availability;</Typography>
+              </TimelineContent>
+            </TimelineItem>
 
-            <div className="col-sm-12 col-md-6">
-              <Card>
-                <IconGavel size={56} stroke={2} />
+            <TimelineItem
+              data-aos="fade-down"
+              data-aos-duration={AOS.duration}
+              data-aos-easing={AOS.easing}
+              data-aos-delay="250"
+            >
+              <TimelineSeparator>
+                <TimelineConnector />
+                <TimelineDot color="primary">
+                  <IconCalendarCog />
+                </TimelineDot>
+                <TimelineConnector />
+              </TimelineSeparator>
 
-                <h1>Regulatory Compliance</h1>
+              <TimelineContent sx={{ py: "12px", px: 2 }}>
+                <Typography variant="h6" component="span">
+                  Conflict Resolution
+                </Typography>
+                <Typography>
+                  If there salon is fully booked for the 2PM, ZenSched suggests
+                  the next available slot.
+                </Typography>
+              </TimelineContent>
+            </TimelineItem>
 
-                <p className="mb-0">Adhere to laws on working hours.</p>
-              </Card>
-            </div>
+            <TimelineItem
+              data-aos={AOS.effect}
+              data-aos-duration={AOS.duration}
+              data-aos-easing={AOS.easing}
+              data-aos-delay="500"
+            >
+              <TimelineSeparator>
+                <TimelineConnector />
+                <TimelineDot color="primary" variant="outlined">
+                  <IconNotification />
+                </TimelineDot>
+                <TimelineConnector sx={{ bgcolor: "secondary.main" }} />
+              </TimelineSeparator>
 
-            <div className="col-sm-12 col-md-6">
-              <Card>
-                <IconNotification size={56} stroke={2} />
+              <TimelineContent sx={{ py: "12px", px: 2 }}>
+                <Typography variant="h6" component="span">
+                  Notifications
+                </Typography>
 
-                <h1>Real-Time Updates</h1>
+                <Typography>
+                  Thanks to the WebHooks functionalities of ZenSched, the
+                  customer and the barber can receive confirmation emails.
+                </Typography>
+              </TimelineContent>
+            </TimelineItem>
 
-                <p className="mb-0">
-                  Provide instant updates to clients about riders availability,
-                  reducing wait times and enhancing satisfaction.
-                </p>
-              </Card>
-            </div>
-          </div>
-        </div>
+            <TimelineItem
+              data-aos={AOS.effect}
+              data-aos-duration={AOS.duration}
+              data-aos-easing={AOS.easing}
+              data-aos-delay="750"
+            >
+              <TimelineSeparator>
+                <TimelineConnector sx={{ bgcolor: "secondary.main" }} />
+
+                <TimelineDot color="secondary">
+                  <IconCheck />
+                </TimelineDot>
+
+                <TimelineConnector sx={{ bgcolor: "secondary.main" }} />
+              </TimelineSeparator>
+
+              <TimelineContent sx={{ py: "12px", px: 2 }}>
+                <Typography variant="h6" component="span">
+                  That's how simple it's with ZenSched!
+                </Typography>
+              </TimelineContent>
+            </TimelineItem>
+          </Timeline>
+        </Container>
+
+        <Container>
+          <Typography
+            variant="h2"
+            fontWeight="900"
+            data-aos={AOS.effect}
+            data-aos-duration={AOS.duration}
+            data-aos-easing={AOS.easing}
+          >
+            ZenSched Implementation
+          </Typography>
+
+          <Box
+            data-aos={AOS.effect}
+            data-aos-duration={AOS.duration}
+            data-aos-easing={AOS.easing}
+          >
+            <Stepper
+              activeStep={activeStep}
+              sx={{
+                mt: 5,
+              }}
+            >
+              {steps.map((label) => (
+                <Step key={label}>
+                  <StepLabel>{label}</StepLabel>
+                </Step>
+              ))}
+            </Stepper>
+
+            <Typography sx={{ mt: 2, mb: 1 }}>Step {activeStep + 1}</Typography>
+
+            <Stack
+              direction="row"
+              alignItems="center"
+              justifyContent="space-between"
+            >
+              <Button
+                color="inherit"
+                disabled={activeStep === 0}
+                onClick={handleBack}
+                sx={{ mr: 1 }}
+              >
+                <Typography id="stepper.previousStepButton">Back</Typography>
+              </Button>
+
+              <Button
+                onClick={handleNext}
+                disabled={activeStep === steps.length - 1}
+              >
+                <Typography id="stepper.nextStepButton">Next</Typography>
+              </Button>
+            </Stack>
+          </Box>
+        </Container>
+
+        <Box
+          sx={{
+            p: 8,
+            backgroundColor: "background.paper",
+          }}
+        >
+          <Benefits benefits={benefits} />
+        </Box>
       </main>
     </Layout>
   );
-}
+};
+
+export default RideSharingSolutionPage;

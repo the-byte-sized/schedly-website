@@ -29,7 +29,7 @@ import Benefits, { type Benefit } from "../sections/Benefits";
 import SolutionFeatures, { Feature } from "../sections/Features";
 import SolutionHeader from "../sections/Header";
 // @ts-expect-error
-import beautySalonAnimationData from "../../../assets/lottie/beauty-salon.json";
+import ecommerceAndRetailAnimationData from "../../../assets/lottie/ecommerce-and-retail.json";
 // @ts-expect-error
 import bookingSolutionAnimationData from "../../../assets/lottie/booking-solution.json";
 
@@ -151,7 +151,7 @@ const EcommerceAndRetailSolutionPage: React.FC = () => {
         <Container sx={{ my: 5 }}>
           <SolutionHeader
             lottieProps={{
-              animationData: beautySalonAnimationData,
+              animationData: ecommerceAndRetailAnimationData,
             }}
             solutionTitle={
               <Translate id="ecommerceAndRetailPage.intro.title">

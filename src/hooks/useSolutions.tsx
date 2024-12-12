@@ -137,7 +137,7 @@ const useSolutions = () => [
   },
   {
     icon: <IconTruckLoading size={56} stroke={2} />,
-    link: "/solutions/logistic-and-supply-chain",
+    link: "/solutions/logistics-and-supply-chain",
     title: translate({
       id: "solutions.logisticAndSupplyChain.title",
       message: "Logistic & Supply Chain",
