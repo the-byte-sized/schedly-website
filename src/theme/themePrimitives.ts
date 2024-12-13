@@ -292,7 +292,7 @@ export const colorSchemes = {
       },
       text: {
         primary: gray[800],
-        secondary: gray[600],
+        secondary: gray[800],
         warning: orange[400],
       },
       action: {
@@ -355,9 +355,9 @@ export const colorSchemes = {
 };
 
 export const typography = {
-  fontFamily: 'Onest, sans-serif',
+  fontFamily: 'Inter, sans-serif',
   h1: {
-    fontSize: defaultTheme.typography.pxToRem(48),
+    fontSize: defaultTheme.typography.pxToRem(64),
     fontWeight: 500,
     lineHeight: 1.2,
     letterSpacing: -0.5,
@@ -392,10 +392,11 @@ export const typography = {
     fontWeight: 500,
   },
   body1: {
-    fontSize: defaultTheme.typography.pxToRem(14),
+    fontSize: defaultTheme.typography.pxToRem(18),
+    lineHeight: 1.5
   },
   body2: {
-    fontSize: defaultTheme.typography.pxToRem(14),
+    fontSize: defaultTheme.typography.pxToRem(16),
     fontWeight: 400,
   },
   caption: {
