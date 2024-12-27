@@ -9,7 +9,6 @@ import {
   useTheme,
 } from "@mui/material";
 import Button from "@site/src/components/Button";
-import Card from "@site/src/components/Card";
 import {
   IconCalendarEvent,
   IconCategoryPlus,
@@ -17,6 +16,12 @@ import {
   IconPlus,
 } from "@tabler/icons-react";
 import React from "react";
+
+const AOS = {
+  effect: "fade-up",
+  duration: "500",
+  easing: "ease-out",
+};
 
 const features = [
   {
@@ -83,13 +88,26 @@ const FeaturesCards: React.FC = () => {
         >
           Why ZenSched
         </Typography>
-        <Typography variant="h1">
+        <Typography
+          variant="h1"
+          data-aos={AOS.effect}
+          data-aos-duration={AOS.duration}
+          data-aos-easing={AOS.easing}
+        >
           <Translate id="featuresSection.title">
             Unleash the Power of Smart Scheduling
           </Translate>
         </Typography>
 
-        <Typography marginTop="1.5rem" variant="body1" color="textSecondary">
+        <Typography
+          marginTop="1.5rem"
+          variant="body1"
+          color="textSecondary"
+          data-aos={AOS.effect}
+          data-aos-duration={AOS.duration}
+          data-aos-easing={AOS.easing}
+          data-aos-delay="250"
+        >
           <Translate id="featuresSection.description">
             Effortlessly manage availability, bookings, and events with
             ZenSched's cutting-edge features. From dynamic rules to seamless
@@ -124,6 +142,9 @@ const FeaturesCards: React.FC = () => {
             >
               <Typography
                 variant="h2"
+                data-aos={AOS.effect}
+                data-aos-duration={AOS.duration}
+                data-aos-easing={AOS.easing}
                 sx={{
                   fontFamily: "Playfair Display, serif",
                   fontStyle: "italic",
@@ -139,11 +160,22 @@ const FeaturesCards: React.FC = () => {
                   xs: "100%",
                 }}
               >
-                <Typography>{feature.description}</Typography>
+                <Typography
+                  data-aos={AOS.effect}
+                  data-aos-duration={AOS.duration}
+                  data-aos-easing={AOS.easing}
+                  data-aos-delay="250"
+                >
+                  {feature.description}
+                </Typography>
               </Box>
               <Link>
                 <Button
                   variant="text"
+                  data-aos={AOS.effect}
+                  data-aos-duration={AOS.duration}
+                  data-aos-easing={AOS.easing}
+                  data-aos-delay="500"
                   sx={{
                     color: palette.text.primary,
 

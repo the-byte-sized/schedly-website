@@ -1,9 +1,6 @@
 import Link from "@docusaurus/Link";
 import Translate from "@docusaurus/Translate";
-import useBaseUrl from "@docusaurus/useBaseUrl";
 import { Typography, Grid2 as Grid, Box, useTheme } from "@mui/material";
-import MuiButton from "@mui/material/Button";
-import Heading from "@theme/Heading";
 import React from "react";
 import styles from "./index.module.css";
 import Container from "@site/src/components/Container";
@@ -17,28 +14,6 @@ const AOS = {
 
 function Header() {
   const { palette, typography } = useTheme();
-  const cursor = React.useRef<HTMLDivElement>(null);
-
-  const handleCursorEffect = React.useCallback((e: MouseEvent) => {
-    if (cursor.current) {
-      const x = e.clientX - 200;
-      const y = e.clientY - 200;
-
-      cursor.current.style.transform = `translate3d(${x}px, ${y}px, 0)`;
-    }
-  }, []);
-
-  React.useEffect(() => {
-    window.addEventListener("mousemove", (e) =>
-      requestAnimationFrame(() => handleCursorEffect(e))
-    );
-
-    return () => {
-      window.addEventListener("mousemove", (e) =>
-        requestAnimationFrame(() => handleCursorEffect(e))
-      );
-    };
-  }, []);
 
   return (
     <header>
@@ -46,18 +21,7 @@ function Header() {
         sx={{ backgroundColor: palette.primary.light }}
         className={styles.header}
       >
-        {/* <div ref={cursor} className={styles.cursor}></div> */}
-
-        {/* <div className={styles.background}>
-          <img src={useBaseUrl("/img/header-pattern.png")} alt="hero pattern" />
-        </div> */}
-
-        <div
-          className={styles.wrapper}
-          data-aos={AOS.effect}
-          data-aos-duration={AOS.duration}
-          data-aos-easing={AOS.easing}
-        >
+        <div className={styles.wrapper}>
           <Container>
             <Grid
               container
@@ -76,11 +40,20 @@ function Header() {
               >
                 Simplify, Customize, Schedule
               </Typography>
-              <Typography variant="h1">
+              <Typography
+                variant="h1"
+                data-aos={AOS.effect}
+                data-aos-duration={AOS.duration}
+                data-aos-easing={AOS.easing}
+              >
                 Scheduling{" "}
                 <Typography
                   variant="h1"
                   component="span"
+                  data-aos={AOS.effect}
+                  data-aos-duration={AOS.duration}
+                  data-aos-easing={AOS.easing}
+                  data-aos-delay="250"
                   sx={{
                     fontFamily: "Playfair Display, serif",
                     fontWeight: 500,
@@ -97,7 +70,7 @@ function Header() {
                 data-aos={AOS.effect}
                 data-aos-duration={AOS.duration}
                 data-aos-easing={AOS.easing}
-                data-aos-delay="250"
+                data-aos-delay="500"
                 className={styles.description}
               >
                 <Typography variant="body1">
@@ -114,7 +87,7 @@ function Header() {
                 data-aos={AOS.effect}
                 data-aos-duration={AOS.duration}
                 data-aos-easing={AOS.easing}
-                data-aos-delay="500"
+                data-aos-delay="750"
                 className="d-flex align-items-center gap-2"
               >
                 <Link
