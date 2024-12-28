@@ -122,6 +122,12 @@ const solutions = [
   },
 ];
 
+const AOS = {
+  effect: "fade-up",
+  duration: "500",
+  easing: "ease-out",
+};
+
 const Solutions: React.FC = () => {
   const id = React.useId();
   const { palette, typography } = useTheme();
@@ -151,11 +157,23 @@ const Solutions: React.FC = () => {
           >
             Do Less, better
           </Typography>
-          <Typography variant="h1">
+          <Typography
+            variant="h1"
+            data-aos={AOS.effect}
+            data-aos-duration={AOS.duration}
+            data-aos-easing={AOS.easing}
+          >
             <Translate id="solutions.title">ZenSched in action</Translate>
           </Typography>
 
-          <Typography marginTop="1.5rem" variant="body1">
+          <Typography
+            marginTop="1.5rem"
+            variant="body1"
+            data-aos={AOS.effect}
+            data-aos-duration={AOS.duration}
+            data-aos-easing={AOS.easing}
+            data-aos-delay="250"
+          >
             <Translate id="solutions.description">
               Imagine how ZenSched's innovative, tech-forward scheduling
               solutions can transform your business. Explore our solutions to
@@ -256,9 +274,20 @@ const Solutions: React.FC = () => {
         </Carousel>
 
         <Box my={12} display="flex" flexDirection="column" textAlign="center">
-          <Typography variant="h1">One API </Typography>
           <Typography
             variant="h1"
+            data-aos={AOS.effect}
+            data-aos-duration={AOS.duration}
+            data-aos-easing={AOS.easing}
+          >
+            One API{" "}
+          </Typography>
+          <Typography
+            variant="h1"
+            data-aos={AOS.effect}
+            data-aos-duration={AOS.duration}
+            data-aos-easing={AOS.easing}
+            data-aos-delay="250"
             sx={{
               fontFamily: "Playfair Display, serif",
               fontWeight: 500,
@@ -268,7 +297,13 @@ const Solutions: React.FC = () => {
           >
             Unlimited solutions
           </Typography>
-          <Box mt={5}>
+          <Box
+            mt={5}
+            data-aos={AOS.effect}
+            data-aos-duration={AOS.duration}
+            data-aos-easing={AOS.easing}
+            data-aos-delay="500"
+          >
             <Link to="https://forms.office.com/r/8LmMHy2bUF" target="_blank">
               <Button>
                 <Translate id="joinWaitlistNow">Join Waitlist Now</Translate>
