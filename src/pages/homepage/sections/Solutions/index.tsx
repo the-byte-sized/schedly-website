@@ -5,8 +5,8 @@ import {
   Container,
   Stack,
   Typography,
-  useTheme,
   useMediaQuery,
+  useTheme,
 } from "@mui/material";
 import Button from "@site/src/components/Button";
 import {
@@ -352,6 +352,13 @@ const Solutions: React.FC = () => {
             </Carousel>
           )}
         </Box>
+
+        <Link to="/solutions">
+          <Button sx={{ marginTop: 5 }}>
+            <Translate id="seeAllSolutions">See all solutions</Translate>
+          </Button>
+        </Link>
+
         <Box my={12} display="flex" flexDirection="column" textAlign="center">
           <Typography
             variant="h1"
@@ -361,6 +368,7 @@ const Solutions: React.FC = () => {
           >
             One API{" "}
           </Typography>
+
           <Typography
             variant="h1"
             data-aos={AOS.effect}
@@ -376,6 +384,7 @@ const Solutions: React.FC = () => {
           >
             Unlimited solutions
           </Typography>
+
           <Box
             mt={5}
             data-aos={AOS.effect}
@@ -384,7 +393,7 @@ const Solutions: React.FC = () => {
             data-aos-delay="500"
           >
             <Link to="https://forms.office.com/r/8LmMHy2bUF" target="_blank">
-              <Button>
+              <Button variant="contained">
                 <Translate id="joinWaitlistNow">Join Waitlist Now</Translate>
               </Button>
             </Link>

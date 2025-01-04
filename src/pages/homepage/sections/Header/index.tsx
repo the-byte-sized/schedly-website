@@ -101,12 +101,13 @@ function Header() {
                   to="https://forms.office.com/r/8LmMHy2bUF"
                   target="_blank"
                 >
-                  <Button sx={{ width: "100%" }}>
+                  <Button sx={{ width: "100%" }} variant="contained">
                     <Translate id="joinWaitlistNow">
                       Join Waitlist Now
                     </Translate>
                   </Button>
                 </Link>
+
                 <Link to="/docs/intro/welcome">
                   <Button sx={{ width: "100%" }}>
                     <Translate id="documentationSection.button">
