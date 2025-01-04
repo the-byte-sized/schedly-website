@@ -9,14 +9,15 @@ import {
 } from "@mui/lab";
 import {
   Box,
-  Button,
   Stack,
   Step,
   StepLabel,
   Stepper,
   Typography,
+  useTheme,
 } from "@mui/material";
 import Container from "@site/src/components/Container";
+import Button from "@site/src/components/Button";
 import {
   IconCalendarCog,
   IconCheck,
@@ -125,6 +126,7 @@ const benefits: Benefit[] = [
 ];
 
 const HealthAndFitnessSolutionPage: React.FC = () => {
+  const { palette } = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
 
   const handleNext = () => {
@@ -147,26 +149,28 @@ const HealthAndFitnessSolutionPage: React.FC = () => {
       })}
     >
       <main>
-        <Container sx={{ my: 5 }}>
-          <SolutionHeader
-            lottieProps={{
-              animationData: healthAndFitnessAnimationData,
-            }}
-            solutionTitle={
-              <Translate id="healthAndFitnessPage.intro.title">
-                Advanced Scheduling for Health and Fitness Center
-              </Translate>
-            }
-            solutionDescription={
-              <Translate id="healthAndFitnessPage.intro.caption">
-                Effortlessly manage fitness schedules with a versatile system
-                that coordinates trainers, handles member bookings, optimizes
-                shared spaces, and adapts seamlessly to changing
-                availability—all from one powerful platform.
-              </Translate>
-            }
-          />
-        </Container>
+        <Box sx={{ background: palette.primary.light }}>
+          <Container sx={{ mb: 5 }}>
+            <SolutionHeader
+              lottieProps={{
+                animationData: healthAndFitnessAnimationData,
+              }}
+              solutionTitle={
+                <Translate id="healthAndFitnessPage.intro.title">
+                  Advanced Scheduling for Health and Fitness Center
+                </Translate>
+              }
+              solutionDescription={
+                <Translate id="healthAndFitnessPage.intro.caption">
+                  Effortlessly manage fitness schedules with a versatile system
+                  that coordinates trainers, handles member bookings, optimizes
+                  shared spaces, and adapts seamlessly to changing
+                  availability—all from one powerful platform.
+                </Translate>
+              }
+            />
+          </Container>
+        </Box>
 
         <Box
           sx={{
@@ -191,9 +195,9 @@ const HealthAndFitnessSolutionPage: React.FC = () => {
               }
               description={
                 <Translate id="healthAndFitnessPage.solutionFeaturesSection.description">
-                  The gym offers a wide range of health and fitness services, including
-                  group classes, personal training sessions, and wellness
-                  consultations. These services require managing class
+                  The gym offers a wide range of health and fitness services,
+                  including group classes, personal training sessions, and
+                  wellness consultations. These services require managing class
                   schedules, coordinating trainer availability, and optimizing
                   shared resources like studios and equipment. ZenSched provides
                   a streamlined solution to handle these scheduling needs,

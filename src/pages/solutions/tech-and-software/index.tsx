@@ -9,19 +9,20 @@ import {
 } from "@mui/lab";
 import {
   Box,
-  Button,
   Stack,
   Step,
   StepLabel,
   Stepper,
   Typography,
+  useTheme,
 } from "@mui/material";
 import Container from "@site/src/components/Container";
+import Button from "@site/src/components/Button";
 import {
   IconCalendarCog,
   IconCalendarStats,
   IconCheck,
-  IconNotification
+  IconNotification,
 } from "@tabler/icons-react";
 import Layout from "@theme/Layout";
 import React from "react";
@@ -125,6 +126,7 @@ const benefits: Benefit[] = [
 ];
 
 const TechAndSoftwareSolutionPage: React.FC = () => {
+  const { palette } = useTheme();
   const [activeStep, setActiveStep] = React.useState<number>(0);
 
   const handleNext = () => {
@@ -148,25 +150,27 @@ const TechAndSoftwareSolutionPage: React.FC = () => {
       })}
     >
       <main>
-        <Container sx={{ my: 5 }}>
-          <SolutionHeader
-            lottieProps={{
-              animationData: techAndSoftwareAnimationData,
-            }}
-            solutionTitle={
-              <Translate id="techAndSoftwareSolutionPage.intro.title">
-                Advanced Scheduling for Tech and Software Teams with ZenSched
-              </Translate>
-            }
-            solutionDescription={
-              <Translate id="techAndSoftwareSolutionPage.intro.caption">
-                Streamline scheduling for tech teams with dynamic availability.
-                Manage meetings, allocate resources, and adapt to last-minute
-                changes—all with one powerful tool.
-              </Translate>
-            }
-          />
-        </Container>
+        <Box sx={{ background: palette.primary.light }}>
+          <Container sx={{ mb: 5 }}>
+            <SolutionHeader
+              lottieProps={{
+                animationData: techAndSoftwareAnimationData,
+              }}
+              solutionTitle={
+                <Translate id="techAndSoftwareSolutionPage.intro.title">
+                  Advanced Scheduling for Tech and Software Teams with ZenSched
+                </Translate>
+              }
+              solutionDescription={
+                <Translate id="techAndSoftwareSolutionPage.intro.caption">
+                  Streamline scheduling for tech teams with dynamic
+                  availability. Manage meetings, allocate resources, and adapt
+                  to last-minute changes—all with one powerful tool.
+                </Translate>
+              }
+            />
+          </Container>
+        </Box>
 
         <Box
           sx={{

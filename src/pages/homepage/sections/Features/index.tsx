@@ -34,7 +34,7 @@ const features = [
       message:
         "An entity is a flexible concept. It can represent a calendar, a barbershop, a personal agenda, or even a task list. Its meaning adapts to your needs.",
     }),
-    icon: <IconCircles size={48} />,
+    path: "/docs/entities/overview",
   },
   {
     title: translate({ id: "features.addRules.title", message: "Add rules" }),
@@ -43,7 +43,7 @@ const features = [
       message:
         "Rules in ZenSched can be one-time or recurring. Use them to represent business hours, employee leave, or resource unavailability — fully customizable.",
     }),
-    icon: <IconCategoryPlus size={48} />,
+    path: "/docs/rules/overview",
   },
   {
     title: translate({
@@ -55,7 +55,7 @@ const features = [
       message:
         "Easily find slots and add events effortlessly. What's an event? It's whatever you need — doctor's appointment, team call, or more, customizable via metadata.",
     }),
-    icon: <IconCalendarEvent size={48} />,
+    path: "/docs/events/overview",
   },
 ];
 
@@ -168,7 +168,7 @@ const FeaturesCards: React.FC = () => {
                   {feature.description}
                 </Typography>
               </Box>
-              <Link>
+              <Link to={feature.path}>
                 <Button
                   variant="text"
                   data-aos={AOS.effect}

@@ -9,14 +9,15 @@ import {
 } from "@mui/lab";
 import {
   Box,
-  Button,
   Stack,
   Step,
   StepLabel,
   Stepper,
   Typography,
+  useTheme,
 } from "@mui/material";
 import Container from "@site/src/components/Container";
+import Button from "@site/src/components/Button";
 import {
   IconCalendarCog,
   IconCheck,
@@ -127,6 +128,7 @@ const benefits: Benefit[] = [
 ];
 
 const EducationSolutionPage: React.FC = () => {
+  const { palette } = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
 
   const handleNext = () => {
@@ -149,26 +151,28 @@ const EducationSolutionPage: React.FC = () => {
       })}
     >
       <main>
-        <Container sx={{ my: 5 }}>
-          <SolutionHeader
-            lottieProps={{
-              animationData: educationSolutionAnimationData,
-            }}
-            solutionTitle={
-              <Translate id="beautySalonsPage.intro.title">
-                Class Scheduling for an Online Learning Platform
-              </Translate>
-            }
-            solutionDescription={
-              <Translate id="beautySalonsPage.intro.caption">
-                Manage live classes effortlessly with a flexible scheduling
-                system. Coordinate instructors across time zones, handle student
-                bookings, and adapt to changing availability—all in one
-                platform.
-              </Translate>
-            }
-          />
-        </Container>
+        <Box sx={{ background: palette.primary.light }}>
+          <Container sx={{ mb: 5 }}>
+            <SolutionHeader
+              lottieProps={{
+                animationData: educationSolutionAnimationData,
+              }}
+              solutionTitle={
+                <Translate id="beautySalonsPage.intro.title">
+                  Class Scheduling for an Online Learning Platform
+                </Translate>
+              }
+              solutionDescription={
+                <Translate id="beautySalonsPage.intro.caption">
+                  Manage live classes effortlessly with a flexible scheduling
+                  system. Coordinate instructors across time zones, handle
+                  student bookings, and adapt to changing availability—all in
+                  one platform.
+                </Translate>
+              }
+            />
+          </Container>
+        </Box>
 
         <Box
           sx={{

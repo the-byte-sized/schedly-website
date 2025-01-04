@@ -10,7 +10,6 @@ import {
 } from "@mui/lab";
 import {
   Box,
-  Button,
   List,
   ListItem,
   ListItemText,
@@ -20,6 +19,7 @@ import {
   StepLabel,
   Stepper,
   Typography,
+  useTheme,
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import Container from "@site/src/components/Container";
@@ -40,6 +40,7 @@ import SolutionHeader from "../sections/Header";
 import healtcareAnimationData from "../../../assets/lottie/healtcare.json";
 // @ts-expect-error
 import bookingSolutionAnimationData from "../../../assets/lottie/booking-solution.json";
+import Button from "@site/src/components/Button";
 
 const AOS = {
   effect: "fade-up",
@@ -143,6 +144,7 @@ const StyledListItem = styled(ListItem)({
 });
 
 const HealthcareSolutionPage: React.FC = () => {
+  const { palette } = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
   const prevStepRef = React.useRef<number>(0);
 
@@ -168,25 +170,27 @@ const HealthcareSolutionPage: React.FC = () => {
       })}
     >
       <main>
-        <Container sx={{ my: 5 }}>
-          <SolutionHeader
-            lottieProps={{
-              animationData: healtcareAnimationData,
-            }}
-            solutionTitle={
-              <Translate id="healthcareSolutionPage.intro.title">
-                Appointment Scheduling for a Multi-Specialty Clinic
-              </Translate>
-            }
-            solutionDescription={
-              <Translate id="healthcareSolutionPage.intro.caption">
-                Simplify appointment management for doctors with different
-                schedules. Handle last-minute cancellations, emergency visits,
-                and resource allocation—all with one tool.
-              </Translate>
-            }
-          />
-        </Container>
+        <Box sx={{ background: palette.primary.light }}>
+          <Container sx={{ mb: 5 }}>
+            <SolutionHeader
+              lottieProps={{
+                animationData: healtcareAnimationData,
+              }}
+              solutionTitle={
+                <Translate id="healthcareSolutionPage.intro.title">
+                  Appointment Scheduling for a Multi-Specialty Clinic
+                </Translate>
+              }
+              solutionDescription={
+                <Translate id="healthcareSolutionPage.intro.caption">
+                  Simplify appointment management for doctors with different
+                  schedules. Handle last-minute cancellations, emergency visits,
+                  and resource allocation—all with one tool.
+                </Translate>
+              }
+            />
+          </Container>
+        </Box>
 
         <Box
           sx={{
@@ -559,13 +563,14 @@ const HealthcareSolutionPage: React.FC = () => {
                 color="inherit"
                 disabled={activeStep === 0}
                 onClick={handleBack}
-                sx={{ mr: 1 }}
+                sx={{ mr: 1, padding: "1rem 1.5rem" }}
               >
                 <Typography id="stepper.previousStepButton">Back</Typography>
               </Button>
 
               <Button
                 onClick={handleNext}
+                sx={{ padding: "1rem 1.5rem" }}
                 disabled={activeStep === steps.length - 1}
               >
                 <Typography id="stepper.nextStepButton">Next</Typography>

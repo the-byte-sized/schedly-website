@@ -92,10 +92,9 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'ZenSched',
       logo: {
         alt: 'ZenSched Logo',
-        src: 'img/logo.svg',
+        src: 'img/zensched-logo.svg',
       },
       items: [
         {

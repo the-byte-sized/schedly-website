@@ -65,7 +65,7 @@ function Header() {
                   Made Simple
                 </Typography>
               </Typography>
-              
+
               <div
                 data-aos={AOS.effect}
                 data-aos-duration={AOS.duration}
@@ -83,28 +83,41 @@ function Header() {
                   </Translate>
                 </Typography>
               </div>
-              <div
+              <Box
                 data-aos={AOS.effect}
                 data-aos-duration={AOS.duration}
                 data-aos-easing={AOS.easing}
                 data-aos-delay="750"
-                className="d-flex align-items-center gap-2"
+                sx={{
+                  display: "flex",
+                  gap: 2,
+                }}
+                flexDirection={{
+                  xs: "column",
+                  md: "row",
+                }}
               >
                 <Link
                   to="https://forms.office.com/r/8LmMHy2bUF"
                   target="_blank"
                 >
-                  <Button>
+                  <Button sx={{ width: "100%" }}>
                     <Translate id="joinWaitlistNow">
                       Join Waitlist Now
                     </Translate>
                   </Button>
                 </Link>
-              </div>
+                <Link to="/docs/intro/welcome">
+                  <Button sx={{ width: "100%" }}>
+                    <Translate id="documentationSection.button">
+                      Documentation
+                    </Translate>
+                  </Button>
+                </Link>
+              </Box>
             </Grid>
           </Container>
         </div>
-
       </Box>
     </header>
   );

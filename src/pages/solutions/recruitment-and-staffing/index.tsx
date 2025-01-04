@@ -9,14 +9,15 @@ import {
 } from "@mui/lab";
 import {
   Box,
-  Button,
   Stack,
   Step,
   StepLabel,
   Stepper,
   Typography,
+  useTheme,
 } from "@mui/material";
 import Container from "@site/src/components/Container";
+import Button from "@site/src/components/Button";
 import {
   IconCalendarCog,
   IconCheck,
@@ -125,6 +126,7 @@ const benefits: Benefit[] = [
 ];
 
 const RecruitmentAndStaffingSolutionPage: React.FC = () => {
+  const { palette } = useTheme();
   const [activeStep, setActiveStep] = React.useState<number>(0);
 
   const handleNext = () => {
@@ -148,25 +150,27 @@ const RecruitmentAndStaffingSolutionPage: React.FC = () => {
       })}
     >
       <main>
-        <Container sx={{ my: 5 }}>
-          <SolutionHeader
-            lottieProps={{
-              animationData: recruitmentAndStaffingAnimationData,
-            }}
-            solutionTitle={
-              <Translate id="recruitmentAndStaffingPage.intro.title">
-                Advanced Scheduling for Recruitment and Staffing with ZenSched
-              </Translate>
-            }
-            solutionDescription={
-              <Translate id="recruitmentAndStaffingPage.intro.caption">
-                Streamline interview scheduling for recruiters with varying
-                availability. Manage candidate bookings, resource allocation,
-                and last-minute changes—all with one powerful tool.
-              </Translate>
-            }
-          />
-        </Container>
+        <Box sx={{ background: palette.primary.light }}>
+          <Container sx={{ mb: 5 }}>
+            <SolutionHeader
+              lottieProps={{
+                animationData: recruitmentAndStaffingAnimationData,
+              }}
+              solutionTitle={
+                <Translate id="recruitmentAndStaffingPage.intro.title">
+                  Advanced Scheduling for Recruitment and Staffing with ZenSched
+                </Translate>
+              }
+              solutionDescription={
+                <Translate id="recruitmentAndStaffingPage.intro.caption">
+                  Streamline interview scheduling for recruiters with varying
+                  availability. Manage candidate bookings, resource allocation,
+                  and last-minute changes—all with one powerful tool.
+                </Translate>
+              }
+            />
+          </Container>
+        </Box>
 
         <Box
           sx={{

@@ -3,7 +3,7 @@ import React from "react";
 
 type Props = ButtonProps;
 
-function Button({ variant = "outlined", ...props }: Props) {
+function Button({ variant = "outlined", sx, ...props }: Props) {
   const { palette } = useTheme();
 
   return (
@@ -33,7 +33,7 @@ function Button({ variant = "outlined", ...props }: Props) {
           },
         }),
 
-        ...props.sx,
+        ...sx,
       }}
       {...props}
     >

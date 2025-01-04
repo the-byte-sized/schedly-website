@@ -9,14 +9,15 @@ import {
 } from "@mui/lab";
 import {
   Box,
-  Button,
   Stack,
   Step,
   StepLabel,
   Stepper,
   Typography,
+  useTheme,
 } from "@mui/material";
 import Container from "@site/src/components/Container";
+import Button from "@site/src/components/Button";
 import {
   IconCalendarCog,
   IconCheck,
@@ -126,6 +127,7 @@ const benefits: Benefit[] = [
 ];
 
 const CoworkingSpaceManagementSolutionPage: React.FC = () => {
+  const { palette } = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
 
   const handleNext = () => {
@@ -148,30 +150,32 @@ const CoworkingSpaceManagementSolutionPage: React.FC = () => {
       })}
     >
       <main>
-        <Container sx={{ my: 5 }}>
-          <SolutionHeader
-            lottieProps={{
-              animationData: coworkingSpaceManagementAnimationData,
-            }}
-            solutionTitle={
-              <Translate id="coworkingSpaceManagementPage.intro.title">
-                Conference Room Booking for a Co-Working Space
-              </Translate>
-            }
-            solutionDescription={
-              <Translate id="coworkingSpaceManagementPage.intro.caption">
-                Manage coworking spaces effortlessly with a single tool. Handle
-                bookings across multiple locations, accommodate various
-                membership levels, and avoid scheduling conflicts—all in one
-                place.
-              </Translate>
-            }
-          />
-        </Container>
+        <Box sx={{ background: palette.primary.light }}>
+          <Container sx={{ mb: 5 }}>
+            <SolutionHeader
+              lottieProps={{
+                animationData: coworkingSpaceManagementAnimationData,
+              }}
+              solutionTitle={
+                <Translate id="coworkingSpaceManagementPage.intro.title">
+                  Conference Room Booking for a Co-Working Space
+                </Translate>
+              }
+              solutionDescription={
+                <Translate id="coworkingSpaceManagementPage.intro.caption">
+                  Manage coworking spaces effortlessly with a single tool.
+                  Handle bookings across multiple locations, accommodate various
+                  membership levels, and avoid scheduling conflicts—all in one
+                  place.
+                </Translate>
+              }
+            />
+          </Container>
+        </Box>
 
         <Box
           sx={{
-            backgroundColor: 'background.paper',
+            backgroundColor: "background.paper",
             py: 5,
           }}
         >
@@ -191,7 +195,16 @@ const CoworkingSpaceManagementSolutionPage: React.FC = () => {
               }
               description={
                 <Translate id="coworkingSpaceManagementPage.solutionFeaturesSection.description">
-                  A dynamic coworking space that manages shared offices, meeting rooms, and event areas for freelancers, startups, and established businesses. The space coordinates schedules for shared resources like desks, private offices, and conference rooms, while also handling member bookings and event setups. Efficiently managing availability, adapting to last-minute changes, and optimizing resource allocation are essential for smooth operations. ZenSched offers a comprehensive scheduling solution to streamline bookings, maximize resource usage, and enhance member satisfaction.
+                  A dynamic coworking space that manages shared offices, meeting
+                  rooms, and event areas for freelancers, startups, and
+                  established businesses. The space coordinates schedules for
+                  shared resources like desks, private offices, and conference
+                  rooms, while also handling member bookings and event setups.
+                  Efficiently managing availability, adapting to last-minute
+                  changes, and optimizing resource allocation are essential for
+                  smooth operations. ZenSched offers a comprehensive scheduling
+                  solution to streamline bookings, maximize resource usage, and
+                  enhance member satisfaction.
                 </Translate>
               }
             />
@@ -370,7 +383,7 @@ const CoworkingSpaceManagementSolutionPage: React.FC = () => {
         <Box
           sx={{
             p: 8,
-            backgroundColor: 'background.paper',
+            backgroundColor: "background.paper",
           }}
         >
           <Benefits benefits={benefits} />

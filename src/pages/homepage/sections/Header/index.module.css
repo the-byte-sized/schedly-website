@@ -1,43 +1,16 @@
 .header {
   overflow: hidden;
-  height: 100vh;
+  height: 80vh;
   padding: 4rem 0;
   position: relative;
-}
-
-.background {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0.2;
-}
-
-.background img {
-  min-width: 100%;
-  min-height: 100%;
-  object-fit: cover;
-}
-
-.background::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(255, 0, 0, 0) 0%,
-    rgba(255, 255, 255, 1) 75%
-  );
 }
 
 .wrapper {
   width: 100%;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .description p {

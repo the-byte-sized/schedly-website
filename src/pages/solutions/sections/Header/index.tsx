@@ -54,7 +54,7 @@ const SolutionHeader: React.FC<SolutionHeaderProps> = ({
           data-aos-duration={AOS.duration}
           data-aos-easing={AOS.easing}
           data-aos-delay="250"
-          sx={{mt: 2}}
+          sx={{ mt: 2 }}
         >
           {solutionDescription}
         </Typography>

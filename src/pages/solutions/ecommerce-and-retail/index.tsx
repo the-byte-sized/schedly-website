@@ -9,14 +9,15 @@ import {
 } from "@mui/lab";
 import {
   Box,
-  Button,
   Stack,
   Step,
   StepLabel,
   Stepper,
   Typography,
+  useTheme,
 } from "@mui/material";
 import Container from "@site/src/components/Container";
+import Button from "@site/src/components/Button";
 import {
   IconCalendarCog,
   IconCheck,
@@ -126,6 +127,7 @@ const benefits: Benefit[] = [
 ];
 
 const EcommerceAndRetailSolutionPage: React.FC = () => {
+  const { palette } = useTheme();
   const [activeStep, setActiveStep] = React.useState<number>(0);
 
   const handleNext = () => {
@@ -148,25 +150,27 @@ const EcommerceAndRetailSolutionPage: React.FC = () => {
       })}
     >
       <main>
-        <Container sx={{ my: 5 }}>
-          <SolutionHeader
-            lottieProps={{
-              animationData: ecommerceAndRetailAnimationData,
-            }}
-            solutionTitle={
-              <Translate id="ecommerceAndRetailPage.intro.title">
-                Advanced Scheduling for E-Commerce and Retail with ZenSched
-              </Translate>
-            }
-            solutionDescription={
-              <Translate id="ecommerceAndRetailPage.intro.caption">
-                Streamline scheduling for retail and e-commerce operations.
-                Manage in-store appointments, delivery slots, and shared
-                resources effortlessly—all in one powerful platform.
-              </Translate>
-            }
-          />
-        </Container>
+        <Box sx={{ background: palette.primary.light }}>
+          <Container sx={{ mb: 5 }}>
+            <SolutionHeader
+              lottieProps={{
+                animationData: ecommerceAndRetailAnimationData,
+              }}
+              solutionTitle={
+                <Translate id="ecommerceAndRetailPage.intro.title">
+                  Advanced Scheduling for E-Commerce and Retail with ZenSched
+                </Translate>
+              }
+              solutionDescription={
+                <Translate id="ecommerceAndRetailPage.intro.caption">
+                  Streamline scheduling for retail and e-commerce operations.
+                  Manage in-store appointments, delivery slots, and shared
+                  resources effortlessly—all in one powerful platform.
+                </Translate>
+              }
+            />
+          </Container>
+        </Box>
 
         <Box
           sx={{

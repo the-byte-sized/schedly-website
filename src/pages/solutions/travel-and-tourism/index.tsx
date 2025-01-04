@@ -9,14 +9,15 @@ import {
 } from "@mui/lab";
 import {
   Box,
-  Button,
   Stack,
   Step,
   StepLabel,
   Stepper,
   Typography,
+  useTheme,
 } from "@mui/material";
 import Container from "@site/src/components/Container";
+import Button from "@site/src/components/Button";
 import {
   IconCalendarCog,
   IconCheck,
@@ -126,6 +127,7 @@ const benefits: Benefit[] = [
 ];
 
 const TravelAndTourismSolutionPage: React.FC = () => {
+  const { palette } = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
 
   const handleNext = () => {
@@ -148,27 +150,29 @@ const TravelAndTourismSolutionPage: React.FC = () => {
       })}
     >
       <main>
-        <Container sx={{ my: 5 }}>
-          <SolutionHeader
-            lottieProps={{
-              animationData: travelAndTourismAnimationData,
-              loop: false,
-            }}
-            solutionTitle={
-              <Translate id="travelAndTourismPage.intro.title">
-                Advanced Scheduling for a Travel and Tourism Agency
-              </Translate>
-            }
-            solutionDescription={
-              <Translate id="travelAndTourismPage.intro.caption">
-                Streamline travel itineraries with a powerful scheduling system.
-                Coordinate tour guides across locations, manage customer
-                bookings, and adapt to last-minute changes—all in one seamless
-                platform.
-              </Translate>
-            }
-          />
-        </Container>
+        <Box sx={{ background: palette.primary.light }}>
+          <Container sx={{ mb: 5 }}>
+            <SolutionHeader
+              lottieProps={{
+                animationData: travelAndTourismAnimationData,
+                loop: false,
+              }}
+              solutionTitle={
+                <Translate id="travelAndTourismPage.intro.title">
+                  Advanced Scheduling for a Travel and Tourism Agency
+                </Translate>
+              }
+              solutionDescription={
+                <Translate id="travelAndTourismPage.intro.caption">
+                  Streamline travel itineraries with a powerful scheduling
+                  system. Coordinate tour guides across locations, manage
+                  customer bookings, and adapt to last-minute changes—all in one
+                  seamless platform.
+                </Translate>
+              }
+            />
+          </Container>
+        </Box>
 
         <Box
           sx={{

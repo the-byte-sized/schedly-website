@@ -9,14 +9,15 @@ import {
 } from "@mui/lab";
 import {
   Box,
-  Button,
   Stack,
   Step,
   StepLabel,
   Stepper,
   Typography,
+  useTheme,
 } from "@mui/material";
 import Container from "@site/src/components/Container";
+import Button from "@site/src/components/Button";
 import {
   IconCalendarCog,
   IconCheck,
@@ -126,6 +127,7 @@ const benefits: Benefit[] = [
 ];
 
 const RestorationAndFoodDeliverySolutionPage: React.FC = () => {
+  const { palette } = useTheme();
   const [activeStep, setActiveStep] = React.useState<number>(0);
 
   const handleNext = () => {
@@ -148,26 +150,28 @@ const RestorationAndFoodDeliverySolutionPage: React.FC = () => {
       })}
     >
       <main>
-        <Container sx={{ my: 5 }}>
-          <SolutionHeader
-            lottieProps={{
-              animationData: restorationAndFoodDeliveryAnimationData,
-            }}
-            solutionTitle={
-              <Translate id="restorationAndFoodDeliveryPage.intro.title">
-                ZenSched for Restaurants and Food Delivery
-              </Translate>
-            }
-            solutionDescription={
-              <Translate id="restorationAndFoodDeliveryPage.intro.caption">
-                Streamline reservations and delivery scheduling for restaurants
-                with dynamic demands. Manage table bookings, optimize delivery
-                routes, and handle last-minute changes—all with one powerful
-                tool.
-              </Translate>
-            }
-          />
-        </Container>
+        <Box sx={{ background: palette.primary.light }}>
+          <Container sx={{ mb: 5 }}>
+            <SolutionHeader
+              lottieProps={{
+                animationData: restorationAndFoodDeliveryAnimationData,
+              }}
+              solutionTitle={
+                <Translate id="restorationAndFoodDeliveryPage.intro.title">
+                  ZenSched for Restaurants and Food Delivery
+                </Translate>
+              }
+              solutionDescription={
+                <Translate id="restorationAndFoodDeliveryPage.intro.caption">
+                  Streamline reservations and delivery scheduling for
+                  restaurants with dynamic demands. Manage table bookings,
+                  optimize delivery routes, and handle last-minute changes—all
+                  with one powerful tool.
+                </Translate>
+              }
+            />
+          </Container>
+        </Box>
 
         <Box
           sx={{

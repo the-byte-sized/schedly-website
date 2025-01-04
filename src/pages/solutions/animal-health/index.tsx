@@ -9,14 +9,15 @@ import {
 } from "@mui/lab";
 import {
   Box,
-  Button,
   Stack,
   Step,
   StepLabel,
   Stepper,
   Typography,
+  useTheme,
 } from "@mui/material";
 import Container from "@site/src/components/Container";
+import Button from "@site/src/components/Button";
 import {
   IconCalendarCog,
   IconCheck,
@@ -126,6 +127,7 @@ const benefits: Benefit[] = [
 ];
 
 const AnimalHealthSolutionPage: React.FC = () => {
+  const { palette } = useTheme();
   const [activeStep, setActiveStep] = React.useState<number>(0);
 
   const handleNext = () => {
@@ -148,25 +150,27 @@ const AnimalHealthSolutionPage: React.FC = () => {
       })}
     >
       <main>
-        <Container sx={{ my: 5 }}>
-          <SolutionHeader
-            lottieProps={{
-              animationData: animalHealthAnimationData,
-            }}
-            solutionTitle={
-              <Translate id="animalHealthPage.intro.title">
-                Simplified Scheduling for Animal Health Services with ZenSched
-              </Translate>
-            }
-            solutionDescription={
-              <Translate id="animalHealthPage.intro.caption">
-                Simplify appointment management for veterinarians with varying
-                schedules. Handle resource allocation, recurring visits, and
-                last-minute changes—all with one powerful tool.
-              </Translate>
-            }
-          />
-        </Container>
+        <Box sx={{ background: palette.primary.light }}>
+          <Container sx={{ mb: 5 }}>
+            <SolutionHeader
+              lottieProps={{
+                animationData: animalHealthAnimationData,
+              }}
+              solutionTitle={
+                <Translate id="animalHealthPage.intro.title">
+                  Simplified Scheduling for Animal Health Services with ZenSched
+                </Translate>
+              }
+              solutionDescription={
+                <Translate id="animalHealthPage.intro.caption">
+                  Simplify appointment management for veterinarians with varying
+                  schedules. Handle resource allocation, recurring visits, and
+                  last-minute changes—all with one powerful tool.
+                </Translate>
+              }
+            />
+          </Container>
+        </Box>
 
         <Box
           sx={{
@@ -267,7 +271,7 @@ const AnimalHealthSolutionPage: React.FC = () => {
                 <Typography variant="h6" component="span">
                   Conflict Resolution
                 </Typography>
-                
+
                 <Typography>
                   If all veterinarians or examination rooms are fully booked for
                   3 PM, ZenSched suggests the next available time slot, ensuring

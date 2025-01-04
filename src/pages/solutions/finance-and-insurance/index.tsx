@@ -9,14 +9,15 @@ import {
 } from "@mui/lab";
 import {
   Box,
-  Button,
   Stack,
   Step,
   StepLabel,
   Stepper,
   Typography,
+  useTheme,
 } from "@mui/material";
 import Container from "@site/src/components/Container";
+import Button from "@site/src/components/Button";
 import {
   IconCalendarCog,
   IconCheck,
@@ -126,6 +127,7 @@ const benefits: Benefit[] = [
 ];
 
 const FinanceAndInsuranceSolutionPage: React.FC = () => {
+  const { palette } = useTheme();
   const [activeStep, setActiveStep] = React.useState<number>(0);
 
   const handleNext = () => {
@@ -148,25 +150,28 @@ const FinanceAndInsuranceSolutionPage: React.FC = () => {
       })}
     >
       <main>
-        <Container sx={{ my: 5 }}>
-          <SolutionHeader
-            lottieProps={{
-              animationData: financeAndInsuranceAnimationData,
-            }}
-            solutionTitle={
-              <Translate id="financeAndInsurancePage.intro.title">
-                Advanced Scheduling for Finance and Insurance with ZenSched
-              </Translate>
-            }
-            solutionDescription={
-              <Translate id="financeAndInsurancePage.intro.caption">
-                Streamline appointment scheduling for financial advisors and
-                insurance agents. Manage client consultations, resource
-                allocation, and last-minute changes—all with one powerful tool.
-              </Translate>
-            }
-          />
-        </Container>
+        <Box sx={{ background: palette.primary.light }}>
+          <Container sx={{ mb: 5 }}>
+            <SolutionHeader
+              lottieProps={{
+                animationData: financeAndInsuranceAnimationData,
+              }}
+              solutionTitle={
+                <Translate id="financeAndInsurancePage.intro.title">
+                  Advanced Scheduling for Finance and Insurance with ZenSched
+                </Translate>
+              }
+              solutionDescription={
+                <Translate id="financeAndInsurancePage.intro.caption">
+                  Streamline appointment scheduling for financial advisors and
+                  insurance agents. Manage client consultations, resource
+                  allocation, and last-minute changes—all with one powerful
+                  tool.
+                </Translate>
+              }
+            />
+          </Container>
+        </Box>
 
         <Box
           sx={{
@@ -297,7 +302,10 @@ const FinanceAndInsuranceSolutionPage: React.FC = () => {
                 </Typography>
 
                 <Typography>
-                Thanks to the WebHooks functionality of ZenSched, both the client and the assigned financial advisor receive confirmation emails and reminders, ensuring a smooth and well-prepared consultation.
+                  Thanks to the WebHooks functionality of ZenSched, both the
+                  client and the assigned financial advisor receive confirmation
+                  emails and reminders, ensuring a smooth and well-prepared
+                  consultation.
                 </Typography>
               </TimelineContent>
             </TimelineItem>

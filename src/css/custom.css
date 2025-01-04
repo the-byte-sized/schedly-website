@@ -58,6 +58,14 @@ a:hover {
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
+.navbar .navbar__brand {
+  margin-right: 0;
+}
+
+.navbar .navbar__logo {
+  max-width: 120px;
+}
+
 .navbar .navbar__inner {
   max-width: var(--website-container-width);
   margin: 0 auto;
@@ -71,7 +79,7 @@ a:hover {
   font-family: var(--ifm-font-family-base);
 }
 
-.wide-dropdown~.dropdown__menu {
+.wide-dropdown ~ .dropdown__menu {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 30px;
@@ -79,7 +87,7 @@ a:hover {
   border: 1px solid lightgray;
 }
 
-.wide-dropdown~.dropdown__menu li {
+.wide-dropdown ~ .dropdown__menu li {
   width: 202px;
 }
 

@@ -9,12 +9,12 @@ import {
 } from "@mui/lab";
 import {
   Box,
-  Button,
   Stack,
   Step,
   StepLabel,
   Stepper,
   Typography,
+  useTheme,
 } from "@mui/material";
 import Container from "@site/src/components/Container";
 import {
@@ -32,6 +32,7 @@ import SolutionHeader from "../sections/Header";
 import beautySalonAnimationData from "../../../assets/lottie/beauty-salon.json";
 // @ts-expect-error
 import bookingSolutionAnimationData from "../../../assets/lottie/booking-solution.json";
+import Button from "@site/src/components/Button";
 
 const AOS = {
   effect: "fade-up",
@@ -126,6 +127,7 @@ const benefits: Benefit[] = [
 ];
 
 const BeautySalonsSolutionPage: React.FC = () => {
+  const { palette } = useTheme();
   const [activeStep, setActiveStep] = React.useState<number>(0);
 
   const handleNext = () => {
@@ -148,25 +150,27 @@ const BeautySalonsSolutionPage: React.FC = () => {
       })}
     >
       <main>
-        <Container sx={{ my: 5 }}>
-          <SolutionHeader
-            lottieProps={{
-              animationData: beautySalonAnimationData,
-            }}
-            solutionTitle={
-              <Translate id="beautySalonsPage.intro.title">
-                Advanced Scheduling for a Beauty Salon
-              </Translate>
-            }
-            solutionDescription={
-              <Translate id="beautySalonsPage.intro.caption">
-                Simplify appointment management for barber with different
-                schedules. Handle last-minute cancellations, and resource
-                allocation—all with one tool.
-              </Translate>
-            }
-          />
-        </Container>
+        <Box sx={{ background: palette.primary.light }}>
+          <Container sx={{ mb: 5 }}>
+            <SolutionHeader
+              lottieProps={{
+                animationData: beautySalonAnimationData,
+              }}
+              solutionTitle={
+                <Translate id="beautySalonsPage.intro.title">
+                  Advanced Scheduling for a Beauty Salon
+                </Translate>
+              }
+              solutionDescription={
+                <Translate id="beautySalonsPage.intro.caption">
+                  Simplify appointment management for barber with different
+                  schedules. Handle last-minute cancellations, and resource
+                  allocation—all with one tool.
+                </Translate>
+              }
+            />
+          </Container>
+        </Box>
 
         <Box
           sx={{

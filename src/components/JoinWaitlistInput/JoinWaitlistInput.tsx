@@ -1,10 +1,10 @@
 import Link from "@docusaurus/Link";
 import Translate, { translate } from "@docusaurus/Translate";
-import Button from "@mui/material/Button";
 import InputAdornment from "@mui/material/InputAdornment";
 import TextField, { type TextFieldProps } from "@mui/material/TextField";
 import { IconChevronRight } from "@tabler/icons-react";
 import React, { useId } from "react";
+import Button from "../Button";
 
 const JoinWaitlistInput: React.FC<TextFieldProps> = (props) => {
   const id = useId();
@@ -48,14 +48,15 @@ const JoinWaitlistInput: React.FC<TextFieldProps> = (props) => {
       // }}
       variant="outlined"
       InputProps={{
+        style: {
+          borderRadius: 0,
+        },
         endAdornment: (
-          <InputAdornment position="end" sx={{ marginRight: -1 }}>
+          <InputAdornment position="end" sx={{ marginRight: "-14px" }}>
             <Button
               disabled={email.length === 0 || error}
-              variant="contained"
               color="primary"
               sx={{
-                borderRadius: 2,
                 textTransform: "none",
               }}
               endIcon={<IconChevronRight />}

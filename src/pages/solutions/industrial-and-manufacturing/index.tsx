@@ -9,14 +9,15 @@ import {
 } from "@mui/lab";
 import {
   Box,
-  Button,
   Stack,
   Step,
   StepLabel,
   Stepper,
   Typography,
+  useTheme,
 } from "@mui/material";
 import Container from "@site/src/components/Container";
+import Button from "@site/src/components/Button";
 import {
   IconCalendarCog,
   IconCheck,
@@ -125,6 +126,7 @@ const benefits: Benefit[] = [
 ];
 
 const IndustrialAndManufacturingSolutionPage: React.FC = () => {
+  const { palette } = useTheme();
   const [activeStep, setActiveStep] = React.useState<number>(0);
 
   const handleNext = () => {
@@ -143,29 +145,32 @@ const IndustrialAndManufacturingSolutionPage: React.FC = () => {
       })}
       description={translate({
         id: "industrialAndManufacturingPage.description",
-        message: "Advanced Scheduling for Industrial and Manufacturing with ZenSched",
+        message:
+          "Advanced Scheduling for Industrial and Manufacturing with ZenSched",
       })}
     >
       <main>
-        <Container sx={{ my: 5 }}>
-          <SolutionHeader
-            lottieProps={{
-              animationData: industrialAndManufacturingAnimationData,
-            }}
-            solutionTitle={
-              <Translate id="industrialAndManufacturingPage.intro.title">
-                Advanced Scheduling for a Beauty Salon
-              </Translate>
-            }
-            solutionDescription={
-              <Translate id="industrialAndManufacturingPage.intro.caption">
-                Streamline production scheduling for manufacturing teams. Manage
-                equipment allocation, workforce shifts, and maintenance
-                tasks—all with one powerful tool.
-              </Translate>
-            }
-          />
-        </Container>
+        <Box sx={{ background: palette.primary.light }}>
+          <Container sx={{ mb: 5 }}>
+            <SolutionHeader
+              lottieProps={{
+                animationData: industrialAndManufacturingAnimationData,
+              }}
+              solutionTitle={
+                <Translate id="industrialAndManufacturingPage.intro.title">
+                  Advanced Scheduling for a Beauty Salon
+                </Translate>
+              }
+              solutionDescription={
+                <Translate id="industrialAndManufacturingPage.intro.caption">
+                  Streamline production scheduling for manufacturing teams.
+                  Manage equipment allocation, workforce shifts, and maintenance
+                  tasks—all with one powerful tool.
+                </Translate>
+              }
+            />
+          </Container>
+        </Box>
 
         <Box
           sx={{
