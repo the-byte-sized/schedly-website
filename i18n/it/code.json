@@ -316,9 +316,6 @@
   "homepage.header.description": {
     "message": "ZenSched è progettato per semplificare la gestione degli eventi e delle risorse per aziende e professionisti. Permette di creare entità personalizzabili, gestire eccezioni con flessibilità e pianificare eventi in modo semplice ed efficiente tramite API o SDK."
   },
-  "features.createEntities.title": {
-    "message": "Crea entità"
-  },
   "features.createEntities.description": {
     "message": "Un’entità è un concetto flessibile. Può rappresentare un calendario, un salone di barbiere, un’agenda personale o persino una lista di attività. Il suo significato si adatta alle tue esigenze."
   },
@@ -364,9 +361,6 @@
   "solutions.coworkingSpaceManagement.title": {
     "message": "Gestione Spazi Di Co-working"
   },
-  "solutions.coworkingSpaceManagement.description": {
-    "message": "Uno spazio di co-working offre ai membri la possibilità di prenotare sale riunioni e strutture condivise. ZenSched aiuta a gestire le prenotazioni su più sedi e a prevenire conflitti di programmazione."
-  },
   "solutions.rideSharingService.title": {
     "message": "Servizio di Ride Sharing"
   },
@@ -390,5 +384,983 @@
   },
   "enterYourEmail": {
     "message": "Inserisci la tua email"
+  },
+  "solutions.animalHealth.title": {
+    "message": "Salute Animale"
+  },
+  "solutions.animalHealth.description": {
+    "message": "Una clinica veterinaria offre una varietà di servizi in clinica, tra cui controlli di routine, vaccinazioni, esami diagnostici e consulenze sul benessere per animali domestici e da allevamento. La gestione degli orari dei veterinari, delle prenotazioni degli appuntamenti e delle risorse condivise come strumenti diagnostici e sale per gli esami è fondamentale per garantire un funzionamento regolare. ZenSched aiuta a semplificare il processo di programmazione, riduce i conflitti di prenotazione e migliora l'esperienza del cliente."
+  },
+  "solutions.coworkingSTypographyaceManagement.description": {
+    "message": "Uno spazio di coworking offre ai membri la possibilità di prenotare sale riunioni e strutture condivise."
+  },
+  "solutions.ecommerceAndRetail.title": {
+    "message": "E-commerce e Vendita al Dettaglio"
+  },
+  "solutions.ecommerceAndRetail.description": {
+    "message": "Un'azienda gestisce una rete di negozi fisici insieme a una piattaforma di e-commerce. L'azienda offre servizi come ritiro prodotti in negozio, appuntamenti per shopping personalizzato, gestione dell'inventario e programmazione delle consegne. Il coordinamento tra il personale del negozio, gli autisti delle consegne e le risorse condivise (es. spazio di stoccaggio e casse) è complesso, specialmente durante i periodi di picco degli acquisti. ZenSched aiuta RetailChain & Co. a semplificare la programmazione, ottimizzare l'allocazione delle risorse e migliorare l'esperienza complessiva del cliente."
+  },
+  "solutions.financeAndInsurance.title": {
+    "message": "Finanza e Assicurazioni"
+  },
+  "solutions.financeAndInsurance.description": {
+    "message": "Un'azienda offre servizi di pianificazione finanziaria, consulenza sugli investimenti e gestione patrimoniale, mentre SecureInsure è specializzata in consulenze sulle polizze assicurative, elaborazione dei sinistri e rinnovi. Entrambi i settori richiedono la gestione degli appuntamenti con i clienti, il coordinamento della disponibilità del personale e la gestione delle risorse condivise come sale riunioni e strumenti specializzati. ZenSched fornisce una soluzione semplificata per gestire queste esigenze di programmazione, garantire un'efficiente allocazione delle risorse e migliorare la comunicazione con i clienti."
+  },
+  "solutions.healthAndFitness.title": {
+    "message": "Salute e Fitness"
+  },
+  "solutions.healthAndFitness.description": {
+    "message": "Una palestra offre un'ampia gamma di servizi per la salute e il fitness, inclusi corsi di gruppo, sessioni di allenamento personale e consulenze sul benessere. Questi servizi richiedono la gestione degli orari dei corsi, il coordinamento della disponibilità degli istruttori e l'ottimizzazione delle risorse condivise come studi e attrezzature. ZenSched fornisce una soluzione semplificata per gestire queste esigenze di programmazione, garantire un utilizzo efficiente delle risorse e migliorare il coinvolgimento dei membri attraverso comunicazioni e promemoria automatizzati."
+  },
+  "solutions.industrialAndManufacturing.title": {
+    "message": "Industria e Produzione"
+  },
+  "solutions.industrialAndManufacturing.description": {
+    "message": "Un'azienda manifatturiera che gestisce programmi di produzione, attività di manutenzione e coordinamento della forza lavoro. L'azienda gestisce multiple linee di produzione, macchinari condivisi e strumenti che richiedono una programmazione precisa per evitare tempi di inattività e massimizzare l'efficienza. Inoltre, SmartMFG coordina i turni dei dipendenti, la manutenzione delle attrezzature e i controlli dell'inventario. ZenSched fornisce una soluzione di programmazione robusta per ottimizzare le operazioni, garantire l'allocazione delle risorse e semplificare la comunicazione tra i team."
+  },
+  "solutions.logisticAndSupplyChain.title": {
+    "message": "Logistica e Catena di Approvvigionamento"
+  },
+  "solutions.logisticAndSupplyChain.description": {
+    "message": "Un'azienda logistica gestisce una rete complessa di magazzini, rotte di consegna e operazioni della catena di approvvigionamento. L'azienda gestisce una varietà di compiti, tra cui la programmazione delle spedizioni, la gestione della flotta, l'allocazione degli spazi del magazzino e l'assegnazione delle banchine di carico. Il coordinamento di autisti, personale del magazzino e risorse condivise è fondamentale per mantenere operazioni regolari e consegne puntuali. ZenSched fornisce una soluzione di programmazione avanzata per ottimizzare l'allocazione delle risorse, migliorare la comunicazione e semplificare i flussi di lavoro logistici."
+  },
+  "solutions.recruitmentAndStaffing.title": {
+    "message": "Reclutamento e Personale"
+  },
+  "solutions.recruitmentAndStaffing.description": {
+    "message": "Un'azienda gestisce colloqui con i candidati, inserimento del personale e sessioni di formazione dei dipendenti per vari clienti. L'azienda coordina gli orari per i recruiter, i responsabili delle assunzioni e i candidati mentre gestisce risorse condivise come sale riunioni e strumenti per videoconferenze. Con alti volumi di colloqui e scadenze strette, una programmazione efficace è fondamentale per mantenere operazioni regolari. ZenSched aiuta TalentHire a semplificare la programmazione, ridurre i conflitti e migliorare la comunicazione tra tutti gli stakeholder."
+  },
+  "solutions.techAndSoftware.title": {
+    "message": "Tech e Software"
+  },
+  "solutions.techAndSoftware.description": {
+    "message": "Un'azienda di software in rapida crescita che gestisce riunioni di team, demo di prodotti, revisioni del codice e sessioni di formazione per sviluppatori. L'azienda opera su più fusi orari e utilizza risorse condivise come sale riunioni, strumenti per videoconferenze e ambienti di test. Il coordinamento degli orari per sviluppatori, project manager e stakeholder è essenziale per rispettare le scadenze e garantire una collaborazione fluida. ZenSched fornisce una potente soluzione di programmazione per gestire le risorse, allineare i team globali e semplificare la comunicazione."
+  },
+  "solutions.travelAndTourism.title": {
+    "message": "Viaggi e Turismo"
+  },
+  "solutions.travelAndTourism.description": {
+    "message": "Un'azienda di viaggi e turismo in crescita che organizza tour guidati, programmi di trasporto e itinerari di viaggio per clienti in diverse destinazioni. L'azienda coordina guide turistiche, autisti e risorse condivise come veicoli, alloggi e spazi per le attività. Gestire le prenotazioni, adattarsi ai cambiamenti dell'ultimo minuto e garantire una comunicazione fluida tra viaggiatori e personale è fondamentale per fornire un'esperienza di viaggio impeccabile. ZenSched offre una soluzione di programmazione robusta per ottimizzare le risorse, semplificare il coordinamento e migliorare la soddisfazione del cliente."
+  },
+  "featureUnderDevelopmentAlert.title": {
+    "message": "🚧 Funzionalità in Sviluppo"
+  },
+  "featureUnderDevelopmentAlert.description": {
+    "message": "Questa funzionalità è attualmente in fase di sviluppo"
+  },
+  "workingWithApiAlert.title": {
+    "message": "👍 Lavorare con l'API"
+  },
+  "workingWithApiAlert.description": {
+    "message": "Dai un'occhiata alla nostra documentazione API per saperne di più sui diversi endpoint nell'API e su come autenticarsi."
+  },
+  "faq.whatIsZenSched.question": {
+    "message": "Cos'è ZenSched?"
+  },
+  "faq.whatIsZenSched.answer": {
+    "message": "ZenSched è una potente piattaforma di programmazione progettata per gestire disponibilità, prenotazioni ed eventi per aziende di tutte le dimensioni. Con funzionalità come regole dinamiche, gestione dei conflitti e integrazione con calendari esterni, garantisce una programmazione intelligente e senza intoppi"
+  },
+  "faq.whoCanUseZenSched.question": {
+    "message": "Chi può utilizzare ZenSched?"
+  },
+  "faq.whoCanUseZenSched.answer": {
+    "message": "ZenSched è perfetto per professionisti, team e organizzazioni di vari settori:\n- Fornitori di servizi (es. saloni, cliniche)\n- Gestori di risorse (es. spazi di coworking, organizzatori di eventi)\n- Chiunque abbia bisogno di una programmazione semplificata."
+  },
+  "faq.schedulingConflictsHandling.question": {
+    "message": "Come gestisce ZenSched i conflitti?"
+  },
+  "faq.schedulingConflictsHandling.answer": {
+    "message": "La nostra piattaforma valuta dinamicamente regole, eventi e disponibilità per garantire che non si verifichino doppie prenotazioni o programmi non validi. Se viene rilevato un conflitto, riceverai un feedback chiaro per risolverlo efficacemente."
+  },
+  "faq.externalCalendarsIntegrations.question": {
+    "message": "ZenSched può integrarsi con calendari esterni?"
+  },
+  "faq.externalCalendarsIntegrations.answer": {
+    "message": "Sì! ZenSched si integra perfettamente con Google Calendar, Outlook e altre piattaforme. Sincronizza i tuoi eventi senza sforzo e mantieni tutto in un unico posto."
+  },
+  "faq.customization.question": {
+    "message": "ZenSched è personalizzabile?"
+  },
+  "faq.customization.answer": {
+    "message": "Assolutamente! Con regole flessibili, metadati per gli eventi e gestione gerarchica delle entità, ZenSched si adatta alle tue esigenze uniche."
+  },
+  "faq.recurringSchedules.question": {
+    "message": "ZenSched funziona con programmi ricorrenti?"
+  },
+  "faq.recurringSchedules.answer": {
+    "message": "Sì, ZenSched supporta sia programmi singoli che ricorrenti. Definisci orari di lavoro settimanali, imposta eccezioni per le festività e gestisci appuntamenti ricorrenti con facilità."
+  },
+  "faq.dataSecurity.question": {
+    "message": "Quanto sono sicuri i miei dati su ZenSched?"
+  },
+  "faq.dataSecurity.answer": {
+    "message": "ZenSched dà priorità alla sicurezza dei dati e utilizza crittografia, API sicure e controlli di accesso basati sui ruoli per proteggere le tue informazioni."
+  },
+  "faq.getStarted.question": {
+    "message": "Come posso iniziare con ZenSched?"
+  },
+  "faq.getStarted.answer": {
+    "message": "Registrati per una prova gratuita per esplorare tutte le nostre funzionalità. Una volta pronto, scegli un piano che si adatti alle tue esigenze e inizia a programmare in modo più intelligente oggi stesso!"
+  },
+  "faqPage.title": {
+    "message": "FAQ"
+  },
+  "faqPage.subtitle1": {
+    "message": "Domande frequenti riguardanti la nostra API di prenotazione e programmazione - ZenSched"
+  },
+  "contactSupportTeam": {
+    "message": "Contatta il nostro team di supporto"
+  },
+  "invalidEmailHelperText": {
+    "message": "Inserisci un indirizzo email valido."
+  },
+  "developerResourcesCard.title": {
+    "message": "Risorse per sviluppatori"
+  },
+  "developerResourcesCard.description": {
+    "message": "Questa è una raccolta di risorse tecniche se stai lavorando con la nostra API."
+  },
+  "developerResourcesCard.button": {
+    "message": "Visita il centro sviluppatori"
+  },
+  "genearlHelpCenterCard.title": {
+    "message": "Centro assistenza generale"
+  },
+  "genearlHelpCenterCard.description": {
+    "message": "Questo è il nostro centro assistenza principale. Trova risposte su configurazioni, fatturazione e altro."
+  },
+  "genearlHelpCenterCard.button": {
+    "message": "Visita il centro assistenza"
+  },
+  "helpPage.title": {
+    "message": "Ottieni Aiuto"
+  },
+  "helpPage.subtitle1": {
+    "message": "Hai domande o qualcosa non funziona?"
+  },
+  "helpPage.subtitle2": {
+    "message": "Trova la tua risposta qui sotto."
+  },
+  "animalHealth.features.manageAppointments.title": {
+    "message": "Gestisci Appuntamenti."
+  },
+  "animalHealth.features.manageAppointments.description": {
+    "message": "Programma controlli di routine, vaccinazioni ed esami diagnostici in modo efficiente, assicurando che la disponibilità dei veterinari e l'allocazione delle stanze siano gestite senza problemi."
+  },
+  "animalHealth.features.handleSharedResources.title": {
+    "message": "Gestisci risorse condivise."
+  },
+  "animalHealth.features.handleSharedResources.description": {
+    "message": "Ottimizza l'uso delle sale per gli esami e delle attrezzature come macchinari diagnostici o strumenti chirurgici per prevenire sovrapposizioni di programmazione."
+  },
+  "animalHealth.features.supportRecurringAppointments.title": {
+    "message": "Supporta Appuntamenti Ricorrenti"
+  },
+  "animalHealth.features.supportRecurringAppointments.description": {
+    "message": "Automatizza gli appuntamenti regolari per vaccinazioni, follow-up o piani di benessere, assicurando che i clienti siano sempre in regola."
+  },
+  "animalHealth.features.notifications.title": {
+    "message": "Notifica e ricorda ai clienti i loro appuntamenti."
+  },
+  "animalHealth.features.notifications.description": {
+    "message": "Invia automaticamente conferme, promemoria e aggiornamenti degli appuntamenti a clienti e personale per un'esperienza fluida e senza problemi."
+  },
+  "animalHealth.benefits.simplifiedScheduling.title": {
+    "message": "Gestione semplificata degli appuntamenti."
+  },
+  "animalHealth.benefits.simplifiedScheduling.description": {
+    "message": "Automatizza la programmazione per cure di routine, diagnostiche e ricorrenti, riducendo lo sforzo manuale."
+  },
+  "animalHealth.benefits.efficientResourceAllocation.title": {
+    "message": "Allocazione efficiente delle risorse"
+  },
+  "animalHealth.benefits.efficientResourceAllocation.description": {
+    "message": "Garantisce che sale visita e attrezzature siano utilizzate in modo ottimale senza conflitti."
+  },
+  "animalHealth.benefits.improvedCustomerSatisfaction.title": {
+    "message": "Maggiore soddisfazione del cliente attraverso promemoria automatici e processi di prenotazione fluidi"
+  },
+  "animalHealth.benefits.improvedCustomerSatisfaction.description": {
+    "message": "Le notifiche tengono informati i clienti, mentre i sistemi intuitivi permettono di creare e modificare gli appuntamenti senza sforzo."
+  },
+  "animalHealthPage.title": {
+    "message": "ZenSched per Cliniche Veterinarie"
+  },
+  "animalHealthPage.description": {
+    "message": "ZenSched per Cliniche Veterinarie"
+  },
+  "animalHealthPage.intro.title": {
+    "message": "Programmazione semplificata per i servizi di salute animale con ZenSched"
+  },
+  "animalHealthPage.intro.caption": {
+    "message": "Semplifica la gestione degli appuntamenti per i veterinari con orari variabili. Gestisci l'allocazione delle risorse, le visite ricorrenti e i cambiamenti dell'ultimo minuto—tutto con un unico potente strumento."
+  },
+  "animalHealthPage.solutionFeaturesSection.title": {
+    "message": "Gestione delle prenotazioni senza sforzo, semplificata per il tuo successo."
+  },
+  "animalHealthPage.solutionFeaturesSection.description": {
+    "message": "Una clinica veterinaria offre una varietà di servizi in clinica, tra cui controlli di routine, vaccinazioni, esami diagnostici e consulenze sul benessere per animali domestici e da allevamento. La gestione degli orari dei veterinari, delle prenotazioni degli appuntamenti e delle risorse condivise come strumenti diagnostici e sale visita è fondamentale per garantire operazioni fluide. ZenSched aiuta a snellire il processo di programmazione, riduce i conflitti di prenotazione e migliora l'esperienza del cliente."
+  },
+  "animalHealthPage.workflowExampleSection.title": {
+    "message": "Esempio di Flusso di Lavoro"
+  },
+  "beautySalons.features.synchronizeAvailability.title": {
+    "message": "Sincronizza la disponibilità tra più specialisti."
+  },
+  "beautySalons.features.synchronizeAvailability.description": {
+    "message": "Gestisci e coordina facilmente gli orari di tutti i tuoi specialisti."
+  },
+  "beautySalons.features.handleSharedResources.title": {
+    "message": "Gestisci le risorse condivise."
+  },
+  "beautySalons.features.handleSharedResources.description": {
+    "message": "Garantisci l'uso ottimale di sale, attrezzature e risorse condivise senza conflitti."
+  },
+  "beautySalons.features.bookingRules.title": {
+    "message": "Supporta diverse regole di prenotazione per specialità."
+  },
+  "beautySalons.features.bookingRules.description": {
+    "message": "Personalizza le politiche di prenotazione per soddisfare le esigenze uniche di ogni specialità."
+  },
+  "beautySalons.features.notifications.title": {
+    "message": "Notifica e ricorda ai clienti i loro appuntamenti."
+  },
+  "beautySalons.features.notifications.description": {
+    "message": "Invia promemoria e aggiornamenti tempestivi per mantenere i clienti informati e puntuali."
+  },
+  "beautySalons.benefits.simplifiedScheduling.title": {
+    "message": "Programmazione semplificata ed efficiente per il salone di bellezza."
+  },
+  "beautySalons.benefits.simplifiedScheduling.description": {
+    "message": "Snellisci la gestione degli appuntamenti con strumenti che centralizzano e organizzano le attività di programmazione, riducendo lo sforzo manuale."
+  },
+  "beautySalons.benefits.reducedBookingConflicts.title": {
+    "message": "Riduzione dei conflitti di prenotazione."
+  },
+  "beautySalons.benefits.reducedBookingConflicts.description": {
+    "message": "Algoritmi intelligenti prevengono le prenotazioni sovrapposte, garantendo operazioni fluide nel salone di bellezza."
+  },
+  "beautySalons.benefits.improvedCustomerSatisfaction.title": {
+    "message": "Maggiore soddisfazione del cliente attraverso promemoria automatici e processi di prenotazione fluidi"
+  },
+  "beautySalons.benefits.improvedCustomerSatisfaction.description": {
+    "message": "Le notifiche tengono informati i clienti, mentre i sistemi intuitivi permettono di creare e modificare gli appuntamenti senza sforzo."
+  },
+  "beautySalonsPage.title": {
+    "message": "ZenSched per l'Istruzione"
+  },
+  "beautySalonsPage.description": {
+    "message": "Pianificazione Intelligente per Ambienti di Apprendimento"
+  },
+  "beautySalonsPage.intro.title": {
+    "message": "Pianificazione delle Lezioni per una Piattaforma di Apprendimento Online"
+  },
+  "beautySalonsPage.intro.caption": {
+    "message": "Gestisci le lezioni dal vivo senza sforzo con un sistema di pianificazione flessibile. Coordina gli istruttori in diversi fusi orari, gestisci le prenotazioni degli studenti e adattati ai cambiamenti di disponibilità, tutto in un'unica piattaforma."
+  },
+  "beautySalonsPage.solutionFeaturesSection.title": {
+    "message": "Gestione delle prenotazioni senza sforzo, semplificata per il tuo successo."
+  },
+  "beautySalonsPage.solutionFeaturesSection.description": {
+    "message": "Una piattaforma innovativa di apprendimento online che offre lezioni dal vivo, workshop e sessioni di tutoraggio individuale su diverse materie. La piattaforma gestisce gli orari per istruttori, studenti e aule virtuali condivise, gestendo anche le prenotazioni in diversi fusi orari. Coordinare la disponibilità degli istruttori, adattarsi ai cambiamenti dell'ultimo minuto e garantire transizioni fluide tra le lezioni sono elementi critici per un'esperienza di apprendimento ottimale. ZenSched fornisce una soluzione di pianificazione flessibile per semplificare la gestione delle lezioni, allineare gli orari globali e migliorare l'esperienza sia per gli studenti che per gli istruttori."
+  },
+  "beautySalonsPage.workflowExampleSection.title": {
+    "message": "Esempio di Flusso di Lavoro"
+  },
+  "coworkingSpaceManagement.features.synchronizeAvailability.title": {
+    "message": "Sincronizza la disponibilità tra il personale."
+  },
+  "coworkingSpaceManagement.features.synchronizeAvailability.description": {
+    "message": "I membri del personale, come i responsabili della reception o il personale delle pulizie, devono coordinare i loro orari per allinearsi con le prenotazioni delle sale riunioni, degli eventi o della configurazione delle attrezzature."
+  },
+  "coworkingSpaceManagement.features.handleSharedResources.title": {
+    "message": "Gestisci le risorse condivise."
+  },
+  "coworkingSpaceManagement.features.handleSharedResources.description": {
+    "message": "Sale riunioni, proiettori e lavagne sono risorse condivise che devono essere prenotate senza conflitti. ZenSched garantisce un'allocazione e un utilizzo ottimali."
+  },
+  "coworkingSpaceManagement.features.supportDifferentBookingRules.title": {
+    "message": "Supporta diverse regole di prenotazione."
+  },
+  "coworkingSpaceManagement.features.supportDifferentBookingRules.description": {
+    "message": "Spazi diversi hanno politiche uniche. Per esempio, le sale riunioni possono essere prenotate in incrementi di 30 minuti, mentre gli uffici privati sono riservati a ore."
+  },
+  "coworkingSpaceManagement.features.notifications.title": {
+    "message": "Notifica e ricorda ai clienti i loro appuntamenti."
+  },
+  "coworkingSpaceManagement.features.notifications.description": {
+    "message": "Invia promemoria e aggiornamenti tempestivi per mantenere clienti e personale informati e puntuali."
+  },
+  "coworkingSpaceManagement.benefits.simplifiedScheduling.title": {
+    "message": "Pianificazione semplificata ed efficiente."
+  },
+  "coworkingSpaceManagement.benefits.simplifiedScheduling.description": {
+    "message": "Semplifica la gestione degli appuntamenti con strumenti che centralizzano e organizzano le attività di pianificazione, riducendo lo sforzo manuale."
+  },
+  "coworkingSpaceManagement.benefits.reducedBookingConflicts.title": {
+    "message": "Conflitti di prenotazione ridotti."
+  },
+  "coworkingSpaceManagement.benefits.reducedBookingConflicts.description": {
+    "message": "Algoritmi intelligenti prevengono le prenotazioni sovrapposte, garantendo operazioni senza intoppi."
+  },
+  "coworkingSpaceManagement.benefits.improvedCustomerSatisfaction.title": {
+    "message": "Maggiore soddisfazione dei clienti attraverso promemoria automatizzati e processi di prenotazione fluidi"
+  },
+  "coworkingSpaceManagement.benefits.improvedCustomerSatisfaction.description": {
+    "message": "Le notifiche mantengono i clienti informati, mentre i sistemi intuitivi permettono di creare e modificare gli appuntamenti senza sforzo."
+  },
+  "coworkingSpaceManagementPage.title": {
+    "message": "ZenSched per Spazi di Coworking"
+  },
+  "coworkingSpaceManagementPage.description": {
+    "message": "Semplificazione della Gestione degli Spazi di Lavoro Condivisi"
+  },
+  "coworkingSpaceManagementPage.intro.title": {
+    "message": "Prenotazione Sale Conferenze per uno Spazio di Coworking"
+  },
+  "coworkingSpaceManagementPage.intro.caption": {
+    "message": "Gestisci gli spazi di coworking senza sforzo con un unico strumento. Gestisci le prenotazioni in più sedi, accoglie vari livelli di abbonamento ed evita conflitti di pianificazione, tutto in un unico posto."
+  },
+  "coworkingSpaceManagementPage.solutionFeaturesSection.title": {
+    "message": "Gestione delle prenotazioni senza sforzo, semplificata per il tuo successo."
+  },
+  "coworkingSpaceManagementPage.solutionFeaturesSection.description": {
+    "message": "Uno spazio di coworking dinamico che gestisce uffici condivisi, sale riunioni e aree eventi per liberi professionisti, startup e aziende consolidate. Lo spazio coordina gli orari per risorse condivise come scrivanie, uffici privati e sale conferenze, gestendo anche le prenotazioni dei membri e l'organizzazione degli eventi. Gestire efficientemente la disponibilità, adattarsi ai cambiamenti dell'ultimo minuto e ottimizzare l'allocazione delle risorse sono essenziali per operazioni fluide. ZenSched offre una soluzione di pianificazione completa per semplificare le prenotazioni, massimizzare l'utilizzo delle risorse e migliorare la soddisfazione dei membri."
+  },
+  "Workflow Example": {
+    "message": "Esempio di Flusso di Lavoro"
+  },
+  "ecommerceAndRetail.features.manageInStoreAppointments.title": {
+    "message": "Gestisci Appuntamenti in Negozio"
+  },
+  "ecommerceAndRetail.features.manageInStoreAppointments.description": {
+    "message": "I clienti possono prenotare consulenze per lo shopping personale o ritiri di prodotti, e ZenSched garantisce la disponibilità del personale e dello spazio."
+  },
+  "ecommerceAndRetail.features.coordinateDeliverySchedules.title": {
+    "message": "Coordina gli Orari di Consegna."
+  },
+  "ecommerceAndRetail.features.coordinateDeliverySchedules.description": {
+    "message": "Sincronizza i percorsi e la disponibilità dei corrieri con le fasce orarie preferite dai clienti."
+  },
+  "ecommerceAndRetail.features.bookingRules.title": {
+    "message": "Imposta Regole di Prenotazione Personalizzate."
+  },
+  "ecommerceAndRetail.features.bookingRules.description": {
+    "message": "Applica regole uniche come finestre specifiche per il ritiro degli ordini e-commerce o fasce orarie per i servizi di consegna."
+  },
+  "ecommerceAndRetail.features.notifications.title": {
+    "message": "Notifica e ricorda ai clienti i loro appuntamenti."
+  },
+  "ecommerceAndRetail.features.notifications.description": {
+    "message": "Invia promemoria e aggiornamenti tempestivi per mantenere i clienti informati e puntuali."
+  },
+  "ecommerceAndRetail.benefits.simplifiedScheduling.title": {
+    "message": "Pianificazione semplificata ed efficiente per le operazioni retail."
+  },
+  "ecommerceAndRetail.benefits.simplifiedScheduling.description": {
+    "message": "Semplifica la gestione degli appuntamenti in negozio e delle consegne con strumenti che centralizzano la pianificazione, riducendo lo sforzo manuale."
+  },
+  "ecommerceAndRetail.benefits.reducedBookingConflicts.title": {
+    "message": "Allocazione ottimizzata delle risorse."
+  },
+  "ecommerceAndRetail.benefits.reducedBookingConflicts.description": {
+    "message": "Algoritmi intelligenti assicurano che le risorse condivise come i banchi per il ritiro e gli slot di consegna siano allocati senza conflitti, migliorando l'efficienza operativa."
+  },
+  "ecommerceAndRetail.benefits.improvedCustomerSatisfaction.title": {
+    "message": "Maggiore soddisfazione dei clienti attraverso notifiche e flessibilità."
+  },
+  "ecommerceAndRetail.benefits.improvedCustomerSatisfaction.description": {
+    "message": "Promemoria automatizzati e aggiornamenti in tempo reale mantengono i clienti informati, mentre le opzioni di pianificazione flessibile rendono le prenotazioni e le ripianificazioni semplici."
+  },
+  "ecommerceAndRetailPage.title": {
+    "message": "ZenSched per E-commerce e Retail"
+  },
+  "ecommerceAndRetailPage.description": {
+    "message": "Pianificazione Avanzata per E-Commerce e Retail con ZenSched"
+  },
+  "ecommerceAndRetailPage.intro.title": {
+    "message": "Pianificazione Avanzata per E-Commerce e Retail con ZenSched"
+  },
+  "ecommerceAndRetailPage.intro.caption": {
+    "message": "Semplifica la pianificazione per le operazioni retail ed e-commerce. Gestisci appuntamenti in negozio, slot di consegna e risorse condivise senza sforzo, tutto in un'unica potente piattaforma."
+  },
+  "ecommerceAndRetailPage.solutionFeaturesSection.title": {
+    "message": "Gestione delle prenotazioni senza sforzo, semplificata per il tuo successo."
+  },
+  "ecommerceAndRetailPage.solutionFeaturesSection.description": {
+    "message": "RetailChain & Co. gestisce una rete di negozi fisici insieme a una piattaforma e-commerce. L'azienda offre servizi come ritiro prodotti in negozio, appuntamenti per lo shopping personale, gestione dell'inventario e pianificazione delle consegne. Coordinare il personale in negozio, i corrieri e le risorse condivise (ad esempio, spazio di stoccaggio e casse) è complesso, specialmente durante i periodi di punta dello shopping. ZenSched aiuta RetailChain & Co. a semplificare la pianificazione, ottimizzare l'allocazione delle risorse e migliorare l'esperienza complessiva del cliente."
+  },
+  "ecommerceAndRetailPage.workflowExampleSection.title": {
+    "message": "Esempio di Flusso di Lavoro"
+  },
+  "education.benefits.synchronizeAvailability.title": {
+    "message": "Gli istruttori, gli assistenti e il personale amministrativo devono coordinare i loro orari per allinearsi con gli orari delle lezioni, le sessioni individuali e le consultazioni con gli studenti. ZenSched sincronizza dinamicamente la disponibilità del personale per evitare conflitti e garantire una pianificazione senza intoppi."
+  },
+  "education.benefits.sharedResources.title": {
+    "message": "Le aule virtuali, le sale riunioni e gli strumenti didattici condivisi (es. lavagne, sistemi di condivisione documenti) vengono assegnati in base alla disponibilità. ZenSched garantisce un utilizzo ottimale evitando prenotazioni doppie e dando priorità a lezioni o sessioni critiche."
+  },
+  "education.benefits.bookingRules.title": {
+    "message": "I diversi corsi ed eventi online hanno politiche uniche. Per esempio, le lezioni regolari sono programmate in incrementi fissi di 1 ora, mentre le sessioni individuali sono prenotabili per 30 minuti."
+  },
+  "education.benefits.notifications.title": {
+    "message": "Notifica e ricorda agli studenti e ai docenti i loro appuntamenti."
+  },
+  "education.benefits.notifications.description": {
+    "message": "Invia promemoria e aggiornamenti tempestivi per mantenere studenti e docenti informati e puntuali."
+  },
+  "education.benefits.simplifiedScheduling.title": {
+    "message": "Pianificazione semplificata ed efficiente."
+  },
+  "education.benefits.simplifiedScheduling.description": {
+    "message": "Semplifica la gestione degli appuntamenti con strumenti che centralizzano e organizzano le attività di pianificazione, riducendo lo sforzo manuale."
+  },
+  "education.benefits.reducedBookingConflicts.title": {
+    "message": "Riduzione dei conflitti di prenotazione."
+  },
+  "education.benefits.reducedBookingConflicts.description": {
+    "message": "Gli algoritmi intelligenti prevengono le prenotazioni sovrapposte, garantendo operazioni fluide."
+  },
+  "education.benefits.improvedCustomerSatisfaction.title": {
+    "message": "Maggiore soddisfazione del cliente attraverso promemoria automatici e processi di prenotazione fluidi"
+  },
+  "education.benefits.improvedCustomerSatisfaction.description": {
+    "message": "Le notifiche mantengono i clienti informati, mentre i sistemi intuitivi permettono di creare e modificare gli appuntamenti senza sforzo."
+  },
+  "financeAndInsurance.features.synchronizeAvailability.title": {
+    "message": "Gestisci le Consultazioni con i Clienti"
+  },
+  "financeAndInsurance.features.synchronizeAvailability.description": {
+    "message": "Pianifica appuntamenti per consulenza finanziaria, revisioni degli investimenti, consulenze assicurative e assistenza per i reclami allineandoti con la disponibilità di consulenti e agenti."
+  },
+  "financeAndInsurance.features.handleSharedResources.title": {
+    "message": "Ottimizza le Risorse Condivise"
+  },
+  "financeAndInsurance.features.handleSharedResources.description": {
+    "message": "Assegna sale riunioni condivise, strutture per conferenze e strumenti specializzati come sistemi di videoconferenza per appuntamenti ibridi."
+  },
+  "financeAndInsurance.features.bookingRules.title": {
+    "message": "Supporta Politiche di Prenotazione Personalizzate"
+  },
+  "financeAndInsurance.features.bookingRules.description": {
+    "message": "Implementa regole uniche per le consultazioni, inclusi tempi cuscinetto tra gli appuntamenti, gestione prioritaria per clienti VIP e requisiti di prenotazione anticipata."
+  },
+  "financeAndInsurance.features.notifications.title": {
+    "message": "Notifica e ricorda ai clienti i loro appuntamenti."
+  },
+  "financeAndInsurance.features.notifications.description": {
+    "message": "Invia promemoria e aggiornamenti tempestivi per mantenere i clienti informati e puntuali."
+  },
+  "financeAndInsurance.benefits.simplifiedScheduling.title": {
+    "message": "Gestione Semplificata degli Appuntamenti"
+  },
+  "financeAndInsurance.benefits.simplifiedScheduling.description": {
+    "message": "Automatizza la pianificazione per consultazioni, supporto reclami e revisioni finanziarie, riducendo lo sforzo manuale."
+  },
+  "financeAndInsurance.benefits.reducedBookingConflicts.title": {
+    "message": "Riduzione dei conflitti di prenotazione."
+  },
+  "financeAndInsurance.benefits.reducedBookingConflicts.description": {
+    "message": "Gli algoritmi intelligenti prevengono le prenotazioni sovrapposte, garantendo operazioni fluide."
+  },
+  "financeAndInsurance.benefits.improvedCustomerSatisfaction.title": {
+    "message": "Maggiore soddisfazione del cliente attraverso promemoria automatici e processi di prenotazione fluidi"
+  },
+  "financeAndInsurance.benefits.improvedCustomerSatisfaction.description": {
+    "message": "Le notifiche mantengono i clienti informati, mentre i sistemi intuitivi permettono di creare e modificare gli appuntamenti senza sforzo."
+  },
+  "financeAndInsurancePage.title": {
+    "message": "ZenSched per Saloni di Bellezza"
+  },
+  "financeAndInsurancePage.description": {
+    "message": "ZenSched per Saloni di Bellezza"
+  },
+  "financeAndInsurancePage.intro.title": {
+    "message": "Pianificazione Avanzata per Finanza e Assicurazioni con ZenSched"
+  },
+  "financeAndInsurancePage.intro.caption": {
+    "message": "Semplifica la pianificazione degli appuntamenti per consulenti finanziari e agenti assicurativi. Gestisci consultazioni con i clienti, allocazione delle risorse e modifiche dell'ultimo minuto—tutto con un unico potente strumento."
+  },
+  "financeAndInsurancePage.solutionFeaturesSection.title": {
+    "message": "Gestione delle prenotazioni senza sforzo, semplificata per il tuo successo."
+  },
+  "financeAndInsurancePage.solutionFeaturesSection.description": {
+    "message": "Un'azienda offre servizi di pianificazione finanziaria, consulenza sugli investimenti e gestione patrimoniale, mentre SecureInsure si specializza in consulenze su polizze assicurative, elaborazione sinistri e rinnovi. Entrambi i settori richiedono la gestione degli appuntamenti con i clienti, il coordinamento della disponibilità del personale e la gestione di risorse condivise come sale riunioni e strumenti specializzati. ZenSched fornisce una soluzione semplificata per gestire queste esigenze di pianificazione, garantire un'efficiente allocazione delle risorse e migliorare la comunicazione con i clienti."
+  },
+  "financeAndInsurancePage.workflowExampleSection.title": {
+    "message": "Esempio di Flusso di Lavoro"
+  },
+  "healthAndFitness.benefits.manageClassSchedules.title": {
+    "message": "Gestisci gli Orari delle Lezioni."
+  },
+  "healthAndFitness.benefits.manageClassSchedules.description": {
+    "message": "Gestisci lezioni di gruppo ricorrenti come yoga o spinning, ciascuna con limiti di capacità e orari fissi. ZenSched assicura che non ci siano sovrapposizioni nell'assegnazione delle risorse o degli istruttori."
+  },
+  "healthAndFitness.benefits.coordinatePersonalTrainingSessions.title": {
+    "message": "Coordina le Sessioni di Personal Training."
+  },
+  "healthAndFitness.benefits.coordinatePersonalTrainingSessions.description": {
+    "message": "Gestisci gli orari degli allenamenti individuali sincronizzando la disponibilità dell'allenatore con le preferenze del cliente, evitando conflitti."
+  },
+  "healthAndFitness.benefits.handleSharedResources.title": {
+    "message": "Gestisci le Risorse Condivise."
+  },
+  "healthAndFitness.benefits.handleSharedResources.description": {
+    "message": "Assegna spazi condivisi (es. studi) e attrezzature (es. biciclette, tappetini) in modo efficiente, garantendo un utilizzo ottimale senza conflitti."
+  },
+  "healthAndFitness.benefits.sendNotifications.title": {
+    "message": "Invia Notifiche e Promemoria."
+  },
+  "healthAndFitness.benefits.sendNotifications.description": {
+    "message": "Automatizza le notifiche email o SMS per prenotazioni, promemoria e aggiornamenti per mantenere sia i membri che lo staff informati e puntuali."
+  },
+  "healthAndFitness.benefits.efficientResourceAllocation.title": {
+    "message": "Allocazione Efficiente delle Risorse"
+  },
+  "healthAndFitness.benefits.efficientResourceAllocation.description": {
+    "message": "Gli spazi e le attrezzature condivise sono gestiti senza problemi, evitando sovraffollamenti e tempi morti."
+  },
+  "healthAndFitness.benefits.personalizedMemberExperience.title": {
+    "message": "Esperienza Personalizzata per i Membri"
+  },
+  "healthAndFitness.benefits.personalizedMemberExperience.description": {
+    "message": "I membri beneficiano di processi di prenotazione chiari, promemoria tempestivi e la possibilità di scegliere istruttori o lezioni preferiti."
+  },
+  "healthAndFitness.benefits.improvedStaffCoordination.title": {
+    "message": "Migliore Coordinamento del Personale"
+  },
+  "healthAndFitness.benefits.improvedStaffCoordination.description": {
+    "message": "Gli orari del personale vengono aggiornati automaticamente, riducendo gli errori e garantendo operazioni fluide."
+  },
+  "healthAndFitnessPage.title": {
+    "message": "ZenSched per Salute e Fitness"
+  },
+  "healthAndFitnessPage.description": {
+    "message": "Pianificazione Intelligente per Centri di Salute e Fitness"
+  },
+  "healthAndFitnessPage.intro.title": {
+    "message": "Pianificazione Avanzata per Centri di Salute e Fitness"
+  },
+  "healthAndFitnessPage.intro.caption": {
+    "message": "Gestisci senza sforzo gli orari del fitness con un sistema versatile che coordina gli istruttori, gestisce le prenotazioni dei membri, ottimizza gli spazi condivisi e si adatta perfettamente ai cambiamenti di disponibilità—tutto da un'unica potente piattaforma."
+  },
+  "healthAndFitnessPage.solutionFeaturesSection.title": {
+    "message": "Gestione delle prenotazioni senza sforzo, semplificata per il tuo successo."
+  },
+  "healthAndFitnessPage.solutionFeaturesSection.description": {
+    "message": "La palestra offre un'ampia gamma di servizi per la salute e il fitness, incluse lezioni di gruppo, sessioni di personal training e consulenze sul benessere. Questi servizi richiedono la gestione degli orari delle lezioni, il coordinamento della disponibilità degli istruttori e l'ottimizzazione delle risorse condivise come studi e attrezzature. ZenSched fornisce una soluzione semplificata per gestire queste esigenze di pianificazione, garantire un utilizzo efficiente delle risorse e migliorare il coinvolgimento dei membri attraverso comunicazioni e promemoria automatizzati."
+  },
+  "healthcare.benefits.synchronizeAvailability.title": {
+    "message": "Gestisci e coordina facilmente gli orari per tutti i tuoi specialisti."
+  },
+  "healthcare.benefits.manageClassSchedules.title": {
+    "message": "Le notifiche mantengono i pazienti informati, mentre i sistemi intuitivi permettono di creare e modificare gli appuntamenti senza sforzo."
+  },
+  "healthcareSolutionPage.title": {
+    "message": "ZenSched per la Sanità"
+  },
+  "healthcareSolutionPage.description": {
+    "message": "Rivoluzionare la Pianificazione Medica"
+  },
+  "healthcareSolutionPage.intro.title": {
+    "message": "Pianificazione Appuntamenti per una Clinica Multi-Specialistica"
+  },
+  "healthcareSolutionPage.intro.caption": {
+    "message": "Semplifica la gestione degli appuntamenti per medici con orari diversi. Gestisci cancellazioni dell'ultimo minuto, visite di emergenza e allocazione delle risorse—tutto con un unico strumento."
+  },
+  "healthcareSolutionPage.solutionFeaturesSection.title": {
+    "message": "Gestione delle prenotazioni senza sforzo, semplificata per il tuo successo."
+  },
+  "healthcareSolutionPage.solutionFeaturesSection.description": {
+    "message": "Una clinica multi-specialistica che offre una gamma di servizi sanitari, tra cui consultazioni generali, visite specialistiche, test diagnostici e programmi di benessere. La clinica gestisce gli orari per medici, infermieri e apparecchiature diagnostiche coordinando gli appuntamenti dei pazienti tra più specialità. Gestire efficientemente le prenotazioni, adattarsi ai cambiamenti dell'ultimo minuto e garantire un uso ottimale delle risorse sono elementi critici per fornire un'assistenza di alta qualità ai pazienti. ZenSched offre una soluzione di pianificazione robusta per semplificare la gestione degli appuntamenti, ottimizzare l'allocazione delle risorse e migliorare l'esperienza complessiva del paziente."
+  },
+  "industrialAndManufacturing.features.coordinateActivities.title": {
+    "message": "Gestisci i Programmi di Produzione"
+  },
+  "industrialAndManufacturing.features.coordinateActivities.description": {
+    "message": "Coordina le attività della linea di produzione e assegna i macchinari condivisi, garantendo transizioni fluide tra le attività."
+  },
+  "industrialAndManufacturing.features.optimizeMaintenanceScheduling.title": {
+    "message": "Ottimizza la Pianificazione della Manutenzione"
+  },
+  "industrialAndManufacturing.features.optimizeMaintenanceScheduling.description": {
+    "message": "Pianifica la manutenzione preventiva e l'assistenza delle apparecchiature senza interrompere i flussi di produzione."
+  },
+  "industrialAndManufacturing.features.handleWorkforceCoordination.title": {
+    "message": "Gestisci il Coordinamento del Personale"
+  },
+  "industrialAndManufacturing.features.handleWorkforceCoordination.description": {
+    "message": "Pianifica i turni dei dipendenti e assegna i compiti in base all'esperienza, alla disponibilità e alle esigenze di produzione."
+  },
+  "industrialAndManufacturing.features.notifications.title": {
+    "message": "Automatizza le Notifiche"
+  },
+  "industrialAndManufacturing.features.notifications.description": {
+    "message": "Invia avvisi ai team riguardo agli aggiornamenti del programma di produzione, attività di manutenzione e cambi turno per mantenere le operazioni fluide."
+  },
+  "industrialAndManufacturing.benefits.optimizedResourceUtilizaion.title": {
+    "message": "Utilizzo Ottimizzato delle Risorse"
+  },
+  "industrialAndManufacturing.benefits.optimizedResourceUtilizaion.description": {
+    "message": "Semplifica la gestione degli appuntamenti con strumenti che centralizzano e organizzano le attività di pianificazione, riducendo lo sforzo manuale."
+  },
+  "industrialAndManufacturing.benefits.reducedDowntime.title": {
+    "message": "Tempi di Inattività Ridotti"
+  },
+  "industrialAndManufacturing.benefits.reducedDowntime.description": {
+    "message": "Semplifica la pianificazione della manutenzione per prevenire guasti imprevisti delle apparecchiature."
+  },
+  "industrialAndManufacturing.benefits.enhancedCommunication.title": {
+    "message": "Comunicazione Migliorata"
+  },
+  "industrialAndManufacturing.benefits.enhancedCommunication.description": {
+    "message": "Le notifiche automatizzate mantengono informati dipendenti e supervisori, migliorando l'efficienza operativa."
+  },
+  "industrialAndManufacturingPage.title": {
+    "message": "ZenSched per l'Industria e la Produzione"
+  },
+  "industrialAndManufacturingPage.description": {
+    "message": "Pianificazione Avanzata per l'Industria e la Produzione con ZenSched"
+  },
+  "industrialAndManufacturingPage.intro.title": {
+    "message": "Pianificazione Avanzata per un Salone di Bellezza"
+  },
+  "industrialAndManufacturingPage.intro.caption": {
+    "message": "Semplifica la pianificazione della produzione per i team manifatturieri. Gestisci l'allocazione delle attrezzature, i turni del personale e le attività di manutenzione, tutto con un unico potente strumento."
+  },
+  "industrialAndManufacturingPage.solutionFeaturesSection.title": {
+    "message": "Gestione delle prenotazioni senza sforzo, semplificata per il tuo successo."
+  },
+  "industrialAndManufacturingPage.solutionFeaturesSection.description": {
+    "message": "Un'azienda manifatturiera che gestisce programmi di produzione, attività di manutenzione e coordinamento della forza lavoro. L'azienda gestisce multiple linee di produzione, macchinari condivisi e strumenti che richiedono una pianificazione precisa per evitare tempi di inattività e massimizzare l'efficienza. Inoltre, SmartMFG coordina i turni dei dipendenti, la manutenzione delle attrezzature e i controlli dell'inventario. ZenSched fornisce una soluzione di pianificazione robusta per ottimizzare le operazioni, garantire l'allocazione delle risorse e semplificare la comunicazione tra i team."
+  },
+  "industrialAndManufacturingPage.workflowExampleSection.title": {
+    "message": "Esempio di Flusso di Lavoro"
+  },
+  "logisticsAndSupplyChain.features.manageShipmentSchedules.title": {
+    "message": "Gestisci i Programmi di Spedizione"
+  },
+  "logisticsAndSupplyChain.features.manageShipmentSchedules.description": {
+    "message": "Coordina i programmi di ritiro e consegna, garantendo la disponibilità degli autisti e l'ottimizzazione dei percorsi."
+  },
+  "logisticsAndSupplyChain.features.optimizeFleet.title": {
+    "message": "Ottimizza la Gestione della Flotta e del Magazzino"
+  },
+  "logisticsAndSupplyChain.features.optimizeFleet.description": {
+    "message": "Assegna efficientemente camion, banchine di carico e spazio di magazzino per evitare colli di bottiglia."
+  },
+  "logisticsAndSupplyChain.features.bookingRules.title": {
+    "message": "Supporta Regole di Pianificazione Dinamiche"
+  },
+  "logisticsAndSupplyChain.features.bookingRules.description": {
+    "message": "Adattati alle spedizioni prioritarie, ai ritardi in tempo reale e alla domanda stagionale con politiche di pianificazione flessibili."
+  },
+  "logisticsAndSupplyChain.features.notifications.title": {
+    "message": "Invia Notifiche e Aggiornamenti"
+  },
+  "logisticsAndSupplyChain.features.notifications.description": {
+    "message": "Notifica autisti, team di magazzino e clienti riguardo agli aggiornamenti del programma, stato delle consegne e potenziali ritardi."
+  },
+  "logisticsAndSupplyChain.benefits.improvedResourceUtilization.title": {
+    "message": "Utilizzo Migliorato delle Risorse"
+  },
+  "logisticsAndSupplyChain.benefits.improvedResourceUtilization.description": {
+    "message": "Massimizza l'uso di camion, banchine e attrezzature, riducendo i tempi di inattività e i colli di bottiglia."
+  },
+  "logisticsAndSupplyChain.benefits.increasedOpearionalEfficiency.title": {
+    "message": "Maggiore Efficienza Operativa"
+  },
+  "logisticsAndSupplyChain.benefits.increasedOpearionalEfficiency.description": {
+    "message": "Semplifica i flussi di lavoro lungo la catena di approvvigionamento, garantendo consegne puntuali e costi ridotti."
+  },
+  "logisticsAndSupplyChain.benefits.enhancedCommunication.title": {
+    "message": "Comunicazione Migliorata"
+  },
+  "logisticsAndSupplyChain.benefits.enhancedCommunication.description": {
+    "message": "Mantiene informati autisti, personale di magazzino e clienti con aggiornamenti e notifiche in tempo reale."
+  },
+  "logisticsAndSupplyChainPage.title": {
+    "message": "ZenSched per Saloni di Bellezza"
+  },
+  "logisticsAndSupplyChainPage.description": {
+    "message": "Pianificazione Avanzata per Logistica e Catena di Approvvigionamento con ZenSched"
+  },
+  "logisticsAndSupplyChainPage.intro.title": {
+    "message": "Pianificazione Avanzata per Logistica e Catena di Approvvigionamento con ZenSched"
+  },
+  "logisticsAndSupplyChainPage.intro.caption": {
+    "message": "Semplifica la pianificazione delle spedizioni per i team logistici. Gestisci assegnazioni degli autisti, risorse del magazzino e modifiche dell'ultimo minuto, tutto con un unico potente strumento."
+  },
+  "logisticsAndSupplyChainPage.solutionFeaturesSection.title": {
+    "message": "Gestione delle prenotazioni senza sforzo, semplificata per il tuo successo."
+  },
+  "logisticsAndSupplyChainPage.solutionFeaturesSection.description": {
+    "message": "Un'azienda logistica gestisce una complessa rete di magazzini, rotte di consegna e operazioni della catena di approvvigionamento. L'azienda gestisce una varietà di attività, inclusa la pianificazione delle spedizioni, la gestione della flotta, l'allocazione dello spazio di magazzino e l'assegnazione delle banchine di carico. Il coordinamento di autisti, personale di magazzino e risorse condivise è fondamentale per mantenere operazioni fluide e consegne puntuali. ZenSched fornisce una soluzione di pianificazione avanzata per ottimizzare l'allocazione delle risorse, migliorare la comunicazione e semplificare i flussi di lavoro logistici."
+  },
+  "logisticsAndSupplyChainPage.workflowExampleSection.title": {
+    "message": "Esempio di Flusso di Lavoro"
+  },
+  "recruitmentAndStaffing.features.streamlineInterviewScheduling.title": {
+    "message": "Semplifica la Pianificazione dei Colloqui"
+  },
+  "recruitmentAndStaffing.features.streamlineInterviewScheduling.description": {
+    "message": "Coordina i colloqui tra più candidati, recruiter e manager delle assunzioni con il monitoraggio dinamico della disponibilità."
+  },
+  "recruitmentAndStaffing.features.manageOnboardingAndTrainingSessions.title": {
+    "message": "Gestisci Sessioni di Onboarding e Formazione"
+  },
+  "recruitmentAndStaffing.features.manageOnboardingAndTrainingSessions.description": {
+    "message": "Pianifica riunioni di onboarding, sessioni di orientamento ed eventi di formazione del team in modo efficiente."
+  },
+  "recruitmentAndStaffing.features.adaptToLastMinuteChanges.title": {
+    "message": "Adattati ai Cambiamenti dell'Ultimo Minuto"
+  },
+  "recruitmentAndStaffing.features.adaptToLastMinuteChanges.description": {
+    "message": "Riassegna slot per i colloqui, aggiorna i programmi o gestisci cancellazioni dell'ultimo minuto con facilità."
+  },
+  "recruitmentAndStaffing.features.automateNotifications.title": {
+    "message": "Automatizza le Notifiche"
+  },
+  "recruitmentAndStaffing.features.automateNotifications.description": {
+    "message": "Invia conferme automatizzate, promemoria e aggiornamenti a candidati, recruiter e manager delle assunzioni."
+  },
+  "recruitmentAndStaffing.benefits.simplifiedScheduling.title": {
+    "message": "Pianificazione Semplificata"
+  },
+  "recruitmentAndStaffing.benefits.simplifiedScheduling.description": {
+    "message": "Automatizza i programmi di colloqui e onboarding, riducendo il carico amministrativo."
+  },
+  "recruitmentAndStaffing.benefits.reducedBookingConflicts.title": {
+    "message": "Conflitti di prenotazione ridotti"
+  },
+  "recruitmentAndStaffing.benefits.reducedBookingConflicts.description": {
+    "message": "Gli algoritmi intelligenti prevengono le prenotazioni sovrapposte, garantendo operazioni fluide del salone di bellezza."
+  },
+  "recruitmentAndStaffing.benefits.enhancedCommunication.title": {
+    "message": "Comunicazione Migliorata"
+  },
+  "recruitmentAndStaffing.benefits.enhancedCommunication.description": {
+    "message": "Mantiene informati candidati, recruiter e manager delle assunzioni con aggiornamenti e promemoria automatizzati."
+  },
+  "recruitmentAndStaffingPage.title": {
+    "message": "ZenSched per Recruitment e Staffing"
+  },
+  "recruitmentAndStaffingPage.description": {
+    "message": "Pianificazione Avanzata per Recruitment e Staffing con ZenSched"
+  },
+  "recruitmentAndStaffingPage.intro.title": {
+    "message": "Pianificazione Avanzata per Recruitment e Staffing con ZenSched"
+  },
+  "recruitmentAndStaffingPage.intro.caption": {
+    "message": "Semplifica la pianificazione dei colloqui per i recruiter con disponibilità variabile. Gestisci prenotazioni dei candidati, allocazione delle risorse e modifiche dell'ultimo minuto, tutto con un unico potente strumento."
+  },
+  "recruitmentAndStaffingPage.solutionFeaturesSection.title": {
+    "message": "Gestione delle prenotazioni senza sforzo, semplificata per il tuo successo."
+  },
+  "recruitmentAndStaffingPage.solutionFeaturesSection.description": {
+    "message": "Gestisce colloqui dei candidati, onboarding del personale e sessioni di formazione dei dipendenti per vari clienti. L'azienda coordina i programmi per recruiter, manager delle assunzioni e candidati gestendo al contempo risorse condivise come sale riunioni e strumenti di videoconferenza. Con elevati volumi di colloqui e scadenze strette, una pianificazione efficace è fondamentale per mantenere operazioni fluide. ZenSched aiuta TalentHire a semplificare la pianificazione, ridurre i conflitti e migliorare la comunicazione tra tutti gli stakeholder."
+  },
+  "recruitmentAndStaffingPage.workflowExampleSection.title": {
+    "message": "Esempio di Flusso di Lavoro"
+  },
+  "restorationAndFoodDelivery.features.manageTableReservations.title": {
+    "message": "Gestisci le Prenotazioni dei Tavoli"
+  },
+  "restorationAndFoodDelivery.features.manageTableReservations.description": {
+    "message": "Gestisci le prenotazioni dei clienti per i servizi di ristorazione, garantendo una corretta allocazione dei tavoli ed evitando il sovraffollamento."
+  },
+  "restorationAndFoodDelivery.features.coordinateDeliverySchedules.title": {
+    "message": "Coordina i Programmi di Consegna"
+  },
+  "restorationAndFoodDelivery.features.coordinateDeliverySchedules.description": {
+    "message": "Ottimizza i percorsi dei fattorini e la loro disponibilità per gestire efficacemente gli ordini dei clienti."
+  },
+  "restorationAndFoodDelivery.features.handlePrivateDiningAndEvents.title": {
+    "message": "Gestisci Sale Private ed Eventi"
+  },
+  "restorationAndFoodDelivery.features.handlePrivateDiningAndEvents.description": {
+    "message": "Pianifica l'uso delle sale private e coordina il personale e le risorse della cucina per eventi speciali."
+  },
+  "restorationAndFoodDelivery.features.notifications.title": {
+    "message": "Notifica e ricorda ai clienti i loro appuntamenti"
+  },
+  "restorationAndFoodDelivery.features.notifications.description": {
+    "message": "Invia promemoria tempestivi e aggiornamenti per mantenere i clienti informati e puntuali."
+  },
+  "restorationAndFoodDelivery.benefits.streamlinedOperations.title": {
+    "message": "Operazioni Ottimizzate"
+  },
+  "restorationAndFoodDelivery.benefits.streamlinedOperations.description": {
+    "message": "Automatizza le prenotazioni, i programmi di consegna e il coordinamento del personale, riducendo lo sforzo manuale."
+  },
+  "restorationAndFoodDelivery.benefits.reducedBookingConflicts.title": {
+    "message": "Conflitti di prenotazione ridotti"
+  },
+  "restorationAndFoodDelivery.benefits.reducedBookingConflicts.description": {
+    "message": "Gli algoritmi intelligenti prevengono le prenotazioni sovrapposte, garantendo operazioni fluide del salone di bellezza."
+  },
+  "restorationAndFoodDelivery.benefits.improvedCustomerSatisfaction.title": {
+    "message": "Maggiore soddisfazione del cliente attraverso promemoria automatizzati e processi di prenotazione fluidi"
+  },
+  "restorationAndFoodDelivery.benefits.improvedCustomerSatisfaction.description": {
+    "message": "Le notifiche mantengono i clienti informati, mentre i sistemi intuitivi permettono la creazione e la modifica degli appuntamenti senza sforzo."
+  },
+  "restorationAndFoodDeliveryPage.title": {
+    "message": "ZenSched per Ristoranti e Consegna Cibo"
+  },
+  "restorationAndFoodDeliveryPage.description": {
+    "message": "Come ZenSched Supporta i Ristoranti con la Consegna di Cibo"
+  },
+  "restorationAndFoodDeliveryPage.intro.title": {
+    "message": "ZenSched per Ristoranti e Consegna Cibo"
+  },
+  "restorationAndFoodDeliveryPage.intro.caption": {
+    "message": "Semplifica le prenotazioni e la pianificazione delle consegne per ristoranti con domande dinamiche. Gestisci prenotazioni dei tavoli, ottimizza i percorsi di consegna e gestisci modifiche dell'ultimo minuto, tutto con un unico potente strumento."
+  },
+  "restorationAndFoodDeliveryPage.solutionFeaturesSection.title": {
+    "message": "Gestione delle prenotazioni senza sforzo, semplificata per il tuo successo."
+  },
+  "restorationAndFoodDeliveryPage.solutionFeaturesSection.description": {
+    "message": "Un ristorante popolare che offre servizi di ristorazione in sala, esperienze di dining privato e consegna di cibo. Il ristorante gestisce prenotazioni dei tavoli, prenotazioni per eventi privati e programmi di consegna, garantendo al contempo l'utilizzo ottimale del personale, delle risorse della cucina e dei fattorini. Coordinare i programmi tra queste operazioni è cruciale per fornire un servizio impeccabile e migliorare la soddisfazione del cliente. ZenSched offre una potente soluzione di pianificazione per gestire le prenotazioni, ottimizzare la logistica delle consegne e semplificare la comunicazione con clienti e personale."
+  },
+  "restorationAndFoodDeliveryPage.workflowExampleSection.title": {
+    "message": "Esempio di Flusso di Lavoro"
+  },
+  "techAndSoftware.features.manageTeamMeetings.title": {
+    "message": "Gestisci le Riunioni del Team"
+  },
+  "techAndSoftware.features.manageTeamMeetings.description": {
+    "message": "Pianifica standup, revisioni degli sprint e retrospettive in modo efficiente, adattandosi ai membri del team in diversi fusi orari."
+  },
+  "techAndSoftware.features.optimizeResourceAllocation.title": {
+    "message": "Ottimizza l'Allocazione delle Risorse"
+  },
+  "techAndSoftware.features.optimizeResourceAllocation.description": {
+    "message": "Assegna risorse condivise come sale riunioni, ambienti di test e attrezzature per demo senza sovrapposizioni."
+  },
+  "techAndSoftware.features.coordinateCrossTeamCollaboration.title": {
+    "message": "Coordina la Collaborazione tra Team"
+  },
+  "techAndSoftware.features.coordinateCrossTeamCollaboration.description": {
+    "message": "Allinea i programmi per team interfunzionali che lavorano su progetti condivisi o dipendenze."
+  },
+  "techAndSoftware.features.notifications.title": {
+    "message": "Automatizza Notifiche e Aggiornamenti"
+  },
+  "techAndSoftware.features.notifications.description": {
+    "message": "Invia conferme automatizzate, promemoria e aggiornamenti in tempo reale per le modifiche al programma."
+  },
+  "techAndSoftware.benefits.improvedCollaboration.title": {
+    "message": "Collaborazione Migliorata"
+  },
+  "techAndSoftware.benefits.improvedCollaboration.description": {
+    "message": "Allinea i team globali, garantendo una comunicazione fluida e flussi di lavoro efficienti."
+  },
+  "techAndSoftware.benefits.increasedDeveloperProductivity.title": {
+    "message": "Maggiore Produttività degli Sviluppatori"
+  },
+  "techAndSoftware.benefits.increasedDeveloperProductivity.description": {
+    "message": "Supporta il tempo di concentrazione ininterrotto riducendo i conflitti di pianificazione."
+  },
+  "techAndSoftware.benefits.improvedCustomerSatisfaction.title": {
+    "message": "Flessibilità in Tempo Reale"
+  },
+  "techAndSoftware.benefits.improvedCustomerSatisfaction.description": {
+    "message": "Si adatta ai cambiamenti di programma, alle richieste dell'ultimo minuto e alle esigenze dinamiche del team."
+  },
+  "techAndSoftwareSolutionPage.title": {
+    "message": "ZenSched per Team Tech e Software"
+  },
+  "techAndSoftwareSolutionPage.description": {
+    "message": "Pianificazione Avanzata per Team Tech e Software con ZenSched"
+  },
+  "techAndSoftwareSolutionPage.intro.title": {
+    "message": "Pianificazione Avanzata per Team Tech e Software con ZenSched"
+  },
+  "techAndSoftwareSolutionPage.intro.caption": {
+    "message": "Semplifica la pianificazione per i team tech con disponibilità dinamica. Gestisci riunioni, alloca risorse e adattati ai cambiamenti dell'ultimo minuto, tutto con un unico potente strumento."
+  },
+  "techAndSoftwareSolutionPage.solutionFeaturesSection.title": {
+    "message": "Gestione delle prenotazioni senza sforzo, semplificata per il tuo successo."
+  },
+  "A fast-growing software company that manages team meetings, product demos, code reviews, and developer training sessions. The company operates across multiple time zones and uses shared resources like meeting rooms, video conferencing tools, and test environments. Coordinating schedules for developers, project managers, and stakeholders is essential to meet deadlines and ensure smooth collaboration. ZenSched provides a powerful scheduling solution to manage resources, align global teams, and streamline communication.": {
+    "message": "Un'azienda di software in rapida crescita che gestisce riunioni di team, demo di prodotti, revisioni del codice e sessioni di formazione per sviluppatori. L'azienda opera su più fusi orari e utilizza risorse condivise come sale riunioni, strumenti di videoconferenza e ambienti di test. Coordinare i programmi per sviluppatori, project manager e stakeholder è essenziale per rispettare le scadenze e garantire una collaborazione fluida. ZenSched fornisce una potente soluzione di pianificazione per gestire le risorse, allineare i team globali e semplificare la comunicazione."
+  },
+  "techAndSoftwareSolutionPage.workflowExampleSection.title": {
+    "message": "Esempio di Flusso di Lavoro"
+  },
+  "travelAndTourism.benefits.synchronizeAvailability.title": {
+    "message": "Sincronizza la disponibilità dello staff."
+  },
+  "travelAndTourism.benefits.synchronizeAvailability.description": {
+    "message": "Le guide turistiche e il personale amministrativo devono coordinare i loro orari. ZenSched sincronizza dinamicamente la disponibilità dello staff per evitare conflitti e garantire una pianificazione senza problemi."
+  },
+  "travelAndTourism.benefits.handleSharedResources.title": {
+    "message": "Gestisci le risorse condivise."
+  },
+  "travelAndTourism.benefits.handleSharedResources.description": {
+    "message": "Adatta facilmente le esigenze uniche di pianificazione con ZenSched. Imposta durate personalizzate delle prenotazioni, politiche di cancellazione e requisiti di prenotazione anticipata per ogni servizio, garantendo una perfetta integrazione con le operazioni aziendali."
+  },
+  "travelAndTourism.benefits.bookingRules.title": {
+    "message": "Supporta diverse regole di prenotazione."
+  },
+  "travelAndTourism.benefits.bookingRules.description": {
+    "message": "I tour guidati e gli eventi hanno politiche uniche."
+  },
+  "travelAndTourism.benefits.notifications.title": {
+    "message": "Notifica e ricorda appuntamenti a clienti e guide turistiche."
+  },
+  "travelAndTourism.benefits.notifications.description": {
+    "message": "Invia promemoria e aggiornamenti tempestivi per tenere informati clienti e guide turistiche e rispettare gli orari."
+  },
+  "travelAndTourism.benefits.simplifiedAndEfficientScheduling.title": {
+    "message": "Pianificazione semplificata ed efficiente."
+  },
+  "travelAndTourism.benefits.simplifiedAndEfficientScheduling.description": {
+    "message": "Ottimizza la gestione degli appuntamenti con strumenti che centralizzano e organizzano le attività di pianificazione, riducendo lo sforzo manuale."
+  },
+  "travelAndTourism.benefits.reducedBookingConflicts.title": {
+    "message": "Riduzione dei conflitti di prenotazione."
+  },
+  "travelAndTourism.benefits.reducedBookingConflicts.description": {
+    "message": "Algoritmi intelligenti evitano sovrapposizioni di prenotazione, garantendo operazioni senza problemi."
+  },
+  "travelAndTourism.benefits.improvedCustomerSatisfaction.title": {
+    "message": "Maggiore soddisfazione del cliente grazie a promemoria automatizzati e processi di prenotazione semplici."
+  },
+  "travelAndTourism.benefits.improvedCustomerSatisfaction.description": {
+    "message": "Le notifiche mantengono i clienti informati, mentre i sistemi intuitivi consentono di creare e modificare facilmente le prenotazioni."
+  },
+  "travelAndTourismPage.title": {
+    "message": "ZenSched per il Turismo e i Viaggi"
+  },
+  "travelAndTourismPage.description": {
+    "message": "Pianificazione intelligente per agenzie di viaggi e turismo"
+  },
+  "travelAndTourismPage.intro.title": {
+    "message": "Pianificazione avanzata per un'agenzia di viaggi e turismo"
+  },
+  "travelAndTourismPage.intro.caption": {
+    "message": "Ottimizza gli itinerari di viaggio con un sistema di pianificazione potente. Coordina le guide turistiche in diverse località, gestisci le prenotazioni dei clienti e adatta gli itinerari a cambiamenti dell'ultimo minuto—tutto in una piattaforma integrata."
+  },
+  "travelAndTourismPage.solutionFeaturesSection.title": {
+    "message": "Gestione delle prenotazioni semplificata per il tuo successo."
+  },
+  "travelAndTourismPage.solutionFeaturesSection.description": {
+    "message": "Un'azienda fiorente nel settore del turismo e dei viaggi che organizza tour guidati, orari di trasporto e itinerari per i clienti in più destinazioni. L'azienda coordina le guide turistiche, gli autisti e risorse condivise come veicoli, alloggi e spazi per attività. Gestire le prenotazioni, adattarsi ai cambiamenti dell'ultimo minuto e garantire una comunicazione fluida tra viaggiatori e staff è cruciale per offrire un'esperienza di viaggio senza intoppi. ZenSched offre una soluzione di pianificazione solida per ottimizzare le risorse, semplificare il coordinamento e migliorare la soddisfazione del cliente."
+  },
+  "featuresSection.title": {
+    "message": "Sfrutta la potenza della pianificazione intelligente"
+  },
+  "featuresSection.description": {
+    "message": "Gestisci facilmente disponibilità, prenotazioni ed eventi con le funzionalità all'avanguardia di ZenSched. Dalle regole dinamiche alle integrazioni fluide, la nostra piattaforma è progettata per semplificare la pianificazione massimizzando produttività e flessibilità."
+  },
+  "choosePlan": {
+    "message": "Scegli il piano"
+  },
+  "contactUs": {
+    "message": "Contattaci"
+  },
+  "seeAllSolutions": {
+    "message": "Scopri tutte le soluzioni"
   }
 }

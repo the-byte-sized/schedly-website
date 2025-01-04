@@ -27,37 +27,33 @@
     "message": "Gestione Spazi Di Co-working",
     "description": "The label of footer link with label=Co-working Space Management linking to /solutions/coworking-space-management"
   },
-  "link.item.label.Ride Sharing Service": {
-    "message": "Servizio di Ride Sharing",
-    "description": "The label of footer link with label=Ride Sharing Service linking to /solutions/ride-sharing"
-  },
   "link.item.label.Beauty Salon": {
     "message": "Saloni Di Bellezza",
     "description": "The label of footer link with label=Beauty Salon linking to /solutions/beauty-salons"
   },
   "link.item.label.Documentation": {
     "message": "Documentazione",
-    "description": "The label of footer link with label=Documentation linking to /docs"
+    "description": "The label of footer link with label=Documentation linking to /docs/intro/welcome"
   },
   "link.item.label.API Reference": {
     "message": "API Reference",
-    "description": "The label of footer link with label=API Reference linking to /docs/api-reference"
+    "description": "The label of footer link with label=API Reference linking to /docs/intro/welcome"
   },
   "link.item.label.Changelog": {
     "message": "Changelog",
-    "description": "The label of footer link with label=Changelog linking to /docs/changelog"
+    "description": "The label of footer link with label=Changelog linking to /docs/intro/welcome"
   },
   "link.item.label.Why ZenSched": {
     "message": "Perché ZenSched",
-    "description": "The label of footer link with label=Why ZenSched linking to /docs"
+    "description": "The label of footer link with label=Why ZenSched linking to /docs/intro/welcome"
   },
   "link.item.label.Features": {
     "message": "Funzionalità",
-    "description": "The label of footer link with label=Features linking to /docs/api-reference"
+    "description": "The label of footer link with label=Features linking to /docs/intro/welcome"
   },
   "link.item.label.Pricing": {
     "message": "Prezzi",
-    "description": "The label of footer link with label=Pricing linking to /docs/changelog"
+    "description": "The label of footer link with label=Pricing linking to /docs/intro/welcome"
   },
   "link.item.label.About Us": {
     "message": "About Us",
@@ -78,5 +74,9 @@
   "copyright": {
     "message": "Copyright © 2024 The Byte-sized.",
     "description": "The footer copyright"
+  },
+  "link.item.label.Restoration & Food Delivery": {
+    "message": "Ristorazione & Food Delivery",
+    "description": "The label of footer link with label=Restoration & Food Delivery linking to /solutions/restoration-and-food-delivery"
   }
 }

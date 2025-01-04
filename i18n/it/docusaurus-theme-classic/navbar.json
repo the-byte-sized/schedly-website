@@ -31,12 +31,36 @@
     "message": "Gestione Spazi Di Co-working",
     "description": "Navbar item with label Co-working Space Management"
   },
-  "item.label.Ride Sharing Service": {
-    "message": "Servizio di Ride Sharing",
-    "description": "Navbar item with label Ride Sharing Service"
-  },
   "item.label.Beauty Salon": {
     "message": "Saloni di Bellezza",
     "description": "Navbar item with label Beauty Salon"
+  },
+  "item.label.Developers": {
+    "message": "Developers",
+    "description": "Navbar item with label Developers"
+  },
+  "item.label.FAQ": {
+    "message": "FAQ",
+    "description": "Navbar item with label FAQ"
+  },
+  "item.label.Help": {
+    "message": "Aiuto",
+    "description": "Navbar item with label Help"
+  },
+  "item.label.Restoration & Food Delivery": {
+    "message": "Ristorazione & Food Delivery",
+    "description": "Navbar item with label Restoration & Food Delivery"
+  },
+  "item.label.Documentation": {
+    "message": "Documentazione",
+    "description": "Navbar item with label Documentation"
+  },
+  "item.label.API Reference": {
+    "message": "API Reference",
+    "description": "Navbar item with label API Reference"
+  },
+  "item.label.Resources": {
+    "message": "Risorse",
+    "description": "Navbar item with label Resources"
   }
 }
