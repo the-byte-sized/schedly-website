@@ -130,7 +130,7 @@ const FeaturesCards: React.FC = () => {
         }}
       >
         {features.map((feature, index) => (
-          <>
+          <React.Fragment key={index}>
             <Box
               display="flex"
               flexDirection="column"
@@ -199,7 +199,7 @@ const FeaturesCards: React.FC = () => {
               </Link>
             </Box>
             {index !== features.length - 1 && <Divider />}
-          </>
+          </React.Fragment>
         ))}
       </Stack>
     </Container>
