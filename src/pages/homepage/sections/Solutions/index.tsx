@@ -265,7 +265,6 @@ const Solutions: React.FC = () => {
               centerSlidePercentage={35}
               infiniteLoop
               autoPlay
-              dynamicHeight
               transitionTime={500}
               swipeScrollTolerance={5}
               interval={2000}
