@@ -63,14 +63,7 @@ const FeaturesCards: React.FC = () => {
   const { palette } = useTheme();
 
   return (
-    <Container
-      id="overview"
-      data-section="features"
-      component="section"
-      sx={{
-        backgroundColor: "background.default",
-      }}
-    >
+    <Container id="overview" data-section="features" component="section">
       <Stack
         maxWidth="740px"
         margin="0 auto"
